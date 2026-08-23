@@ -1,0 +1,49 @@
+# Kaggle notebook config: one T4 (or T4 x2), fp16, inside the 12-hour cap.
+#
+# base.yaml stays the full-scale reference. This trades sequence length and
+# MC-dropout passes for a run that finishes in roughly two hours.
+#
+#   seq 512      most files in this corpus fit after the 5-95 percentile
+#                filter, and attention cost is quadratic, so halving the
+#                length more than halves the step time
+#   batch 32     fits in 16 GB at seq 512 under fp16
+#   passes 8     only used with --resample; 30 passes over 31k human rows is
+#                an 8-hour job on a T4 for the +0.43 points Droid reports
+#
+# FlashAttention-2 needs Ampere (sm_80+). A T4 is Turing (sm_75), so ModernBERT
+# falls back to SDPA and pads to full length. That penalty is unavoidable here.
+extends: base.yaml
+
+data:
+  max_rows_per_split: null      # full corpus
+
+# The full corpus is ~418k rows, of which ~197k are training. base.yaml was
+# sized for the 145k-row sample, and inheriting it unchanged killed the first
+# Kaggle run: char 2-5 grams at 20k features over 197k rows produced a design
+# matrix large enough that XGBoost was OOM-killed with no traceback.
+#
+# 2-4 grams at 10k features cuts non-zeros per row roughly fourfold, and
+# xgb.py now builds the matrix in float32.
+features:
+  tfidf_ngram_min: 2
+  tfidf_ngram_max: 4
+  tfidf_max_features: 10000
+
+xgb:
+  n_estimators: 300             # base.yaml's 600 x 4 classes = 2400 trees
+  max_depth: 7                  # depth 8 histograms at 10k features are heavy
+  learning_rate: 0.12
+  subsample: 0.85
+  colsample_bytree: 0.6
+  n_jobs: -1
+
+modernbert:
+  max_length: 512
+  batch_size: 32
+  epochs: 3
+  lr: 5.0e-5
+  mc_dropout_passes: 8
+
+fastdetect:
+  batch_size: 16
+  max_length: 512

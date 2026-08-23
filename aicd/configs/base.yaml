@@ -1,0 +1,77 @@
+# Base configuration for the AI-generated code detection system.
+project:
+  name: aicd
+  seed: 20260818
+  artifacts_dir: artifacts
+  reports_dir: eval/reports
+
+data:
+  hf_dataset: project-droid/DroidCollection
+  cache_dir: artifacts/data
+  # Cap rows pulled per split. null = everything (846k train).
+  # Keep this small until the full pipeline is verified end to end.
+  max_rows_per_split: 60000
+  languages: [python, java, cpp, csharp, go, javascript]
+  # Quality filters (published Droid / CoDet-M4 pipeline)
+  token_pct_low: 5
+  token_pct_high: 95
+  minhash_threshold: 0.85
+  min_chars: 40
+
+labels:
+  human: 0
+  machine: 1
+  hybrid: 2
+  adversarial: 3
+
+splits:
+  # Families held out entirely from training for the unseen-generator slice
+  holdout_families: [microsoft, mistralai]   # Phi + Mistral families
+  # Languages held out for the unseen-language slice
+  holdout_languages: [go, javascript]
+  # Sources held out for the unseen-domain slice. Source-level rather than
+  # domain-level: holding out all of general_deployed removes 83% of the
+  # corpus AND every adversarial sample, since adversarial code only exists
+  # in The Vault / StarCoder. These three give a genuine structural shift
+  # (class-level + inline snippets + research code vs functions/algorithmic)
+  # while keeping all four classes on both sides of the boundary.
+  holdout_sources: [THEVAULT_CLASS, THEVAULT_INLINE, ARXIV]
+  min_slice_size: 500
+  val_fraction: 0.12
+
+features:
+  tfidf_ngram_min: 2
+  tfidf_ngram_max: 5
+  tfidf_max_features: 20000
+  tfidf_sublinear: true
+  max_missing_fraction: 0.20
+
+xgb:
+  n_estimators: 600
+  max_depth: 8
+  learning_rate: 0.1
+  subsample: 0.85
+  colsample_bytree: 0.7
+  n_jobs: -1
+
+modernbert:
+  base_model: answerdotai/ModernBERT-base
+  projection_dim: 128
+  num_classes: 4
+  max_length: 1024
+  epochs: 3
+  lr: 5.0e-5
+  batch_size: 16
+  warmup_ratio: 0.1
+  triplet_weight: 0.1
+  mc_dropout_passes: 30
+  resample_drop_fraction: 0.07
+
+fastdetect:
+  scoring_model: Qwen/Qwen2.5-Coder-0.5B
+  max_length: 512
+  batch_size: 4
+
+policy:
+  target_human_fpr: 0.01
+  abstain_margin: 0.15

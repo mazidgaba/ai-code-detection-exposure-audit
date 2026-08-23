@@ -1,0 +1,13 @@
+# Seed 4 of the seed sweep (E4).
+#
+# Reviewer finding U4, raised by all three reviewers: three seeds is not enough.
+# With three runs there are two degrees of freedom, and the 95% upper bound on
+# the true standard deviation is roughly six times the sample one, so "48 times
+# the training noise" could honestly be eight times. Five seeds fixes that.
+#
+# Only project.seed differs from kaggle.yaml. The corpus is built once, by
+# kaggle.yaml, and every seed trains on that same splits.parquet, so the spread
+# measured here is training variance and not split variance.
+extends: kaggle.yaml
+project:
+  seed: 4

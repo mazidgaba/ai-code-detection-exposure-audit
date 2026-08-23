@@ -1,0 +1,15 @@
+# Matched-scale control (Experiment 1).
+#
+# Identical to kaggle.yaml in every respect except the amount of training data.
+# kaggle.yaml's corpus came from one of DroidCollection's three training
+# shards, giving Branch A 196,854 training rows; the notebook pulls all three
+# for this config, leaving roughly 545,000 once the withheld categories are
+# removed.
+#
+# The withholding itself is unchanged and inherited: splits.holdout_families,
+# holdout_languages and holdout_sources still remove MICROSOFT, MISTRALAI, Go,
+# JavaScript, THEVAULT_CLASS, THEVAULT_INLINE and ARXIV from training. That is
+# the point. If Branch A still collapses with three times the data and the same
+# categories withheld, training-set size is excluded as the explanation and the
+# paper's causal claim stands.
+extends: kaggle.yaml

@@ -1,0 +1,46 @@
+{
+  "arms": {
+    "d2_rows": 196720,
+    "d2_withheld": 70032,
+    "d2_exposure": 0.356,
+    "d1small_rows": 126688,
+    "checksum": "a974c64fa585b282"
+  },
+  "conditions": {
+    "s1_in_distribution": {
+      "rows": 31041,
+      "d1small": 0.8852,
+      "d2": 0.8852,
+      "difference": 0.0
+    },
+    "s2_unseen_generator": {
+      "rows": 30344,
+      "d1small": 0.8472,
+      "d2": 0.8672,
+      "difference": 0.02
+    },
+    "s3_unseen_language": {
+      "rows": 26936,
+      "d1small": 0.5723,
+      "d2": 0.8154,
+      "difference": 0.2431
+    },
+    "s4_unseen_domain": {
+      "rows": 27100,
+      "d1small": 0.3974,
+      "d2": 0.7891,
+      "difference": 0.3917
+    },
+    "s5_compound": {
+      "rows": 4168,
+      "d1small": 0.2749,
+      "d2": 0.6193,
+      "difference": 0.3444
+    }
+  },
+  "drop_d1small": 0.6102,
+  "drop_d2": 0.2659,
+  "exposure_removes": 0.3443,
+  "s1_argmax_disagreements": 1849,
+  "_note": "Drops computed from unrounded macro-F1, so they differ in the fourth decimal from subtracting the rounded table cells."
+}

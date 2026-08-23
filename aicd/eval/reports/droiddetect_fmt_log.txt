@@ -1,0 +1,37 @@
+[droiddetect] device=cpu
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|##########| 134/134 [00:00<00:00, 1909.38it/s]
+[transformers] [1mModernBertModel LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+decoder.bias      | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[droiddetect] hidden=768 proj=256 classes=4 pooling=mean
+  encoder tensors: 134 loaded, 0 missing, 0 unexpected
+[transformers] You are using a model of type `custom_model` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+[droiddetect] val: 390 rows (normalised) [test shard]
+    [val] 200/390  1.1 rows/s
+[droiddetect] s1_in_distribution: 392 rows (normalised) [test shard]
+    [s1_in_distribution] 200/392  0.9 rows/s
+[droiddetect] s2_unseen_generator: 366 rows (normalised) [test shard]
+    [s2_unseen_generator] 200/366  1.0 rows/s
+[droiddetect] s3_unseen_language: 367 rows (normalised) [test shard]
+    [s3_unseen_language] 200/367  0.9 rows/s
+[droiddetect] s4_unseen_domain: 425 rows (normalised) [test shard]
+    [s4_unseen_domain] 200/425  0.9 rows/s
+    [s4_unseen_domain] 400/425  0.9 rows/s
+[droiddetect] s5_compound: 407 rows (normalised) [test shard]
+    [s5_compound] 200/407  0.9 rows/s
+    [s5_compound] 400/407  0.9 rows/s
+
+slice                        n  macroF1     wF1     acc     AUC  humFPR
+----------------------------------------------------------------------
+s1_in_distribution         392   0.5607  0.7030  0.7066  0.9675  0.1488
+s2_unseen_generator        366   0.5955  0.7147  0.7377  0.9753  0.1461
+s3_unseen_language         367   0.5340  0.6861  0.7003  0.9616  0.0596
+s4_unseen_domain           425   0.4363  0.6284  0.6541  0.9758  0.0217
+s5_compound                407   0.4062  0.5939  0.6290   0.923   0.045

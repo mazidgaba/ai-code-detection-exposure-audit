@@ -1,0 +1,58 @@
+{
+  "ci": {
+    "macro_f1": [
+      0.3144202322037027,
+      0.3311679102220025
+    ],
+    "human_false_accusation_rate": [
+      0.4690475290361013,
+      0.49820177291026435
+    ],
+    "n_boot": 1000
+  },
+  "weights": "branch_a_matched.pt",
+  "n_rows": 7202,
+  "classes_present": [
+    "human",
+    "machine",
+    "hybrid"
+  ],
+  "macro_f1_present_classes": 0.32243239699785436,
+  "binary_auc": 0.655644288749445,
+  "human_false_accusation_rate": 0.48403001071811363,
+  "per_generator": {
+    "codestral": {
+      "n": 916,
+      "recall_as_nonhuman": 0.6768558951965066
+    },
+    "gemini": {
+      "n": 880,
+      "recall_as_nonhuman": 0.5647727272727273
+    },
+    "llama": {
+      "n": 741,
+      "recall_as_nonhuman": 0.6909581646423751
+    }
+  },
+  "confusion_row_normalised": {
+    "human": [
+      0.516,
+      0.4568,
+      0.0236,
+      0.0036
+    ],
+    "machine": [
+      0.0216,
+      0.8556,
+      0.1207,
+      0.0022
+    ],
+    "hybrid": [
+      0.5519,
+      0.417,
+      0.0075,
+      0.0236
+    ]
+  },
+  "note": "AIGCodeSet has no adversarial class; macro-F1 is over the three present classes."
+}

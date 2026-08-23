@@ -1,0 +1,43 @@
+{
+  "raw": {
+    "dev-00000-of-00001.parquet": {
+      "rows": 105824,
+      "adversarial": 16139
+    },
+    "test-00000-of-00001.parquet": {
+      "rows": 105826,
+      "adversarial": 16140
+    },
+    "train-00000-of-00003.parquet": {
+      "rows": 282200,
+      "adversarial": 0
+    },
+    "train-00001-of-00003.parquet": {
+      "rows": 282199,
+      "adversarial": 0
+    },
+    "train-00002-of-00003.parquet": {
+      "rows": 282199,
+      "adversarial": 129115
+    }
+  },
+  "adversarial_in_training_shards": 129115,
+  "adversarial_in_dev_and_test": 32279,
+  "build": {
+    "adversarial_rows": 15959,
+    "by_original_split": {
+      "dev": 7980,
+      "test": 7979
+    },
+    "by_condition": {
+      "train": 6123,
+      "s4_unseen_domain": 3344,
+      "s2_unseen_generator": 2451,
+      "s3_unseen_language": 2003,
+      "s1_in_distribution": 951,
+      "val": 932,
+      "s5_compound": 155
+    },
+    "survival_rate": 0.4944081291241984
+  }
+}

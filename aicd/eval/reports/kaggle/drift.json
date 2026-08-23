@@ -1,0 +1,128 @@
+{
+  "branch": "b",
+  "slices": {
+    "s1_in_distribution": {
+      "checked_at": "2026-08-19T18:21:44.132361+00:00",
+      "n": 31083,
+      "overall_psi": 0.01098126611248992,
+      "by_language": {
+        "c": {
+          "psi": 0.012671785974670793,
+          "n": 1566,
+          "verdict": "stable"
+        },
+        "cpp": {
+          "psi": 0.01033064832443672,
+          "n": 4090,
+          "verdict": "stable"
+        },
+        "csharp": {
+          "psi": 0.0042286497811060714,
+          "n": 3536,
+          "verdict": "stable"
+        },
+        "java": {
+          "psi": 0.015322298481053351,
+          "n": 7863,
+          "verdict": "stable"
+        },
+        "php": {
+          "psi": 0.08343531956601011,
+          "n": 171,
+          "verdict": "stable"
+        },
+        "python": {
+          "psi": 0.005690872780883262,
+          "n": 13779,
+          "verdict": "stable"
+        }
+      },
+      "overall_verdict": "stable"
+    },
+    "s2_unseen_generator": {
+      "checked_at": "2026-08-19T18:21:44.201593+00:00",
+      "n": 41061,
+      "overall_psi": 0.3005903554380317,
+      "by_language": {
+        "c": {
+          "psi": 0.627020580331545,
+          "n": 1634,
+          "verdict": "SIGNIFICANT"
+        },
+        "cpp": {
+          "psi": 1.4599612628789322,
+          "n": 3643,
+          "verdict": "SIGNIFICANT"
+        },
+        "csharp": {
+          "psi": 0.02561701861065585,
+          "n": 5478,
+          "verdict": "stable"
+        },
+        "java": {
+          "psi": 0.3213410738502732,
+          "n": 10578,
+          "verdict": "SIGNIFICANT"
+        },
+        "php": {
+          "psi": 0.05183610096784185,
+          "n": 284,
+          "verdict": "stable"
+        },
+        "python": {
+          "psi": 0.07362167181102815,
+          "n": 19301,
+          "verdict": "stable"
+        }
+      },
+      "overall_verdict": "SIGNIFICANT"
+    },
+    "s3_unseen_language": {
+      "checked_at": "2026-08-19T18:21:44.276317+00:00",
+      "n": 56631,
+      "overall_psi": 1.4735611195341591,
+      "by_language": {},
+      "overall_verdict": "SIGNIFICANT"
+    },
+    "s4_unseen_domain": {
+      "checked_at": "2026-08-19T18:21:44.345795+00:00",
+      "n": 56731,
+      "overall_psi": 0.7761387340559758,
+      "by_language": {
+        "c": {
+          "psi": 1.785681220308251,
+          "n": 2266,
+          "verdict": "SIGNIFICANT"
+        },
+        "cpp": {
+          "psi": 1.8248942830364083,
+          "n": 5926,
+          "verdict": "SIGNIFICANT"
+        },
+        "csharp": {
+          "psi": 0.28399925108928326,
+          "n": 9761,
+          "verdict": "SIGNIFICANT"
+        },
+        "java": {
+          "psi": 1.3885716171733975,
+          "n": 25010,
+          "verdict": "SIGNIFICANT"
+        },
+        "python": {
+          "psi": 1.0776032866667076,
+          "n": 13615,
+          "verdict": "SIGNIFICANT"
+        }
+      },
+      "overall_verdict": "SIGNIFICANT"
+    },
+    "s5_compound": {
+      "checked_at": "2026-08-19T18:21:44.414700+00:00",
+      "n": 4168,
+      "overall_psi": 2.582846452572617,
+      "by_language": {},
+      "overall_verdict": "SIGNIFICANT"
+    }
+  }
+}

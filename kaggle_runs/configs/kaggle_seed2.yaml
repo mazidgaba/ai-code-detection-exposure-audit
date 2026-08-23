@@ -1,0 +1,9 @@
+# Seed 2 of the seed sweep (Experiment 2).
+#
+# Same data and same recipe as kaggle.yaml. Only project.seed differs, so any
+# spread across these runs is training variance and nothing else. Bootstrap
+# intervals in the paper cover sampling noise for a fixed model and cannot
+# measure this.
+extends: kaggle.yaml
+project:
+  seed: 2

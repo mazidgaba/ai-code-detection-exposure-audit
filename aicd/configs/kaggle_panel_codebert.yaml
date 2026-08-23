@@ -1,0 +1,13 @@
+# E3 detector panel: CodeBERT in place of ModernBERT.
+#
+# Reviewer U3, raised by all three: the paper says "detectors key on surface
+# lexical habit" while having evaluated exactly one. A second independently
+# trained detector on the same split is the cheapest way to earn the plural.
+#
+# This needs no new training code. TLModel reads last_hidden_state and the
+# encoder's own hidden_size, so any HuggingFace encoder drops in. CodeBERT is
+# RoBERTa-shaped at hidden 768 with 512 max positions, which matches the
+# sequence length already in use.
+extends: kaggle.yaml
+modernbert:
+  base_model: microsoft/codebert-base

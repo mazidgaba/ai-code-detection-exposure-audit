@@ -1,0 +1,19 @@
+# E8: does training through the rewrites fix the sensitivity?
+#
+# The transformation battery showed renaming identifiers costs the detector
+# more than half its accuracy while changing nothing a compiler sees. This
+# trains the same model on a corpus where half the rows have been rewritten
+# that way, and asks whether the collapse survives.
+#
+# Both outcomes are useful, which is why the plan calls this the highest-
+# leverage optional item. If it helps, the paper gains a mitigation and stops
+# being purely diagnostic. If it does not, the finding is quotable: augmenting
+# away the surface cue does not restore transfer, so the dependence is deeper
+# than formatting.
+#
+# Everything else matches kaggle.yaml exactly, so the comparison against the
+# reference run is clean.
+extends: kaggle.yaml
+modernbert:
+  augment_fraction: 0.5
+  augment_transforms: [rename_identifiers, whitespace]

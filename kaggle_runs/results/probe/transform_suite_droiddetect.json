@@ -1,0 +1,52 @@
+{
+  "model": "droiddetect",
+  "slice": "s1_in_distribution",
+  "n": 2000,
+  "max_len": 512,
+  "baseline": {
+    "macro_f1": 0.9119795620238249,
+    "binary_auc": 0.9960278765630377
+  },
+  "transforms": [
+    {
+      "transform": "whitespace",
+      "applied_fraction": 0.853,
+      "macro_f1": 0.5405603405216297,
+      "delta_macro_f1": -0.3714192215021952,
+      "binary_auc": 0.9722652416096261,
+      "delta_auc": -0.023762634953411577
+    },
+    {
+      "transform": "strip_comments",
+      "applied_fraction": 0.8095,
+      "macro_f1": 0.5008273958765025,
+      "delta_macro_f1": -0.4111521661473224,
+      "binary_auc": 0.9754274321355887,
+      "delta_auc": -0.020600444427449016
+    },
+    {
+      "transform": "rename_identifiers",
+      "applied_fraction": 1.0,
+      "macro_f1": 0.44483080114677265,
+      "delta_macro_f1": -0.46714876087705226,
+      "binary_auc": 0.9281873648341471,
+      "delta_auc": -0.0678405117288906
+    },
+    {
+      "transform": "compress_blanks",
+      "applied_fraction": 0.0595,
+      "macro_f1": 0.9106288328586649,
+      "delta_macro_f1": -0.0013507291651599918,
+      "binary_auc": 0.9954633134913048,
+      "delta_auc": -0.0005645630717329153
+    },
+    {
+      "transform": "dead_code",
+      "applied_fraction": 1.0,
+      "macro_f1": 0.688803969937168,
+      "delta_macro_f1": -0.22317559208665694,
+      "binary_auc": 0.9832734248530968,
+      "delta_auc": -0.01275445170994094
+    }
+  ]
+}

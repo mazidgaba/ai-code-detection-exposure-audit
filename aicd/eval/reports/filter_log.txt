@@ -1,0 +1,33 @@
+[filter] starting from 180,001 rows
+
+  min_chars         180,001 ->  179,982  (-19)
+    parse 0/179,982
+    parse 20,000/179,982
+    parse 40,000/179,982
+    parse 60,000/179,982
+    parse 80,000/179,982
+    parse 100,000/179,982
+    parse 120,000/179,982
+    parse 140,000/179,982
+    parse 160,000/179,982
+  parseable         179,982 ->  160,804  (-19,178)
+  length_pct        160,804 ->  144,986  (-15,818)
+    exact-dup pass removed 20
+    minhash 0/144,966
+    minhash 20,000/144,966
+    minhash 40,000/144,966
+    minhash 60,000/144,966
+    minhash 80,000/144,966
+    minhash 100,000/144,966
+    minhash 120,000/144,966
+    minhash 140,000/144,966
+  minhash_dedup     144,986 ->  144,939  (-47)
+
+filter log
+step                before     after   removed     pct
+min_chars          180,001   179,982        19    0.0%
+parseable          179,982   160,804    19,178   10.7%
+length_pct         160,804   144,986    15,818    9.8%
+minhash_dedup      144,986   144,939        47    0.0%
+
+[done] filtered.parquet: 144,939 rows

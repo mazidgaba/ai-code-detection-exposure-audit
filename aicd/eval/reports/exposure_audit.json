@@ -1,0 +1,85 @@
+{
+  "n_train_rows": 846598,
+  "shards": 3,
+  "axes": {
+    "generator family": {
+      "microsoft": {
+        "rows": 56756,
+        "share": 0.06704
+      },
+      "mistralai": {
+        "rows": 2828,
+        "share": 0.00334
+      }
+    },
+    "language": {
+      "go": {
+        "rows": 54194,
+        "share": 0.064014
+      },
+      "javascript": {
+        "rows": 76232,
+        "share": 0.090045
+      }
+    },
+    "source": {
+      "thevault_class": {
+        "rows": 68295,
+        "share": 0.08067
+      },
+      "thevault_inline": {
+        "rows": 71073,
+        "share": 0.083951
+      },
+      "arxiv": {
+        "rows": 780,
+        "share": 0.000921
+      }
+    }
+  },
+  "observed_values": {
+    "Model_Family": [
+      "01-ai",
+      "bigcode",
+      "codellama",
+      "deepseek-ai",
+      "google",
+      "gpt-4o",
+      "gpt-4o-mini",
+      "human",
+      "ibm-granite",
+      "meta-llama",
+      "microsoft",
+      "mistralai",
+      "qwen"
+    ],
+    "Language": [
+      "c",
+      "c#",
+      "c++",
+      "go",
+      "java",
+      "javascript",
+      "php",
+      "python",
+      "rust"
+    ],
+    "Source": [
+      "arxiv",
+      "atcoder",
+      "codeforces",
+      "droid_personahub",
+      "leetcode",
+      "obscura_coder",
+      "starcoder_data",
+      "taco",
+      "thevault_class",
+      "thevault_function",
+      "thevault_inline"
+    ]
+  },
+  "all_withheld_categories_present_in_training_split": true,
+  "union_rows_touching_any_withheld_category": 301714,
+  "union_share": 0.356384,
+  "naive_sum_double_counts": 330158
+}

@@ -1,0 +1,12 @@
+[xgb] fitting TF-IDF on 67,197 training rows...
+  tfidf width: 8000
+[xgb] training 200 trees on (67197, 8093)...
+[xgb] saved -> C:\Users\hp\Desktop\AI Code Detection\aicd\artifacts\xgb_branch_b.pkl
+
+slice                        n  macroF1     wF1     acc     AUC  humFPR
+----------------------------------------------------------------------
+s1_in_distribution      10,618   0.7227  0.8288  0.8235  0.9882  0.0713
+s2_unseen_generator     13,759   0.6181  0.7342  0.7262  0.9919  0.0708
+s3_unseen_language      19,130   0.3940  0.4886  0.4568  0.8497  0.3394
+s4_unseen_domain        22,093   0.3139  0.3551  0.3396  0.7904  0.7327
+s5_compound              1,526   0.2091  0.2977  0.2654   0.706  0.6746

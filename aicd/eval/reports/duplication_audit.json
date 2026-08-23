@@ -1,0 +1,126 @@
+{
+  "perms": 128,
+  "shingle": 5,
+  "thresholds": [
+    0.5,
+    0.7,
+    0.85
+  ],
+  "train_rows": 67197,
+  "slices": {
+    "s1_in_distribution": {
+      "rows": 10618,
+      "above": {
+        "0.5": {
+          "rows": 16,
+          "share": 0.0015068751177246186
+        },
+        "0.7": {
+          "rows": 1,
+          "share": 9.417969485778867e-05
+        },
+        "0.85": {
+          "rows": 0,
+          "share": 0.0
+        }
+      },
+      "max_similarity_mean": 0.004441161235637596,
+      "max_similarity_median": 0.0
+    },
+    "s2_unseen_generator": {
+      "rows": 13759,
+      "above": {
+        "0.5": {
+          "rows": 9,
+          "share": 0.0006541173050367032
+        },
+        "0.7": {
+          "rows": 3,
+          "share": 0.0002180391016789011
+        },
+        "0.85": {
+          "rows": 1,
+          "share": 7.26797005596337e-05
+        }
+      },
+      "max_similarity_mean": 0.0017607793080892506,
+      "max_similarity_median": 0.0
+    },
+    "s3_unseen_language": {
+      "rows": 19130,
+      "above": {
+        "0.5": {
+          "rows": 1,
+          "share": 5.227391531625719e-05
+        },
+        "0.7": {
+          "rows": 0,
+          "share": 0.0
+        },
+        "0.85": {
+          "rows": 0,
+          "share": 0.0
+        }
+      },
+      "max_similarity_mean": 9.556325143753267e-05,
+      "max_similarity_median": 0.0
+    },
+    "s4_unseen_domain": {
+      "rows": 22093,
+      "above": {
+        "0.5": {
+          "rows": 4,
+          "share": 0.00018105282216086544
+        },
+        "0.7": {
+          "rows": 1,
+          "share": 4.526320554021636e-05
+        },
+        "0.85": {
+          "rows": 1,
+          "share": 4.526320554021636e-05
+        }
+      },
+      "max_similarity_mean": 0.00038473724709183903,
+      "max_similarity_median": 0.0
+    },
+    "s5_compound": {
+      "rows": 1526,
+      "above": {
+        "0.5": {
+          "rows": 0,
+          "share": 0.0
+        },
+        "0.7": {
+          "rows": 0,
+          "share": 0.0
+        },
+        "0.85": {
+          "rows": 0,
+          "share": 0.0
+        }
+      },
+      "max_similarity_mean": 0.0004658830275229358,
+      "max_similarity_median": 0.0
+    },
+    "val": {
+      "rows": 10613,
+      "above": {
+        "0.5": {
+          "rows": 16,
+          "share": 0.0015075850372185057
+        },
+        "0.7": {
+          "rows": 3,
+          "share": 0.0002826721944784698
+        },
+        "0.85": {
+          "rows": 0,
+          "share": 0.0
+        }
+      },
+      "max_similarity_mean": 0.004082552058795817,
+      "max_similarity_median": 0.0
+    }
+  }
+}

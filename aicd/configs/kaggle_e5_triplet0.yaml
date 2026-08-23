@@ -1,0 +1,10 @@
+# E5, capacity and hyperparameter ablation: triplet term removed entirely.
+#
+# The paper's contributions list claimed a control excluding "free-parameter
+# choice" and no such control existed. This is one of the four runs that makes
+# the claim true. The reporting rule matters: the finding is not that this
+# setting is optimal, it is that the collapse is present in every configuration
+# we tried, so it cannot be an artefact of one.
+extends: kaggle.yaml
+modernbert:
+  triplet_weight: 0.0

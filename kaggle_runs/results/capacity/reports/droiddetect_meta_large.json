@@ -1,0 +1,8 @@
+{
+  "repo": "project-droid/DroidDetect-Large",
+  "encoder": "answerdotai/ModernBERT-large",
+  "model": "large",
+  "pooling": "mean",
+  "max_len": 512,
+  "max_eval": 3000
+}

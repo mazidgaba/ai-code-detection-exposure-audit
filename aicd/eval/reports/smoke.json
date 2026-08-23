@@ -1,0 +1,42 @@
+{
+  "stages": {
+    "features": {
+      "ok": true,
+      "raw_width": 78,
+      "kept": 42
+    },
+    "branch_b_xgb": {
+      "ok": true,
+      "n_test": 100,
+      "macro_f1": 1.0
+    },
+    "metrics": {
+      "ok": true,
+      "keys": 9
+    },
+    "calibration": {
+      "ok": true,
+      "ece": 0.1813,
+      "shape": "ok"
+    },
+    "policy": {
+      "ok": true,
+      "t_high": 0.6,
+      "decision": "machine"
+    },
+    "attribution": {
+      "ok": true,
+      "windows": 6,
+      "regions": 2,
+      "synthetic_hybrid": true
+    },
+    "drift": {
+      "ok": true,
+      "psi_same": 0.0095,
+      "psi_shifted": 10.961,
+      "verdict_shifted": "SIGNIFICANT"
+    }
+  },
+  "ok": true,
+  "elapsed_s": 5.83
+}

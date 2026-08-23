@@ -1,0 +1,23 @@
+# E5: ModernBERT-large in place of base, the capacity axis proper.
+#
+# The first attempt at this run died with CUDA out of memory after allocating
+# all but 57 MiB of a 14.56 GiB T4. ModernBERT-large is 395M parameters against
+# base's 149M, and at sequence length 512 the activations do not fit whatever
+# the batch size is reduced to without also changing the optimisation.
+#
+# Gradient checkpointing is the fix that costs the experiment nothing. It
+# recomputes activations in the backward pass rather than storing them, so the
+# gradients and the parameter updates are bit-for-bit what they would have been
+# without it. The price is roughly a third more wall clock, which is why this
+# run needs about 26 hours over three sessions rather than 21 over two.
+#
+# Two deviations from kaggle.yaml remain and both are disclosed in the paper.
+# The batch size is 16 rather than 32, and gradient checkpointing is on. The
+# sequence length stays at 512 deliberately: shortening it would mean the large
+# model saw less of each file than the reference model did, and the ablation
+# could then no longer separate capacity from truncation.
+extends: kaggle.yaml
+modernbert:
+  base_model: answerdotai/ModernBERT-large
+  batch_size: 16
+  gradient_checkpointing: true

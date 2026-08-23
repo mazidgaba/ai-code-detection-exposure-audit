@@ -1,0 +1,23 @@
+{
+  "source": "basakdemirok/AIGCodeSet",
+  "citation": "Demirok and Kutlu, SIU 2025, arXiv:2412.16594",
+  "n_raw": 7471,
+  "n_overlapping_with_droidcollection": 3,
+  "overlap_fraction": 0.00040155267032525766,
+  "internal_duplicates": 266,
+  "n_retained": 7202,
+  "retained_by_class": {
+    "0": 4665,
+    "1": 928,
+    "2": 1609
+  },
+  "retained_by_generator": {
+    "human": 4665,
+    "codestral": 916,
+    "gemini": 880,
+    "llama": 741
+  },
+  "adversarial_class_present": false,
+  "human_submission_dates": "2016-07 to 2020-09, before Codex and ChatGPT",
+  "droid_hashes": 1057072
+}

@@ -1,0 +1,94 @@
+{
+  "source": "Kaggle commit, GPU T4 x2, 644.7 min total",
+  "corpus": {
+    "normalized_rows": 493850,
+    "filtered_rows": 417645,
+    "train_rows": 196854,
+    "dense_features": 96,
+    "note": "train shard 0 only; all adversarial rows came from dev/test"
+  },
+  "branch_a_modernbert": {
+    "s1_in_distribution": {
+      "n": 31083,
+      "macro_f1": 0.8977,
+      "weighted_f1": 0.9326,
+      "accuracy": 0.9322,
+      "binary_auc": 0.998,
+      "human_fpr": 0.0224
+    },
+    "s2_unseen_generator": {
+      "n": 41061,
+      "macro_f1": 0.8685,
+      "weighted_f1": 0.906,
+      "accuracy": 0.9052,
+      "binary_auc": 0.9987,
+      "human_fpr": 0.0223
+    },
+    "s3_unseen_language": {
+      "n": 56631,
+      "macro_f1": 0.5667,
+      "weighted_f1": 0.6601,
+      "accuracy": 0.6228,
+      "binary_auc": 0.9194,
+      "human_fpr": 0.3158
+    },
+    "s4_unseen_domain": {
+      "n": 56731,
+      "macro_f1": 0.4029,
+      "weighted_f1": 0.4476,
+      "accuracy": 0.4281,
+      "binary_auc": 0.8717,
+      "human_fpr": 0.692
+    },
+    "s5_compound": {
+      "n": 4168,
+      "macro_f1": 0.2378,
+      "weighted_f1": 0.2403,
+      "accuracy": 0.262,
+      "binary_auc": 0.7614,
+      "human_fpr": 0.8827
+    }
+  },
+  "branch_b_xgboost": {
+    "s1_in_distribution": {
+      "n": 31083,
+      "macro_f1": 0.7276,
+      "weighted_f1": 0.8572,
+      "accuracy": 0.8506,
+      "binary_auc": 0.9922,
+      "human_fpr": 0.0634
+    },
+    "s2_unseen_generator": {
+      "n": 41061,
+      "macro_f1": 0.6307,
+      "weighted_f1": 0.7798,
+      "accuracy": 0.7722,
+      "binary_auc": 0.9939,
+      "human_fpr": 0.0633
+    },
+    "s3_unseen_language": {
+      "n": 56631,
+      "macro_f1": 0.3733,
+      "weighted_f1": 0.4682,
+      "accuracy": 0.4034,
+      "binary_auc": 0.8368,
+      "human_fpr": 0.386
+    },
+    "s4_unseen_domain": {
+      "n": 56731,
+      "macro_f1": 0.317,
+      "weighted_f1": 0.3595,
+      "accuracy": 0.3539,
+      "binary_auc": 0.8162,
+      "human_fpr": 0.7383
+    },
+    "s5_compound": {
+      "n": 4168,
+      "macro_f1": 0.2094,
+      "weighted_f1": 0.2712,
+      "accuracy": 0.2334,
+      "binary_auc": 0.7198,
+      "human_fpr": 0.6911
+    }
+  }
+}

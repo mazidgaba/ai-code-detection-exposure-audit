@@ -1,0 +1,62 @@
+{
+  "n_seeds": 6,
+  "runs": {
+    "paper (seed 20260818)": {
+      "s1_in_distribution": 0.8977,
+      "s2_unseen_generator": 0.8685,
+      "s3_unseen_language": 0.5667,
+      "s4_unseen_domain": 0.4029,
+      "s5_compound": 0.2378
+    },
+    "seed1": {
+      "s1_in_distribution": 0.8976,
+      "s2_unseen_generator": 0.8708,
+      "s3_unseen_language": 0.5752,
+      "s4_unseen_domain": 0.4092,
+      "s5_compound": 0.2596
+    },
+    "seed2": {
+      "s1_in_distribution": 0.8917,
+      "s2_unseen_generator": 0.8633,
+      "s3_unseen_language": 0.5489,
+      "s4_unseen_domain": 0.3997,
+      "s5_compound": 0.2553
+    },
+    "seed3": {
+      "s1_in_distribution": 0.8927,
+      "s2_unseen_generator": 0.8666,
+      "s3_unseen_language": 0.5804,
+      "s4_unseen_domain": 0.3902,
+      "s5_compound": 0.2768
+    },
+    "seed4": {
+      "s1_in_distribution": 0.8963,
+      "s2_unseen_generator": 0.8682,
+      "s3_unseen_language": 0.5794,
+      "s4_unseen_domain": 0.3867,
+      "s5_compound": 0.2483
+    },
+    "seed5": {
+      "s1_in_distribution": 0.8913,
+      "s2_unseen_generator": 0.8686,
+      "s3_unseen_language": 0.5662,
+      "s4_unseen_domain": 0.3975,
+      "s5_compound": 0.2551
+    }
+  },
+  "mean": {
+    "s1_in_distribution": 0.8946,
+    "s2_unseen_generator": 0.8677,
+    "s3_unseen_language": 0.5695,
+    "s4_unseen_domain": 0.3977,
+    "s5_compound": 0.2555
+  },
+  "sd": {
+    "s1_in_distribution": 0.003,
+    "s2_unseen_generator": 0.0025,
+    "s3_unseen_language": 0.0118,
+    "s4_unseen_domain": 0.0083,
+    "s5_compound": 0.0129
+  },
+  "note": "Six seeds. Seeds 3-5 scored on a corpus rebuild differing from the original by 214 rows in 417,645; S5 is identical in both."
+}

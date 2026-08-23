@@ -1,0 +1,133 @@
+{
+  "variant": "default",
+  "conditions": {
+    "s1_in_distribution": {
+      "n": 3000,
+      "identity_macro_f1": 0.4307436189849201,
+      "best_macro_f1": 0.4307436189849201,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.9841835009520643
+    },
+    "s2_unseen_generator": {
+      "n": 3000,
+      "identity_macro_f1": 0.5094604488009987,
+      "best_macro_f1": 0.5094604488009987,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.9906059832995258
+    },
+    "s3_unseen_language": {
+      "n": 3000,
+      "identity_macro_f1": 0.3744038633261759,
+      "best_macro_f1": 0.3744038633261759,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.9812027606447165
+    },
+    "s4_unseen_domain": {
+      "n": 2999,
+      "identity_macro_f1": 0.516201143547064,
+      "best_macro_f1": 0.516201143547064,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.9910809425087497
+    },
+    "s5_compound": {
+      "n": 3000,
+      "identity_macro_f1": 0.43440888273825845,
+      "best_macro_f1": 0.43440888273825845,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.9885729652797725
+    },
+    "test_s1_in_distribution": {
+      "n": 561,
+      "identity_macro_f1": 0.5473263906511698,
+      "best_macro_f1": 0.5473263906511698,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.9883328196434994
+    },
+    "test_s2_unseen_generator": {
+      "n": 643,
+      "identity_macro_f1": 0.5659822078093706,
+      "best_macro_f1": 0.5659822078093706,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.9898681784299109
+    },
+    "test_s3_unseen_language": {
+      "n": 603,
+      "identity_macro_f1": 0.44643120631975874,
+      "best_macro_f1": 0.44643120631975874,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.9848899855124955
+    },
+    "test_s4_unseen_domain": {
+      "n": 691,
+      "identity_macro_f1": 0.5875350279843652,
+      "best_macro_f1": 0.5875350279843652,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.9934074261177065
+    },
+    "test_s5_compound": {
+      "n": 640,
+      "identity_macro_f1": 0.5128763833244349,
+      "best_macro_f1": 0.5128763833244349,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary_auc": 0.989653647752395
+    }
+  },
+  "best_overall_permutation": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "mean_macro_f1_identity": 0.4925369173486517,
+  "mean_macro_f1_best": 0.4925369173486517
+}

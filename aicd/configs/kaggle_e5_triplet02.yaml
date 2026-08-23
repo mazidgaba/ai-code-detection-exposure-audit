@@ -1,0 +1,4 @@
+# E5: triplet term at double the default weight.
+extends: kaggle.yaml
+modernbert:
+  triplet_weight: 0.2

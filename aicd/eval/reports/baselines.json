@@ -1,0 +1,77 @@
+{
+  "s1_in_distribution": {
+    "n": 31083,
+    "class_counts": [
+      11773,
+      12932,
+      5427,
+      951
+    ],
+    "uniform": 0.21841094870150013,
+    "uniform_simulated": 0.21843921041045866,
+    "stratified": 0.24999999999999997,
+    "stratified_simulated": 0.2499484952819035,
+    "majority": 0.14690446438714075,
+    "branch_a": 0.8976745329305021
+  },
+  "s2_unseen_generator": {
+    "n": 41061,
+    "class_counts": [
+      20508,
+      10895,
+      7207,
+      2451
+    ],
+    "uniform": 0.22331644970413803,
+    "uniform_simulated": 0.22332410829618005,
+    "stratified": 0.25,
+    "stratified_simulated": 0.2500206251026468,
+    "majority": 0.16654485211713688,
+    "branch_a": 0.8685149127043924
+  },
+  "s3_unseen_language": {
+    "n": 56631,
+    "class_counts": [
+      19363,
+      25471,
+      9794,
+      2003
+    ],
+    "uniform": 0.21915378905683933,
+    "uniform_simulated": 0.21915279390799455,
+    "stratified": 0.25,
+    "stratified_simulated": 0.2501483792266579,
+    "majority": 0.15511802392146354,
+    "branch_a": 0.5667177563908041
+  },
+  "s4_unseen_domain": {
+    "n": 56731,
+    "class_counts": [
+      26955,
+      12167,
+      14265,
+      3344
+    ],
+    "uniform": 0.2261534252622868,
+    "uniform_simulated": 0.2262049691048712,
+    "stratified": 0.25,
+    "stratified_simulated": 0.25012787782074963,
+    "majority": 0.1610484429892694,
+    "branch_a": 0.40289540639502763
+  },
+  "s5_compound": {
+    "n": 4168,
+    "class_counts": [
+      1936,
+      1199,
+      878,
+      155
+    ],
+    "uniform": 0.22148897537178955,
+    "uniform_simulated": 0.22167594050254663,
+    "stratified": 0.25,
+    "stratified_simulated": 0.2499540264181169,
+    "majority": 0.15858453473132372,
+    "branch_a": 0.23778553105715772
+  }
+}

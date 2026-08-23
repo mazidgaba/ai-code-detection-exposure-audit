@@ -1,0 +1,1235 @@
+[{"stream_name":"stderr","time":9.36016249,"data":"/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":9.360234916,"data":"  validate(nb)\n"}
+,{"stream_name":"stderr","time":10.635116773,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.635158054,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.63516397,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.635168362,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.438254071,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.438283811,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.438289234,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.438293157,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":14.095075994,"data":"Python 3.12.13\n"}
+,{"stream_name":"stdout","time":20.52784178,"data":"torch 2.10.0+cu128 | CUDA: True\n"}
+,{"stream_name":"stdout","time":20.527896998,"data":"  GPU0: Tesla T4  15.6 GB\n"}
+,{"stream_name":"stdout","time":20.527903865,"data":"  GPU1: Tesla T4  15.6 GB\n"}
+,{"stream_name":"stdout","time":21.057710216,"data":"code -\u003e /kaggle/working/project/aicd\n"}
+,{"stream_name":"stdout","time":25.042715188,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 667.5/667.5 kB 10.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.105325594,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 51.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.136177262,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.2/107.2 kB 6.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.244956606,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 667.5/667.5 kB 10.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.24498414,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 51.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.244991181,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.2/107.2 kB 6.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":31.914032246,"data":"  ok  xgboost        3.2.0\n"}
+,{"stream_name":"stdout","time":31.91406746,"data":"  ok  sklearn        1.6.1\n"}
+,{"stream_name":"stdout","time":56.886355004,"data":"  ok  transformers   5.0.0\n"}
+,{"stream_name":"stdout","time":58.812062539,"data":"  ok  datasets       5.0.0\n"}
+,{"stream_name":"stdout","time":58.812137187,"data":"  ok  yaml           6.0.3\n"}
+,{"stream_name":"stdout","time":59.309378631,"data":"  ok  datasketch     2.0.0\n"}
+,{"stream_name":"stdout","time":59.30943211,"data":"[   0.8 min] deps\n"}
+,{"stream_name":"stdout","time":59.32702951,"data":"\u003e\u003e -m aicd.data.download --config kaggle.yaml --train-shards 1\n"}
+,{"stream_name":"stdout","time":59.836494445,"data":"[fetch] dev (1 file(s), max_rows=None)\n"}
+,{"stream_name":"stdout","time":59.836526734,"data":"  [get ] dev-00000-of-00001.parquet ...\n"}
+,{"stream_name":"stdout","time":60.038641148,"data":"[fetch] dev (1 file(s), max_rows=None)\n"}
+,{"stream_name":"stdout","time":60.038682971,"data":"  [get ] dev-00000-of-00001.parquet ...\n"}
+,{"stream_name":"stdout","time":60.807503265,"data":"\r              1/65 MB\r              2/65 MB\r              3/65 MB\r              4/65 MB\r              5/65 MB\r              6/65 MB\r              7/65 MB\r              8/65 MB\r              9/65 MB\r             10/65 MB\r             12/65 MB\r             13/65 MB\r             14/65 MB\r             15/65 MB\r             16/65 MB\r             17/65 MB\r             18/65 MB\r             19/65 MB\r             20/65 MB\r              1/65 MB\r              2/65 MB\r              3/65 MB\r              4/65 MB\r              5/65 MB\r              6/65 MB\r              7/65 MB\r              8/65 MB\r              9/65 MB\r             10/65 MB\r             12/65 MB\r             13/65 MB\r             14/65 MB\r             15/65 MB\r             16/65 MB\r             17/65 MB\r             18/65 MB\r             19/65 MB\r             21/65 MB\r             22/65 MB\r             23/65 MB\r             24/65 MB\r             25/65 MB\r             26/65 MB\r             27/65 MB\r             28/65 MB\r             29/65 MB\r             30/65 MB\r             31/65 MB\r             33/65 MB\r             34/65 MB\r             35/65 MB\r             36/65 MB\r             37/65 MB\r             38/65 MB\r             39/65 MB\r             40/65 MB\r             41/65 MB\r             42/65 MB\r             43/65 MB\r             44/65 MB\r             45/65 MB\r             46/65 MB\r             47/65 MB\r             48/65 MB\r             49/65 MB\r             50/65 MB\r             51/65 MB\r             52/65 MB\r             53/65 MB\r             55/65 MB\r             20/65 MB\r             21/65 MB\r             22/65 MB\r             23/65 MB\r             24/65 MB\r             25/65 MB\r             26/65 MB\r             27/65 MB\r             28/65 MB\r             29/65 MB\r             30/65 MB\r             31/65 MB\r             33/65 MB\r             34/65 MB\r             35/65 MB\r             36/65 MB\r             37/65 MB\r             38/65 MB\r             39/65 MB\r             40/65 MB\r             41/65 MB\r             42/65 MB\r             43/65 MB\r             44/65 MB\r             45/65 MB\r             46/65 MB\r             47/65 MB\r             48/65 MB\r             49/65 MB\r             50/65 MB\r             51/65 MB\r             52/65 MB\r             53/65 MB\r             55/65 MB\r             56/65 MB\r             57/65 MB\r             58/65 MB\r             59/65 MB\r             60/65 MB\r             61/65 MB\r             62/65 MB\r             63/65 MB\r             64/65 MB\r             65/65 MB\n"}
+,{"stream_name":"stdout","time":60.974980265,"data":"\r             56/65 MB\r             57/65 MB\r             58/65 MB\r             59/65 MB\r             60/65 MB\r             61/65 MB\r             62/65 MB\r             63/65 MB\r             64/65 MB\r             65/65 MB\n"}
+,{"stream_name":"stdout","time":62.584101243,"data":"[done] raw_dev.parquet: 105,824 rows, 63.4 MB\n"}
+,{"stream_name":"stdout","time":62.584997219,"data":"[fetch] test (1 file(s), max_rows=None)\n"}
+,{"stream_name":"stdout","time":62.58502634,"data":"  [get ] test-00000-of-00001.parquet ...\n"}
+,{"stream_name":"stdout","time":62.78624871,"data":"[done] raw_dev.parquet: 105,824 rows, 63.4 MB\n"}
+,{"stream_name":"stdout","time":62.786299604,"data":"[fetch] test (1 file(s), max_rows=None)\n"}
+,{"stream_name":"stdout","time":62.786305162,"data":"  [get ] test-00000-of-00001.parquet ...\n"}
+,{"stream_name":"stdout","time":63.513315523,"data":"\r              1/65 MB\r              2/65 MB\r              3/65 MB\r              4/65 MB\r              5/65 MB\r              6/65 MB\r              7/65 MB\r              8/65 MB\r              9/65 MB\r             10/65 MB\r             12/65 MB\r             13/65 MB\r             14/65 MB\r             15/65 MB\r             16/65 MB\r             17/65 MB\r             18/65 MB\r             19/65 MB\r             20/65 MB\r             21/65 MB\r             22/65 MB\r              1/65 MB\r              2/65 MB\r              3/65 MB\r              4/65 MB\r              5/65 MB\r              6/65 MB\r              7/65 MB\r              8/65 MB\r              9/65 MB\r             10/65 MB\r             12/65 MB\r             13/65 MB\r             14/65 MB\r             15/65 MB\r             16/65 MB\r             17/65 MB\r             18/65 MB\r             19/65 MB\r             20/65 MB\r             21/65 MB\r             22/65 MB\r             23/65 MB\r             24/65 MB\r             25/65 MB\r             26/65 MB\r             27/65 MB\r             28/65 MB\r             29/65 MB\r             30/65 MB\r             31/65 MB\r             33/65 MB\r             34/65 MB\r             35/65 MB\r             36/65 MB\r             37/65 MB\r             38/65 MB\r             39/65 MB\r             40/65 MB\r             41/65 MB\r             42/65 MB\r             43/65 MB\r             44/65 MB\r             45/65 MB\r             46/65 MB\r             47/65 MB\r             48/65 MB\r             49/65 MB\r             50/65 MB\r             51/65 MB\r             52/65 MB\r             53/65 MB\r             55/65 MB\r             56/65 MB\r             57/65 MB\r             23/65 MB\r             24/65 MB\r             25/65 MB\r             26/65 MB\r             27/65 MB\r             28/65 MB\r             29/65 MB\r             30/65 MB\r             31/65 MB\r             33/65 MB\r             34/65 MB\r             35/65 MB\r             36/65 MB\r             37/65 MB\r             38/65 MB\r             39/65 MB\r             40/65 MB\r             41/65 MB\r             42/65 MB\r             43/65 MB\r             44/65 MB\r             45/65 MB\r             46/65 MB\r             47/65 MB\r             48/65 MB\r             49/65 MB\r             50/65 MB\r             51/65 MB\r             52/65 MB\r             53/65 MB\r             55/65 MB\r             56/65 MB\r             58/65 MB\r             59/65 MB\r             60/65 MB\r             61/65 MB\r             62/65 MB\r             63/65 MB\r             64/65 MB\r             65/65 MB\n"}
+,{"stream_name":"stdout","time":63.682496488,"data":"\r             57/65 MB\r             58/65 MB\r             59/65 MB\r             60/65 MB\r             61/65 MB\r             62/65 MB\r             63/65 MB\r             64/65 MB\r             65/65 MB\n"}
+,{"stream_name":"stdout","time":64.855949955,"data":"[done] raw_test.parquet: 105,826 rows, 63.5 MB\n"}
+,{"stream_name":"stdout","time":64.855978112,"data":"[fetch] train (1 file(s), max_rows=None)\n"}
+,{"stream_name":"stdout","time":64.856520092,"data":"  [get ] train-00000-of-00003.parquet ...\n"}
+,{"stream_name":"stdout","time":65.058235326,"data":"[done] raw_test.parquet: 105,826 rows, 63.5 MB\n"}
+,{"stream_name":"stdout","time":65.058269645,"data":"[fetch] train (1 file(s), max_rows=None)\n"}
+,{"stream_name":"stdout","time":65.058289742,"data":"  [get ] train-00000-of-00003.parquet ...\n"}
+,{"stream_name":"stdout","time":66.498943221,"data":"\r              1/167 MB\r              2/167 MB\r              3/167 MB\r              4/167 MB\r              5/167 MB\r              6/167 MB\r              7/167 MB\r              8/167 MB\r              9/167 MB\r             10/167 MB\r             12/167 MB\r             13/167 MB\r             14/167 MB\r             15/167 MB\r             16/167 MB\r             17/167 MB\r             18/167 MB\r             19/167 MB\r             20/167 MB\r             21/167 MB\r             22/167 MB\r             23/167 MB\r             24/167 MB\r             25/167 MB\r             26/167 MB\r             27/167 MB\r             28/167 MB\r              1/167 MB\r              2/167 MB\r              3/167 MB\r              4/167 MB\r              5/167 MB\r              6/167 MB\r              7/167 MB\r              8/167 MB\r              9/167 MB\r             10/167 MB\r             12/167 MB\r             13/167 MB\r             14/167 MB\r             15/167 MB\r             16/167 MB\r             17/167 MB\r             18/167 MB\r             19/167 MB\r             20/167 MB\r             21/167 MB\r             22/167 MB\r             23/167 MB\r             24/167 MB\r             25/167 MB\r             26/167 MB\r             27/167 MB\r             28/167 MB\r             29/167 MB\r             30/167 MB\r             31/167 MB\r             33/167 MB\r             34/167 MB\r             35/167 MB\r             36/167 MB\r             37/167 MB\r             38/167 MB\r             39/167 MB\r             40/167 MB\r             41/167 MB\r             42/167 MB\r             43/167 MB\r             44/167 MB\r             45/167 MB\r             46/167 MB\r             47/167 MB\r             48/167 MB\r             49/167 MB\r             50/167 MB\r             51/167 MB\r             52/167 MB\r             53/167 MB\r             55/167 MB\r             56/167 MB\r             57/167 MB\r             58/167 MB\r             59/167 MB\r             60/167 MB\r             29/167 MB\r             30/167 MB\r             31/167 MB\r             33/167 MB\r             34/167 MB\r             35/167 MB\r             36/167 MB\r             37/167 MB\r             38/167 MB\r             39/167 MB\r             40/167 MB\r             41/167 MB\r             42/167 MB\r             43/167 MB\r             44/167 MB\r             45/167 MB\r             46/167 MB\r             47/167 MB\r             48/167 MB\r             49/167 MB\r             50/167 MB\r             51/167 MB\r             52/167 MB\r             53/167 MB\r             55/167 MB\r             56/167 MB\r             57/167 MB\r             58/167 MB\r             59/167 MB\r             60/167 MB\r             61/167 MB\r             62/167 MB\r             63/167 MB\r             64/167 MB\r             65/167 MB\r             66/167 MB\r             67/167 MB\r             68/167 MB\r             69/167 MB\r             70/167 MB\r             71/167 MB\r             72/167 MB\r             73/167 MB\r             74/167 MB\r             75/167 MB\r             77/167 MB\r             78/167 MB\r             79/167 MB\r             80/167 MB\r             81/167 MB\r             82/167 MB\r             83/167 MB\r             84/167 MB\r             85/167 MB\r             86/167 MB\r             87/167 MB\r             88/167 MB\r             89/167 MB\r             90/167 MB\r             91/167 MB\r             92/167 MB\r             93/167 MB\r             61/167 MB\r             62/167 MB\r             63/167 MB\r             64/167 MB\r             65/167 MB\r             66/167 MB\r             67/167 MB\r             68/167 MB\r             69/167 MB\r             70/167 MB\r             71/167 MB\r             72/167 MB\r             73/167 MB\r             74/167 MB\r             75/167 MB\r             77/167 MB\r             78/167 MB\r             79/167 MB\r             80/167 MB\r             81/167 MB\r             82/167 MB\r             83/167 MB\r             84/167 MB\r             85/167 MB\r             86/167 MB\r             87/167 MB\r             88/167 MB\r             89/167 MB\r             90/167 MB\r             91/167 MB\r             92/167 MB\r             93/167 MB\r             94/167 MB\r             95/167 MB\r             96/167 MB\r             98/167 MB\r             99/167 MB\r            100/167 MB\r            101/167 MB\r            102/167 MB\r            103/167 MB\r            104/167 MB\r            105/167 MB\r            106/167 MB\r            107/167 MB\r            108/167 MB\r            109/167 MB\r            110/167 MB\r            111/167 MB\r            112/167 MB\r            113/167 MB\r            114/167 MB\r            115/167 MB\r            116/167 MB\r            117/167 MB\r            118/167 MB\r            120/167 MB\r            121/167 MB\r            122/167 MB\r            123/167 MB\r            124/167 MB\r            125/167 MB\r            126/167 MB\r            127/167 MB\r            128/167 MB\r            129/167 MB\r             94/167 MB\r             95/167 MB\r             96/167 MB\r             98/167 MB\r             99/167 MB\r            100/167 MB\r            101/167 MB\r            102/167 MB\r            103/167 MB\r            104/167 MB\r            105/167 MB\r            106/167 MB\r            107/167 MB\r            108/167 MB\r            109/167 MB\r            110/167 MB\r            111/167 MB\r            112/167 MB\r            113/167 MB\r            114/167 MB\r            115/167 MB\r            116/167 MB\r            117/167 MB\r            118/167 MB\r            120/167 MB\r            121/167 MB\r            122/167 MB\r            123/167 MB\r            124/167 MB\r            125/167 MB\r            126/167 MB\r            127/167 MB\r            128/167 MB\r            129/167 MB\r            130/167 MB\r            131/167 MB\r            132/167 MB\r            133/167 MB\r            134/167 MB\r            135/167 MB\r            136/167 MB\r            137/167 MB\r            138/167 MB\r            139/167 MB\r            141/167 MB\r            142/167 MB\r            143/167 MB\r            144/167 MB\r            145/167 MB\r            146/167 MB\r            147/167 MB\r            148/167 MB\r            149/167 MB\r            150/167 MB\r            151/167 MB\r            152/167 MB\r            153/167 MB\r            154/167 MB\r            155/167 MB\r            156/167 MB\r            157/167 MB\r            158/167 MB\r            159/167 MB\r            160/167 MB\r            161/167 MB\r            163/167 MB\r            130/167 MB\r            131/167 MB\r            132/167 MB\r            133/167 MB\r            134/167 MB\r            135/167 MB\r            136/167 MB\r            137/167 MB\r            138/167 MB\r            139/167 MB\r            141/167 MB\r            142/167 MB\r            143/167 MB\r            144/167 MB\r            145/167 MB\r            146/167 MB\r            147/167 MB\r            148/167 MB\r            149/167 MB\r            150/167 MB\r            151/167 MB\r            152/167 MB\r            153/167 MB\r            154/167 MB\r            155/167 MB\r            156/167 MB\r            157/167 MB\r            158/167 MB\r            159/167 MB\r            160/167 MB\r            161/167 MB\r            163/167 MB\r            164/167 MB\r            165/167 MB\r            166/167 MB\r            167/167 MB\n"}
+,{"stream_name":"stdout","time":66.687054518,"data":"\r            164/167 MB\r            165/167 MB\r            166/167 MB\r            167/167 MB\n"}
+,{"stream_name":"stdout","time":69.764949766,"data":"[done] raw_train.parquet: 282,200 rows, 162.8 MB\n"}
+,{"stream_name":"stdout","time":69.9673273,"data":"[done] raw_train.parquet: 282,200 rows, 162.8 MB\n"}
+,{"stream_name":"stdout","time":69.986896854,"data":"[   1.0 min] downloaded 1 shard\n"}
+,{"stream_name":"stdout","time":69.987782341,"data":"\u003e\u003e -m aicd.data.normalize --config kaggle.yaml\n"}
+,{"stream_name":"stdout","time":70.475633518,"data":"[normalize] raw_train.parquet\n"}
+,{"stream_name":"stdout","time":70.678012671,"data":"[normalize] raw_train.parquet\n"}
+,{"stream_name":"stdout","time":93.452238096,"data":"[normalize] raw_dev.parquet\n"}
+,{"stream_name":"stdout","time":93.662718561,"data":"[normalize] raw_dev.parquet\n"}
+,{"stream_name":"stdout","time":102.768603544,"data":"[normalize] raw_test.parquet\n"}
+,{"stream_name":"stdout","time":102.970907727,"data":"[normalize] raw_test.parquet\n"}
+,{"stream_name":"stdout","time":115.533971187,"data":"\n"}
+,{"stream_name":"stdout","time":115.534013623,"data":"[done] normalized.parquet: 493,850 rows\n"}
+,{"stream_name":"stdout","time":115.534040773,"data":"\n"}
+,{"stream_name":"stdout","time":115.53404662,"data":"label distribution:\n"}
+,{"stream_name":"stdout","time":115.546380893,"data":"label\n"}
+,{"stream_name":"stdout","time":115.546412722,"data":"0    204416\n"}
+,{"stream_name":"stdout","time":115.546419395,"data":"1    171490\n"}
+,{"stream_name":"stdout","time":115.546424305,"data":"2     85665\n"}
+,{"stream_name":"stdout","time":115.546428857,"data":"3     32279\n"}
+,{"stream_name":"stdout","time":115.546433317,"data":"\n"}
+,{"stream_name":"stdout","time":115.546438439,"data":"language:\n"}
+,{"stream_name":"stdout","time":115.573445777,"data":"language\n"}
+,{"stream_name":"stdout","time":115.57346792,"data":"python        169673\n"}
+,{"stream_name":"stdout","time":115.573476236,"data":"java          119249\n"}
+,{"stream_name":"stdout","time":115.5734815,"data":"cpp            53569\n"}
+,{"stream_name":"stdout","time":115.57349015,"data":"csharp         49782\n"}
+,{"stream_name":"stdout","time":115.573493514,"data":"javascript     44185\n"}
+,{"stream_name":"stdout","time":115.573496789,"data":"go             31383\n"}
+,{"stream_name":"stdout","time":115.573500916,"data":"c              22283\n"}
+,{"stream_name":"stdout","time":115.573505703,"data":"php             2230\n"}
+,{"stream_name":"stdout","time":115.573530421,"data":"rust            1496\n"}
+,{"stream_name":"stdout","time":115.573536016,"data":"\n"}
+,{"stream_name":"stdout","time":115.573541307,"data":"domain:\n"}
+,{"stream_name":"stdout","time":115.601708865,"data":"domain\n"}
+,{"stream_name":"stdout","time":115.60172812,"data":"general_deployed    378431\n"}
+,{"stream_name":"stdout","time":115.601734529,"data":"algorithmic         114810\n"}
+,{"stream_name":"stdout","time":115.601739832,"data":"research               609\n"}
+,{"stream_name":"stdout","time":115.601744821,"data":"\n"}
+,{"stream_name":"stdout","time":115.601750035,"data":"model_family:\n"}
+,{"stream_name":"stdout","time":115.650857649,"data":"model_family\n"}
+,{"stream_name":"stdout","time":115.650879413,"data":"human          204416\n"}
+,{"stream_name":"stdout","time":115.650883417,"data":"gpt-4o-mini     71906\n"}
+,{"stream_name":"stdout","time":115.650886693,"data":"qwen            58413\n"}
+,{"stream_name":"stdout","time":115.650890001,"data":"microsoft       31873\n"}
+,{"stream_name":"stdout","time":115.65091374,"data":"meta-llama      29570\n"}
+,{"stream_name":"stdout","time":115.650918884,"data":"01-ai           24760\n"}
+,{"stream_name":"stdout","time":115.65092430199999,"data":"deepseek-ai     20326\n"}
+,{"stream_name":"stdout","time":115.650943723,"data":"gpt-4o          13901\n"}
+,{"stream_name":"stdout","time":115.650950415,"data":"ibm-granite     13095\n"}
+,{"stream_name":"stdout","time":115.650954967,"data":"codellama       12565\n"}
+,{"stream_name":"stdout","time":115.650959441,"data":"google           7416\n"}
+,{"stream_name":"stdout","time":115.650965572,"data":"bigcode          3313\n"}
+,{"stream_name":"stdout","time":115.650992162,"data":"mistralai        2296\n"}
+,{"stream_name":"stdout","time":115.73634466,"data":"\n"}
+,{"stream_name":"stdout","time":115.736373806,"data":"[done] normalized.parquet: 493,850 rows\n"}
+,{"stream_name":"stdout","time":115.736379195,"data":"\n"}
+,{"stream_name":"stdout","time":115.736399464,"data":"label distribution:\n"}
+,{"stream_name":"stdout","time":115.736403915,"data":"label\n"}
+,{"stream_name":"stdout","time":115.736408245,"data":"0    204416\n"}
+,{"stream_name":"stdout","time":115.736412486,"data":"1    171490\n"}
+,{"stream_name":"stdout","time":115.736416621,"data":"2     85665\n"}
+,{"stream_name":"stdout","time":115.736420981,"data":"3     32279\n"}
+,{"stream_name":"stdout","time":115.736425223,"data":"\n"}
+,{"stream_name":"stdout","time":115.736429255,"data":"language:\n"}
+,{"stream_name":"stdout","time":115.736433682,"data":"language\n"}
+,{"stream_name":"stdout","time":115.73643789,"data":"python        169673\n"}
+,{"stream_name":"stdout","time":115.736442117,"data":"java          119249\n"}
+,{"stream_name":"stdout","time":115.736446283,"data":"cpp            53569\n"}
+,{"stream_name":"stdout","time":115.736450448,"data":"csharp         49782\n"}
+,{"stream_name":"stdout","time":115.7364547,"data":"javascript     44185\n"}
+,{"stream_name":"stdout","time":115.736459078,"data":"go             31383\n"}
+,{"stream_name":"stdout","time":115.736463255,"data":"c              22283\n"}
+,{"stream_name":"stdout","time":115.736467433,"data":"php             2230\n"}
+,{"stream_name":"stdout","time":115.736471615,"data":"rust            1496\n"}
+,{"stream_name":"stdout","time":115.736475849,"data":"\n"}
+,{"stream_name":"stdout","time":115.736479901,"data":"domain:\n"}
+,{"stream_name":"stdout","time":115.736484076,"data":"domain\n"}
+,{"stream_name":"stdout","time":115.73648826,"data":"general_deployed    378431\n"}
+,{"stream_name":"stdout","time":115.736492477,"data":"algorithmic         114810\n"}
+,{"stream_name":"stdout","time":115.73649669,"data":"research               609\n"}
+,{"stream_name":"stdout","time":115.736500897,"data":"\n"}
+,{"stream_name":"stdout","time":115.736504953,"data":"model_family:\n"}
+,{"stream_name":"stdout","time":115.736509173,"data":"model_family\n"}
+,{"stream_name":"stdout","time":115.736530229,"data":"human          204416\n"}
+,{"stream_name":"stdout","time":115.736534787,"data":"gpt-4o-mini     71906\n"}
+,{"stream_name":"stdout","time":115.736546536,"data":"qwen            58413\n"}
+,{"stream_name":"stdout","time":115.736551032,"data":"microsoft       31873\n"}
+,{"stream_name":"stdout","time":115.736555505,"data":"meta-llama      29570\n"}
+,{"stream_name":"stdout","time":115.736559967,"data":"01-ai           24760\n"}
+,{"stream_name":"stdout","time":115.736564389,"data":"deepseek-ai     20326\n"}
+,{"stream_name":"stdout","time":115.736568855,"data":"gpt-4o          13901\n"}
+,{"stream_name":"stdout","time":115.736573343,"data":"ibm-granite     13095\n"}
+,{"stream_name":"stdout","time":115.736577802,"data":"codellama       12565\n"}
+,{"stream_name":"stdout","time":115.736582119,"data":"google           7416\n"}
+,{"stream_name":"stdout","time":115.736586568,"data":"bigcode          3313\n"}
+,{"stream_name":"stdout","time":115.736591105,"data":"mistralai        2296\n"}
+,{"stream_name":"stdout","time":115.950570041,"data":"[   1.7 min] normalize\n"}
+,{"stream_name":"stdout","time":115.951485789,"data":"\u003e\u003e -m aicd.data.filter --config kaggle.yaml\n"}
+,{"stream_name":"stdout","time":120.248000467,"data":"[filter] starting from 493,850 rows\n"}
+,{"stream_name":"stdout","time":120.248038754,"data":"\n"}
+,{"stream_name":"stdout","time":120.450408746,"data":"[filter] starting from 493,850 rows\n"}
+,{"stream_name":"stdout","time":120.450447504,"data":"\n"}
+,{"stream_name":"stdout","time":120.584509701,"data":"  min_chars         493,850 -\u003e  493,789  (-61)\n"}
+,{"stream_name":"stdout","time":120.786592421,"data":"  min_chars         493,850 -\u003e  493,789  (-61)\n"}
+,{"stream_name":"stdout","time":122.011859379,"data":"    parse 0/493,789\n"}
+,{"stream_name":"stdout","time":122.214230855,"data":"    parse 0/493,789\n"}
+,{"stream_name":"stdout","time":128.583386057,"data":"    parse 20,000/493,789\n"}
+,{"stream_name":"stdout","time":128.789339288,"data":"    parse 20,000/493,789\n"}
+,{"stream_name":"stdout","time":133.058484084,"data":"    parse 40,000/493,789\n"}
+,{"stream_name":"stdout","time":133.260684832,"data":"    parse 40,000/493,789\n"}
+,{"stream_name":"stdout","time":137.64502572,"data":"    parse 60,000/493,789\n"}
+,{"stream_name":"stdout","time":137.847503036,"data":"    parse 60,000/493,789\n"}
+,{"stream_name":"stdout","time":142.127464118,"data":"    parse 80,000/493,789\n"}
+,{"stream_name":"stdout","time":142.3295377,"data":"    parse 80,000/493,789\n"}
+,{"stream_name":"stdout","time":146.581854032,"data":"    parse 100,000/493,789\n"}
+,{"stream_name":"stdout","time":146.784995422,"data":"    parse 100,000/493,789\n"}
+,{"stream_name":"stdout","time":151.115910028,"data":"    parse 120,000/493,789\n"}
+,{"stream_name":"stdout","time":151.318328279,"data":"    parse 120,000/493,789\n"}
+,{"stream_name":"stdout","time":155.720481491,"data":"    parse 140,000/493,789\n"}
+,{"stream_name":"stdout","time":155.922737319,"data":"    parse 140,000/493,789\n"}
+,{"stream_name":"stdout","time":160.175617902,"data":"    parse 160,000/493,789\n"}
+,{"stream_name":"stdout","time":160.381392375,"data":"    parse 160,000/493,789\n"}
+,{"stream_name":"stdout","time":164.672390405,"data":"    parse 180,000/493,789\n"}
+,{"stream_name":"stdout","time":164.874657028,"data":"    parse 180,000/493,789\n"}
+,{"stream_name":"stdout","time":169.235506909,"data":"    parse 200,000/493,789\n"}
+,{"stream_name":"stdout","time":169.43772858,"data":"    parse 200,000/493,789\n"}
+,{"stream_name":"stdout","time":173.741309021,"data":"    parse 220,000/493,789\n"}
+,{"stream_name":"stdout","time":173.943696897,"data":"    parse 220,000/493,789\n"}
+,{"stream_name":"stdout","time":178.253190955,"data":"    parse 240,000/493,789\n"}
+,{"stream_name":"stdout","time":178.455679739,"data":"    parse 240,000/493,789\n"}
+,{"stream_name":"stdout","time":182.709508917,"data":"    parse 260,000/493,789\n"}
+,{"stream_name":"stdout","time":182.911908304,"data":"    parse 260,000/493,789\n"}
+,{"stream_name":"stdout","time":187.168539102,"data":"    parse 280,000/493,789\n"}
+,{"stream_name":"stdout","time":187.371050425,"data":"    parse 280,000/493,789\n"}
+,{"stream_name":"stdout","time":191.665799872,"data":"    parse 300,000/493,789\n"}
+,{"stream_name":"stdout","time":191.875410685,"data":"    parse 300,000/493,789\n"}
+,{"stream_name":"stdout","time":196.097726645,"data":"    parse 320,000/493,789\n"}
+,{"stream_name":"stdout","time":196.300254717,"data":"    parse 320,000/493,789\n"}
+,{"stream_name":"stdout","time":200.641077542,"data":"    parse 340,000/493,789\n"}
+,{"stream_name":"stdout","time":200.843672691,"data":"    parse 340,000/493,789\n"}
+,{"stream_name":"stdout","time":206.075338875,"data":"    parse 360,000/493,789\n"}
+,{"stream_name":"stdout","time":206.277406722,"data":"    parse 360,000/493,789\n"}
+,{"stream_name":"stdout","time":214.794861908,"data":"    parse 380,000/493,789\n"}
+,{"stream_name":"stdout","time":214.997499747,"data":"    parse 380,000/493,789\n"}
+,{"stream_name":"stdout","time":221.984151673,"data":"    parse 400,000/493,789\n"}
+,{"stream_name":"stdout","time":222.194180803,"data":"    parse 400,000/493,789\n"}
+,{"stream_name":"stdout","time":226.470680811,"data":"    parse 420,000/493,789\n"}
+,{"stream_name":"stdout","time":226.673151392,"data":"    parse 420,000/493,789\n"}
+,{"stream_name":"stdout","time":230.985851493,"data":"    parse 440,000/493,789\n"}
+,{"stream_name":"stdout","time":231.188315956,"data":"    parse 440,000/493,789\n"}
+,{"stream_name":"stdout","time":235.380003873,"data":"    parse 460,000/493,789\n"}
+,{"stream_name":"stdout","time":235.582639128,"data":"    parse 460,000/493,789\n"}
+,{"stream_name":"stdout","time":241.900595086,"data":"    parse 480,000/493,789\n"}
+,{"stream_name":"stdout","time":242.10306826,"data":"    parse 480,000/493,789\n"}
+,{"stream_name":"stdout","time":250.206347777,"data":"  parseable         493,789 -\u003e  463,765  (-30,024)\n"}
+,{"stream_name":"stdout","time":250.409134458,"data":"  parseable         493,789 -\u003e  463,765  (-30,024)\n"}
+,{"stream_name":"stdout","time":288.143534194,"data":"  length_pct        463,765 -\u003e  418,049  (-45,716)\n"}
+,{"stream_name":"stdout","time":288.355400016,"data":"  length_pct        463,765 -\u003e  418,049  (-45,716)\n"}
+,{"stream_name":"stdout","time":290.346558247,"data":"    exact-dup pass removed 404\n"}
+,{"stream_name":"stdout","time":290.352415999,"data":"    minhash 0/417,645\n"}
+,{"stream_name":"stdout","time":290.549186523,"data":"    exact-dup pass removed 404\n"}
+,{"stream_name":"stdout","time":290.549218129,"data":"    minhash 0/417,645\n"}
+,{"stream_name":"stdout","time":300.917431319,"data":"    minhash 20,000/417,645\n"}
+,{"stream_name":"stdout","time":301.120432508,"data":"    minhash 20,000/417,645\n"}
+,{"stream_name":"stdout","time":311.568372716,"data":"    minhash 40,000/417,645\n"}
+,{"stream_name":"stdout","time":311.770565959,"data":"    minhash 40,000/417,645\n"}
+,{"stream_name":"stdout","time":322.125510942,"data":"    minhash 60,000/417,645\n"}
+,{"stream_name":"stdout","time":322.332399358,"data":"    minhash 60,000/417,645\n"}
+,{"stream_name":"stdout","time":332.867576556,"data":"    minhash 80,000/417,645\n"}
+,{"stream_name":"stdout","time":333.069910016,"data":"    minhash 80,000/417,645\n"}
+,{"stream_name":"stdout","time":343.568532593,"data":"    minhash 100,000/417,645\n"}
+,{"stream_name":"stdout","time":343.770883624,"data":"    minhash 100,000/417,645\n"}
+,{"stream_name":"stdout","time":354.030240256,"data":"    minhash 120,000/417,645\n"}
+,{"stream_name":"stdout","time":354.236997142,"data":"    minhash 120,000/417,645\n"}
+,{"stream_name":"stdout","time":364.776533068,"data":"    minhash 140,000/417,645\n"}
+,{"stream_name":"stdout","time":364.978833262,"data":"    minhash 140,000/417,645\n"}
+,{"stream_name":"stdout","time":375.292277391,"data":"    minhash 160,000/417,645\n"}
+,{"stream_name":"stdout","time":375.494448215,"data":"    minhash 160,000/417,645\n"}
+,{"stream_name":"stdout","time":386.069982217,"data":"    minhash 180,000/417,645\n"}
+,{"stream_name":"stdout","time":386.277198127,"data":"    minhash 180,000/417,645\n"}
+,{"stream_name":"stdout","time":396.496614625,"data":"    minhash 200,000/417,645\n"}
+,{"stream_name":"stdout","time":396.698966837,"data":"    minhash 200,000/417,645\n"}
+,{"stream_name":"stdout","time":407.233648874,"data":"    minhash 220,000/417,645\n"}
+,{"stream_name":"stdout","time":407.435935037,"data":"    minhash 220,000/417,645\n"}
+,{"stream_name":"stdout","time":417.671297043,"data":"    minhash 240,000/417,645\n"}
+,{"stream_name":"stdout","time":417.878317628,"data":"    minhash 240,000/417,645\n"}
+,{"stream_name":"stdout","time":428.384892461,"data":"    minhash 260,000/417,645\n"}
+,{"stream_name":"stdout","time":428.587282388,"data":"    minhash 260,000/417,645\n"}
+,{"stream_name":"stdout","time":438.976164605,"data":"    minhash 280,000/417,645\n"}
+,{"stream_name":"stdout","time":439.178553939,"data":"    minhash 280,000/417,645\n"}
+,{"stream_name":"stdout","time":449.892048986,"data":"    minhash 300,000/417,645\n"}
+,{"stream_name":"stdout","time":450.099576548,"data":"    minhash 300,000/417,645\n"}
+,{"stream_name":"stdout","time":460.372178536,"data":"    minhash 320,000/417,645\n"}
+,{"stream_name":"stdout","time":460.574463053,"data":"    minhash 320,000/417,645\n"}
+,{"stream_name":"stdout","time":470.861686914,"data":"    minhash 340,000/417,645\n"}
+,{"stream_name":"stdout","time":471.063988403,"data":"    minhash 340,000/417,645\n"}
+,{"stream_name":"stdout","time":482.07030591,"data":"    minhash 360,000/417,645\n"}
+,{"stream_name":"stdout","time":482.277430943,"data":"    minhash 360,000/417,645\n"}
+,{"stream_name":"stdout","time":492.494588343,"data":"    minhash 380,000/417,645\n"}
+,{"stream_name":"stdout","time":492.696990241,"data":"    minhash 380,000/417,645\n"}
+,{"stream_name":"stdout","time":503.009861338,"data":"    minhash 400,000/417,645\n"}
+,{"stream_name":"stdout","time":503.2122106,"data":"    minhash 400,000/417,645\n"}
+,{"stream_name":"stdout","time":512.530281847,"data":"  minhash_dedup     418,049 -\u003e  417,431  (-618)\n"}
+,{"stream_name":"stdout","time":512.53034863,"data":"\n"}
+,{"stream_name":"stdout","time":512.53035539,"data":"filter log\n"}
+,{"stream_name":"stdout","time":512.530360128,"data":"step                before     after   removed     pct\n"}
+,{"stream_name":"stdout","time":512.530364627,"data":"min_chars          493,850   493,789        61    0.0%\n"}
+,{"stream_name":"stdout","time":512.53036901,"data":"parseable          493,789   463,765    30,024    6.1%\n"}
+,{"stream_name":"stdout","time":512.530373315,"data":"length_pct         463,765   418,049    45,716    9.9%\n"}
+,{"stream_name":"stdout","time":512.530377666,"data":"minhash_dedup      418,049   417,431       618    0.1%\n"}
+,{"stream_name":"stdout","time":512.747068141,"data":"  minhash_dedup     418,049 -\u003e  417,431  (-618)\n"}
+,{"stream_name":"stdout","time":512.747109803,"data":"\n"}
+,{"stream_name":"stdout","time":512.747130264,"data":"filter log\n"}
+,{"stream_name":"stdout","time":512.747135521,"data":"step                before     after   removed     pct\n"}
+,{"stream_name":"stdout","time":512.747140795,"data":"min_chars          493,850   493,789        61    0.0%\n"}
+,{"stream_name":"stdout","time":512.747145823,"data":"parseable          493,789   463,765    30,024    6.1%\n"}
+,{"stream_name":"stdout","time":512.747150164,"data":"length_pct         463,765   418,049    45,716    9.9%\n"}
+,{"stream_name":"stdout","time":512.747154477,"data":"minhash_dedup      418,049   417,431       618    0.1%\n"}
+,{"stream_name":"stdout","time":515.680490324,"data":"\n"}
+,{"stream_name":"stdout","time":515.680525958,"data":"[done] filtered.parquet: 417,431 rows\n"}
+,{"stream_name":"stdout","time":515.882625956,"data":"\n"}
+,{"stream_name":"stdout","time":515.882673137,"data":"[done] filtered.parquet: 417,431 rows\n"}
+,{"stream_name":"stdout","time":518.849730929,"data":"[   8.4 min] filter\n"}
+,{"stream_name":"stdout","time":518.850974298,"data":"\u003e\u003e -m aicd.data.splits --config kaggle.yaml\n"}
+,{"stream_name":"stdout","time":522.51635758,"data":"[splits] assigning over 417,431 rows\n"}
+,{"stream_name":"stdout","time":522.516583034,"data":"  holdout families : ['microsoft', 'mistralai']\n"}
+,{"stream_name":"stdout","time":522.516601098,"data":"  holdout languages: ['go', 'javascript']\n"}
+,{"stream_name":"stdout","time":522.516606425,"data":"  holdout sources  : ['THEVAULT_CLASS', 'THEVAULT_INLINE', 'ARXIV']\n"}
+,{"stream_name":"stdout","time":522.719044279,"data":"[splits] assigning over 417,431 rows\n"}
+,{"stream_name":"stdout","time":522.719081909,"data":"  holdout families : ['microsoft', 'mistralai']\n"}
+,{"stream_name":"stdout","time":522.719086163,"data":"  holdout languages: ['go', 'javascript']\n"}
+,{"stream_name":"stdout","time":522.719089274,"data":"  holdout sources  : ['THEVAULT_CLASS', 'THEVAULT_INLINE', 'ARXIV']\n"}
+,{"stream_name":"stdout","time":523.194906935,"data":"  [dedup] dropped 40 rows from s2_unseen_generator sharing a problem_id with train\n"}
+,{"stream_name":"stdout","time":523.363631072,"data":"  [dedup] dropped 1 rows from s3_unseen_language sharing a problem_id with train\n"}
+,{"stream_name":"stdout","time":523.397406223,"data":"  [dedup] dropped 40 rows from s2_unseen_generator sharing a problem_id with train\n"}
+,{"stream_name":"stdout","time":523.39744127,"data":"  [dedup] dropped 1 rows from s3_unseen_language sharing a problem_id with train\n"}
+,{"stream_name":"stdout","time":523.813985015,"data":"\n"}
+,{"stream_name":"stdout","time":523.81402983,"data":"slice                      rows   human    mach  hybrid     adv\n"}
+,{"stream_name":"stdout","time":523.876767916,"data":"train                   196,720  74,235  82,620  33,784   6,081\n"}
+,{"stream_name":"stdout","time":523.923701608,"data":"val                      31,049  11,675  13,054   5,355     965\n"}
+,{"stream_name":"stdout","time":523.962642821,"data":"s1_in_distribution       31,041  11,692  13,006   5,392     951\n"}
+,{"stream_name":"stdout","time":524.001451601,"data":"s2_unseen_generator      41,058  20,509  10,892   7,206   2,451\n"}
+,{"stream_name":"stdout","time":524.016529524,"data":"\n"}
+,{"stream_name":"stdout","time":524.016565966,"data":"slice                      rows   human    mach  hybrid     adv\n"}
+,{"stream_name":"stdout","time":524.016573508,"data":"train                   196,720  74,235  82,620  33,784   6,081\n"}
+,{"stream_name":"stdout","time":524.016578824,"data":"val                      31,049  11,675  13,054   5,355     965\n"}
+,{"stream_name":"stdout","time":524.016584448,"data":"s1_in_distribution       31,041  11,692  13,006   5,392     951\n"}
+,{"stream_name":"stdout","time":524.016589538,"data":"s2_unseen_generator      41,058  20,509  10,892   7,206   2,451\n"}
+,{"stream_name":"stdout","time":524.044136614,"data":"s3_unseen_language       56,626  19,359  25,470   9,794   2,003\n"}
+,{"stream_name":"stdout","time":524.087096553,"data":"s4_unseen_domain         56,728  26,954  12,167  14,263   3,344\n"}
+,{"stream_name":"stdout","time":524.12194396,"data":"s5_compound               4,168   1,936   1,199     878     155\n"}
+,{"stream_name":"stdout","time":524.146704025,"data":"unused                       41\n"}
+,{"stream_name":"stdout","time":524.146755033,"data":"\n"}
+,{"stream_name":"stdout","time":524.146763074,"data":"slice guarantees\n"}
+,{"stream_name":"stdout","time":524.246756179,"data":"s3_unseen_language       56,626  19,359  25,470   9,794   2,003\n"}
+,{"stream_name":"stdout","time":524.246837624,"data":"s4_unseen_domain         56,728  26,954  12,167  14,263   3,344\n"}
+,{"stream_name":"stdout","time":524.246844689,"data":"s5_compound               4,168   1,936   1,199     878     155\n"}
+,{"stream_name":"stdout","time":524.246848907,"data":"unused                       41\n"}
+,{"stream_name":"stdout","time":524.246853243,"data":"\n"}
+,{"stream_name":"stdout","time":524.246856826,"data":"slice guarantees\n"}
+,{"stream_name":"stdout","time":524.258466593,"data":"  s1_in_distribution     problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":524.307764048,"data":"  s2_unseen_generator    problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":524.363636003,"data":"  s3_unseen_language     problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":524.421396688,"data":"  s4_unseen_domain       problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":524.457489598,"data":"  s5_compound            problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":524.461053359,"data":"  s1_in_distribution     problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":524.461077462,"data":"  s2_unseen_generator    problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":524.461082612,"data":"  s3_unseen_language     problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":524.46108643,"data":"  s4_unseen_domain       problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":524.461090119,"data":"  s5_compound            problem_id overlap=0    labels=4 ok \n"}
+,{"stream_name":"stdout","time":527.696584536,"data":"\n"}
+,{"stream_name":"stdout","time":527.696617388,"data":"[done] splits.parquet (417,431 rows)\n"}
+,{"stream_name":"stdout","time":527.898647199,"data":"\n"}
+,{"stream_name":"stdout","time":527.898681229,"data":"[done] splits.parquet (417,431 rows)\n"}
+,{"stream_name":"stdout","time":527.908954952,"data":"[   8.6 min] splits\n"}
+,{"stream_name":"stdout","time":527.910049579,"data":"\u003e\u003e -m pytest aicd/tests/ -q\n"}
+,{"stream_name":"stdout","time":538.825245865,"data":"..............................................................................................                         [100%]\n"}
+,{"stream_name":"stdout","time":538.825488497,"data":"48 passed in 9.29s\n"}
+,{"stream_name":"stdout","time":538.86664942,"data":"..                         [100%]\n"}
+,{"stream_name":"stdout","time":538.866688825,"data":"48 passed in 9.29s\n"}
+,{"stream_name":"stdout","time":542.891533986,"data":"[   8.8 min] integrity tests passed\n"}
+,{"stream_name":"stdout","time":542.892497446,"data":"\n"}
+,{"stream_name":"stdout","time":542.892519121,"data":"training rows: 196,720   (expected 196,854)\n"}
+,{"stream_name":"stdout","time":542.921215846,"data":"\u003e\u003e -m aicd.models.modernbert_triplet --config kaggle_panel_codebert.yaml --tag panel_codebert --max-hours 10 --resume\n"}
+,{"stream_name":"stdout","time":545.998416009,"data":"[seed] all generators seeded with 20260818\n"}
+,{"stream_name":"stdout","time":546.204582552,"data":"[seed] all generators seeded with 20260818\n"}
+,{"stream_name":"stdout","time":552.721464546,"data":"[branch_a:panel_codebert] device=cuda train_rows=196,720\n"}
+,{"stream_name":"stdout","time":552.722165279,"data":"  class counts=[74235, 82620, 33784, 6081] weights=[0.662, 0.595, 1.456, 8.087]\n"}
+,{"stream_name":"stdout","time":552.923840061,"data":"[branch_a:panel_codebert] device=cuda train_rows=196,720\n"}
+,{"stream_name":"stdout","time":552.923880821,"data":"  class counts=[74235, 82620, 33784, 6081] weights=[0.662, 0.595, 1.456, 8.087]\n"}
+,{"stream_name":"stderr","time":557.095070746,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":557.297349903,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":557.297387012,"data":"\n"}
+,{"stream_name":"stderr","time":557.297390522,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":564.603342608,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights:   1%|          | 1/199 [00:00\u003c00:00, 10255.02it/s, Materializing param=embeddings.LayerNorm.bias]\rLoading weights:   1%|          | 1/199 [00:00\u003c00:00, 4009.85it/s, Materializing param=embeddings.LayerNorm.bias] \rLoading weights:   1%|          | 2/199 [00:00\u003c00:00, 2892.62it/s, Materializing param=embeddings.LayerNorm.weight]\rLoading weights:   1%|          | 2/199 [00:00\u003c00:00, 2478.17it/s, Materializing param=embeddings.LayerNorm.weight]\rLoading weights:   2%|▏         | 3/199 [00:00\u003c00:00, 1554.60it/s, Materializing param=embeddings.position_embeddings.weight]\rLoading weights:   2%|▏         | 3/199 [00:00\u003c00:00, 1454.34it/s, Materializing param=embeddings.position_embeddings.weight]\rLoading weights:   2%|▏         | 4/199 [00:00\u003c00:00, 1720.39it/s, Materializing param=embeddings.token_type_embeddings.weight]\rLoading weights:   2%|▏         | 4/199 [00:00\u003c00:00, 1156.33it/s, Materializing param=embeddings.token_type_embeddings.weight]\rLoading weights:   3%|▎         | 5/199 [00:00\u003c00:00, 1338.66it/s, Materializing param=embeddings.word_embeddings.weight]      \rLoading weights:   3%|▎         | 5/199 [00:00\u003c00:00, 1290.63it/s, Materializing param=embeddings.word_embeddings.weight]\rLoading weights:   3%|▎         | 6/199 [00:00\u003c00:00, 1416.91it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]\rLoading weights:   3%|▎         | 6/199 [00:00\u003c00:00, 1349.74it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]\rLoading weights:   4%|▎         | 7/199 [00:00\u003c00:00, 1227.38it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]\rLoading weights:   4%|▎         | 7/199 [00:00\u003c00:00, 1179.22it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]\rLoading weights:   4%|▍         | 8/199 [00:00\u003c00:00, 1287.98it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]      \rLoading weights:   4%|▍         | 8/199 [00:00\u003c00:00, 1250.17it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]\rLoading weights:   5%|▍         | 9/199 [00:00\u003c00:00, 1080.67it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]\rLoading weights:   5%|▍         | 9/199 [00:00\u003c00:00, 1066.53it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]\rLoading weights:   5%|▌         | 10/199 [00:00\u003c00:00, 1067.69it/s, Materializing param=encoder.layer.0.attention.self.key.bias]     \rLoading weights:   5%|▌         | 10/199 [00:00\u003c00:00, 1025.70it/s, Materializing param=encoder.layer.0.attention.self.key.bias]\rLoading weights:   6%|▌         | 11/199 [00:00\u003c00:00, 1069.83it/s, Materializing param=encoder.layer.0.attention.self.key.weight]\rLoading weights:   6%|▌         | 11/199 [00:00\u003c00:00, 1061.09it/s, Materializing param=encoder.layer.0.attention.self.key.weight]\rLoading weights:   6%|▌         | 12/199 [00:00\u003c00:00, 1136.69it/s, Materializing param=encoder.layer.0.attention.self.query.bias]\rLoading weights:   6%|▌         | 12/199 [00:00\u003c00:00, 1127.10it/s, Materializing param=encoder.layer.0.attention.self.query.bias]\rLoading weights:   7%|▋         | 13/199 [00:00\u003c00:00, 1200.75it/s, Materializing param=encoder.layer.0.attention.self.query.weight]\rLoading weights:   7%|▋         | 13/199 [00:00\u003c00:00, 1186.58it/s, Materializing param=encoder.layer.0.attention.self.query.weight]\rLoading weights:   7%|▋         | 14/199 [00:00\u003c00:00, 1254.01it/s, Materializing param=encoder.layer.0.attention.self.value.bias]  \rLoading weights:   7%|▋         | 14/199 [00:00\u003c00:00, 1242.41it/s, Materializing param=encoder.layer.0.attention.self.value.bias]\rLoading weights:   8%|▊         | 15/199 [00:00\u003c00:00, 1312.11it/s, Materializing param=encoder.layer.0.attention.self.value.weight]\rLoading weights:   8%|▊         | 15/199 [00:00\u003c00:00, 1300.37it/s, Materializing param=encoder.layer.0.attention.self.value.weight]\rLoading weights:   8%|▊         | 16/199 [00:00\u003c00:00, 1367.87it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]    \rLoading weights:   8%|▊         | 16/199 [00:00\u003c00:00, 1356.31it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]\rLoading weights:   9%|▊         | 17/199 [00:00\u003c00:00, 1418.60it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]\rLoading weights:   9%|▊         | 17/199 [00:00\u003c00:00, 1409.54it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]\rLoading weights:   9%|▉         | 18/199 [00:00\u003c00:00, 1472.40it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]    \rLoading weights:   9%|▉         | 18/199 [00:00\u003c00:00, 1461.46it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]\rLoading weights:  10%|▉         | 19/199 [00:00\u003c00:00, 1523.16it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]\rLoading weights:  10%|▉         | 19/199 [00:00\u003c00:00, 1511.78it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]\rLoading weights:  10%|█         | 20/199 [00:00\u003c00:00, 1571.14it/s, Materializing param=encoder.layer.0.output.dense.bias]      \rLoading weights:  10%|█         | 20/199 [00:00\u003c00:00, 1560.26it/s, Materializing param=encoder.layer.0.output.dense.bias]\rLoading weights:  11%|█         | 21/199 [00:00\u003c00:00, 1614.61it/s, Materializing param=encoder.layer.0.output.dense.weight]\rLoading weights:  11%|█         | 21/199 [00:00\u003c00:00, 1603.06it/s, Materializing param=encoder.layer.0.output.dense.weight]\rLoading weights:  11%|█         | 22/199 [00:00\u003c00:00, 1656.25it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]\rLoading weights:  11%|█         | 22/199 [00:00\u003c00:00, 1645.97it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]\rLoading weights:  12%|█▏        | 23/199 [00:00\u003c00:00, 1697.50it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]\rLoading weights:  12%|█▏        | 23/199 [00:00\u003c00:00, 1686.99it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]\rLoading weights:  12%|█▏        | 24/199 [00:00\u003c00:00, 1740.01it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]      \rLoading weights:  12%|█▏        | 24/199 [00:00\u003c00:00, 1727.95it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]\rLoading weights:  13%|█▎        | 25/199 [00:00\u003c00:00, 1771.15it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]\rLoading weights:  13%|█▎        | 25/199 [00:00\u003c00:00, 1760.69it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]\rLoading weights:  13%|█▎        | 26/199 [00:00\u003c00:00, 1806.51it/s, Materializing param=encoder.layer.1.attention.self.key.bias]      \rLoading weights:  13%|█▎        | 26/199 [00:00\u003c00:00, 1793.41it/s, Materializing param=encoder.layer.1.attention.self.key.bias]\rLoading weights:  14%|█▎        | 27/199 [00:00\u003c00:00, 1834.87it/s, Materializing param=encoder.layer.1.attention.self.key.weight]\rLoading weights:  14%|█▎        | 27/199 [00:00\u003c00:00, 1824.46it/s, Materializing param=encoder.layer.1.attention.self.key.weight]\rLoading weights:  14%|█▍        | 28/199 [00:00\u003c00:00, 1861.77it/s, Materializing param=encoder.layer.1.attention.self.query.bias]\rLoading weights:  14%|█▍        | 28/199 [00:00\u003c00:00, 1847.04it/s, Materializing param=encoder.layer.1.attention.self.query.bias]\rLoading weights:  15%|█▍        | 29/199 [00:00\u003c00:00, 1883.88it/s, Materializing param=encoder.layer.1.attention.self.query.weight]\rLoading weights:  15%|█▍        | 29/199 [00:00\u003c00:00, 1871.22it/s, Materializing param=encoder.layer.1.attention.self.query.weight]\rLoading weights:  15%|█▌        | 30/199 [00:00\u003c00:00, 1911.92it/s, Materializing param=encoder.layer.1.attention.self.value.bias]  \rLoading weights:  15%|█▌        | 30/199 [00:00\u003c00:00, 1903.30it/s, Materializing param=encoder.layer.1.attention.self.value.bias]\rLoading weights:  16%|█▌        | 31/199 [00:00\u003c00:00, 1943.40it/s, Materializing param=encoder.layer.1.attention.self.value.weight]\rLoading weights:  16%|█▌        | 31/199 [00:00\u003c00:00, 1934.79it/s, Materializing param=encoder.layer.1.attention.self.value.weight]\rLoading weights:  16%|█▌        | 32/199 [00:00\u003c00:00, 1976.26it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]    \rLoading weights:  16%|█▌        | 32/199 [00:00\u003c00:00, 1962.74it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]\rLoading weights:  17%|█▋        | 33/199 [00:00\u003c00:00, 2003.10it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]\rLoading weights:  17%|█▋        | 33/199 [00:00\u003c00:00, 1992.31it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]\rLoading weights:  17%|█▋        | 34/199 [00:00\u003c00:00, 2032.96it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]    \rLoading weights:  17%|█▋        | 34/199 [00:00\u003c00:00, 2021.35it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]\rLoading weights:  18%|█▊        | 35/199 [00:00\u003c00:00, 2059.09it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]\rLoading weights:  18%|█▊        | 35/199 [00:00\u003c00:00, 2047.31it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]\rLoading weights:  18%|█▊        | 36/199 [00:00\u003c00:00, 2085.57it/s, Materializing param=encoder.layer.1.output.dense.bias]      \rLoading weights:  18%|█▊        | 36/199 [00:00\u003c00:00, 2074.13it/s, Materializing param=encoder.layer.1.output.dense.bias]\rLoading weights:  19%|█▊        | 37/199 [00:00\u003c00:00, 2109.44it/s, Materializing param=encoder.layer.1.output.dense.weight]\rLoading weights:  19%|█▊        | 37/199 [00:00\u003c00:00, 2099.88it/s, Materializing param=encoder.layer.1.output.dense.weight]\rLoading weights:  19%|█▉        | 38/199 [00:00\u003c00:00, 2116.45it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]\rLoading weights:  19%|█▉        | 38/199 [00:00\u003c00:00, 2026.52it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]\rLoading weights:  20%|█▉        | 39/199 [00:00\u003c00:00, 2041.99it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]\rLoading weights:  20%|█▉        | 39/199 [00:00\u003c00:00, 2026.26it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]\rLoading weights:  20%|██        | 40/199 [00:00\u003c00:00, 2027.65it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]      \rLoading weights:  20%|██        | 40/199 [00:00\u003c00:00, 2014.77it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]\rLoading weights:  21%|██        | 41/199 [00:00\u003c00:00, 2041.34it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]\rLoading weights:  21%|██        | 41/199 [00:00\u003c00:00, 2029.20it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]\rLoading weights:  21%|██        | 42/199 [00:00\u003c00:00, 2058.53it/s, Materializing param=encoder.layer.2.attention.self.key.bias]      \rLoading weights:  21%|██        | 42/199 [00:00\u003c00:00, 2048.52it/s, Materializing param=encoder.layer.2.attention.self.key.bias]\rLoading weights:  22%|██▏       | 43/199 [00:00\u003c00:00, 2080.99it/s, Materializing param=encoder.layer.2.attention.self.key.weight]\rLoading weights:  22%|██▏       | 43/199 [00:00\u003c00:00, 2071.83it/s, Materializing param=encoder.layer.2.attention.self.key.weight]\rLoading weights:  22%|██▏       | 44/199 [00:00\u003c00:00, 2102.62it/s, Materializing param=encoder.layer.2.attention.self.query.bias]\rLoading weights:  22%|██▏       | 44/199 [00:00\u003c00:00, 2093.30it/s, Materializing param=encoder.layer.2.attention.self.query.bias]\rLoading weights:  23%|██▎       | 45/199 [00:00\u003c00:00, 2124.92it/s, Materializing param=encoder.layer.2.attention.self.query.weight]\rLoading weights:  23%|██▎       | 45/199 [00:00\u003c00:00, 2115.32it/s, Materializing param=encoder.layer.2.attention.self.query.weight]\rLoading weights:  23%|██▎       | 46/199 [00:00\u003c00:00, 2146.88it/s, Materializing param=encoder.layer.2.attention.self.value.bias]  \rLoading weights:  23%|██▎       | 46/199 [00:00\u003c00:00, 2137.51it/s, Materializing param=encoder.layer.2.attention.self.value.bias]\rLoading weights:  24%|██▎       | 47/199 [00:00\u003c00:00, 2169.03it/s, Materializing param=encoder.layer.2.attention.self.value.weight]\rLoading weights:  24%|██▎       | 47/199 [00:00\u003c00:00, 2160.45it/s, Materializing param=encoder.layer.2.attention.self.value.weight]\rLoading weights:  24%|██▍       | 48/199 [00:00\u003c00:00, 2190.05it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]    \rLoading weights:  24%|██▍       | 48/199 [00:00\u003c00:00, 2180.61it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]\rLoading weights:  25%|██▍       | 49/199 [00:00\u003c00:00, 2210.76it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]\rLoading weights:  25%|██▍       | 49/199 [00:00\u003c00:00, 2202.23it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]\rLoading weights:  25%|██▌       | 50/199 [00:00\u003c00:00, 2226.04it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]    \rLoading weights:  25%|██▌       | 50/199 [00:00\u003c00:00, 2215.08it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]\rLoading weights:  26%|██▌       | 51/199 [00:00\u003c00:00, 2239.82it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]\rLoading weights:  26%|██▌       | 51/199 [00:00\u003c00:00, 2229.22it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]\rLoading weights:  26%|██▌       | 52/199 [00:00\u003c00:00, 2251.79it/s, Materializing param=encoder.layer.2.output.dense.bias]      \rLoading weights:  26%|██▌       | 52/199 [00:00\u003c00:00, 2241.08it/s, Materializing param=encoder.layer.2.output.dense.bias]\rLoading weights:  27%|██▋       | 53/199 [00:00\u003c00:00, 2262.81it/s, Materializing param=encoder.layer.2.output.dense.weight]\rLoading weights:  27%|██▋       | 53/199 [00:00\u003c00:00, 2250.91it/s, Materializing param=encoder.layer.2.output.dense.weight]\rLoading weights:  27%|██▋       | 54/199 [00:00\u003c00:00, 2275.23it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]\rLoading weights:  27%|██▋       | 54/199 [00:00\u003c00:00, 2264.68it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]\rLoading weights:  28%|██▊       | 55/199 [00:00\u003c00:00, 2285.79it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]\rLoading weights:  28%|██▊       | 55/199 [00:00\u003c00:00, 2272.44it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]\rLoading weights:  28%|██▊       | 56/199 [00:00\u003c00:00, 2294.01it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]      \rLoading weights:  28%|██▊       | 56/199 [00:00\u003c00:00, 2282.17it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]\rLoading weights:  29%|██▊       | 57/199 [00:00\u003c00:00, 2303.32it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]\rLoading weights:  29%|██▊       | 57/199 [00:00\u003c00:00, 2292.47it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]\rLoading weights:  29%|██▉       | 58/199 [00:00\u003c00:00, 2311.53it/s, Materializing param=encoder.layer.3.attention.self.key.bias]      \rLoading weights:  29%|██▉       | 58/199 [00:00\u003c00:00, 2299.07it/s, Materializing param=encoder.layer.3.attention.self.key.bias]\rLoading weights:  30%|██▉       | 59/199 [00:00\u003c00:00, 2319.38it/s, Materializing param=encoder.layer.3.attention.self.key.weight]\rLoading weights:  30%|██▉       | 59/199 [00:00\u003c00:00, 2308.71it/s, Materializing param=encoder.layer.3.attention.self.key.weight]\rLoading weights:  30%|███       | 60/199 [00:00\u003c00:00, 2330.62it/s, Materializing param=encoder.layer.3.attention.self.query.bias]\rLoading weights:  30%|███       | 60/199 [00:00\u003c00:00, 2320.56it/s, Materializing param=encoder.layer.3.attention.self.query.bias]\rLoading weights:  31%|███       | 61/199 [00:00\u003c00:00, 2336.02it/s, Materializing param=encoder.layer.3.attention.self.query.weight]\rLoading weights:  31%|███       | 61/199 [00:00\u003c00:00, 2324.79it/s, Materializing param=encoder.layer.3.attention.self.query.weight]\rLoading weights:  31%|███       | 62/199 [00:00\u003c00:00, 2343.95it/s, Materializing param=encoder.layer.3.attention.self.value.bias]  \rLoading weights:  31%|███       | 62/199 [00:00\u003c00:00, 2332.51it/s, Materializing param=encoder.layer.3.attention.self.value.bias]\rLoading weights:  32%|███▏      | 63/199 [00:00\u003c00:00, 2352.51it/s, Materializing param=encoder.layer.3.attention.self.value.weight]\rLoading weights:  32%|███▏      | 63/199 [00:00\u003c00:00, 2342.15it/s, Materializing param=encoder.layer.3.attention.self.value.weight]\rLoading weights:  32%|███▏      | 64/199 [00:00\u003c00:00, 2357.99it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]    \rLoading weights:  32%|███▏      | 64/199 [00:00\u003c00:00, 2346.63it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]\rLoading weights:  33%|███▎      | 65/199 [00:00\u003c00:00, 2364.83it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]\rLoading weights:  33%|███▎      | 65/199 [00:00\u003c00:00, 2355.01it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]\rLoading weights:  33%|███▎      | 66/199 [00:00\u003c00:00, 2374.11it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]    \rLoading weights:  33%|███▎      | 66/199 [00:00\u003c00:00, 2362.83it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]\rLoading weights:  34%|███▎      | 67/199 [00:00\u003c00:00, 2380.50it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]\rLoading weights:  34%|███▎      | 67/199 [00:00\u003c00:00, 2371.30it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]\rLoading weights:  34%|███▍      | 68/199 [00:00\u003c00:00, 2389.62it/s, Materializing param=encoder.layer.3.output.dense.bias]      \rLoading weights:  34%|███▍      | 68/199 [00:00\u003c00:00, 2379.37it/s, Materializing param=encoder.layer.3.output.dense.bias]\rLoading weights:  35%|███▍      | 69/199 [00:00\u003c00:00, 2397.50it/s, Materializing param=encoder.layer.3.output.dense.weight]\rLoading weights:  35%|███▍      | 69/199 [00:00\u003c00:00, 2386.66it/s, Materializing param=encoder.layer.3.output.dense.weight]\rLoading weights:  35%|███▌      | 70/199 [00:00\u003c00:00, 2403.81it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]\rLoading weights:  35%|███▌      | 70/199 [00:00\u003c00:00, 2394.81it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]\rLoading weights:  36%|███▌      | 71/199 [00:00\u003c00:00, 2410.64it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]\rLoading weights:  36%|███▌      | 71/199 [00:00\u003c00:00, 2400.38it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]\rLoading weights:  36%|███▌      | 72/199 [00:00\u003c00:00, 2417.49it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]      \rLoading weights:  36%|███▌      | 72/199 [00:00\u003c00:00, 2406.72it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]\rLoading weights:  37%|███▋      | 73/199 [00:00\u003c00:00, 2422.34it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]\rLoading weights:  37%|███▋      | 73/199 [00:00\u003c00:00, 2412.38it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]\rLoading weights:  37%|███▋      | 74/199 [00:00\u003c00:00, 2427.81it/s, Materializing param=encoder.layer.4.attention.self.key.bias]      \rLoading weights:  37%|███▋      | 74/199 [00:00\u003c00:00, 2419.20it/s, Materializing param=encoder.layer.4.attention.self.key.bias]\rLoading weights:  38%|███▊      | 75/199 [00:00\u003c00:00, 2435.26it/s, Materializing param=encoder.layer.4.attention.self.key.weight]\rLoading weights:  38%|███▊      | 75/199 [00:00\u003c00:00, 2424.94it/s, Materializing param=encoder.layer.4.attention.self.key.weight]\rLoading weights:  38%|███▊      | 76/199 [00:00\u003c00:00, 2440.19it/s, Materializing param=encoder.layer.4.attention.self.query.bias]\rLoading weights:  38%|███▊      | 76/199 [00:00\u003c00:00, 2432.00it/s, Materializing param=encoder.layer.4.attention.self.query.bias]\rLoading weights:  39%|███▊      | 77/199 [00:00\u003c00:00, 2448.55it/s, Materializing param=encoder.layer.4.attention.self.query.weight]\rLoading weights:  39%|███▊      | 77/199 [00:00\u003c00:00, 2439.76it/s, Materializing param=encoder.layer.4.attention.self.query.weight]\rLoading weights:  39%|███▉      | 78/199 [00:00\u003c00:00, 2457.45it/s, Materializing param=encoder.layer.4.attention.self.value.bias]  \rLoading weights:  39%|███▉      | 78/199 [00:00\u003c00:00, 2449.41it/s, Materializing param=encoder.layer.4.attention.self.value.bias]\rLoading weights:  40%|███▉      | 79/199 [00:00\u003c00:00, 2457.05it/s, Materializing param=encoder.layer.4.attention.self.value.weight]\rLoading weights:  40%|███▉      | 79/199 [00:00\u003c00:00, 2449.00it/s, Materializing param=encoder.layer.4.attention.self.value.weight]\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights:   1%|          | 1/199 [00:00\u003c00:00, 10255.02it/s, Materializing param=embeddings.LayerNorm.bias]\rLoading weights:   1%|          | 1/199 [00:00\u003c00:00, 4009.85it/s, Materializing param=embeddings.LayerNorm.bias] \rLoading weights:   1%|          | 2/199 [00:00\u003c00:00, 2892.62it/s, Materializing param=embeddings.LayerNorm.weight]\rLoading weights:   1%|          | 2/199 [00:00\u003c00:00, 2478.17it/s, Materializing param=embeddings.LayerNorm.weight]\rLoading weights:   2%|▏         | 3/199 [00:00\u003c00:00, 1554.60it/s, Materializing param=embeddings.position_embeddings.weight]\rLoading weights:   2%|▏         | 3/199 [00:00\u003c00:00, 1454.34it/s, Materializing param=embeddings.position_embeddings.weight]\rLoading weights:   2%|▏         | 4/199 [00:00\u003c00:00, 1720.39it/s, Materializing param=embeddings.token_type_embeddings.weight]\rLoading weights:   2%|▏         | 4/199 [00:00\u003c00:00, 1156.33it/s, Materializing param=embeddings.token_type_embeddings.weight]\rLoading weights:   3%|▎         | 5/199 [00:00\u003c00:00, 1338.66it/s, Materializing param=embeddings.word_embeddings.weight]      \rLoading weights:   3%|▎         | 5/199 [00:00\u003c00:00, 1290.63it/s, Materializing param=embeddings.word_embeddings.weight]\rLoading weights:   3%|▎         | 6/199 [00:00\u003c00:00, 1416.91it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]\rLoading weights:   3%|▎         | 6/199 [00:00\u003c00:00, 1349.74it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]\rLoading weights:   4%|▎         | 7/199 [00:00\u003c00:00, 1227.38it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]\rLoading weights:   4%|▎         | 7/199 [00:00\u003c00:00, 1179.22it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]\rLoading weights:   4%|▍         | 8/199 [00:00\u003c00:00, 1287.98it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]      \rLoading weights:   4%|▍         | 8/199 [00:00\u003c00:00, 1250.17it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]\rLoading weights:   5%|▍         | 9/199 [00:00\u003c00:00, 1080.67it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]\rLoading weights:   5%|▍         | 9/199 [00:00\u003c00:00, 1066.53it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]\rLoading weights:   5%|▌         | 10/199 [00:00\u003c00:00, 1067.69it/s, Materializing param=encoder.layer.0.attention.self.key.bias]     \rLoading weights:   5%|▌         | 10/199 [00:00\u003c00:00, 1025.70it/s, Materializing param=encoder.layer.0.attention.self.key.bias]\rLoading weights:   6%|▌         | 11/199 [00:00\u003c00:00, 1069.83it/s, Materializing param=encoder.layer.0.attention.self.key.weight]\rLoading weights:   6%|▌         | 11/199 [00:00\u003c00:00, 1061.09it/s, Materializing param=encoder.layer.0.attention.self.key.weight]\rLoading weights:   6%|▌         | 12/199 [00:00\u003c00:00, 1136.69it/s, Materializing param=encoder.layer.0.attention.self.query.bias]\rLoading weights:   6%|▌         | 12/199 [00:00\u003c00:00, 1127.10it/s, Materializing param=encoder.layer.0.attention.self.query.bias]\rLoading weights:   7%|▋         | 13/199 [00:00\u003c00:00, 1200.75it/s, Materializing param=encoder.layer.0.attention.self.query.weight]\rLoading weights:   7%|▋         | 13/199 [00:00\u003c00:00, 1186.58it/s, Materializing param=encoder.layer.0.attention.self.query.weight]\rLoading weights:   7%|▋         | 14/199 [00:00\u003c00:00, 1254.01it/s, Materializing param=encoder.layer.0.attention.self.value.bias]  \rLoading weights:   7%|▋         | 14/199 [00:00\u003c00:00, 1242.41it/s, Materializing param=encoder.layer.0.attention.self.value.bias]\rLoading weights:   8%|▊         | 15/199 [00:00\u003c00:00, 1312.11it/s, Materializing param=encoder.layer.0.attention.self.value.weight]\rLoading weights:   8%|▊         | 15/199 [00:00\u003c00:00, 1300.37it/s, Materializing param=encoder.layer.0.attention.self.value.weight]\rLoading weights:   8%|▊         | 16/199 [00:00\u003c00:00, 1367.87it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]    \rLoading weights:   8%|▊         | 16/199 [00:00\u003c00:00, 1356.31it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]\rLoading weights:   9%|▊         | 17/199 [00:00\u003c00:00, 1418.60it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]\rLoading weights:   9%|▊         | 17/199 [00:00\u003c00:00, 1409.54it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]\rLoading weights:   9%|▉         | 18/199 [00:00\u003c00:00, 1472.40it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]    \rLoading weights:   9%|▉         | 18/199 [00:00\u003c00:00, 1461.46it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]\rLoading weights:  10%|▉         | 19/199 [00:00\u003c00:00, 1523.16it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]\rLoading weights:  10%|▉         | 19/199 [00:00\u003c00:00, 1511.78it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]\rLoading weights:  10%|█         | 20/199 [00:00\u003c00:00, 1571.14it/s, Materializing param=encoder.layer.0.output.dense.bias]      \rLoading weights:  10%|█         | 20/199 [00:00\u003c00:00, 1560.26it/s, Materializing param=encoder.layer.0.output.dense.bias]\rLoading weights:  11%|█         | 21/199 [00:00\u003c00:00, 1614.61it/s, Materializing param=encoder.layer.0.output.dense.weight]\rLoading weights:  11%|█         | 21/199 [00:00\u003c00:00, 1603.06it/s, Materializing param=encoder.layer.0.output.dense.weight]\rLoading weights:  11%|█         | 22/199 [00:00\u003c00:00, 1656.25it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]\rLoading weights:  11%|█         | 22/199 [00:00\u003c00:00, 1645.97it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]\rLoading weights:  12%|█▏        | 23/199 [00:00\u003c00:00, 1697.50it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]\rLoading weights:  12%|█▏        | 23/199 [00:00\u003c00:00, 1686.99it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]\rLoading weights:  12%|█▏        | 24/199 [00:00\u003c00:00, 1740.01it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]      \rLoading weights:  12%|█▏        | 24/199 [00:00\u003c00:00, 1727.95it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]\rLoading weights:  13%|█▎        | 25/199 [00:00\u003c00:00, 1771.15it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]\rLoading weights:  13%|█▎        | 25/199 [00:00\u003c00:00, 1760.69it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]\rLoading weights:  13%|█▎        | 26/199 [00:00\u003c00:00, 1806.51it/s, Materializing param=encoder.layer.1.attention.self.key.bias]      \rLoading weights:  13%|█▎        | 26/199 [00:00\u003c00:00, 1793.41it/s, Materializing param=encoder.layer.1.attention.self.key.bias]\rLoading weights:  14%|█▎        | 27/199 [00:00\u003c00:00, 1834.87it/s, Materializing param=encoder.layer.1.attention.self.key.weight]\rLoading weights:  14%|█▎        | 27/199 [00:00\u003c00:00, 1824.46it/s, Materializing param=encoder.layer.1.attention.self.key.weight]\rLoading weights:  14%|█▍        | 28/199 [00:00\u003c00:00, 1861.77it/s, Materializing param=encoder.layer.1.attention.self.query.bias]\rLoading weights:  14%|█▍        | 28/199 [00:00\u003c00:00, 1847.04it/s, Materializing param=encoder.layer.1.attention.self.query.bias]\rLoading weights:  15%|█▍        | 29/199 [00:00\u003c00:00, 1883.88it/s, Materializing param=encoder.layer.1.attention.self.query.weight]\rLoading weights:  15%|█▍        | 29/199 [00:00\u003c00:00, 1871.22it/s, Materializing param=encoder.layer.1.attention.self.query.weight]\rLoading weights:  15%|█▌        | 30/199 [00:00\u003c00:00, 1911.92it/s, Materializing param=encoder.layer.1.attention.self.value.bias]  \rLoading weights:  15%|█▌        | 30/199 [00:00\u003c00:00, 1903.30it/s, Materializing param=encoder.layer.1.attention.self.value.bias]\rLoading weights:  16%|█▌        | 31/199 [00:00\u003c00:00, 1943.40it/s, Materializing param=encoder.layer.1.attention.self.value.weight]\rLoading weights:  16%|█▌        | 31/199 [00:00\u003c00:00, 1934.79it/s, Materializing param=encoder.layer.1.attention.self.value.weight]\rLoading weights:  16%|█▌        | 32/199 [00:00\u003c00:00, 1976.26it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]    \rLoading weights:  16%|█▌        | 32/199 [00:00\u003c00:00, 1962.74it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]\rLoading weights:  17%|█▋        | 33/199 [00:00\u003c00:00, 2003.10it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]\rLoading weights:  17%|█▋        | 33/199 [00:00\u003c00:00, 1992.31it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]\rLoading weights:  17%|█▋        | 34/199 [00:00\u003c00:00, 2032.96it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]    \rLoading weights:  17%|█▋        | 34/199 [00:00\u003c00:00, 2021.35it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]\rLoading weights:  18%|█▊        | 35/199 [00:00\u003c00:00, 2059.09it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]\rLoading weights:  18%|█▊        | 35/199 [00:00\u003c00:00, 2047.31it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]\rLoading weights:  18%|█▊        | 36/199 [00:00\u003c00:00, 2085.57it/s, Materializing param=encoder.layer.1.output.dense.bias]      \rLoading weights:  18%|█▊        | 36/199 [00:00\u003c00:00, 2074.13it/s, Materializing param=encoder.layer.1.output.dense.bias]\rLoading weights:  19%|█▊        | 37/199 [00:00\u003c00:00, 2109.44it/s, Materializing param=encoder.layer.1.output.dense.weight]\rLoading weights:  19%|█▊        | 37/199 [00:00\u003c00:00, 2099.88it/s, Materializing param=encoder.layer.1.output.dense.weight]\rLoading weights:  19%|█▉        | 38/199 [00:00\u003c00:00, 2116.45it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]\rLoading weights:  19%|█▉        | 38/199 [00:00\u003c00:00, 2026.52it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]\rLoading weights:  20%|█▉        | 39/199 [00:00\u003c00:00, 2041.99it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]\rLoading weights:  20%|█▉        | 39/199 [00:00\u003c00:00, 2026.26it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]\rLoading weights:  20%|██        | 40/199 [00:00\u003c00:00, 2027.65it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]      \rLoading weights:  20%|██        | 40/199 [00:00\u003c00:00, 2014.77it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]\rLoading weights:  21%|██        | 41/199 [00:00\u003c00:00, 2041.34it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]\rLoading weights:  21%|██        | 41/199 [00:00\u003c00:00, 2029.20it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]\rLoading weights:  21%|██        | 42/199 [00:00\u003c00:00, 2058.53it/s, Materializing param=encoder.layer.2.attention.self.key.bias]      \rLoading weights:  21%|██        | 42/199 [00:00\u003c00:00, 2048.52it/s, Materializing param=encoder.layer.2.attention.self.key.bias]\rLoading weights:  22%|██▏       | 43/199 [00:00\u003c00:00, 2080.99it/s, Materializing param=encoder.layer.2.attention.self.key.weight]\rLoading weights:  22%|██▏       | 43/199 [00:00\u003c00:00, 2071.83it/s, Materializing param=encoder.layer.2.attention.self.key.weight]\rLoading weights:  22%|██▏       | 44/199 [00:00\u003c00:00, 2102.62it/s, Materializing param=encoder.layer.2.attention.self.query.bias]\rLoading weights:  22%|██▏       | 44/199 [00:00\u003c00:00, 2093.30it/s, Materializing param=encoder.layer.2.attention.self.query.bias]\rLoading weights:  23%|██▎       | 45/199 [00:00\u003c00:00, 2124.92it/s, Materializing param=encoder.layer.2.attention.self.query.weight]\rLoading weights:  23%|██▎       | 45/199 [00:00\u003c00:00, 2115.32it/s, Materializing param=encoder.layer.2.attention.self.query.weight]\rLoading weights:  23%|██▎       | 46/199 [00:00\u003c00:00, 2146.88it/s, Materializing param=encoder.layer.2.attention.self.value.bias]  \rLoading weights:  23%|██▎       | 46/199 [00:00\u003c00:00, 2137.51it/s, Materializing param=encoder.layer.2.attention.self.value.bias]\rLoading weights:  24%|██▎       | 47/199 [00:00\u003c00:00, 2169.03it/s, Materializing param=encoder.layer.2.attention.self.value.weight]\rLoading weights:  24%|██▎       | 47/199 [00:00\u003c00:00, 2160.45it/s, Materializing param=encoder.layer.2.attention.self.value.weight]\rLoading weights:  24%|██▍       | 48/199 [00:00\u003c00:00, 2190.05it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]    \rLoading weights:  24%|██▍       | 48/199 [00:00\u003c00:00, 2180.61it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]\rLoading weights:  25%|██▍       | 49/199 [00:00\u003c00:00, 2210.76it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]\rLoading weights:  25%|██▍       | 49/199 [00:00\u003c00:00, 2202.23it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]\rLoading weights:  25%|██▌       | 50/199 [00:00\u003c00:00, 2226.04it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]    \rLoading weights:  25%|██▌       | 50/199 [00:00\u003c00:00, 2215.08it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]\rLoading weights:  26%|██▌       | 51/199 [00:00\u003c00:00, 2239.82it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]\rLoading weights:  26%|██▌       | 51/199 [00:00\u003c00:00, 2229.22it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]\rLoading weights:  26%|██▌       | 52/199 [00:00\u003c00:00, 2251.79it/s, Materializing param=encoder.layer.2.output.dense.bias]      \rLoading weights:  26%|██▌       | 52/199 [00:00\u003c00:00, 2241.08it/s, Materializing param=encoder.layer.2.output.dense.bias]\rLoading weights:  27%|██▋       | 53/199 [00:00\u003c00:00, 2262.81it/s, Materializing param=encoder.layer.2.output.dense.weight]\rLoading weights:  27%|██▋       | 53/199 [00:00\u003c00:00, 2250.91it/s, Materializing param=encoder.layer.2.output.dense.weight]\rLoading weights:  27%|██▋       | 54/199 [00:00\u003c00:00, 2275.23it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]\rLoading weights:  27%|██▋       | 54/199 [00:00\u003c00:00, 2264.68it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]\rLoading weights:  28%|██▊       | 55/199 [00:00\u003c00:00, 2285.79it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]\rLoading weights:  28%|██▊       | 55/199 [00:00\u003c00:00, 2272.44it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]\rLoading weights:  28%|██▊       | 56/199 [00:00\u003c00:00, 2294.01it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]      \rLoading weights:  28%|██▊       | 56/199 [00:00\u003c00:00, 2282.17it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]\rLoading weights:  29%|██▊       | 57/199 [00:00\u003c00:00, 2303.32it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]\rLoading weights:  29%|██▊       | 57/199 [00:00\u003c00:00, 2292.47it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]\rLoading weights:  29%|██▉       | 58/199 [00:00\u003c00:00, 2311.53it/s, Materializing param=encoder.layer.3.attention.self.key.bias]      \rLoading weights:  29%|██▉       | 58/199 [00:00\u003c00:00, 2299.07it/s, Materializing param=encoder.layer.3.attention.self.key.bias]\rLoading weights:  30%|██▉       | 59/199 [00:00\u003c00:00, 2319.38it/s, Materializing param=encoder.layer.3.attention.self.key.weight]\rLoading weights:  30%|██▉       | 59/199 [00:00\u003c00:00, 2308.71it/s, Materializing param=encoder.layer.3.attention.self.key.weight]\rLoading weights:  30%|███       | 60/199 [00:00\u003c00:00, 2330.62it/s, Materializing param=encoder.layer.3.attention.self.query.bias]\rLoading weights:  30%|███       | 60/199 [00:00\u003c00:00, 2320.56it/s, Materializing param=encoder.layer.3.attention.self.query.bias]\rLoading weights:  31%|███       | 61/199 [00:00\u003c00:00, 2336.02it/s, Materializing param=encoder.layer.3.attention.self.query.weight]\rLoading weights:  31%|███       | 61/199 [00:00\u003c00:00, 2324.79it/s, Materializing param=encoder.layer.3.attention.self.query.weight]\rLoading weights:  31%|███       | 62/199 [00:00\u003c00:00, 2343.95it/s, Materializing param=encoder.layer.3.attention.self.value.bias]  \rLoading weights:  31%|███       | 62/199 [00:00\u003c00:00, 2332.51it/s, Materializing param=encoder.layer.3.attention.self.value.bias]\rLoading weights:  32%|███▏      | 63/199 [00:00\u003c00:00, 2352.51it/s, Materializing param=encoder.layer.3.attention.self.value.weight]\rLoading weights:  32%|███▏      | 63/199 [00:00\u003c00:00, 2342.15it/s, Materializing param=encoder.layer.3.attention.self.value.weight]\rLoading weights:  32%|███▏      | 64/199 [00:00\u003c00:00, 2357.99it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]    \rLoading weights:  32%|███▏      | 64/199 [00:00\u003c00:00, 2346.63it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]\rLoading weights:  33%|███▎      | 65/199 [00:00\u003c00:00, 2364.83it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]\rLoading weights:  33%|███▎      | 65/199 [00:00\u003c00:00, 2355.01it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]\rLoading weights:  33%|███▎      | 66/199 [00:00\u003c00:00, 2374.11it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]    \rLoading weights:  33%|███▎      | 66/199 [00:00\u003c00:00, 2362.83it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]\rLoading weights:  34%|███▎      | 67/199 [00:00\u003c00:00, 2380.50it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]\rLoading weights:  34%|███▎      | 67/199 [00:00\u003c00:00, 2371.30it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]\rLoading weights:  34%|███▍      | 68/199 [00:00\u003c00:00, 2389.62it/s, Materializing param=encoder.layer.3.output.dense.bias]      \rLoading weights:  34%|███▍      | 68/199 [00:00\u003c00:00, 2379.37it/s, Materializing param=encoder.layer.3.output.dense.bias]\rLoading weights:  35%|███▍      | 69/199 [00:00\u003c00:00, 2397.50it/s, Materializing param=encoder.layer.3.output.dense.weight]\rLoading weights:  35%|███▍      | 69/199 [00:00\u003c00:00, 2386.66it/s, Materializing param=encoder.layer.3.output.dense.weight]\rLoading weights:  35%|███▌      | 70/199 [00:00\u003c00:00, 2403.81it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]\rLoading weights:  35%|███▌      | 70/199 [00:00\u003c00:00, 2394.81it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]\rLoading weights:  36%|███▌      | 71/199 [00:00\u003c00:00, 2410.64it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]\rLoading weights:  36%|███▌      | 71/199 [00:00\u003c00:00, 2400.38it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]\rLoading weights:  36%|███▌      | 72/199 [00:00\u003c00:00, 2417.49it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]      \rLoading weights:  36%|███▌      | 72/199 [00:00\u003c00:00, 2406.72it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]\rLoading weights:  37%|███▋      | 73/199 [00:00\u003c00:00, 2422.34it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]\rLoading weights:  37%|███▋      | 73/199 [00:00\u003c00:00, 2412.38it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]\rLoading weights:  37%|███▋      | 74/199 [00:00\u003c00:00, 2427.81it/s, Materializing param=encoder.layer.4.attention.self.key.bias]      \rLoading weights:  37%|███▋      | 74/199 [00:00\u003c00:00, 2419.20it/s, Materializing param=encoder.layer.4.attention.self.key.bias]\rLoading weights:  38%|███▊      | 75/199 [00:00\u003c00:00, 2435.26it/s, Materializing param=encoder.layer.4.attention.self.key.weight]\rLoading weights:  38%|███▊      | 75/199 [00:00\u003c00:00, 2424.94it/s, Materializing param=encoder.layer.4.attention.self.key.weight]\rLoading weights:  38%|███▊      | 76/199 [00:00\u003c00:00, 2440.19it/s, Materializing param=encoder.layer.4.attention.self.query.bias]\rLoading weights:  38%|███▊      | 76/199 [00:00\u003c00:00, 2432.00it/s, Materializing param=encoder.layer.4.attention.self.query.bias]\rLoading weights:  39%|███▊      | 77/199 [00:00\u003c00:00, 2448.55it/s, Materializing param=encoder.layer.4.attention.self.query.weight]\rLoading weights:  39%|███▊      | 77/199 [00:00\u003c00:00, 2439.76it/s, Materializing param=encoder.layer.4.attention.self.query.weight]\rLoading weights:  39%|███▉      | 78/199 [00:00\u003c00:00, 2457.45it/s, Materializing param=encoder.layer.4.attention.self.value.bias]  \rLoading weights:  39%|███▉      | 78/199 [00:00\u003c00:00, 2449.41it/s, Materializing param=encoder.layer.4.attention.self.value.bias]\rLoading weights:  40%|███▉      | 79/199 [00:00\u003c00:00, 2457.05it/s, Materializing param=encoder.layer.4.attention.self.value.weight]\rLoading weights:  40%|███▉      | 79/199 [00:00\u003c00:00, 2449.00it/s, Materializing param=encoder.layer.4.attention.self.value.weight]\n"}
+,{"stream_name":"stdout","time":565.00871555,"data":"[branch_a:panel_codebert] --resume given but no checkpoint at branch_a_panel_codebert_ckpt.pt, starting fresh\n"}
+,{"stream_name":"stdout","time":565.008754153,"data":"[branch_a:panel_codebert] amp=True running epochs 0..2\n"}
+,{"stream_name":"stdout","time":565.210989457,"data":"[branch_a:panel_codebert] --resume given but no checkpoint at branch_a_panel_codebert_ckpt.pt, starting fresh\n"}
+,{"stream_name":"stdout","time":565.211037125,"data":"[branch_a:panel_codebert] amp=True running epochs 0..2\n"}
+,{"stream_name":"stdout","time":568.441662645,"data":"  ep0 step 0/6147 loss=1.5127\n"}
+,{"stream_name":"stdout","time":568.643699188,"data":"  ep0 step 0/6147 loss=1.5127\n"}
+,{"stream_name":"stdout","time":606.426048798,"data":"  ep0 step 50/6147 loss=1.4975\n"}
+,{"stream_name":"stdout","time":606.636842387,"data":"  ep0 step 50/6147 loss=1.4975\n"}
+,{"stream_name":"stdout","time":647.305600934,"data":"  ep0 step 100/6147 loss=1.4824\n"}
+,{"stream_name":"stdout","time":647.519103932,"data":"  ep0 step 100/6147 loss=1.4824\n"}
+,{"stream_name":"stdout","time":693.583680345,"data":"  ep0 step 150/6147 loss=1.4702\n"}
+,{"stream_name":"stdout","time":693.79678135,"data":"  ep0 step 150/6147 loss=1.4702\n"}
+,{"stream_name":"stdout","time":740.285636129,"data":"  ep0 step 200/6147 loss=1.4499\n"}
+,{"stream_name":"stdout","time":740.495032639,"data":"  ep0 step 200/6147 loss=1.4499\n"}
+,{"stream_name":"stdout","time":787.101065577,"data":"  ep0 step 250/6147 loss=1.4132\n"}
+,{"stream_name":"stdout","time":787.310120284,"data":"  ep0 step 250/6147 loss=1.4132\n"}
+,{"stream_name":"stdout","time":833.748902426,"data":"  ep0 step 300/6147 loss=1.3735\n"}
+,{"stream_name":"stdout","time":833.957889132,"data":"  ep0 step 300/6147 loss=1.3735\n"}
+,{"stream_name":"stdout","time":880.818063047,"data":"  ep0 step 350/6147 loss=1.3475\n"}
+,{"stream_name":"stdout","time":881.027514804,"data":"  ep0 step 350/6147 loss=1.3475\n"}
+,{"stream_name":"stdout","time":927.62714626,"data":"  ep0 step 400/6147 loss=1.3156\n"}
+,{"stream_name":"stdout","time":927.837406265,"data":"  ep0 step 400/6147 loss=1.3156\n"}
+,{"stream_name":"stdout","time":974.569865705,"data":"  ep0 step 450/6147 loss=1.2728\n"}
+,{"stream_name":"stdout","time":974.778876146,"data":"  ep0 step 450/6147 loss=1.2728\n"}
+,{"stream_name":"stdout","time":1021.64649957,"data":"  ep0 step 500/6147 loss=1.2370\n"}
+,{"stream_name":"stdout","time":1021.856393549,"data":"  ep0 step 500/6147 loss=1.2370\n"}
+,{"stream_name":"stdout","time":1068.309482012,"data":"  ep0 step 550/6147 loss=1.2090\n"}
+,{"stream_name":"stdout","time":1068.51971191,"data":"  ep0 step 550/6147 loss=1.2090\n"}
+,{"stream_name":"stdout","time":1115.067866317,"data":"  ep0 step 600/6147 loss=1.1807\n"}
+,{"stream_name":"stdout","time":1115.277619643,"data":"  ep0 step 600/6147 loss=1.1807\n"}
+,{"stream_name":"stdout","time":1161.773559521,"data":"  ep0 step 650/6147 loss=1.1491\n"}
+,{"stream_name":"stdout","time":1161.983233432,"data":"  ep0 step 650/6147 loss=1.1491\n"}
+,{"stream_name":"stdout","time":1208.670142454,"data":"  ep0 step 700/6147 loss=1.1211\n"}
+,{"stream_name":"stdout","time":1208.88396947,"data":"  ep0 step 700/6147 loss=1.1211\n"}
+,{"stream_name":"stdout","time":1255.590592214,"data":"  ep0 step 750/6147 loss=1.0986\n"}
+,{"stream_name":"stdout","time":1255.799769118,"data":"  ep0 step 750/6147 loss=1.0986\n"}
+,{"stream_name":"stdout","time":1302.38091292,"data":"  ep0 step 800/6147 loss=1.0741\n"}
+,{"stream_name":"stdout","time":1302.591784049,"data":"  ep0 step 800/6147 loss=1.0741\n"}
+,{"stream_name":"stdout","time":1348.798876023,"data":"  ep0 step 850/6147 loss=1.0544\n"}
+,{"stream_name":"stdout","time":1349.008618916,"data":"  ep0 step 850/6147 loss=1.0544\n"}
+,{"stream_name":"stdout","time":1395.597441718,"data":"  ep0 step 900/6147 loss=1.0369\n"}
+,{"stream_name":"stdout","time":1395.811469497,"data":"  ep0 step 900/6147 loss=1.0369\n"}
+,{"stream_name":"stdout","time":1442.412258146,"data":"  ep0 step 950/6147 loss=1.0171\n"}
+,{"stream_name":"stdout","time":1442.626926597,"data":"  ep0 step 950/6147 loss=1.0171\n"}
+,{"stream_name":"stdout","time":1489.26852385,"data":"  ep0 step 1000/6147 loss=1.0004\n"}
+,{"stream_name":"stdout","time":1489.478176839,"data":"  ep0 step 1000/6147 loss=1.0004\n"}
+,{"stream_name":"stdout","time":1535.980314962,"data":"  ep0 step 1050/6147 loss=0.9860\n"}
+,{"stream_name":"stdout","time":1536.194482807,"data":"  ep0 step 1050/6147 loss=0.9860\n"}
+,{"stream_name":"stdout","time":1582.902377476,"data":"  ep0 step 1100/6147 loss=0.9699\n"}
+,{"stream_name":"stdout","time":1583.112354988,"data":"  ep0 step 1100/6147 loss=0.9699\n"}
+,{"stream_name":"stdout","time":1629.45855447,"data":"  ep0 step 1150/6147 loss=0.9548\n"}
+,{"stream_name":"stdout","time":1629.6677413,"data":"  ep0 step 1150/6147 loss=0.9548\n"}
+,{"stream_name":"stdout","time":1675.994378818,"data":"  ep0 step 1200/6147 loss=0.9402\n"}
+,{"stream_name":"stdout","time":1676.203942314,"data":"  ep0 step 1200/6147 loss=0.9402\n"}
+,{"stream_name":"stdout","time":1722.906075693,"data":"  ep0 step 1250/6147 loss=0.9264\n"}
+,{"stream_name":"stdout","time":1723.121095894,"data":"  ep0 step 1250/6147 loss=0.9264\n"}
+,{"stream_name":"stdout","time":1769.333292982,"data":"  ep0 step 1300/6147 loss=0.9165\n"}
+,{"stream_name":"stdout","time":1769.543204676,"data":"  ep0 step 1300/6147 loss=0.9165\n"}
+,{"stream_name":"stdout","time":1816.024676172,"data":"  ep0 step 1350/6147 loss=0.9072\n"}
+,{"stream_name":"stdout","time":1816.239209194,"data":"  ep0 step 1350/6147 loss=0.9072\n"}
+,{"stream_name":"stdout","time":1862.645175666,"data":"  ep0 step 1400/6147 loss=0.8965\n"}
+,{"stream_name":"stdout","time":1862.854951131,"data":"  ep0 step 1400/6147 loss=0.8965\n"}
+,{"stream_name":"stdout","time":1909.584943012,"data":"  ep0 step 1450/6147 loss=0.8872\n"}
+,{"stream_name":"stdout","time":1909.799434821,"data":"  ep0 step 1450/6147 loss=0.8872\n"}
+,{"stream_name":"stdout","time":1956.186665372,"data":"  ep0 step 1500/6147 loss=0.8783\n"}
+,{"stream_name":"stdout","time":1956.396453663,"data":"  ep0 step 1500/6147 loss=0.8783\n"}
+,{"stream_name":"stdout","time":2002.720197694,"data":"  ep0 step 1550/6147 loss=0.8676\n"}
+,{"stream_name":"stdout","time":2002.930195677,"data":"  ep0 step 1550/6147 loss=0.8676\n"}
+,{"stream_name":"stdout","time":2049.432200469,"data":"  ep0 step 1600/6147 loss=0.8592\n"}
+,{"stream_name":"stdout","time":2049.64698069,"data":"  ep0 step 1600/6147 loss=0.8592\n"}
+,{"stream_name":"stdout","time":2095.951730515,"data":"  ep0 step 1650/6147 loss=0.8519\n"}
+,{"stream_name":"stdout","time":2096.166259634,"data":"  ep0 step 1650/6147 loss=0.8519\n"}
+,{"stream_name":"stdout","time":2142.356216224,"data":"  ep0 step 1700/6147 loss=0.8436\n"}
+,{"stream_name":"stdout","time":2142.565973832,"data":"  ep0 step 1700/6147 loss=0.8436\n"}
+,{"stream_name":"stdout","time":2188.862135719,"data":"  ep0 step 1750/6147 loss=0.8366\n"}
+,{"stream_name":"stdout","time":2189.072154983,"data":"  ep0 step 1750/6147 loss=0.8366\n"}
+,{"stream_name":"stdout","time":2235.527399135,"data":"  ep0 step 1800/6147 loss=0.8280\n"}
+,{"stream_name":"stdout","time":2235.742264502,"data":"  ep0 step 1800/6147 loss=0.8280\n"}
+,{"stream_name":"stdout","time":2282.137398143,"data":"  ep0 step 1850/6147 loss=0.8227\n"}
+,{"stream_name":"stdout","time":2282.354080565,"data":"  ep0 step 1850/6147 loss=0.8227\n"}
+,{"stream_name":"stdout","time":2328.623702874,"data":"  ep0 step 1900/6147 loss=0.8158\n"}
+,{"stream_name":"stdout","time":2328.8336943,"data":"  ep0 step 1900/6147 loss=0.8158\n"}
+,{"stream_name":"stdout","time":2374.948297356,"data":"  ep0 step 1950/6147 loss=0.8106\n"}
+,{"stream_name":"stdout","time":2375.163234291,"data":"  ep0 step 1950/6147 loss=0.8106\n"}
+,{"stream_name":"stdout","time":2421.288707522,"data":"  ep0 step 2000/6147 loss=0.8057\n"}
+,{"stream_name":"stdout","time":2421.503186972,"data":"  ep0 step 2000/6147 loss=0.8057\n"}
+,{"stream_name":"stdout","time":2468.184384838,"data":"  ep0 step 2050/6147 loss=0.7997\n"}
+,{"stream_name":"stdout","time":2468.394612184,"data":"  ep0 step 2050/6147 loss=0.7997\n"}
+,{"stream_name":"stdout","time":2514.640330627,"data":"  ep0 step 2100/6147 loss=0.7952\n"}
+,{"stream_name":"stdout","time":2514.851269744,"data":"  ep0 step 2100/6147 loss=0.7952\n"}
+,{"stream_name":"stdout","time":2561.080813122,"data":"  ep0 step 2150/6147 loss=0.7901\n"}
+,{"stream_name":"stdout","time":2561.296321312,"data":"  ep0 step 2150/6147 loss=0.7901\n"}
+,{"stream_name":"stdout","time":2607.620384951,"data":"  ep0 step 2200/6147 loss=0.7842\n"}
+,{"stream_name":"stdout","time":2607.835526185,"data":"  ep0 step 2200/6147 loss=0.7842\n"}
+,{"stream_name":"stdout","time":2654.142634396,"data":"  ep0 step 2250/6147 loss=0.7785\n"}
+,{"stream_name":"stdout","time":2654.357659218,"data":"  ep0 step 2250/6147 loss=0.7785\n"}
+,{"stream_name":"stdout","time":2700.322356512,"data":"  ep0 step 2300/6147 loss=0.7745\n"}
+,{"stream_name":"stdout","time":2700.53339993,"data":"  ep0 step 2300/6147 loss=0.7745\n"}
+,{"stream_name":"stdout","time":2746.589755639,"data":"  ep0 step 2350/6147 loss=0.7693\n"}
+,{"stream_name":"stdout","time":2746.799887986,"data":"  ep0 step 2350/6147 loss=0.7693\n"}
+,{"stream_name":"stdout","time":2793.005180377,"data":"  ep0 step 2400/6147 loss=0.7630\n"}
+,{"stream_name":"stdout","time":2793.220582898,"data":"  ep0 step 2400/6147 loss=0.7630\n"}
+,{"stream_name":"stdout","time":2839.637442491,"data":"  ep0 step 2450/6147 loss=0.7597\n"}
+,{"stream_name":"stdout","time":2839.84823886,"data":"  ep0 step 2450/6147 loss=0.7597\n"}
+,{"stream_name":"stdout","time":2886.203457617,"data":"  ep0 step 2500/6147 loss=0.7560\n"}
+,{"stream_name":"stdout","time":2886.41794651,"data":"  ep0 step 2500/6147 loss=0.7560\n"}
+,{"stream_name":"stdout","time":2932.979220643,"data":"  ep0 step 2550/6147 loss=0.7521\n"}
+,{"stream_name":"stdout","time":2933.1950367,"data":"  ep0 step 2550/6147 loss=0.7521\n"}
+,{"stream_name":"stdout","time":2979.603425223,"data":"  ep0 step 2600/6147 loss=0.7494\n"}
+,{"stream_name":"stdout","time":2979.818076943,"data":"  ep0 step 2600/6147 loss=0.7494\n"}
+,{"stream_name":"stdout","time":3026.224341368,"data":"  ep0 step 2650/6147 loss=0.7461\n"}
+,{"stream_name":"stdout","time":3026.435796741,"data":"  ep0 step 2650/6147 loss=0.7461\n"}
+,{"stream_name":"stdout","time":3072.7967559,"data":"  ep0 step 2700/6147 loss=0.7420\n"}
+,{"stream_name":"stdout","time":3073.011934172,"data":"  ep0 step 2700/6147 loss=0.7420\n"}
+,{"stream_name":"stdout","time":3119.305453322,"data":"  ep0 step 2750/6147 loss=0.7376\n"}
+,{"stream_name":"stdout","time":3119.520762306,"data":"  ep0 step 2750/6147 loss=0.7376\n"}
+,{"stream_name":"stdout","time":3165.607170354,"data":"  ep0 step 2800/6147 loss=0.7353\n"}
+,{"stream_name":"stdout","time":3165.817836771,"data":"  ep0 step 2800/6147 loss=0.7353\n"}
+,{"stream_name":"stdout","time":3212.26369802,"data":"  ep0 step 2850/6147 loss=0.7313\n"}
+,{"stream_name":"stdout","time":3212.479809774,"data":"  ep0 step 2850/6147 loss=0.7313\n"}
+,{"stream_name":"stdout","time":3258.91877844,"data":"  ep0 step 2900/6147 loss=0.7278\n"}
+,{"stream_name":"stdout","time":3259.129180759,"data":"  ep0 step 2900/6147 loss=0.7278\n"}
+,{"stream_name":"stdout","time":3305.367036999,"data":"  ep0 step 2950/6147 loss=0.7244\n"}
+,{"stream_name":"stdout","time":3305.577571631,"data":"  ep0 step 2950/6147 loss=0.7244\n"}
+,{"stream_name":"stdout","time":3351.766170354,"data":"  ep0 step 3000/6147 loss=0.7208\n"}
+,{"stream_name":"stdout","time":3351.982052322,"data":"  ep0 step 3000/6147 loss=0.7208\n"}
+,{"stream_name":"stdout","time":3398.213568304,"data":"  ep0 step 3050/6147 loss=0.7180\n"}
+,{"stream_name":"stdout","time":3398.424564042,"data":"  ep0 step 3050/6147 loss=0.7180\n"}
+,{"stream_name":"stdout","time":3444.479294406,"data":"  ep0 step 3100/6147 loss=0.7145\n"}
+,{"stream_name":"stdout","time":3444.690308314,"data":"  ep0 step 3100/6147 loss=0.7145\n"}
+,{"stream_name":"stdout","time":3491.189374156,"data":"  ep0 step 3150/6147 loss=0.7125\n"}
+,{"stream_name":"stdout","time":3491.400190595,"data":"  ep0 step 3150/6147 loss=0.7125\n"}
+,{"stream_name":"stdout","time":3537.583293559,"data":"  ep0 step 3200/6147 loss=0.7089\n"}
+,{"stream_name":"stdout","time":3537.79460403,"data":"  ep0 step 3200/6147 loss=0.7089\n"}
+,{"stream_name":"stdout","time":3584.168051341,"data":"  ep0 step 3250/6147 loss=0.7050\n"}
+,{"stream_name":"stdout","time":3584.379012702,"data":"  ep0 step 3250/6147 loss=0.7050\n"}
+,{"stream_name":"stdout","time":3630.55050819,"data":"  ep0 step 3300/6147 loss=0.7022\n"}
+,{"stream_name":"stdout","time":3630.766263,"data":"  ep0 step 3300/6147 loss=0.7022\n"}
+,{"stream_name":"stdout","time":3677.009093962,"data":"  ep0 step 3350/6147 loss=0.6995\n"}
+,{"stream_name":"stdout","time":3677.220333493,"data":"  ep0 step 3350/6147 loss=0.6995\n"}
+,{"stream_name":"stdout","time":3723.390296402,"data":"  ep0 step 3400/6147 loss=0.6964\n"}
+,{"stream_name":"stdout","time":3723.606164607,"data":"  ep0 step 3400/6147 loss=0.6964\n"}
+,{"stream_name":"stdout","time":3769.853135202,"data":"  ep0 step 3450/6147 loss=0.6942\n"}
+,{"stream_name":"stdout","time":3770.064509833,"data":"  ep0 step 3450/6147 loss=0.6942\n"}
+,{"stream_name":"stdout","time":3816.228313131,"data":"  ep0 step 3500/6147 loss=0.6907\n"}
+,{"stream_name":"stdout","time":3816.444345573,"data":"  ep0 step 3500/6147 loss=0.6907\n"}
+,{"stream_name":"stdout","time":3862.581802887,"data":"  ep0 step 3550/6147 loss=0.6882\n"}
+,{"stream_name":"stdout","time":3862.792850679,"data":"  ep0 step 3550/6147 loss=0.6882\n"}
+,{"stream_name":"stdout","time":3908.599308341,"data":"  ep0 step 3600/6147 loss=0.6851\n"}
+,{"stream_name":"stdout","time":3908.810385207,"data":"  ep0 step 3600/6147 loss=0.6851\n"}
+,{"stream_name":"stdout","time":3954.683647902,"data":"  ep0 step 3650/6147 loss=0.6836\n"}
+,{"stream_name":"stdout","time":3954.899368699,"data":"  ep0 step 3650/6147 loss=0.6836\n"}
+,{"stream_name":"stdout","time":4000.602576912,"data":"  ep0 step 3700/6147 loss=0.6820\n"}
+,{"stream_name":"stdout","time":4000.818655905,"data":"  ep0 step 3700/6147 loss=0.6820\n"}
+,{"stream_name":"stdout","time":4046.916300667,"data":"  ep0 step 3750/6147 loss=0.6802\n"}
+,{"stream_name":"stdout","time":4047.132528927,"data":"  ep0 step 3750/6147 loss=0.6802\n"}
+,{"stream_name":"stdout","time":4093.38883151,"data":"  ep0 step 3800/6147 loss=0.6770\n"}
+,{"stream_name":"stdout","time":4093.600262556,"data":"  ep0 step 3800/6147 loss=0.6770\n"}
+,{"stream_name":"stdout","time":4139.712684387,"data":"  ep0 step 3850/6147 loss=0.6747\n"}
+,{"stream_name":"stdout","time":4139.924544978,"data":"  ep0 step 3850/6147 loss=0.6747\n"}
+,{"stream_name":"stdout","time":4185.709366223,"data":"  ep0 step 3900/6147 loss=0.6725\n"}
+,{"stream_name":"stdout","time":4185.920521311,"data":"  ep0 step 3900/6147 loss=0.6725\n"}
+,{"stream_name":"stdout","time":4231.872424826,"data":"  ep0 step 3950/6147 loss=0.6707\n"}
+,{"stream_name":"stdout","time":4232.088289945,"data":"  ep0 step 3950/6147 loss=0.6707\n"}
+,{"stream_name":"stdout","time":4278.0714593,"data":"  ep0 step 4000/6147 loss=0.6684\n"}
+,{"stream_name":"stdout","time":4278.289015898,"data":"  ep0 step 4000/6147 loss=0.6684\n"}
+,{"stream_name":"stdout","time":4324.253938389,"data":"  ep0 step 4050/6147 loss=0.6665\n"}
+,{"stream_name":"stdout","time":4324.465175474,"data":"  ep0 step 4050/6147 loss=0.6665\n"}
+,{"stream_name":"stdout","time":4370.351881795,"data":"  ep0 step 4100/6147 loss=0.6635\n"}
+,{"stream_name":"stdout","time":4370.563166539,"data":"  ep0 step 4100/6147 loss=0.6635\n"}
+,{"stream_name":"stdout","time":4416.405476781,"data":"  ep0 step 4150/6147 loss=0.6615\n"}
+,{"stream_name":"stdout","time":4416.616605858,"data":"  ep0 step 4150/6147 loss=0.6615\n"}
+,{"stream_name":"stdout","time":4462.695826453,"data":"  ep0 step 4200/6147 loss=0.6591\n"}
+,{"stream_name":"stdout","time":4462.912108971,"data":"  ep0 step 4200/6147 loss=0.6591\n"}
+,{"stream_name":"stdout","time":4508.935872356,"data":"  ep0 step 4250/6147 loss=0.6565\n"}
+,{"stream_name":"stdout","time":4509.147404803,"data":"  ep0 step 4250/6147 loss=0.6565\n"}
+,{"stream_name":"stdout","time":4555.090550378,"data":"  ep0 step 4300/6147 loss=0.6543\n"}
+,{"stream_name":"stdout","time":4555.302219574,"data":"  ep0 step 4300/6147 loss=0.6543\n"}
+,{"stream_name":"stdout","time":4601.164050513,"data":"  ep0 step 4350/6147 loss=0.6527\n"}
+,{"stream_name":"stdout","time":4601.380732371,"data":"  ep0 step 4350/6147 loss=0.6527\n"}
+,{"stream_name":"stdout","time":4647.50051619,"data":"  ep0 step 4400/6147 loss=0.6509\n"}
+,{"stream_name":"stdout","time":4647.712641032,"data":"  ep0 step 4400/6147 loss=0.6509\n"}
+,{"stream_name":"stdout","time":4693.739457364,"data":"  ep0 step 4450/6147 loss=0.6487\n"}
+,{"stream_name":"stdout","time":4693.951114362,"data":"  ep0 step 4450/6147 loss=0.6487\n"}
+,{"stream_name":"stdout","time":4739.977751526,"data":"  ep0 step 4500/6147 loss=0.6465\n"}
+,{"stream_name":"stdout","time":4740.189874718,"data":"  ep0 step 4500/6147 loss=0.6465\n"}
+,{"stream_name":"stdout","time":4786.225543438,"data":"  ep0 step 4550/6147 loss=0.6450\n"}
+,{"stream_name":"stdout","time":4786.442450781,"data":"  ep0 step 4550/6147 loss=0.6450\n"}
+,{"stream_name":"stdout","time":4832.395145738,"data":"  ep0 step 4600/6147 loss=0.6432\n"}
+,{"stream_name":"stdout","time":4832.606649792,"data":"  ep0 step 4600/6147 loss=0.6432\n"}
+,{"stream_name":"stdout","time":4878.426657402,"data":"  ep0 step 4650/6147 loss=0.6412\n"}
+,{"stream_name":"stdout","time":4878.640773474,"data":"  ep0 step 4650/6147 loss=0.6412\n"}
+,{"stream_name":"stdout","time":4924.418777187,"data":"  ep0 step 4700/6147 loss=0.6392\n"}
+,{"stream_name":"stdout","time":4924.630396997,"data":"  ep0 step 4700/6147 loss=0.6392\n"}
+,{"stream_name":"stdout","time":4970.343338525,"data":"  ep0 step 4750/6147 loss=0.6373\n"}
+,{"stream_name":"stdout","time":4970.555651121,"data":"  ep0 step 4750/6147 loss=0.6373\n"}
+,{"stream_name":"stdout","time":5016.419240089,"data":"  ep0 step 4800/6147 loss=0.6351\n"}
+,{"stream_name":"stdout","time":5016.63669915,"data":"  ep0 step 4800/6147 loss=0.6351\n"}
+,{"stream_name":"stdout","time":5062.092817672,"data":"  ep0 step 4850/6147 loss=0.6334\n"}
+,{"stream_name":"stdout","time":5062.310055774,"data":"  ep0 step 4850/6147 loss=0.6334\n"}
+,{"stream_name":"stdout","time":5108.319025815,"data":"  ep0 step 4900/6147 loss=0.6315\n"}
+,{"stream_name":"stdout","time":5108.538076558,"data":"  ep0 step 4900/6147 loss=0.6315\n"}
+,{"stream_name":"stdout","time":5154.441109543,"data":"  ep0 step 4950/6147 loss=0.6301\n"}
+,{"stream_name":"stdout","time":5154.658104332,"data":"  ep0 step 4950/6147 loss=0.6301\n"}
+,{"stream_name":"stdout","time":5200.302597097,"data":"  ep0 step 5000/6147 loss=0.6283\n"}
+,{"stream_name":"stdout","time":5200.518945609,"data":"  ep0 step 5000/6147 loss=0.6283\n"}
+,{"stream_name":"stdout","time":5245.781619709,"data":"  ep0 step 5050/6147 loss=0.6258\n"}
+,{"stream_name":"stdout","time":5246.000038957,"data":"  ep0 step 5050/6147 loss=0.6258\n"}
+,{"stream_name":"stdout","time":5291.685740182,"data":"  ep0 step 5100/6147 loss=0.6240\n"}
+,{"stream_name":"stdout","time":5291.897859834,"data":"  ep0 step 5100/6147 loss=0.6240\n"}
+,{"stream_name":"stdout","time":5337.500157588,"data":"  ep0 step 5150/6147 loss=0.6220\n"}
+,{"stream_name":"stdout","time":5337.717062213,"data":"  ep0 step 5150/6147 loss=0.6220\n"}
+,{"stream_name":"stdout","time":5383.359245877,"data":"  ep0 step 5200/6147 loss=0.6207\n"}
+,{"stream_name":"stdout","time":5383.578168549,"data":"  ep0 step 5200/6147 loss=0.6207\n"}
+,{"stream_name":"stdout","time":5429.519118847,"data":"  ep0 step 5250/6147 loss=0.6185\n"}
+,{"stream_name":"stdout","time":5429.731953174,"data":"  ep0 step 5250/6147 loss=0.6185\n"}
+,{"stream_name":"stdout","time":5475.269642438,"data":"  ep0 step 5300/6147 loss=0.6165\n"}
+,{"stream_name":"stdout","time":5475.481621773,"data":"  ep0 step 5300/6147 loss=0.6165\n"}
+,{"stream_name":"stdout","time":5520.885222325,"data":"  ep0 step 5350/6147 loss=0.6149\n"}
+,{"stream_name":"stdout","time":5521.097372634,"data":"  ep0 step 5350/6147 loss=0.6149\n"}
+,{"stream_name":"stdout","time":5566.682128244,"data":"  ep0 step 5400/6147 loss=0.6132\n"}
+,{"stream_name":"stdout","time":5566.894272545,"data":"  ep0 step 5400/6147 loss=0.6132\n"}
+,{"stream_name":"stdout","time":5612.529519453,"data":"  ep0 step 5450/6147 loss=0.6125\n"}
+,{"stream_name":"stdout","time":5612.741676595,"data":"  ep0 step 5450/6147 loss=0.6125\n"}
+,{"stream_name":"stdout","time":5658.273317849,"data":"  ep0 step 5500/6147 loss=0.6109\n"}
+,{"stream_name":"stdout","time":5658.485543481,"data":"  ep0 step 5500/6147 loss=0.6109\n"}
+,{"stream_name":"stdout","time":5703.939658188,"data":"  ep0 step 5550/6147 loss=0.6100\n"}
+,{"stream_name":"stdout","time":5704.157205122,"data":"  ep0 step 5550/6147 loss=0.6100\n"}
+,{"stream_name":"stdout","time":5749.673502781,"data":"  ep0 step 5600/6147 loss=0.6088\n"}
+,{"stream_name":"stdout","time":5749.885818205,"data":"  ep0 step 5600/6147 loss=0.6088\n"}
+,{"stream_name":"stdout","time":5795.52860571,"data":"  ep0 step 5650/6147 loss=0.6078\n"}
+,{"stream_name":"stdout","time":5795.7458362,"data":"  ep0 step 5650/6147 loss=0.6078\n"}
+,{"stream_name":"stdout","time":5841.654832106,"data":"  ep0 step 5700/6147 loss=0.6068\n"}
+,{"stream_name":"stdout","time":5841.867387782,"data":"  ep0 step 5700/6147 loss=0.6068\n"}
+,{"stream_name":"stdout","time":5887.65650847,"data":"  ep0 step 5750/6147 loss=0.6050\n"}
+,{"stream_name":"stdout","time":5887.868844157,"data":"  ep0 step 5750/6147 loss=0.6050\n"}
+,{"stream_name":"stdout","time":5933.388350163,"data":"  ep0 step 5800/6147 loss=0.6036\n"}
+,{"stream_name":"stdout","time":5933.608072587,"data":"  ep0 step 5800/6147 loss=0.6036\n"}
+,{"stream_name":"stdout","time":5979.067673001,"data":"  ep0 step 5850/6147 loss=0.6020\n"}
+,{"stream_name":"stdout","time":5979.280439736,"data":"  ep0 step 5850/6147 loss=0.6020\n"}
+,{"stream_name":"stdout","time":6024.91604805,"data":"  ep0 step 5900/6147 loss=0.6009\n"}
+,{"stream_name":"stdout","time":6025.129507462,"data":"  ep0 step 5900/6147 loss=0.6009\n"}
+,{"stream_name":"stdout","time":6070.664765378,"data":"  ep0 step 5950/6147 loss=0.5996\n"}
+,{"stream_name":"stdout","time":6070.884486048,"data":"  ep0 step 5950/6147 loss=0.5996\n"}
+,{"stream_name":"stdout","time":6116.503523923,"data":"  ep0 step 6000/6147 loss=0.5983\n"}
+,{"stream_name":"stdout","time":6116.717038411,"data":"  ep0 step 6000/6147 loss=0.5983\n"}
+,{"stream_name":"stdout","time":6162.458370584,"data":"  ep0 step 6050/6147 loss=0.5964\n"}
+,{"stream_name":"stdout","time":6162.671272594,"data":"  ep0 step 6050/6147 loss=0.5964\n"}
+,{"stream_name":"stdout","time":6208.321691043,"data":"  ep0 step 6100/6147 loss=0.5952\n"}
+,{"stream_name":"stdout","time":6208.540985605,"data":"  ep0 step 6100/6147 loss=0.5952\n"}
+,{"stream_name":"stdout","time":6250.714974146,"data":"[branch_a:panel_codebert] epoch 0 mean loss 0.5946\n"}
+,{"stream_name":"stdout","time":6250.927874831,"data":"[branch_a:panel_codebert] epoch 0 mean loss 0.5946\n"}
+,{"stream_name":"stdout","time":6252.571451538,"data":"  checkpoint -\u003e branch_a_panel_codebert_ckpt.pt (epoch 0)\n"}
+,{"stream_name":"stdout","time":6252.773504185,"data":"  checkpoint -\u003e branch_a_panel_codebert_ckpt.pt (epoch 0)\n"}
+,{"stream_name":"stdout","time":6253.521246382,"data":"  ep1 step 0/6147 loss=0.3820\n"}
+,{"stream_name":"stdout","time":6253.723602442,"data":"  ep1 step 0/6147 loss=0.3820\n"}
+,{"stream_name":"stdout","time":6299.606427754,"data":"  ep1 step 50/6147 loss=0.3525\n"}
+,{"stream_name":"stdout","time":6299.824303525,"data":"  ep1 step 50/6147 loss=0.3525\n"}
+,{"stream_name":"stdout","time":6345.346290559,"data":"  ep1 step 100/6147 loss=0.3624\n"}
+,{"stream_name":"stdout","time":6345.558870379,"data":"  ep1 step 100/6147 loss=0.3624\n"}
+,{"stream_name":"stdout","time":6390.869246774,"data":"  ep1 step 150/6147 loss=0.3771\n"}
+,{"stream_name":"stdout","time":6391.087203018,"data":"  ep1 step 150/6147 loss=0.3771\n"}
+,{"stream_name":"stdout","time":6436.57142417,"data":"  ep1 step 200/6147 loss=0.3820\n"}
+,{"stream_name":"stdout","time":6436.789329109,"data":"  ep1 step 200/6147 loss=0.3820\n"}
+,{"stream_name":"stdout","time":6482.467196579,"data":"  ep1 step 250/6147 loss=0.3827\n"}
+,{"stream_name":"stdout","time":6482.679932209,"data":"  ep1 step 250/6147 loss=0.3827\n"}
+,{"stream_name":"stdout","time":6528.27682385,"data":"  ep1 step 300/6147 loss=0.3924\n"}
+,{"stream_name":"stdout","time":6528.489986148,"data":"  ep1 step 300/6147 loss=0.3924\n"}
+,{"stream_name":"stdout","time":6574.056049341,"data":"  ep1 step 350/6147 loss=0.3853\n"}
+,{"stream_name":"stdout","time":6574.268962527,"data":"  ep1 step 350/6147 loss=0.3853\n"}
+,{"stream_name":"stdout","time":6619.904178801,"data":"  ep1 step 400/6147 loss=0.3872\n"}
+,{"stream_name":"stdout","time":6620.12275615,"data":"  ep1 step 400/6147 loss=0.3872\n"}
+,{"stream_name":"stdout","time":6665.6525865,"data":"  ep1 step 450/6147 loss=0.3884\n"}
+,{"stream_name":"stdout","time":6665.873324486,"data":"  ep1 step 450/6147 loss=0.3884\n"}
+,{"stream_name":"stdout","time":6711.434403771,"data":"  ep1 step 500/6147 loss=0.3902\n"}
+,{"stream_name":"stdout","time":6711.647458939,"data":"  ep1 step 500/6147 loss=0.3902\n"}
+,{"stream_name":"stdout","time":6757.373553723,"data":"  ep1 step 550/6147 loss=0.3946\n"}
+,{"stream_name":"stdout","time":6757.587064461,"data":"  ep1 step 550/6147 loss=0.3946\n"}
+,{"stream_name":"stdout","time":6803.270037088,"data":"  ep1 step 600/6147 loss=0.3971\n"}
+,{"stream_name":"stdout","time":6803.483285293,"data":"  ep1 step 600/6147 loss=0.3971\n"}
+,{"stream_name":"stdout","time":6849.202484256,"data":"  ep1 step 650/6147 loss=0.3970\n"}
+,{"stream_name":"stdout","time":6849.416776957,"data":"  ep1 step 650/6147 loss=0.3970\n"}
+,{"stream_name":"stdout","time":6895.268683879,"data":"  ep1 step 700/6147 loss=0.3960\n"}
+,{"stream_name":"stdout","time":6895.481793492,"data":"  ep1 step 700/6147 loss=0.3960\n"}
+,{"stream_name":"stdout","time":6941.096555021,"data":"  ep1 step 750/6147 loss=0.3929\n"}
+,{"stream_name":"stdout","time":6941.318122074,"data":"  ep1 step 750/6147 loss=0.3929\n"}
+,{"stream_name":"stdout","time":6986.939031003,"data":"  ep1 step 800/6147 loss=0.3941\n"}
+,{"stream_name":"stdout","time":6987.15737783,"data":"  ep1 step 800/6147 loss=0.3941\n"}
+,{"stream_name":"stdout","time":7032.868306812,"data":"  ep1 step 850/6147 loss=0.3942\n"}
+,{"stream_name":"stdout","time":7033.08236398,"data":"  ep1 step 850/6147 loss=0.3942\n"}
+,{"stream_name":"stdout","time":7078.933060489,"data":"  ep1 step 900/6147 loss=0.3926\n"}
+,{"stream_name":"stdout","time":7079.153285278,"data":"  ep1 step 900/6147 loss=0.3926\n"}
+,{"stream_name":"stdout","time":7124.968304788,"data":"  ep1 step 950/6147 loss=0.3940\n"}
+,{"stream_name":"stdout","time":7125.181558588,"data":"  ep1 step 950/6147 loss=0.3940\n"}
+,{"stream_name":"stdout","time":7170.981261516,"data":"  ep1 step 1000/6147 loss=0.3908\n"}
+,{"stream_name":"stdout","time":7171.194998452,"data":"  ep1 step 1000/6147 loss=0.3908\n"}
+,{"stream_name":"stdout","time":7217.079068677,"data":"  ep1 step 1050/6147 loss=0.3933\n"}
+,{"stream_name":"stdout","time":7217.292216601,"data":"  ep1 step 1050/6147 loss=0.3933\n"}
+,{"stream_name":"stdout","time":7263.169431553,"data":"  ep1 step 1100/6147 loss=0.3914\n"}
+,{"stream_name":"stdout","time":7263.383053038,"data":"  ep1 step 1100/6147 loss=0.3914\n"}
+,{"stream_name":"stdout","time":7309.262579394,"data":"  ep1 step 1150/6147 loss=0.3969\n"}
+,{"stream_name":"stdout","time":7309.476034243,"data":"  ep1 step 1150/6147 loss=0.3969\n"}
+,{"stream_name":"stdout","time":7355.627623314,"data":"  ep1 step 1200/6147 loss=0.3970\n"}
+,{"stream_name":"stdout","time":7355.841580934,"data":"  ep1 step 1200/6147 loss=0.3970\n"}
+,{"stream_name":"stdout","time":7401.862822197,"data":"  ep1 step 1250/6147 loss=0.3968\n"}
+,{"stream_name":"stdout","time":7402.076424836,"data":"  ep1 step 1250/6147 loss=0.3968\n"}
+,{"stream_name":"stdout","time":7448.071062725,"data":"  ep1 step 1300/6147 loss=0.3969\n"}
+,{"stream_name":"stdout","time":7448.285254447,"data":"  ep1 step 1300/6147 loss=0.3969\n"}
+,{"stream_name":"stdout","time":7494.044609085,"data":"  ep1 step 1350/6147 loss=0.3997\n"}
+,{"stream_name":"stdout","time":7494.263260852,"data":"  ep1 step 1350/6147 loss=0.3997\n"}
+,{"stream_name":"stdout","time":7539.884785495,"data":"  ep1 step 1400/6147 loss=0.3983\n"}
+,{"stream_name":"stdout","time":7540.103264386,"data":"  ep1 step 1400/6147 loss=0.3983\n"}
+,{"stream_name":"stdout","time":7585.605334691,"data":"  ep1 step 1450/6147 loss=0.3988\n"}
+,{"stream_name":"stdout","time":7585.826794979,"data":"  ep1 step 1450/6147 loss=0.3988\n"}
+,{"stream_name":"stdout","time":7631.430843743,"data":"  ep1 step 1500/6147 loss=0.3990\n"}
+,{"stream_name":"stdout","time":7631.64504969,"data":"  ep1 step 1500/6147 loss=0.3990\n"}
+,{"stream_name":"stdout","time":7677.453644851,"data":"  ep1 step 1550/6147 loss=0.3996\n"}
+,{"stream_name":"stdout","time":7677.666559966,"data":"  ep1 step 1550/6147 loss=0.3996\n"}
+,{"stream_name":"stdout","time":7723.316383051,"data":"  ep1 step 1600/6147 loss=0.4002\n"}
+,{"stream_name":"stdout","time":7723.535015095,"data":"  ep1 step 1600/6147 loss=0.4002\n"}
+,{"stream_name":"stdout","time":7769.152709334,"data":"  ep1 step 1650/6147 loss=0.4011\n"}
+,{"stream_name":"stdout","time":7769.366865971,"data":"  ep1 step 1650/6147 loss=0.4011\n"}
+,{"stream_name":"stdout","time":7815.006036912,"data":"  ep1 step 1700/6147 loss=0.4021\n"}
+,{"stream_name":"stdout","time":7815.220189326,"data":"  ep1 step 1700/6147 loss=0.4021\n"}
+,{"stream_name":"stdout","time":7860.964016887,"data":"  ep1 step 1750/6147 loss=0.4020\n"}
+,{"stream_name":"stdout","time":7861.189571004,"data":"  ep1 step 1750/6147 loss=0.4020\n"}
+,{"stream_name":"stdout","time":7906.885362783,"data":"  ep1 step 1800/6147 loss=0.4015\n"}
+,{"stream_name":"stdout","time":7907.099692487,"data":"  ep1 step 1800/6147 loss=0.4015\n"}
+,{"stream_name":"stdout","time":7952.798369474,"data":"  ep1 step 1850/6147 loss=0.4016\n"}
+,{"stream_name":"stdout","time":7953.012322935,"data":"  ep1 step 1850/6147 loss=0.4016\n"}
+,{"stream_name":"stdout","time":7998.589161874,"data":"  ep1 step 1900/6147 loss=0.4006\n"}
+,{"stream_name":"stdout","time":7998.803306288,"data":"  ep1 step 1900/6147 loss=0.4006\n"}
+,{"stream_name":"stdout","time":8044.392868645,"data":"  ep1 step 1950/6147 loss=0.4002\n"}
+,{"stream_name":"stdout","time":8044.606965681,"data":"  ep1 step 1950/6147 loss=0.4002\n"}
+,{"stream_name":"stdout","time":8090.388387577,"data":"  ep1 step 2000/6147 loss=0.3997\n"}
+,{"stream_name":"stdout","time":8090.603871939,"data":"  ep1 step 2000/6147 loss=0.3997\n"}
+,{"stream_name":"stdout","time":8136.469415964,"data":"  ep1 step 2050/6147 loss=0.3999\n"}
+,{"stream_name":"stdout","time":8136.690418032,"data":"  ep1 step 2050/6147 loss=0.3999\n"}
+,{"stream_name":"stdout","time":8182.236095415,"data":"  ep1 step 2100/6147 loss=0.4000\n"}
+,{"stream_name":"stdout","time":8182.458816982,"data":"  ep1 step 2100/6147 loss=0.4000\n"}
+,{"stream_name":"stdout","time":8227.94576345,"data":"  ep1 step 2150/6147 loss=0.3994\n"}
+,{"stream_name":"stdout","time":8228.163005631,"data":"  ep1 step 2150/6147 loss=0.3994\n"}
+,{"stream_name":"stdout","time":8274.166949392,"data":"  ep1 step 2200/6147 loss=0.3991\n"}
+,{"stream_name":"stdout","time":8274.38611031,"data":"  ep1 step 2200/6147 loss=0.3991\n"}
+,{"stream_name":"stdout","time":8319.766301118,"data":"  ep1 step 2250/6147 loss=0.3972\n"}
+,{"stream_name":"stdout","time":8319.981817294,"data":"  ep1 step 2250/6147 loss=0.3972\n"}
+,{"stream_name":"stdout","time":8365.417240575,"data":"  ep1 step 2300/6147 loss=0.3986\n"}
+,{"stream_name":"stdout","time":8365.631707201,"data":"  ep1 step 2300/6147 loss=0.3986\n"}
+,{"stream_name":"stdout","time":8411.596209771,"data":"  ep1 step 2350/6147 loss=0.3996\n"}
+,{"stream_name":"stdout","time":8411.811336702,"data":"  ep1 step 2350/6147 loss=0.3996\n"}
+,{"stream_name":"stdout","time":8457.378954375,"data":"  ep1 step 2400/6147 loss=0.3983\n"}
+,{"stream_name":"stdout","time":8457.599144295,"data":"  ep1 step 2400/6147 loss=0.3983\n"}
+,{"stream_name":"stdout","time":8503.437697038,"data":"  ep1 step 2450/6147 loss=0.3996\n"}
+,{"stream_name":"stdout","time":8503.652844231,"data":"  ep1 step 2450/6147 loss=0.3996\n"}
+,{"stream_name":"stdout","time":8549.691368518,"data":"  ep1 step 2500/6147 loss=0.3996\n"}
+,{"stream_name":"stdout","time":8549.907730578,"data":"  ep1 step 2500/6147 loss=0.3996\n"}
+,{"stream_name":"stdout","time":8595.162095436,"data":"  ep1 step 2550/6147 loss=0.3976\n"}
+,{"stream_name":"stdout","time":8595.384610818,"data":"  ep1 step 2550/6147 loss=0.3976\n"}
+,{"stream_name":"stdout","time":8641.157768802,"data":"  ep1 step 2600/6147 loss=0.3972\n"}
+,{"stream_name":"stdout","time":8641.372631822,"data":"  ep1 step 2600/6147 loss=0.3972\n"}
+,{"stream_name":"stdout","time":8687.350574138,"data":"  ep1 step 2650/6147 loss=0.3960\n"}
+,{"stream_name":"stdout","time":8687.565434722,"data":"  ep1 step 2650/6147 loss=0.3960\n"}
+,{"stream_name":"stdout","time":8733.343423404,"data":"  ep1 step 2700/6147 loss=0.3968\n"}
+,{"stream_name":"stdout","time":8733.558331805,"data":"  ep1 step 2700/6147 loss=0.3968\n"}
+,{"stream_name":"stdout","time":8779.164769645,"data":"  ep1 step 2750/6147 loss=0.3964\n"}
+,{"stream_name":"stdout","time":8779.385341654,"data":"  ep1 step 2750/6147 loss=0.3964\n"}
+,{"stream_name":"stdout","time":8825.297745177,"data":"  ep1 step 2800/6147 loss=0.3955\n"}
+,{"stream_name":"stdout","time":8825.512497559,"data":"  ep1 step 2800/6147 loss=0.3955\n"}
+,{"stream_name":"stdout","time":8871.35023041,"data":"  ep1 step 2850/6147 loss=0.3954\n"}
+,{"stream_name":"stdout","time":8871.564548197,"data":"  ep1 step 2850/6147 loss=0.3954\n"}
+,{"stream_name":"stdout","time":8916.912475376,"data":"  ep1 step 2900/6147 loss=0.3944\n"}
+,{"stream_name":"stdout","time":8917.127711565,"data":"  ep1 step 2900/6147 loss=0.3944\n"}
+,{"stream_name":"stdout","time":8963.03027902,"data":"  ep1 step 2950/6147 loss=0.3941\n"}
+,{"stream_name":"stdout","time":8963.25378636,"data":"  ep1 step 2950/6147 loss=0.3941\n"}
+,{"stream_name":"stdout","time":9008.855982055,"data":"  ep1 step 3000/6147 loss=0.3946\n"}
+,{"stream_name":"stdout","time":9009.073969671,"data":"  ep1 step 3000/6147 loss=0.3946\n"}
+,{"stream_name":"stdout","time":9054.623576773,"data":"  ep1 step 3050/6147 loss=0.3944\n"}
+,{"stream_name":"stdout","time":9054.83855895,"data":"  ep1 step 3050/6147 loss=0.3944\n"}
+,{"stream_name":"stdout","time":9101.045408815,"data":"  ep1 step 3100/6147 loss=0.3935\n"}
+,{"stream_name":"stdout","time":9101.261190706,"data":"  ep1 step 3100/6147 loss=0.3935\n"}
+,{"stream_name":"stdout","time":9147.031061026,"data":"  ep1 step 3150/6147 loss=0.3948\n"}
+,{"stream_name":"stdout","time":9147.246035593,"data":"  ep1 step 3150/6147 loss=0.3948\n"}
+,{"stream_name":"stdout","time":9193.135040388,"data":"  ep1 step 3200/6147 loss=0.3944\n"}
+,{"stream_name":"stdout","time":9193.355148991,"data":"  ep1 step 3200/6147 loss=0.3944\n"}
+,{"stream_name":"stdout","time":9239.380298866,"data":"  ep1 step 3250/6147 loss=0.3944\n"}
+,{"stream_name":"stdout","time":9239.600838075,"data":"  ep1 step 3250/6147 loss=0.3944\n"}
+,{"stream_name":"stdout","time":9285.068549638,"data":"  ep1 step 3300/6147 loss=0.3934\n"}
+,{"stream_name":"stdout","time":9285.283361044,"data":"  ep1 step 3300/6147 loss=0.3934\n"}
+,{"stream_name":"stdout","time":9331.038956517,"data":"  ep1 step 3350/6147 loss=0.3936\n"}
+,{"stream_name":"stdout","time":9331.254671355,"data":"  ep1 step 3350/6147 loss=0.3936\n"}
+,{"stream_name":"stdout","time":9377.184947261,"data":"  ep1 step 3400/6147 loss=0.3934\n"}
+,{"stream_name":"stdout","time":9377.399732786,"data":"  ep1 step 3400/6147 loss=0.3934\n"}
+,{"stream_name":"stdout","time":9423.189735041,"data":"  ep1 step 3450/6147 loss=0.3936\n"}
+,{"stream_name":"stdout","time":9423.404615957,"data":"  ep1 step 3450/6147 loss=0.3936\n"}
+,{"stream_name":"stdout","time":9469.235328669,"data":"  ep1 step 3500/6147 loss=0.3932\n"}
+,{"stream_name":"stdout","time":9469.45082232,"data":"  ep1 step 3500/6147 loss=0.3932\n"}
+,{"stream_name":"stdout","time":9514.675571636,"data":"  ep1 step 3550/6147 loss=0.3936\n"}
+,{"stream_name":"stdout","time":9514.890526253,"data":"  ep1 step 3550/6147 loss=0.3936\n"}
+,{"stream_name":"stdout","time":9560.801860974,"data":"  ep1 step 3600/6147 loss=0.3942\n"}
+,{"stream_name":"stdout","time":9561.017282736,"data":"  ep1 step 3600/6147 loss=0.3942\n"}
+,{"stream_name":"stdout","time":9606.788410552,"data":"  ep1 step 3650/6147 loss=0.3938\n"}
+,{"stream_name":"stdout","time":9607.003609786,"data":"  ep1 step 3650/6147 loss=0.3938\n"}
+,{"stream_name":"stdout","time":9652.622068813,"data":"  ep1 step 3700/6147 loss=0.3938\n"}
+,{"stream_name":"stdout","time":9652.838030847,"data":"  ep1 step 3700/6147 loss=0.3938\n"}
+,{"stream_name":"stdout","time":9698.512066517,"data":"  ep1 step 3750/6147 loss=0.3928\n"}
+,{"stream_name":"stdout","time":9698.727538667,"data":"  ep1 step 3750/6147 loss=0.3928\n"}
+,{"stream_name":"stdout","time":9744.506817627,"data":"  ep1 step 3800/6147 loss=0.3939\n"}
+,{"stream_name":"stdout","time":9744.722626252,"data":"  ep1 step 3800/6147 loss=0.3939\n"}
+,{"stream_name":"stdout","time":9790.533886357,"data":"  ep1 step 3850/6147 loss=0.3941\n"}
+,{"stream_name":"stdout","time":9790.749653333,"data":"  ep1 step 3850/6147 loss=0.3941\n"}
+,{"stream_name":"stdout","time":9836.317537645,"data":"  ep1 step 3900/6147 loss=0.3933\n"}
+,{"stream_name":"stdout","time":9836.537815614,"data":"  ep1 step 3900/6147 loss=0.3933\n"}
+,{"stream_name":"stdout","time":9882.296350145,"data":"  ep1 step 3950/6147 loss=0.3931\n"}
+,{"stream_name":"stdout","time":9882.511952105,"data":"  ep1 step 3950/6147 loss=0.3931\n"}
+,{"stream_name":"stdout","time":9928.076297868,"data":"  ep1 step 4000/6147 loss=0.3929\n"}
+,{"stream_name":"stdout","time":9928.29165767,"data":"  ep1 step 4000/6147 loss=0.3929\n"}
+,{"stream_name":"stdout","time":9974.000466755,"data":"  ep1 step 4050/6147 loss=0.3931\n"}
+,{"stream_name":"stdout","time":9974.216429967,"data":"  ep1 step 4050/6147 loss=0.3931\n"}
+,{"stream_name":"stdout","time":10019.631042887,"data":"  ep1 step 4100/6147 loss=0.3933\n"}
+,{"stream_name":"stdout","time":10019.846763733,"data":"  ep1 step 4100/6147 loss=0.3933\n"}
+,{"stream_name":"stdout","time":10065.33371071,"data":"  ep1 step 4150/6147 loss=0.3931\n"}
+,{"stream_name":"stdout","time":10065.553899409,"data":"  ep1 step 4150/6147 loss=0.3931\n"}
+,{"stream_name":"stdout","time":10111.45205512,"data":"  ep1 step 4200/6147 loss=0.3932\n"}
+,{"stream_name":"stdout","time":10111.667730006,"data":"  ep1 step 4200/6147 loss=0.3932\n"}
+,{"stream_name":"stdout","time":10157.118244036,"data":"  ep1 step 4250/6147 loss=0.3926\n"}
+,{"stream_name":"stdout","time":10157.339978975,"data":"  ep1 step 4250/6147 loss=0.3926\n"}
+,{"stream_name":"stdout","time":10203.541014582,"data":"  ep1 step 4300/6147 loss=0.3930\n"}
+,{"stream_name":"stdout","time":10203.757469515,"data":"  ep1 step 4300/6147 loss=0.3930\n"}
+,{"stream_name":"stdout","time":10249.810161378,"data":"  ep1 step 4350/6147 loss=0.3919\n"}
+,{"stream_name":"stdout","time":10250.033908053,"data":"  ep1 step 4350/6147 loss=0.3919\n"}
+,{"stream_name":"stdout","time":10295.672991336,"data":"  ep1 step 4400/6147 loss=0.3916\n"}
+,{"stream_name":"stdout","time":10295.893816948,"data":"  ep1 step 4400/6147 loss=0.3916\n"}
+,{"stream_name":"stdout","time":10341.622429718,"data":"  ep1 step 4450/6147 loss=0.3919\n"}
+,{"stream_name":"stdout","time":10341.843958829,"data":"  ep1 step 4450/6147 loss=0.3919\n"}
+,{"stream_name":"stdout","time":10387.582477141,"data":"  ep1 step 4500/6147 loss=0.3913\n"}
+,{"stream_name":"stdout","time":10387.798401257,"data":"  ep1 step 4500/6147 loss=0.3913\n"}
+,{"stream_name":"stdout","time":10433.293597008,"data":"  ep1 step 4550/6147 loss=0.3907\n"}
+,{"stream_name":"stdout","time":10433.514452925,"data":"  ep1 step 4550/6147 loss=0.3907\n"}
+,{"stream_name":"stdout","time":10479.201096815,"data":"  ep1 step 4600/6147 loss=0.3907\n"}
+,{"stream_name":"stdout","time":10479.416795999,"data":"  ep1 step 4600/6147 loss=0.3907\n"}
+,{"stream_name":"stdout","time":10525.022734589,"data":"  ep1 step 4650/6147 loss=0.3902\n"}
+,{"stream_name":"stdout","time":10525.243854307,"data":"  ep1 step 4650/6147 loss=0.3902\n"}
+,{"stream_name":"stdout","time":10570.86104193,"data":"  ep1 step 4700/6147 loss=0.3896\n"}
+,{"stream_name":"stdout","time":10571.076433392,"data":"  ep1 step 4700/6147 loss=0.3896\n"}
+,{"stream_name":"stdout","time":10616.405228083,"data":"  ep1 step 4750/6147 loss=0.3897\n"}
+,{"stream_name":"stdout","time":10616.625901044,"data":"  ep1 step 4750/6147 loss=0.3897\n"}
+,{"stream_name":"stdout","time":10662.329032797,"data":"  ep1 step 4800/6147 loss=0.3897\n"}
+,{"stream_name":"stdout","time":10662.550491315,"data":"  ep1 step 4800/6147 loss=0.3897\n"}
+,{"stream_name":"stdout","time":10708.103792441,"data":"  ep1 step 4850/6147 loss=0.3887\n"}
+,{"stream_name":"stdout","time":10708.325479275,"data":"  ep1 step 4850/6147 loss=0.3887\n"}
+,{"stream_name":"stdout","time":10754.164747505,"data":"  ep1 step 4900/6147 loss=0.3887\n"}
+,{"stream_name":"stdout","time":10754.381259714,"data":"  ep1 step 4900/6147 loss=0.3887\n"}
+,{"stream_name":"stdout","time":10800.15875335,"data":"  ep1 step 4950/6147 loss=0.3884\n"}
+,{"stream_name":"stdout","time":10800.374873694,"data":"  ep1 step 4950/6147 loss=0.3884\n"}
+,{"stream_name":"stdout","time":10845.935330179,"data":"  ep1 step 5000/6147 loss=0.3880\n"}
+,{"stream_name":"stdout","time":10846.151407199,"data":"  ep1 step 5000/6147 loss=0.3880\n"}
+,{"stream_name":"stdout","time":10891.851787374,"data":"  ep1 step 5050/6147 loss=0.3876\n"}
+,{"stream_name":"stdout","time":10892.072621585,"data":"  ep1 step 5050/6147 loss=0.3876\n"}
+,{"stream_name":"stdout","time":10937.858134912,"data":"  ep1 step 5100/6147 loss=0.3870\n"}
+,{"stream_name":"stdout","time":10938.074311283,"data":"  ep1 step 5100/6147 loss=0.3870\n"}
+,{"stream_name":"stdout","time":10983.95043864,"data":"  ep1 step 5150/6147 loss=0.3871\n"}
+,{"stream_name":"stdout","time":10984.172074389,"data":"  ep1 step 5150/6147 loss=0.3871\n"}
+,{"stream_name":"stdout","time":11029.664044524,"data":"  ep1 step 5200/6147 loss=0.3868\n"}
+,{"stream_name":"stdout","time":11029.879877915,"data":"  ep1 step 5200/6147 loss=0.3868\n"}
+,{"stream_name":"stdout","time":11075.580162318,"data":"  ep1 step 5250/6147 loss=0.3865\n"}
+,{"stream_name":"stdout","time":11075.796945866,"data":"  ep1 step 5250/6147 loss=0.3865\n"}
+,{"stream_name":"stdout","time":11121.972073315,"data":"  ep1 step 5300/6147 loss=0.3871\n"}
+,{"stream_name":"stdout","time":11122.188163617,"data":"  ep1 step 5300/6147 loss=0.3871\n"}
+,{"stream_name":"stdout","time":11168.061596736,"data":"  ep1 step 5350/6147 loss=0.3866\n"}
+,{"stream_name":"stdout","time":11168.283659633,"data":"  ep1 step 5350/6147 loss=0.3866\n"}
+,{"stream_name":"stdout","time":11213.799187675,"data":"  ep1 step 5400/6147 loss=0.3869\n"}
+,{"stream_name":"stdout","time":11214.015459866,"data":"  ep1 step 5400/6147 loss=0.3869\n"}
+,{"stream_name":"stdout","time":11259.568435533,"data":"  ep1 step 5450/6147 loss=0.3859\n"}
+,{"stream_name":"stdout","time":11259.784867582,"data":"  ep1 step 5450/6147 loss=0.3859\n"}
+,{"stream_name":"stdout","time":11305.75788778,"data":"  ep1 step 5500/6147 loss=0.3853\n"}
+,{"stream_name":"stdout","time":11305.97528298,"data":"  ep1 step 5500/6147 loss=0.3853\n"}
+,{"stream_name":"stdout","time":11352.098752547,"data":"  ep1 step 5550/6147 loss=0.3847\n"}
+,{"stream_name":"stdout","time":11352.315200098,"data":"  ep1 step 5550/6147 loss=0.3847\n"}
+,{"stream_name":"stdout","time":11398.102252272,"data":"  ep1 step 5600/6147 loss=0.3842\n"}
+,{"stream_name":"stdout","time":11398.319537357,"data":"  ep1 step 5600/6147 loss=0.3842\n"}
+,{"stream_name":"stdout","time":11443.8821167,"data":"  ep1 step 5650/6147 loss=0.3843\n"}
+,{"stream_name":"stdout","time":11444.099006097,"data":"  ep1 step 5650/6147 loss=0.3843\n"}
+,{"stream_name":"stdout","time":11489.7873232,"data":"  ep1 step 5700/6147 loss=0.3839\n"}
+,{"stream_name":"stdout","time":11490.014893506,"data":"  ep1 step 5700/6147 loss=0.3839\n"}
+,{"stream_name":"stdout","time":11535.743685068,"data":"  ep1 step 5750/6147 loss=0.3838\n"}
+,{"stream_name":"stdout","time":11535.96075003,"data":"  ep1 step 5750/6147 loss=0.3838\n"}
+,{"stream_name":"stdout","time":11581.662915554,"data":"  ep1 step 5800/6147 loss=0.3835\n"}
+,{"stream_name":"stdout","time":11581.884648224,"data":"  ep1 step 5800/6147 loss=0.3835\n"}
+,{"stream_name":"stdout","time":11627.891768707,"data":"  ep1 step 5850/6147 loss=0.3836\n"}
+,{"stream_name":"stdout","time":11628.108842906,"data":"  ep1 step 5850/6147 loss=0.3836\n"}
+,{"stream_name":"stdout","time":11673.894750981,"data":"  ep1 step 5900/6147 loss=0.3835\n"}
+,{"stream_name":"stdout","time":11674.112129382,"data":"  ep1 step 5900/6147 loss=0.3835\n"}
+,{"stream_name":"stdout","time":11719.774207862,"data":"  ep1 step 5950/6147 loss=0.3830\n"}
+,{"stream_name":"stdout","time":11719.99904763,"data":"  ep1 step 5950/6147 loss=0.3830\n"}
+,{"stream_name":"stdout","time":11766.124694328,"data":"  ep1 step 6000/6147 loss=0.3826\n"}
+,{"stream_name":"stdout","time":11766.346401547,"data":"  ep1 step 6000/6147 loss=0.3826\n"}
+,{"stream_name":"stdout","time":11812.139259597,"data":"  ep1 step 6050/6147 loss=0.3824\n"}
+,{"stream_name":"stdout","time":11812.363991706,"data":"  ep1 step 6050/6147 loss=0.3824\n"}
+,{"stream_name":"stdout","time":11857.879259466,"data":"  ep1 step 6100/6147 loss=0.3827\n"}
+,{"stream_name":"stdout","time":11858.104273666,"data":"  ep1 step 6100/6147 loss=0.3827\n"}
+,{"stream_name":"stdout","time":11900.400200008,"data":"[branch_a:panel_codebert] epoch 1 mean loss 0.3826\n"}
+,{"stream_name":"stdout","time":11900.624942014,"data":"[branch_a:panel_codebert] epoch 1 mean loss 0.3826\n"}
+,{"stream_name":"stdout","time":11903.356180807,"data":"  checkpoint -\u003e branch_a_panel_codebert_ckpt.pt (epoch 1)\n"}
+,{"stream_name":"stdout","time":11903.558615508,"data":"  checkpoint -\u003e branch_a_panel_codebert_ckpt.pt (epoch 1)\n"}
+,{"stream_name":"stdout","time":11904.304100127,"data":"  ep2 step 0/6147 loss=0.4273\n"}
+,{"stream_name":"stdout","time":11904.506382116,"data":"  ep2 step 0/6147 loss=0.4273\n"}
+,{"stream_name":"stdout","time":11950.547044645,"data":"  ep2 step 50/6147 loss=0.3167\n"}
+,{"stream_name":"stdout","time":11950.764584511,"data":"  ep2 step 50/6147 loss=0.3167\n"}
+,{"stream_name":"stdout","time":11996.339361965,"data":"  ep2 step 100/6147 loss=0.2775\n"}
+,{"stream_name":"stdout","time":11996.556663907,"data":"  ep2 step 100/6147 loss=0.2775\n"}
+,{"stream_name":"stdout","time":12042.162349365,"data":"  ep2 step 150/6147 loss=0.2873\n"}
+,{"stream_name":"stdout","time":12042.384154317,"data":"  ep2 step 150/6147 loss=0.2873\n"}
+,{"stream_name":"stdout","time":12088.07400446,"data":"  ep2 step 200/6147 loss=0.3069\n"}
+,{"stream_name":"stdout","time":12088.295996127,"data":"  ep2 step 200/6147 loss=0.3069\n"}
+,{"stream_name":"stdout","time":12133.668319522,"data":"  ep2 step 250/6147 loss=0.2963\n"}
+,{"stream_name":"stdout","time":12133.886021701,"data":"  ep2 step 250/6147 loss=0.2963\n"}
+,{"stream_name":"stdout","time":12179.157420731,"data":"  ep2 step 300/6147 loss=0.2893\n"}
+,{"stream_name":"stdout","time":12179.378049761,"data":"  ep2 step 300/6147 loss=0.2893\n"}
+,{"stream_name":"stdout","time":12224.942391198,"data":"  ep2 step 350/6147 loss=0.2868\n"}
+,{"stream_name":"stdout","time":12225.159604741,"data":"  ep2 step 350/6147 loss=0.2868\n"}
+,{"stream_name":"stdout","time":12270.714126039,"data":"  ep2 step 400/6147 loss=0.2884\n"}
+,{"stream_name":"stdout","time":12270.931576351,"data":"  ep2 step 400/6147 loss=0.2884\n"}
+,{"stream_name":"stdout","time":12316.218868397,"data":"  ep2 step 450/6147 loss=0.2887\n"}
+,{"stream_name":"stdout","time":12316.438838155,"data":"  ep2 step 450/6147 loss=0.2887\n"}
+,{"stream_name":"stdout","time":12361.838025152,"data":"  ep2 step 500/6147 loss=0.2922\n"}
+,{"stream_name":"stdout","time":12362.055816645,"data":"  ep2 step 500/6147 loss=0.2922\n"}
+,{"stream_name":"stdout","time":12407.675272845,"data":"  ep2 step 550/6147 loss=0.2930\n"}
+,{"stream_name":"stdout","time":12407.89326185,"data":"  ep2 step 550/6147 loss=0.2930\n"}
+,{"stream_name":"stdout","time":12453.373317465,"data":"  ep2 step 600/6147 loss=0.2929\n"}
+,{"stream_name":"stdout","time":12453.599443266,"data":"  ep2 step 600/6147 loss=0.2929\n"}
+,{"stream_name":"stdout","time":12499.014832179,"data":"  ep2 step 650/6147 loss=0.2937\n"}
+,{"stream_name":"stdout","time":12499.232681718,"data":"  ep2 step 650/6147 loss=0.2937\n"}
+,{"stream_name":"stdout","time":12544.81431777,"data":"  ep2 step 700/6147 loss=0.2921\n"}
+,{"stream_name":"stdout","time":12545.039683047,"data":"  ep2 step 700/6147 loss=0.2921\n"}
+,{"stream_name":"stdout","time":12590.342780982,"data":"  ep2 step 750/6147 loss=0.2947\n"}
+,{"stream_name":"stdout","time":12590.560445143,"data":"  ep2 step 750/6147 loss=0.2947\n"}
+,{"stream_name":"stdout","time":12636.219290499,"data":"  ep2 step 800/6147 loss=0.2939\n"}
+,{"stream_name":"stdout","time":12636.445224207,"data":"  ep2 step 800/6147 loss=0.2939\n"}
+,{"stream_name":"stdout","time":12681.896313748,"data":"  ep2 step 850/6147 loss=0.2944\n"}
+,{"stream_name":"stdout","time":12682.122505268,"data":"  ep2 step 850/6147 loss=0.2944\n"}
+,{"stream_name":"stdout","time":12727.611352537,"data":"  ep2 step 900/6147 loss=0.2948\n"}
+,{"stream_name":"stdout","time":12727.829534685,"data":"  ep2 step 900/6147 loss=0.2948\n"}
+,{"stream_name":"stdout","time":12773.386614528,"data":"  ep2 step 950/6147 loss=0.2948\n"}
+,{"stream_name":"stdout","time":12773.605064823,"data":"  ep2 step 950/6147 loss=0.2948\n"}
+,{"stream_name":"stdout","time":12819.029869675,"data":"  ep2 step 1000/6147 loss=0.2941\n"}
+,{"stream_name":"stdout","time":12819.247745073,"data":"  ep2 step 1000/6147 loss=0.2941\n"}
+,{"stream_name":"stdout","time":12864.815369415,"data":"  ep2 step 1050/6147 loss=0.2966\n"}
+,{"stream_name":"stdout","time":12865.033853962,"data":"  ep2 step 1050/6147 loss=0.2966\n"}
+,{"stream_name":"stdout","time":12910.400643518,"data":"  ep2 step 1100/6147 loss=0.2965\n"}
+,{"stream_name":"stdout","time":12910.618354524,"data":"  ep2 step 1100/6147 loss=0.2965\n"}
+,{"stream_name":"stdout","time":12956.10695756,"data":"  ep2 step 1150/6147 loss=0.2961\n"}
+,{"stream_name":"stdout","time":12956.326242802,"data":"  ep2 step 1150/6147 loss=0.2961\n"}
+,{"stream_name":"stdout","time":13001.74552807,"data":"  ep2 step 1200/6147 loss=0.2943\n"}
+,{"stream_name":"stdout","time":13001.964060801,"data":"  ep2 step 1200/6147 loss=0.2943\n"}
+,{"stream_name":"stdout","time":13047.243304393,"data":"  ep2 step 1250/6147 loss=0.2925\n"}
+,{"stream_name":"stdout","time":13047.461108235,"data":"  ep2 step 1250/6147 loss=0.2925\n"}
+,{"stream_name":"stdout","time":13093.012546164,"data":"  ep2 step 1300/6147 loss=0.2910\n"}
+,{"stream_name":"stdout","time":13093.231708055,"data":"  ep2 step 1300/6147 loss=0.2910\n"}
+,{"stream_name":"stdout","time":13138.495229983,"data":"  ep2 step 1350/6147 loss=0.2901\n"}
+,{"stream_name":"stdout","time":13138.713303957,"data":"  ep2 step 1350/6147 loss=0.2901\n"}
+,{"stream_name":"stdout","time":13184.137107133,"data":"  ep2 step 1400/6147 loss=0.2930\n"}
+,{"stream_name":"stdout","time":13184.358638904,"data":"  ep2 step 1400/6147 loss=0.2930\n"}
+,{"stream_name":"stdout","time":13229.899233109,"data":"  ep2 step 1450/6147 loss=0.2939\n"}
+,{"stream_name":"stdout","time":13230.126820687,"data":"  ep2 step 1450/6147 loss=0.2939\n"}
+,{"stream_name":"stdout","time":13275.654270022,"data":"  ep2 step 1500/6147 loss=0.2941\n"}
+,{"stream_name":"stdout","time":13275.875680424,"data":"  ep2 step 1500/6147 loss=0.2941\n"}
+,{"stream_name":"stdout","time":13321.478775327,"data":"  ep2 step 1550/6147 loss=0.2936\n"}
+,{"stream_name":"stdout","time":13321.701601466,"data":"  ep2 step 1550/6147 loss=0.2936\n"}
+,{"stream_name":"stdout","time":13367.010707556,"data":"  ep2 step 1600/6147 loss=0.2945\n"}
+,{"stream_name":"stdout","time":13367.228575647,"data":"  ep2 step 1600/6147 loss=0.2945\n"}
+,{"stream_name":"stdout","time":13412.426269568,"data":"  ep2 step 1650/6147 loss=0.2946\n"}
+,{"stream_name":"stdout","time":13412.644250821,"data":"  ep2 step 1650/6147 loss=0.2946\n"}
+,{"stream_name":"stdout","time":13457.961766337,"data":"  ep2 step 1700/6147 loss=0.2939\n"}
+,{"stream_name":"stdout","time":13458.179996441,"data":"  ep2 step 1700/6147 loss=0.2939\n"}
+,{"stream_name":"stdout","time":13503.65129086,"data":"  ep2 step 1750/6147 loss=0.2928\n"}
+,{"stream_name":"stdout","time":13503.877527403,"data":"  ep2 step 1750/6147 loss=0.2928\n"}
+,{"stream_name":"stdout","time":13549.48374306,"data":"  ep2 step 1800/6147 loss=0.2913\n"}
+,{"stream_name":"stdout","time":13549.702551792,"data":"  ep2 step 1800/6147 loss=0.2913\n"}
+,{"stream_name":"stdout","time":13595.173902427,"data":"  ep2 step 1850/6147 loss=0.2914\n"}
+,{"stream_name":"stdout","time":13595.39312315,"data":"  ep2 step 1850/6147 loss=0.2914\n"}
+,{"stream_name":"stdout","time":13640.864685426,"data":"  ep2 step 1900/6147 loss=0.2904\n"}
+,{"stream_name":"stdout","time":13641.092118197,"data":"  ep2 step 1900/6147 loss=0.2904\n"}
+,{"stream_name":"stdout","time":13686.692896337,"data":"  ep2 step 1950/6147 loss=0.2893\n"}
+,{"stream_name":"stdout","time":13686.911403402,"data":"  ep2 step 1950/6147 loss=0.2893\n"}
+,{"stream_name":"stdout","time":13731.958640266,"data":"  ep2 step 2000/6147 loss=0.2885\n"}
+,{"stream_name":"stdout","time":13732.181897024,"data":"  ep2 step 2000/6147 loss=0.2885\n"}
+,{"stream_name":"stdout","time":13777.87910552,"data":"  ep2 step 2050/6147 loss=0.2889\n"}
+,{"stream_name":"stdout","time":13778.0976989,"data":"  ep2 step 2050/6147 loss=0.2889\n"}
+,{"stream_name":"stdout","time":13823.70461175,"data":"  ep2 step 2100/6147 loss=0.2889\n"}
+,{"stream_name":"stdout","time":13823.923257398,"data":"  ep2 step 2100/6147 loss=0.2889\n"}
+,{"stream_name":"stdout","time":13869.166512692,"data":"  ep2 step 2150/6147 loss=0.2888\n"}
+,{"stream_name":"stdout","time":13869.385374303,"data":"  ep2 step 2150/6147 loss=0.2888\n"}
+,{"stream_name":"stdout","time":13914.963590232,"data":"  ep2 step 2200/6147 loss=0.2901\n"}
+,{"stream_name":"stdout","time":13915.187468729,"data":"  ep2 step 2200/6147 loss=0.2901\n"}
+,{"stream_name":"stdout","time":13960.787364365,"data":"  ep2 step 2250/6147 loss=0.2885\n"}
+,{"stream_name":"stdout","time":13961.005900517,"data":"  ep2 step 2250/6147 loss=0.2885\n"}
+,{"stream_name":"stdout","time":14006.718066516,"data":"  ep2 step 2300/6147 loss=0.2882\n"}
+,{"stream_name":"stdout","time":14006.944786079,"data":"  ep2 step 2300/6147 loss=0.2882\n"}
+,{"stream_name":"stdout","time":14052.299807415,"data":"  ep2 step 2350/6147 loss=0.2880\n"}
+,{"stream_name":"stdout","time":14052.523158622,"data":"  ep2 step 2350/6147 loss=0.2880\n"}
+,{"stream_name":"stdout","time":14098.03389061,"data":"  ep2 step 2400/6147 loss=0.2871\n"}
+,{"stream_name":"stdout","time":14098.257999439,"data":"  ep2 step 2400/6147 loss=0.2871\n"}
+,{"stream_name":"stdout","time":14143.891577914,"data":"  ep2 step 2450/6147 loss=0.2869\n"}
+,{"stream_name":"stdout","time":14144.11167448,"data":"  ep2 step 2450/6147 loss=0.2869\n"}
+,{"stream_name":"stdout","time":14189.923628859,"data":"  ep2 step 2500/6147 loss=0.2877\n"}
+,{"stream_name":"stdout","time":14190.144264731,"data":"  ep2 step 2500/6147 loss=0.2877\n"}
+,{"stream_name":"stdout","time":14235.753237872,"data":"  ep2 step 2550/6147 loss=0.2868\n"}
+,{"stream_name":"stdout","time":14235.971651684,"data":"  ep2 step 2550/6147 loss=0.2868\n"}
+,{"stream_name":"stdout","time":14281.752843318,"data":"  ep2 step 2600/6147 loss=0.2863\n"}
+,{"stream_name":"stdout","time":14281.971407431,"data":"  ep2 step 2600/6147 loss=0.2863\n"}
+,{"stream_name":"stdout","time":14327.603350167,"data":"  ep2 step 2650/6147 loss=0.2861\n"}
+,{"stream_name":"stdout","time":14327.83161885,"data":"  ep2 step 2650/6147 loss=0.2861\n"}
+,{"stream_name":"stdout","time":14373.520294403,"data":"  ep2 step 2700/6147 loss=0.2857\n"}
+,{"stream_name":"stdout","time":14373.739203218,"data":"  ep2 step 2700/6147 loss=0.2857\n"}
+,{"stream_name":"stdout","time":14419.432717791,"data":"  ep2 step 2750/6147 loss=0.2865\n"}
+,{"stream_name":"stdout","time":14419.65719914,"data":"  ep2 step 2750/6147 loss=0.2865\n"}
+,{"stream_name":"stdout","time":14465.212400718,"data":"  ep2 step 2800/6147 loss=0.2864\n"}
+,{"stream_name":"stdout","time":14465.434692996,"data":"  ep2 step 2800/6147 loss=0.2864\n"}
+,{"stream_name":"stdout","time":14510.823295275,"data":"  ep2 step 2850/6147 loss=0.2856\n"}
+,{"stream_name":"stdout","time":14511.04170091,"data":"  ep2 step 2850/6147 loss=0.2856\n"}
+,{"stream_name":"stdout","time":14556.825697707,"data":"  ep2 step 2900/6147 loss=0.2868\n"}
+,{"stream_name":"stdout","time":14557.044218519,"data":"  ep2 step 2900/6147 loss=0.2868\n"}
+,{"stream_name":"stdout","time":14602.897003614,"data":"  ep2 step 2950/6147 loss=0.2861\n"}
+,{"stream_name":"stdout","time":14603.11639071,"data":"  ep2 step 2950/6147 loss=0.2861\n"}
+,{"stream_name":"stdout","time":14648.61515208,"data":"  ep2 step 3000/6147 loss=0.2860\n"}
+,{"stream_name":"stdout","time":14648.83450985,"data":"  ep2 step 3000/6147 loss=0.2860\n"}
+,{"stream_name":"stdout","time":14694.988232477,"data":"  ep2 step 3050/6147 loss=0.2865\n"}
+,{"stream_name":"stdout","time":14695.215229488,"data":"  ep2 step 3050/6147 loss=0.2865\n"}
+,{"stream_name":"stdout","time":14741.253714495,"data":"  ep2 step 3100/6147 loss=0.2859\n"}
+,{"stream_name":"stdout","time":14741.477650692,"data":"  ep2 step 3100/6147 loss=0.2859\n"}
+,{"stream_name":"stdout","time":14787.424538787,"data":"  ep2 step 3150/6147 loss=0.2862\n"}
+,{"stream_name":"stdout","time":14787.644227965,"data":"  ep2 step 3150/6147 loss=0.2862\n"}
+,{"stream_name":"stdout","time":14833.690977913,"data":"  ep2 step 3200/6147 loss=0.2861\n"}
+,{"stream_name":"stdout","time":14833.910267135,"data":"  ep2 step 3200/6147 loss=0.2861\n"}
+,{"stream_name":"stdout","time":14879.778905333,"data":"  ep2 step 3250/6147 loss=0.2854\n"}
+,{"stream_name":"stdout","time":14879.997650289,"data":"  ep2 step 3250/6147 loss=0.2854\n"}
+,{"stream_name":"stdout","time":14925.6852103,"data":"  ep2 step 3300/6147 loss=0.2857\n"}
+,{"stream_name":"stdout","time":14925.906179013,"data":"  ep2 step 3300/6147 loss=0.2857\n"}
+,{"stream_name":"stdout","time":14971.713956864,"data":"  ep2 step 3350/6147 loss=0.2852\n"}
+,{"stream_name":"stdout","time":14971.933889581,"data":"  ep2 step 3350/6147 loss=0.2852\n"}
+,{"stream_name":"stdout","time":15017.763016474,"data":"  ep2 step 3400/6147 loss=0.2856\n"}
+,{"stream_name":"stdout","time":15017.988624596,"data":"  ep2 step 3400/6147 loss=0.2856\n"}
+,{"stream_name":"stdout","time":15063.457583899,"data":"  ep2 step 3450/6147 loss=0.2863\n"}
+,{"stream_name":"stdout","time":15063.683217452,"data":"  ep2 step 3450/6147 loss=0.2863\n"}
+,{"stream_name":"stdout","time":15109.44803346,"data":"  ep2 step 3500/6147 loss=0.2860\n"}
+,{"stream_name":"stdout","time":15109.668102198,"data":"  ep2 step 3500/6147 loss=0.2860\n"}
+,{"stream_name":"stdout","time":15155.430993382,"data":"  ep2 step 3550/6147 loss=0.2858\n"}
+,{"stream_name":"stdout","time":15155.655360885,"data":"  ep2 step 3550/6147 loss=0.2858\n"}
+,{"stream_name":"stdout","time":15201.313069552,"data":"  ep2 step 3600/6147 loss=0.2855\n"}
+,{"stream_name":"stdout","time":15201.537945409,"data":"  ep2 step 3600/6147 loss=0.2855\n"}
+,{"stream_name":"stdout","time":15247.177783135,"data":"  ep2 step 3650/6147 loss=0.2855\n"}
+,{"stream_name":"stdout","time":15247.402589085,"data":"  ep2 step 3650/6147 loss=0.2855\n"}
+,{"stream_name":"stdout","time":15293.109304885,"data":"  ep2 step 3700/6147 loss=0.2845\n"}
+,{"stream_name":"stdout","time":15293.329487278,"data":"  ep2 step 3700/6147 loss=0.2845\n"}
+,{"stream_name":"stdout","time":15339.172286158,"data":"  ep2 step 3750/6147 loss=0.2842\n"}
+,{"stream_name":"stdout","time":15339.398342455,"data":"  ep2 step 3750/6147 loss=0.2842\n"}
+,{"stream_name":"stdout","time":15384.981075348,"data":"  ep2 step 3800/6147 loss=0.2841\n"}
+,{"stream_name":"stdout","time":15385.201391312,"data":"  ep2 step 3800/6147 loss=0.2841\n"}
+,{"stream_name":"stdout","time":15430.827444476,"data":"  ep2 step 3850/6147 loss=0.2845\n"}
+,{"stream_name":"stdout","time":15431.047443292,"data":"  ep2 step 3850/6147 loss=0.2845\n"}
+,{"stream_name":"stdout","time":15476.709121355,"data":"  ep2 step 3900/6147 loss=0.2839\n"}
+,{"stream_name":"stdout","time":15476.930621917,"data":"  ep2 step 3900/6147 loss=0.2839\n"}
+,{"stream_name":"stdout","time":15522.671573183,"data":"  ep2 step 3950/6147 loss=0.2832\n"}
+,{"stream_name":"stdout","time":15522.891077398,"data":"  ep2 step 3950/6147 loss=0.2832\n"}
+,{"stream_name":"stdout","time":15568.537109103,"data":"  ep2 step 4000/6147 loss=0.2826\n"}
+,{"stream_name":"stdout","time":15568.758825659,"data":"  ep2 step 4000/6147 loss=0.2826\n"}
+,{"stream_name":"stdout","time":15614.220651699,"data":"  ep2 step 4050/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":15614.440084252,"data":"  ep2 step 4050/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":15660.173114255,"data":"  ep2 step 4100/6147 loss=0.2818\n"}
+,{"stream_name":"stdout","time":15660.402544125,"data":"  ep2 step 4100/6147 loss=0.2818\n"}
+,{"stream_name":"stdout","time":15706.312589573,"data":"  ep2 step 4150/6147 loss=0.2822\n"}
+,{"stream_name":"stdout","time":15706.532388242,"data":"  ep2 step 4150/6147 loss=0.2822\n"}
+,{"stream_name":"stdout","time":15752.564298878,"data":"  ep2 step 4200/6147 loss=0.2816\n"}
+,{"stream_name":"stdout","time":15752.783707762,"data":"  ep2 step 4200/6147 loss=0.2816\n"}
+,{"stream_name":"stdout","time":15798.7526636,"data":"  ep2 step 4250/6147 loss=0.2814\n"}
+,{"stream_name":"stdout","time":15798.972451891,"data":"  ep2 step 4250/6147 loss=0.2814\n"}
+,{"stream_name":"stdout","time":15844.868802662,"data":"  ep2 step 4300/6147 loss=0.2810\n"}
+,{"stream_name":"stdout","time":15845.095130779,"data":"  ep2 step 4300/6147 loss=0.2810\n"}
+,{"stream_name":"stdout","time":15891.197433137,"data":"  ep2 step 4350/6147 loss=0.2811\n"}
+,{"stream_name":"stdout","time":15891.423010606,"data":"  ep2 step 4350/6147 loss=0.2811\n"}
+,{"stream_name":"stdout","time":15937.237317071,"data":"  ep2 step 4400/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":15937.457741847,"data":"  ep2 step 4400/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":15983.453498754,"data":"  ep2 step 4450/6147 loss=0.2820\n"}
+,{"stream_name":"stdout","time":15983.67362901,"data":"  ep2 step 4450/6147 loss=0.2820\n"}
+,{"stream_name":"stdout","time":16029.186567017,"data":"  ep2 step 4500/6147 loss=0.2821\n"}
+,{"stream_name":"stdout","time":16029.407375589,"data":"  ep2 step 4500/6147 loss=0.2821\n"}
+,{"stream_name":"stdout","time":16075.106491435,"data":"  ep2 step 4550/6147 loss=0.2822\n"}
+,{"stream_name":"stdout","time":16075.327365806,"data":"  ep2 step 4550/6147 loss=0.2822\n"}
+,{"stream_name":"stdout","time":16121.191082388,"data":"  ep2 step 4600/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16121.416848111,"data":"  ep2 step 4600/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16167.355386594,"data":"  ep2 step 4650/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16167.583180049,"data":"  ep2 step 4650/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16213.16480128,"data":"  ep2 step 4700/6147 loss=0.2823\n"}
+,{"stream_name":"stdout","time":16213.390251543,"data":"  ep2 step 4700/6147 loss=0.2823\n"}
+,{"stream_name":"stdout","time":16259.351487548,"data":"  ep2 step 4750/6147 loss=0.2820\n"}
+,{"stream_name":"stdout","time":16259.577931321,"data":"  ep2 step 4750/6147 loss=0.2820\n"}
+,{"stream_name":"stdout","time":16305.295533641,"data":"  ep2 step 4800/6147 loss=0.2818\n"}
+,{"stream_name":"stdout","time":16305.51833919,"data":"  ep2 step 4800/6147 loss=0.2818\n"}
+,{"stream_name":"stdout","time":16351.20513234,"data":"  ep2 step 4850/6147 loss=0.2818\n"}
+,{"stream_name":"stdout","time":16351.425422921,"data":"  ep2 step 4850/6147 loss=0.2818\n"}
+,{"stream_name":"stdout","time":16397.211262778,"data":"  ep2 step 4900/6147 loss=0.2812\n"}
+,{"stream_name":"stdout","time":16397.431799275,"data":"  ep2 step 4900/6147 loss=0.2812\n"}
+,{"stream_name":"stdout","time":16443.190442715,"data":"  ep2 step 4950/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16443.411638775,"data":"  ep2 step 4950/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16489.254472747,"data":"  ep2 step 5000/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16489.475863208,"data":"  ep2 step 5000/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16535.364223769,"data":"  ep2 step 5050/6147 loss=0.2813\n"}
+,{"stream_name":"stdout","time":16535.592737609,"data":"  ep2 step 5050/6147 loss=0.2813\n"}
+,{"stream_name":"stdout","time":16581.529276059,"data":"  ep2 step 5100/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16581.750547529,"data":"  ep2 step 5100/6147 loss=0.2817\n"}
+,{"stream_name":"stdout","time":16627.544631627,"data":"  ep2 step 5150/6147 loss=0.2818\n"}
+,{"stream_name":"stdout","time":16627.767002577,"data":"  ep2 step 5150/6147 loss=0.2818\n"}
+,{"stream_name":"stdout","time":16673.408768828,"data":"  ep2 step 5200/6147 loss=0.2822\n"}
+,{"stream_name":"stdout","time":16673.629797737,"data":"  ep2 step 5200/6147 loss=0.2822\n"}
+,{"stream_name":"stdout","time":16719.453450551,"data":"  ep2 step 5250/6147 loss=0.2819\n"}
+,{"stream_name":"stdout","time":16719.674507783,"data":"  ep2 step 5250/6147 loss=0.2819\n"}
+,{"stream_name":"stdout","time":16765.522015841,"data":"  ep2 step 5300/6147 loss=0.2813\n"}
+,{"stream_name":"stdout","time":16765.743068643,"data":"  ep2 step 5300/6147 loss=0.2813\n"}
+,{"stream_name":"stdout","time":16811.754623452,"data":"  ep2 step 5350/6147 loss=0.2809\n"}
+,{"stream_name":"stdout","time":16811.975483379,"data":"  ep2 step 5350/6147 loss=0.2809\n"}
+,{"stream_name":"stdout","time":16857.841942009,"data":"  ep2 step 5400/6147 loss=0.2809\n"}
+,{"stream_name":"stdout","time":16858.063276265,"data":"  ep2 step 5400/6147 loss=0.2809\n"}
+,{"stream_name":"stdout","time":16903.974213173,"data":"  ep2 step 5450/6147 loss=0.2814\n"}
+,{"stream_name":"stdout","time":16904.194979832,"data":"  ep2 step 5450/6147 loss=0.2814\n"}
+,{"stream_name":"stdout","time":16949.802743765,"data":"  ep2 step 5500/6147 loss=0.2812\n"}
+,{"stream_name":"stdout","time":16950.027869128,"data":"  ep2 step 5500/6147 loss=0.2812\n"}
+,{"stream_name":"stdout","time":16995.817673914,"data":"  ep2 step 5550/6147 loss=0.2810\n"}
+,{"stream_name":"stdout","time":16996.038470726,"data":"  ep2 step 5550/6147 loss=0.2810\n"}
+,{"stream_name":"stdout","time":17041.799518317,"data":"  ep2 step 5600/6147 loss=0.2804\n"}
+,{"stream_name":"stdout","time":17042.020747606,"data":"  ep2 step 5600/6147 loss=0.2804\n"}
+,{"stream_name":"stdout","time":17087.881856756,"data":"  ep2 step 5650/6147 loss=0.2803\n"}
+,{"stream_name":"stdout","time":17088.107942747,"data":"  ep2 step 5650/6147 loss=0.2803\n"}
+,{"stream_name":"stdout","time":17133.813372735,"data":"  ep2 step 5700/6147 loss=0.2802\n"}
+,{"stream_name":"stdout","time":17134.039715346,"data":"  ep2 step 5700/6147 loss=0.2802\n"}
+,{"stream_name":"stdout","time":17179.928042365,"data":"  ep2 step 5750/6147 loss=0.2801\n"}
+,{"stream_name":"stdout","time":17180.149045842,"data":"  ep2 step 5750/6147 loss=0.2801\n"}
+,{"stream_name":"stdout","time":17225.914291372,"data":"  ep2 step 5800/6147 loss=0.2797\n"}
+,{"stream_name":"stdout","time":17226.135927476,"data":"  ep2 step 5800/6147 loss=0.2797\n"}
+,{"stream_name":"stdout","time":17271.867363258,"data":"  ep2 step 5850/6147 loss=0.2796\n"}
+,{"stream_name":"stdout","time":17272.08864124,"data":"  ep2 step 5850/6147 loss=0.2796\n"}
+,{"stream_name":"stdout","time":17318.143074666,"data":"  ep2 step 5900/6147 loss=0.2799\n"}
+,{"stream_name":"stdout","time":17318.364163085,"data":"  ep2 step 5900/6147 loss=0.2799\n"}
+,{"stream_name":"stdout","time":17364.076893825,"data":"  ep2 step 5950/6147 loss=0.2791\n"}
+,{"stream_name":"stdout","time":17364.298199082,"data":"  ep2 step 5950/6147 loss=0.2791\n"}
+,{"stream_name":"stdout","time":17410.125988842,"data":"  ep2 step 6000/6147 loss=0.2794\n"}
+,{"stream_name":"stdout","time":17410.348575844,"data":"  ep2 step 6000/6147 loss=0.2794\n"}
+,{"stream_name":"stdout","time":17456.125145344,"data":"  ep2 step 6050/6147 loss=0.2795\n"}
+,{"stream_name":"stdout","time":17456.348263896,"data":"  ep2 step 6050/6147 loss=0.2795\n"}
+,{"stream_name":"stdout","time":17501.916058287,"data":"  ep2 step 6100/6147 loss=0.2794\n"}
+,{"stream_name":"stdout","time":17502.137106227,"data":"  ep2 step 6100/6147 loss=0.2794\n"}
+,{"stream_name":"stdout","time":17544.302945035,"data":"[branch_a:panel_codebert] epoch 2 mean loss 0.2797\n"}
+,{"stream_name":"stdout","time":17544.524834564,"data":"[branch_a:panel_codebert] epoch 2 mean loss 0.2797\n"}
+,{"stream_name":"stdout","time":17547.252798495,"data":"  checkpoint -\u003e branch_a_panel_codebert_ckpt.pt (epoch 2)\n"}
+,{"stream_name":"stdout","time":17547.455853657,"data":"  checkpoint -\u003e branch_a_panel_codebert_ckpt.pt (epoch 2)\n"}
+,{"stream_name":"stdout","time":17589.785255799,"data":"    scored 5,024/31,049  120 rows/s\n"}
+,{"stream_name":"stdout","time":17590.006468906,"data":"    scored 5,024/31,049  120 rows/s\n"}
+,{"stream_name":"stdout","time":17630.91885347,"data":"    scored 10,016/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17631.157492876,"data":"    scored 10,016/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17671.962642815,"data":"    scored 15,008/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17672.192201798,"data":"    scored 15,008/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17713.045136592,"data":"    scored 20,000/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17713.266769165,"data":"    scored 20,000/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17754.414689135,"data":"    scored 25,024/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17754.641484016,"data":"    scored 25,024/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17795.48563273,"data":"    scored 30,016/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17795.804653208,"data":"    scored 30,016/31,049  121 rows/s\n"}
+,{"stream_name":"stdout","time":17845.375664335,"data":"    scored 5,024/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":17845.604970314,"data":"    scored 5,024/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":17886.460040553,"data":"    scored 10,016/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":17886.691181609,"data":"    scored 10,016/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":17927.492414928,"data":"    scored 15,008/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":17927.722550766,"data":"    scored 15,008/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":17968.602144556,"data":"    scored 20,000/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":17968.832467468,"data":"    scored 20,000/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":18009.93088938,"data":"    scored 25,024/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":18010.15363678,"data":"    scored 25,024/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":18050.989582073,"data":"    scored 30,016/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":18051.211076048,"data":"    scored 30,016/31,041  121 rows/s\n"}
+,{"stream_name":"stdout","time":18100.974790932,"data":"    scored 5,024/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18101.203263538,"data":"    scored 5,024/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18142.034284718,"data":"    scored 10,016/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18142.257283107,"data":"    scored 10,016/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18183.091441739,"data":"    scored 15,008/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18183.314326635,"data":"    scored 15,008/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18224.151267621,"data":"    scored 20,000/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18224.38155328,"data":"    scored 20,000/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18265.457243599,"data":"    scored 25,024/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18265.688375674,"data":"    scored 25,024/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18306.567950434,"data":"    scored 30,016/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18306.79062989,"data":"    scored 30,016/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18347.731167442,"data":"    scored 35,008/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18347.95956496,"data":"    scored 35,008/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18388.904236841,"data":"    scored 40,000/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18389.128114192,"data":"    scored 40,000/41,058  121 rows/s\n"}
+,{"stream_name":"stdout","time":18439.510110326,"data":"    scored 5,024/56,626  120 rows/s\n"}
+,{"stream_name":"stdout","time":18439.739952202,"data":"    scored 5,024/56,626  120 rows/s\n"}
+,{"stream_name":"stdout","time":18480.660338736,"data":"    scored 10,016/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18480.900802308,"data":"    scored 10,016/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18521.781429179,"data":"    scored 15,008/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18522.012152942,"data":"    scored 15,008/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18563.179850696,"data":"    scored 20,000/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18563.403575252,"data":"    scored 20,000/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18604.670112311,"data":"    scored 25,024/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18604.893830794,"data":"    scored 25,024/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18645.769765617,"data":"    scored 30,016/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18645.999494405,"data":"    scored 30,016/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18686.848331458,"data":"    scored 35,008/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18687.071718398,"data":"    scored 35,008/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18728.175936947,"data":"    scored 40,000/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18728.400496715,"data":"    scored 40,000/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18769.737014477,"data":"    scored 45,024/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18769.960043122,"data":"    scored 45,024/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18811.119573906,"data":"    scored 50,016/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18811.341995778,"data":"    scored 50,016/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18852.297431075,"data":"    scored 55,008/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18852.524695484,"data":"    scored 55,008/56,626  121 rows/s\n"}
+,{"stream_name":"stdout","time":18907.004076684,"data":"    scored 5,024/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":18907.22679035,"data":"    scored 5,024/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":18948.117951371,"data":"    scored 10,016/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":18948.349603212,"data":"    scored 10,016/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":18989.15946979,"data":"    scored 15,008/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":18989.383536919,"data":"    scored 15,008/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19030.212037002,"data":"    scored 20,000/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19030.439805548,"data":"    scored 20,000/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19071.597982319,"data":"    scored 25,024/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19071.820236219,"data":"    scored 25,024/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19112.794205611,"data":"    scored 30,016/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19113.024976981,"data":"    scored 30,016/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19153.824194746,"data":"    scored 35,008/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19154.052365342,"data":"    scored 35,008/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19195.077262529,"data":"    scored 40,000/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19195.304941855,"data":"    scored 40,000/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19236.909117084,"data":"    scored 45,024/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19237.137658911,"data":"    scored 45,024/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19278.02683939,"data":"    scored 50,016/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19278.249862093,"data":"    scored 50,016/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19319.589577361,"data":"    scored 55,008/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19319.813029668,"data":"    scored 55,008/56,728  121 rows/s\n"}
+,{"stream_name":"stdout","time":19368.037339021,"data":"\n"}
+,{"stream_name":"stdout","time":19368.037387264,"data":"slice                        n  macroF1     wF1     acc     AUC  humFPR\n"}
+,{"stream_name":"stdout","time":19368.037394191,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":19368.037399009,"data":"s1_in_distribution      31,041   0.8656  0.9190  0.9181  0.9972  0.0366\n"}
+,{"stream_name":"stdout","time":19368.037403596,"data":"s2_unseen_generator     41,058   0.8235  0.8820  0.8800  0.9981  0.0385\n"}
+,{"stream_name":"stdout","time":19368.037408001,"data":"s3_unseen_language      56,626   0.5312  0.6162  0.5924  0.9137  0.3077\n"}
+,{"stream_name":"stdout","time":19368.037413332,"data":"s4_unseen_domain        56,728   0.3227  0.3339  0.3419  0.8531  0.8344\n"}
+,{"stream_name":"stdout","time":19368.037418312,"data":"s5_compound              4,168   0.2093  0.2079  0.2378  0.8042   0.905\n"}
+,{"stream_name":"stdout","time":19368.260972882,"data":"\n"}
+,{"stream_name":"stdout","time":19368.261002829,"data":"slice                        n  macroF1     wF1     acc     AUC  humFPR\n"}
+,{"stream_name":"stdout","time":19368.261008293,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":19368.261012988,"data":"s1_in_distribution      31,041   0.8656  0.9190  0.9181  0.9972  0.0366\n"}
+,{"stream_name":"stdout","time":19368.261018184,"data":"s2_unseen_generator     41,058   0.8235  0.8820  0.8800  0.9981  0.0385\n"}
+,{"stream_name":"stdout","time":19368.261023021,"data":"s3_unseen_language      56,626   0.5312  0.6162  0.5924  0.9137  0.3077\n"}
+,{"stream_name":"stdout","time":19368.261027223,"data":"s4_unseen_domain        56,728   0.3227  0.3339  0.3419  0.8531  0.8344\n"}
+,{"stream_name":"stdout","time":19368.261031564,"data":"s5_compound              4,168   0.2093  0.2079  0.2378  0.8042   0.905\n"}
+,{"stream_name":"stdout","time":19369.496719465,"data":"[ 322.6 min] panel_codebert trained and evaluated\n"}
+,{"stream_name":"stdout","time":19369.589406899,"data":"condition                    CodeBERT   ModernBERT    delta\n"}
+,{"stream_name":"stdout","time":19369.589436,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":19369.589453511,"data":"s1_in_distribution             0.8656       0.8977  -0.0321\n"}
+,{"stream_name":"stdout","time":19369.589457494,"data":"s2_unseen_generator            0.8235       0.8685  -0.0450\n"}
+,{"stream_name":"stdout","time":19369.589460986,"data":"s3_unseen_language             0.5312       0.5667  -0.0355\n"}
+,{"stream_name":"stdout","time":19369.589464241,"data":"s4_unseen_domain               0.3227       0.4029  -0.0802\n"}
+,{"stream_name":"stdout","time":19369.589467636,"data":"s5_compound                    0.2093       0.2378  -0.0285\n"}
+,{"stream_name":"stdout","time":19369.589471346,"data":"\n"}
+,{"stream_name":"stdout","time":19369.589474581,"data":"S1 -\u003e S5: 0.8656 -\u003e 0.2093  (drop 0.6562)\n"}
+,{"stream_name":"stdout","time":19369.5894786,"data":"ModernBERT drop:                   0.6599\n"}
+,{"stream_name":"stdout","time":19369.589481827,"data":"\n"}
+,{"stream_name":"stdout","time":19369.589485079,"data":"CodeBERT collapses under compound shift as well. The plural claim\n"}
+,{"stream_name":"stdout","time":19369.589488491,"data":"in the paper now has a second, independently trained system\n"}
+,{"stream_name":"stdout","time":19369.589491913,"data":"standing behind it.\n"}
+,{"stream_name":"stdout","time":19369.870455832,"data":"copied 6 arrays\n"}
+,{"stream_name":"stdout","time":19369.870494999,"data":"-\u003e /kaggle/working/results.zip  (Output tab)\n"}
+,{"stream_name":"stdout","time":19369.870500987,"data":"       485 KB  arrays/proba_a_panel_codebert_s1_in_distribution.npy\n"}
+,{"stream_name":"stdout","time":19369.87050506,"data":"       642 KB  arrays/proba_a_panel_codebert_s2_unseen_generator.npy\n"}
+,{"stream_name":"stdout","time":19369.870508748,"data":"       885 KB  arrays/proba_a_panel_codebert_s3_unseen_language.npy\n"}
+,{"stream_name":"stdout","time":19369.870512327,"data":"       886 KB  arrays/proba_a_panel_codebert_s4_unseen_domain.npy\n"}
+,{"stream_name":"stdout","time":19369.870515896,"data":"        65 KB  arrays/proba_a_panel_codebert_s5_compound.npy\n"}
+,{"stream_name":"stdout","time":19369.870519527,"data":"       485 KB  arrays/proba_a_panel_codebert_val.npy\n"}
+,{"stream_name":"stdout","time":19369.870524037,"data":"         5 KB  reports/branch_a_panel_codebert.json\n"}
+,{"stream_name":"stdout","time":19369.870527491,"data":"         1 KB  reports/splits.json\n"}
+,{"stream_name":"stdout","time":19369.870531034,"data":"[ 322.6 min] saved\n"}
+,{"stream_name":"stderr","time":19373.580203492,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights:   1%|          | 1/199 [00:00\u003c00:00, 10255.02it/s, Materializing param=embeddings.LayerNorm.bias]\rLoading weights:   1%|          | 1/199 [00:00\u003c00:00, 4009.85it/s, Materializing param=embeddings.LayerNorm.bias] \rLoading weights:   1%|          | 2/199 [00:00\u003c00:00, 2892.62it/s, Materializing param=embeddings.LayerNorm.weight]\rLoading weights:   1%|          | 2/199 [00:00\u003c00:00, 2478.17it/s, Materializing param=embeddings.LayerNorm.weight]\rLoading weights:   2%|▏         | 3/199 [00:00\u003c00:00, 1554.60it/s, Materializing param=embeddings.position_embeddings.weight]\rLoading weights:   2%|▏         | 3/199 [00:00\u003c00:00, 1454.34it/s, Materializing param=embeddings.position_embeddings.weight]\rLoading weights:   2%|▏         | 4/199 [00:00\u003c00:00, 1720.39it/s, Materializing param=embeddings.token_type_embeddings.weight]\rLoading weights:   2%|▏         | 4/199 [00:00\u003c00:00, 1156.33it/s, Materializing param=embeddings.token_type_embeddings.weight]\rLoading weights:   3%|▎         | 5/199 [00:00\u003c00:00, 1338.66it/s, Materializing param=embeddings.word_embeddings.weight]      \rLoading weights:   3%|▎         | 5/199 [00:00\u003c00:00, 1290.63it/s, Materializing param=embeddings.word_embeddings.weight]\rLoading weights:   3%|▎         | 6/199 [00:00\u003c00:00, 1416.91it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]\rLoading weights:   3%|▎         | 6/199 [00:00\u003c00:00, 1349.74it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.bias]\rLoading weights:   4%|▎         | 7/199 [00:00\u003c00:00, 1227.38it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]\rLoading weights:   4%|▎         | 7/199 [00:00\u003c00:00, 1179.22it/s, Materializing param=encoder.layer.0.attention.output.LayerNorm.weight]\rLoading weights:   4%|▍         | 8/199 [00:00\u003c00:00, 1287.98it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]      \rLoading weights:   4%|▍         | 8/199 [00:00\u003c00:00, 1250.17it/s, Materializing param=encoder.layer.0.attention.output.dense.bias]\rLoading weights:   5%|▍         | 9/199 [00:00\u003c00:00, 1080.67it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]\rLoading weights:   5%|▍         | 9/199 [00:00\u003c00:00, 1066.53it/s, Materializing param=encoder.layer.0.attention.output.dense.weight]\rLoading weights:   5%|▌         | 10/199 [00:00\u003c00:00, 1067.69it/s, Materializing param=encoder.layer.0.attention.self.key.bias]     \rLoading weights:   5%|▌         | 10/199 [00:00\u003c00:00, 1025.70it/s, Materializing param=encoder.layer.0.attention.self.key.bias]\rLoading weights:   6%|▌         | 11/199 [00:00\u003c00:00, 1069.83it/s, Materializing param=encoder.layer.0.attention.self.key.weight]\rLoading weights:   6%|▌         | 11/199 [00:00\u003c00:00, 1061.09it/s, Materializing param=encoder.layer.0.attention.self.key.weight]\rLoading weights:   6%|▌         | 12/199 [00:00\u003c00:00, 1136.69it/s, Materializing param=encoder.layer.0.attention.self.query.bias]\rLoading weights:   6%|▌         | 12/199 [00:00\u003c00:00, 1127.10it/s, Materializing param=encoder.layer.0.attention.self.query.bias]\rLoading weights:   7%|▋         | 13/199 [00:00\u003c00:00, 1200.75it/s, Materializing param=encoder.layer.0.attention.self.query.weight]\rLoading weights:   7%|▋         | 13/199 [00:00\u003c00:00, 1186.58it/s, Materializing param=encoder.layer.0.attention.self.query.weight]\rLoading weights:   7%|▋         | 14/199 [00:00\u003c00:00, 1254.01it/s, Materializing param=encoder.layer.0.attention.self.value.bias]  \rLoading weights:   7%|▋         | 14/199 [00:00\u003c00:00, 1242.41it/s, Materializing param=encoder.layer.0.attention.self.value.bias]\rLoading weights:   8%|▊         | 15/199 [00:00\u003c00:00, 1312.11it/s, Materializing param=encoder.layer.0.attention.self.value.weight]\rLoading weights:   8%|▊         | 15/199 [00:00\u003c00:00, 1300.37it/s, Materializing param=encoder.layer.0.attention.self.value.weight]\rLoading weights:   8%|▊         | 16/199 [00:00\u003c00:00, 1367.87it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]    \rLoading weights:   8%|▊         | 16/199 [00:00\u003c00:00, 1356.31it/s, Materializing param=encoder.layer.0.intermediate.dense.bias]\rLoading weights:   9%|▊         | 17/199 [00:00\u003c00:00, 1418.60it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]\rLoading weights:   9%|▊         | 17/199 [00:00\u003c00:00, 1409.54it/s, Materializing param=encoder.layer.0.intermediate.dense.weight]\rLoading weights:   9%|▉         | 18/199 [00:00\u003c00:00, 1472.40it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]    \rLoading weights:   9%|▉         | 18/199 [00:00\u003c00:00, 1461.46it/s, Materializing param=encoder.layer.0.output.LayerNorm.bias]\rLoading weights:  10%|▉         | 19/199 [00:00\u003c00:00, 1523.16it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]\rLoading weights:  10%|▉         | 19/199 [00:00\u003c00:00, 1511.78it/s, Materializing param=encoder.layer.0.output.LayerNorm.weight]\rLoading weights:  10%|█         | 20/199 [00:00\u003c00:00, 1571.14it/s, Materializing param=encoder.layer.0.output.dense.bias]      \rLoading weights:  10%|█         | 20/199 [00:00\u003c00:00, 1560.26it/s, Materializing param=encoder.layer.0.output.dense.bias]\rLoading weights:  11%|█         | 21/199 [00:00\u003c00:00, 1614.61it/s, Materializing param=encoder.layer.0.output.dense.weight]\rLoading weights:  11%|█         | 21/199 [00:00\u003c00:00, 1603.06it/s, Materializing param=encoder.layer.0.output.dense.weight]\rLoading weights:  11%|█         | 22/199 [00:00\u003c00:00, 1656.25it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]\rLoading weights:  11%|█         | 22/199 [00:00\u003c00:00, 1645.97it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.bias]\rLoading weights:  12%|█▏        | 23/199 [00:00\u003c00:00, 1697.50it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]\rLoading weights:  12%|█▏        | 23/199 [00:00\u003c00:00, 1686.99it/s, Materializing param=encoder.layer.1.attention.output.LayerNorm.weight]\rLoading weights:  12%|█▏        | 24/199 [00:00\u003c00:00, 1740.01it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]      \rLoading weights:  12%|█▏        | 24/199 [00:00\u003c00:00, 1727.95it/s, Materializing param=encoder.layer.1.attention.output.dense.bias]\rLoading weights:  13%|█▎        | 25/199 [00:00\u003c00:00, 1771.15it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]\rLoading weights:  13%|█▎        | 25/199 [00:00\u003c00:00, 1760.69it/s, Materializing param=encoder.layer.1.attention.output.dense.weight]\rLoading weights:  13%|█▎        | 26/199 [00:00\u003c00:00, 1806.51it/s, Materializing param=encoder.layer.1.attention.self.key.bias]      \rLoading weights:  13%|█▎        | 26/199 [00:00\u003c00:00, 1793.41it/s, Materializing param=encoder.layer.1.attention.self.key.bias]\rLoading weights:  14%|█▎        | 27/199 [00:00\u003c00:00, 1834.87it/s, Materializing param=encoder.layer.1.attention.self.key.weight]\rLoading weights:  14%|█▎        | 27/199 [00:00\u003c00:00, 1824.46it/s, Materializing param=encoder.layer.1.attention.self.key.weight]\rLoading weights:  14%|█▍        | 28/199 [00:00\u003c00:00, 1861.77it/s, Materializing param=encoder.layer.1.attention.self.query.bias]\rLoading weights:  14%|█▍        | 28/199 [00:00\u003c00:00, 1847.04it/s, Materializing param=encoder.layer.1.attention.self.query.bias]\rLoading weights:  15%|█▍        | 29/199 [00:00\u003c00:00, 1883.88it/s, Materializing param=encoder.layer.1.attention.self.query.weight]\rLoading weights:  15%|█▍        | 29/199 [00:00\u003c00:00, 1871.22it/s, Materializing param=encoder.layer.1.attention.self.query.weight]\rLoading weights:  15%|█▌        | 30/199 [00:00\u003c00:00, 1911.92it/s, Materializing param=encoder.layer.1.attention.self.value.bias]  \rLoading weights:  15%|█▌        | 30/199 [00:00\u003c00:00, 1903.30it/s, Materializing param=encoder.layer.1.attention.self.value.bias]\rLoading weights:  16%|█▌        | 31/199 [00:00\u003c00:00, 1943.40it/s, Materializing param=encoder.layer.1.attention.self.value.weight]\rLoading weights:  16%|█▌        | 31/199 [00:00\u003c00:00, 1934.79it/s, Materializing param=encoder.layer.1.attention.self.value.weight]\rLoading weights:  16%|█▌        | 32/199 [00:00\u003c00:00, 1976.26it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]    \rLoading weights:  16%|█▌        | 32/199 [00:00\u003c00:00, 1962.74it/s, Materializing param=encoder.layer.1.intermediate.dense.bias]\rLoading weights:  17%|█▋        | 33/199 [00:00\u003c00:00, 2003.10it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]\rLoading weights:  17%|█▋        | 33/199 [00:00\u003c00:00, 1992.31it/s, Materializing param=encoder.layer.1.intermediate.dense.weight]\rLoading weights:  17%|█▋        | 34/199 [00:00\u003c00:00, 2032.96it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]    \rLoading weights:  17%|█▋        | 34/199 [00:00\u003c00:00, 2021.35it/s, Materializing param=encoder.layer.1.output.LayerNorm.bias]\rLoading weights:  18%|█▊        | 35/199 [00:00\u003c00:00, 2059.09it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]\rLoading weights:  18%|█▊        | 35/199 [00:00\u003c00:00, 2047.31it/s, Materializing param=encoder.layer.1.output.LayerNorm.weight]\rLoading weights:  18%|█▊        | 36/199 [00:00\u003c00:00, 2085.57it/s, Materializing param=encoder.layer.1.output.dense.bias]      \rLoading weights:  18%|█▊        | 36/199 [00:00\u003c00:00, 2074.13it/s, Materializing param=encoder.layer.1.output.dense.bias]\rLoading weights:  19%|█▊        | 37/199 [00:00\u003c00:00, 2109.44it/s, Materializing param=encoder.layer.1.output.dense.weight]\rLoading weights:  19%|█▊        | 37/199 [00:00\u003c00:00, 2099.88it/s, Materializing param=encoder.layer.1.output.dense.weight]\rLoading weights:  19%|█▉        | 38/199 [00:00\u003c00:00, 2116.45it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]\rLoading weights:  19%|█▉        | 38/199 [00:00\u003c00:00, 2026.52it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.bias]\rLoading weights:  20%|█▉        | 39/199 [00:00\u003c00:00, 2041.99it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]\rLoading weights:  20%|█▉        | 39/199 [00:00\u003c00:00, 2026.26it/s, Materializing param=encoder.layer.2.attention.output.LayerNorm.weight]\rLoading weights:  20%|██        | 40/199 [00:00\u003c00:00, 2027.65it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]      \rLoading weights:  20%|██        | 40/199 [00:00\u003c00:00, 2014.77it/s, Materializing param=encoder.layer.2.attention.output.dense.bias]\rLoading weights:  21%|██        | 41/199 [00:00\u003c00:00, 2041.34it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]\rLoading weights:  21%|██        | 41/199 [00:00\u003c00:00, 2029.20it/s, Materializing param=encoder.layer.2.attention.output.dense.weight]\rLoading weights:  21%|██        | 42/199 [00:00\u003c00:00, 2058.53it/s, Materializing param=encoder.layer.2.attention.self.key.bias]      \rLoading weights:  21%|██        | 42/199 [00:00\u003c00:00, 2048.52it/s, Materializing param=encoder.layer.2.attention.self.key.bias]\rLoading weights:  22%|██▏       | 43/199 [00:00\u003c00:00, 2080.99it/s, Materializing param=encoder.layer.2.attention.self.key.weight]\rLoading weights:  22%|██▏       | 43/199 [00:00\u003c00:00, 2071.83it/s, Materializing param=encoder.layer.2.attention.self.key.weight]\rLoading weights:  22%|██▏       | 44/199 [00:00\u003c00:00, 2102.62it/s, Materializing param=encoder.layer.2.attention.self.query.bias]\rLoading weights:  22%|██▏       | 44/199 [00:00\u003c00:00, 2093.30it/s, Materializing param=encoder.layer.2.attention.self.query.bias]\rLoading weights:  23%|██▎       | 45/199 [00:00\u003c00:00, 2124.92it/s, Materializing param=encoder.layer.2.attention.self.query.weight]\rLoading weights:  23%|██▎       | 45/199 [00:00\u003c00:00, 2115.32it/s, Materializing param=encoder.layer.2.attention.self.query.weight]\rLoading weights:  23%|██▎       | 46/199 [00:00\u003c00:00, 2146.88it/s, Materializing param=encoder.layer.2.attention.self.value.bias]  \rLoading weights:  23%|██▎       | 46/199 [00:00\u003c00:00, 2137.51it/s, Materializing param=encoder.layer.2.attention.self.value.bias]\rLoading weights:  24%|██▎       | 47/199 [00:00\u003c00:00, 2169.03it/s, Materializing param=encoder.layer.2.attention.self.value.weight]\rLoading weights:  24%|██▎       | 47/199 [00:00\u003c00:00, 2160.45it/s, Materializing param=encoder.layer.2.attention.self.value.weight]\rLoading weights:  24%|██▍       | 48/199 [00:00\u003c00:00, 2190.05it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]    \rLoading weights:  24%|██▍       | 48/199 [00:00\u003c00:00, 2180.61it/s, Materializing param=encoder.layer.2.intermediate.dense.bias]\rLoading weights:  25%|██▍       | 49/199 [00:00\u003c00:00, 2210.76it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]\rLoading weights:  25%|██▍       | 49/199 [00:00\u003c00:00, 2202.23it/s, Materializing param=encoder.layer.2.intermediate.dense.weight]\rLoading weights:  25%|██▌       | 50/199 [00:00\u003c00:00, 2226.04it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]    \rLoading weights:  25%|██▌       | 50/199 [00:00\u003c00:00, 2215.08it/s, Materializing param=encoder.layer.2.output.LayerNorm.bias]\rLoading weights:  26%|██▌       | 51/199 [00:00\u003c00:00, 2239.82it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]\rLoading weights:  26%|██▌       | 51/199 [00:00\u003c00:00, 2229.22it/s, Materializing param=encoder.layer.2.output.LayerNorm.weight]\rLoading weights:  26%|██▌       | 52/199 [00:00\u003c00:00, 2251.79it/s, Materializing param=encoder.layer.2.output.dense.bias]      \rLoading weights:  26%|██▌       | 52/199 [00:00\u003c00:00, 2241.08it/s, Materializing param=encoder.layer.2.output.dense.bias]\rLoading weights:  27%|██▋       | 53/199 [00:00\u003c00:00, 2262.81it/s, Materializing param=encoder.layer.2.output.dense.weight]\rLoading weights:  27%|██▋       | 53/199 [00:00\u003c00:00, 2250.91it/s, Materializing param=encoder.layer.2.output.dense.weight]\rLoading weights:  27%|██▋       | 54/199 [00:00\u003c00:00, 2275.23it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]\rLoading weights:  27%|██▋       | 54/199 [00:00\u003c00:00, 2264.68it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.bias]\rLoading weights:  28%|██▊       | 55/199 [00:00\u003c00:00, 2285.79it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]\rLoading weights:  28%|██▊       | 55/199 [00:00\u003c00:00, 2272.44it/s, Materializing param=encoder.layer.3.attention.output.LayerNorm.weight]\rLoading weights:  28%|██▊       | 56/199 [00:00\u003c00:00, 2294.01it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]      \rLoading weights:  28%|██▊       | 56/199 [00:00\u003c00:00, 2282.17it/s, Materializing param=encoder.layer.3.attention.output.dense.bias]\rLoading weights:  29%|██▊       | 57/199 [00:00\u003c00:00, 2303.32it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]\rLoading weights:  29%|██▊       | 57/199 [00:00\u003c00:00, 2292.47it/s, Materializing param=encoder.layer.3.attention.output.dense.weight]\rLoading weights:  29%|██▉       | 58/199 [00:00\u003c00:00, 2311.53it/s, Materializing param=encoder.layer.3.attention.self.key.bias]      \rLoading weights:  29%|██▉       | 58/199 [00:00\u003c00:00, 2299.07it/s, Materializing param=encoder.layer.3.attention.self.key.bias]\rLoading weights:  30%|██▉       | 59/199 [00:00\u003c00:00, 2319.38it/s, Materializing param=encoder.layer.3.attention.self.key.weight]\rLoading weights:  30%|██▉       | 59/199 [00:00\u003c00:00, 2308.71it/s, Materializing param=encoder.layer.3.attention.self.key.weight]\rLoading weights:  30%|███       | 60/199 [00:00\u003c00:00, 2330.62it/s, Materializing param=encoder.layer.3.attention.self.query.bias]\rLoading weights:  30%|███       | 60/199 [00:00\u003c00:00, 2320.56it/s, Materializing param=encoder.layer.3.attention.self.query.bias]\rLoading weights:  31%|███       | 61/199 [00:00\u003c00:00, 2336.02it/s, Materializing param=encoder.layer.3.attention.self.query.weight]\rLoading weights:  31%|███       | 61/199 [00:00\u003c00:00, 2324.79it/s, Materializing param=encoder.layer.3.attention.self.query.weight]\rLoading weights:  31%|███       | 62/199 [00:00\u003c00:00, 2343.95it/s, Materializing param=encoder.layer.3.attention.self.value.bias]  \rLoading weights:  31%|███       | 62/199 [00:00\u003c00:00, 2332.51it/s, Materializing param=encoder.layer.3.attention.self.value.bias]\rLoading weights:  32%|███▏      | 63/199 [00:00\u003c00:00, 2352.51it/s, Materializing param=encoder.layer.3.attention.self.value.weight]\rLoading weights:  32%|███▏      | 63/199 [00:00\u003c00:00, 2342.15it/s, Materializing param=encoder.layer.3.attention.self.value.weight]\rLoading weights:  32%|███▏      | 64/199 [00:00\u003c00:00, 2357.99it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]    \rLoading weights:  32%|███▏      | 64/199 [00:00\u003c00:00, 2346.63it/s, Materializing param=encoder.layer.3.intermediate.dense.bias]\rLoading weights:  33%|███▎      | 65/199 [00:00\u003c00:00, 2364.83it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]\rLoading weights:  33%|███▎      | 65/199 [00:00\u003c00:00, 2355.01it/s, Materializing param=encoder.layer.3.intermediate.dense.weight]\rLoading weights:  33%|███▎      | 66/199 [00:00\u003c00:00, 2374.11it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]    \rLoading weights:  33%|███▎      | 66/199 [00:00\u003c00:00, 2362.83it/s, Materializing param=encoder.layer.3.output.LayerNorm.bias]\rLoading weights:  34%|███▎      | 67/199 [00:00\u003c00:00, 2380.50it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]\rLoading weights:  34%|███▎      | 67/199 [00:00\u003c00:00, 2371.30it/s, Materializing param=encoder.layer.3.output.LayerNorm.weight]\rLoading weights:  34%|███▍      | 68/199 [00:00\u003c00:00, 2389.62it/s, Materializing param=encoder.layer.3.output.dense.bias]      \rLoading weights:  34%|███▍      | 68/199 [00:00\u003c00:00, 2379.37it/s, Materializing param=encoder.layer.3.output.dense.bias]\rLoading weights:  35%|███▍      | 69/199 [00:00\u003c00:00, 2397.50it/s, Materializing param=encoder.layer.3.output.dense.weight]\rLoading weights:  35%|███▍      | 69/199 [00:00\u003c00:00, 2386.66it/s, Materializing param=encoder.layer.3.output.dense.weight]\rLoading weights:  35%|███▌      | 70/199 [00:00\u003c00:00, 2403.81it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]\rLoading weights:  35%|███▌      | 70/199 [00:00\u003c00:00, 2394.81it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.bias]\rLoading weights:  36%|███▌      | 71/199 [00:00\u003c00:00, 2410.64it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]\rLoading weights:  36%|███▌      | 71/199 [00:00\u003c00:00, 2400.38it/s, Materializing param=encoder.layer.4.attention.output.LayerNorm.weight]\rLoading weights:  36%|███▌      | 72/199 [00:00\u003c00:00, 2417.49it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]      \rLoading weights:  36%|███▌      | 72/199 [00:00\u003c00:00, 2406.72it/s, Materializing param=encoder.layer.4.attention.output.dense.bias]\rLoading weights:  37%|███▋      | 73/199 [00:00\u003c00:00, 2422.34it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]\rLoading weights:  37%|███▋      | 73/199 [00:00\u003c00:00, 2412.38it/s, Materializing param=encoder.layer.4.attention.output.dense.weight]\rLoading weights:  37%|███▋      | 74/199 [00:00\u003c00:00, 2427.81it/s, Materializing param=encoder.layer.4.attention.self.key.bias]      \rLoading weights:  37%|███▋      | 74/199 [00:00\u003c00:00, 2419.20it/s, Materializing param=encoder.layer.4.attention.self.key.bias]\rLoading weights:  38%|███▊      | 75/199 [00:00\u003c00:00, 2435.26it/s, Materializing param=encoder.layer.4.attention.self.key.weight]\rLoading weights:  38%|███▊      | 75/199 [00:00\u003c00:00, 2424.94it/s, Materializing param=encoder.layer.4.attention.self.key.weight]\rLoading weights:  38%|███▊      | 76/199 [00:00\u003c00:00, 2440.19it/s, Materializing param=encoder.layer.4.attention.self.query.bias]\rLoading weights:  38%|███▊      | 76/199 [00:00\u003c00:00, 2432.00it/s, Materializing param=encoder.layer.4.attention.self.query.bias]\rLoading weights:  39%|███▊      | 77/199 [00:00\u003c00:00, 2448.55it/s, Materializing param=encoder.layer.4.attention.self.query.weight]\rLoading weights:  39%|███▊      | 77/199 [00:00\u003c00:00, 2439.76it/s, Materializing param=encoder.layer.4.attention.self.query.weight]\rLoading weights:  39%|███▉      | 78/199 [00:00\u003c00:00, 2457.45it/s, Materializing param=encoder.layer.4.attention.self.value.bias]  \rLoading weights:  39%|███▉      | 78/199 [00:00\u003c00:00, 2449.41it/s, Materializing param=encoder.layer.4.attention.self.value.bias]\rLoading weights:  40%|███▉      | 79/199 [00:00\u003c00:00, 2457.05it/s, Materializing param=encoder.layer.4.attention.self.value.weight]\rLoading weights:  40%|███▉      | 79/199 [00:00\u003c00:00, 2449.00it/s, Materializing param=encoder.layer.4.attention.self.value.weight]/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":19373.580396817,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":19373.790097298,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":19373.790131686,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":19374.481827027,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":19374.857928409,"data":"[NbConvertApp] Writing 46636 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":19377.212702998,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":19378.044379617,"data":"[NbConvertApp] Writing 337623 bytes to __results__.html\n"}
+]

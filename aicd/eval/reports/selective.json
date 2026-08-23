@@ -1,0 +1,240 @@
+{
+  "thresholds": {
+    "t_high": 0.9381999969482422,
+    "t_low": 0.7881999969482422,
+    "delta0": 0.15000000000000002
+  },
+  "lambda": 1.0,
+  "slices": {
+    "s1_in_distribution": {
+      "n": 10618,
+      "aurc": 0.038114553766043946,
+      "aurc_human_fp": 0.005873373270912015,
+      "risk_at_cov_80": 0.08586833374609344,
+      "risk_at_cov_50": 0.008852891316632134,
+      "human_fp_at_cov_80": 0.012478809610162794,
+      "policies": {
+        "fixed": {
+          "coverage": 0.9329440572612545,
+          "abstain_rate": 0.06705594273874549,
+          "human_fpr": 0.01435108153078203,
+          "machine_recall": 0.9250686543742644,
+          "n_called": 9906,
+          "n": 10618
+        },
+        "confidence": {
+          "coverage": 0.9329440572612545,
+          "abstain_rate": 0.06705594273874549,
+          "human_fpr": 0.005921993056973657,
+          "machine_recall": 0.8538630465162708,
+          "n_called": 9906,
+          "n": 10618
+        },
+        "psi_gated": {
+          "coverage": 0.9326615181766811,
+          "abstain_rate": 0.06733848182331892,
+          "human_fpr": 0.014146037029332224,
+          "machine_recall": 0.9250392464678179,
+          "n_called": 9903,
+          "n": 10618,
+          "psi": 0.0010312710984219117,
+          "delta": 0.1501546906647633,
+          "t_lo": 0.7881226516158606,
+          "t_hi": 0.9382773422806239
+        },
+        "confidence_matched": {
+          "coverage": 0.9326615181766811,
+          "abstain_rate": 0.06733848182331892,
+          "human_fpr": 0.005921993056973657,
+          "machine_recall": 0.8541749900119856,
+          "n_called": 9903,
+          "n": 10618
+        }
+      }
+    },
+    "s2_unseen_generator": {
+      "n": 13759,
+      "aurc": 0.10134726046315379,
+      "aurc_human_fp": 0.008305997490793908,
+      "risk_at_cov_80": 0.1987789812930883,
+      "risk_at_cov_50": 0.07602296718695592,
+      "human_fp_at_cov_80": 0.01816992516390204,
+      "policies": {
+        "fixed": {
+          "coverage": 0.9390217312304673,
+          "abstain_rate": 0.06097826876953272,
+          "human_fpr": 0.012578616352201259,
+          "machine_recall": 0.9460108939442486,
+          "n_called": 12920,
+          "n": 13759
+        },
+        "confidence": {
+          "coverage": 0.9390217312304673,
+          "abstain_rate": 0.06097826876953272,
+          "human_fpr": 0.006334708308780201,
+          "machine_recall": 0.8806262230919765,
+          "n_called": 12920,
+          "n": 13759
+        },
+        "psi_gated": {
+          "coverage": 0.9308089250672287,
+          "abstain_rate": 0.06919107493277132,
+          "human_fpr": 0.010369702434625788,
+          "machine_recall": 0.947342759629449,
+          "n_called": 12807,
+          "n": 13759,
+          "psi": 0.09795877478104276,
+          "delta": 0.16469381621715642,
+          "t_lo": 0.780853088839664,
+          "t_hi": 0.9455469050568204
+        },
+        "confidence_matched": {
+          "coverage": 0.9308089250672287,
+          "abstain_rate": 0.06919107493277132,
+          "human_fpr": 0.00560389323108686,
+          "machine_recall": 0.8810155990706937,
+          "n_called": 12807,
+          "n": 13759
+        }
+      }
+    },
+    "s3_unseen_language": {
+      "n": 19130,
+      "aurc": 0.33460170207823337,
+      "aurc_human_fp": 0.08411429587765162,
+      "risk_at_cov_80": 0.5081677992681651,
+      "risk_at_cov_50": 0.403868269733403,
+      "human_fp_at_cov_80": 0.13950601150026137,
+      "policies": {
+        "fixed": {
+          "coverage": 0.7673288029273393,
+          "abstain_rate": 0.2326711970726607,
+          "human_fpr": 0.054630441133508616,
+          "machine_recall": 0.5744925315970892,
+          "n_called": 14679,
+          "n": 19130
+        },
+        "confidence": {
+          "coverage": 0.7673288029273393,
+          "abstain_rate": 0.2326711970726607,
+          "human_fpr": 0.006790710308298248,
+          "machine_recall": 0.2940131219245489,
+          "n_called": 14679,
+          "n": 19130
+        },
+        "psi_gated": {
+          "coverage": 0.4267642446419237,
+          "abstain_rate": 0.5732357553580762,
+          "human_fpr": 0.0,
+          "machine_recall": 0.011092150170648464,
+          "n_called": 8164,
+          "n": 19130,
+          "psi": 1.251000873031596,
+          "delta": 0.33765013095473945,
+          "t_lo": 0.6613498690452606,
+          "t_hi": 0.999
+        },
+        "confidence_matched": {
+          "coverage": 0.4267642446419237,
+          "abstain_rate": 0.5732357553580762,
+          "human_fpr": 0.0,
+          "machine_recall": 0.0,
+          "n_called": 8164,
+          "n": 19130
+        }
+      }
+    },
+    "s4_unseen_domain": {
+      "n": 22093,
+      "aurc": 0.46048365896322596,
+      "aurc_human_fp": 0.2845428228721959,
+      "risk_at_cov_80": 0.6268614490411683,
+      "risk_at_cov_50": 0.539220566656572,
+      "human_fp_at_cov_80": 0.3889240939031099,
+      "policies": {
+        "fixed": {
+          "coverage": 0.8407640429095189,
+          "abstain_rate": 0.1592359570904811,
+          "human_fpr": 0.577080770807708,
+          "machine_recall": 0.9395623086517746,
+          "n_called": 18575,
+          "n": 22093
+        },
+        "confidence": {
+          "coverage": 0.8407640429095189,
+          "abstain_rate": 0.1592359570904811,
+          "human_fpr": 0.4184517286041646,
+          "machine_recall": 0.8658936519091122,
+          "n_called": 18575,
+          "n": 22093
+        },
+        "psi_gated": {
+          "coverage": 0.205857058796904,
+          "abstain_rate": 0.794142941203096,
+          "human_fpr": 0.0010732492621411322,
+          "machine_recall": 0.48721071863581,
+          "n_called": 4548,
+          "n": 22093,
+          "psi": 0.8291540841022315,
+          "delta": 0.27437311261533476,
+          "t_lo": 0.7246268873846653,
+          "t_hi": 0.999
+        },
+        "confidence_matched": {
+          "coverage": 0.205857058796904,
+          "abstain_rate": 0.794142941203096,
+          "human_fpr": 0.0,
+          "machine_recall": 0.0,
+          "n_called": 4548,
+          "n": 22093
+        }
+      }
+    },
+    "s5_compound": {
+      "n": 1526,
+      "aurc": 0.6008970357607578,
+      "aurc_human_fp": 0.29368415324191866,
+      "risk_at_cov_80": 0.7247706126394652,
+      "risk_at_cov_50": 0.6788990825688074,
+      "human_fp_at_cov_80": 0.37762127253930533,
+      "policies": {
+        "fixed": {
+          "coverage": 0.7339449541284404,
+          "abstain_rate": 0.2660550458715596,
+          "human_fpr": 0.2495755517826825,
+          "machine_recall": 0.6384180790960452,
+          "n_called": 1120,
+          "n": 1526
+        },
+        "confidence": {
+          "coverage": 0.7339449541284404,
+          "abstain_rate": 0.2660550458715596,
+          "human_fpr": 0.06327160493827161,
+          "machine_recall": 0.3834745762711864,
+          "n_called": 1120,
+          "n": 1526
+        },
+        "psi_gated": {
+          "coverage": 0.2470511140235911,
+          "abstain_rate": 0.7529488859764089,
+          "human_fpr": 0.0,
+          "machine_recall": 0.018018018018018018,
+          "n_called": 377,
+          "n": 1526,
+          "psi": 1.831078530891482,
+          "delta": 0.42466177963372237,
+          "t_lo": 0.5743382203662777,
+          "t_hi": 0.999
+        },
+        "confidence_matched": {
+          "coverage": 0.2470511140235911,
+          "abstain_rate": 0.7529488859764089,
+          "human_fpr": 0.0,
+          "machine_recall": 0.0,
+          "n_called": 377,
+          "n": 1526
+        }
+      }
+    }
+  }
+}

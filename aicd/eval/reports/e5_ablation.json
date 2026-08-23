@@ -1,0 +1,89 @@
+{
+  "reference": {
+    "seed_drops": {
+      "20260818": 0.6599,
+      "1": 0.6379999999999999,
+      "2": 0.6364000000000001,
+      "3": 0.6159000000000001,
+      "4": 0.648,
+      "5": 0.6362
+    },
+    "drop_mean": 0.6390666666666668,
+    "ci95": [
+      0.6237363311448602,
+      0.6543970021884734
+    ],
+    "drop_min": 0.6159000000000001,
+    "drop_max": 0.6599
+  },
+  "arms": {
+    "triplet0": {
+      "what_changed": "triplet loss removed",
+      "source": "kaggle_runs/results/e5/branch_a_e5_triplet0.json",
+      "provenance": "report",
+      "by_condition": {
+        "s1_in_distribution": 0.895261819360067,
+        "s2_unseen_generator": 0.8685682000660834,
+        "s3_unseen_language": 0.5904127035560787,
+        "s4_unseen_domain": 0.3903249733229065,
+        "s5_compound": 0.2620638173597795
+      },
+      "drop": 0.6331980020002874,
+      "vs_seed_range": "inside"
+    },
+    "triplet02": {
+      "what_changed": "triplet weight 0.2",
+      "source": "kaggle_runs/results/e5_triplet02_kernel.log",
+      "provenance": "kernel log",
+      "by_condition": {
+        "s1_in_distribution": 0.8933,
+        "s2_unseen_generator": 0.8678,
+        "s3_unseen_language": 0.5544,
+        "s4_unseen_domain": 0.4091,
+        "s5_compound": 0.2672
+      },
+      "drop": 0.626,
+      "vs_seed_range": "inside"
+    },
+    "proj256": {
+      "what_changed": "projection head 256",
+      "source": "kaggle_runs/results/e5_proj256_kernel.log",
+      "provenance": "kernel log",
+      "by_condition": {
+        "s1_in_distribution": 0.8962,
+        "s2_unseen_generator": 0.8678,
+        "s3_unseen_language": 0.581,
+        "s4_unseen_domain": 0.4092,
+        "s5_compound": 0.2756
+      },
+      "drop": 0.6206,
+      "vs_seed_range": "inside"
+    },
+    "large": {
+      "what_changed": "ModernBERT-large",
+      "source": "kaggle_runs/results/e5/branch_a_e5_large.json",
+      "provenance": "report",
+      "by_condition": {
+        "s1_in_distribution": 0.9031950068837095,
+        "s2_unseen_generator": 0.8749371672371998,
+        "s3_unseen_language": 0.6679360134627865,
+        "s4_unseen_domain": 0.3970461194340964,
+        "s5_compound": 0.2957029671063495
+      },
+      "drop": 0.60749203977736,
+      "vs_seed_range": "below"
+    }
+  },
+  "arm_drop_range": [
+    0.60749203977736,
+    0.6331980020002874
+  ],
+  "arm_spread": 0.025705962222927425,
+  "seed_spread": 0.04399999999999993,
+  "any_arm_removes_collapse": false,
+  "twin_control": {
+    "held_out_drop": 0.610239430491863,
+    "exposed_drop": 0.26593570760691587,
+    "move": 0.34430372288494715
+  }
+}

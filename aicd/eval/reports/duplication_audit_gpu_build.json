@@ -1,0 +1,69 @@
+{
+  "_note": "Recovered from the e1-exposed-arm-d2 kernel log. The audit ran inside that notebook, on the GPU build, which is the build the paper's headline numbers come from. The CPU-build figures are in duplication_audit.json; this one supersedes them for anything quoted about the GPU build.",
+  "_source_kernel": "syedahafsanaim/e1-exposed-arm-d2",
+  "perms": 128,
+  "shingle": 5,
+  "thresholds": [0.5, 0.7, 0.85],
+  "train_rows": 196720,
+  "build": "gpu",
+  "build_total_rows": 417431,
+  "slices": {
+    "s1_in_distribution": {
+      "rows": 31041,
+      "above": {
+        "0.5": {"rows": 186, "share": 0.0060},
+        "0.7": {"rows": 22, "share": 0.0007},
+        "0.85": {"rows": 7, "share": 0.0002}
+      }
+    },
+    "s2_unseen_generator": {
+      "rows": 41058,
+      "above": {
+        "0.5": {"rows": 118, "share": 0.0029},
+        "0.7": {"rows": 24, "share": 0.0006},
+        "0.85": {"rows": 6, "share": 0.0001}
+      }
+    },
+    "s3_unseen_language": {
+      "rows": 56626,
+      "above": {
+        "0.5": {"rows": 2, "share": 0.00004},
+        "0.7": {"rows": 0, "share": 0.0},
+        "0.85": {"rows": 0, "share": 0.0}
+      }
+    },
+    "s4_unseen_domain": {
+      "rows": 56728,
+      "above": {
+        "0.5": {"rows": 19, "share": 0.0003},
+        "0.7": {"rows": 6, "share": 0.0001},
+        "0.85": {"rows": 2, "share": 0.00004}
+      }
+    },
+    "s5_compound": {
+      "rows": 4168,
+      "above": {
+        "0.5": {"rows": 1, "share": 0.0002},
+        "0.7": {"rows": 0, "share": 0.0},
+        "0.85": {"rows": 0, "share": 0.0}
+      }
+    },
+    "val": {
+      "rows": 31049,
+      "above": {
+        "0.5": {"rows": 180, "share": 0.0058},
+        "0.7": {"rows": 20, "share": 0.0006},
+        "0.85": {"rows": 3, "share": 0.0001}
+      }
+    }
+  },
+  "control": {
+    "identical": {"n": 400, "mean": 1.0, "median": 1.0,
+                  "share_above_085": 1.0, "share_above_05": 1.0},
+    "renamed_and_commented": {"n": 400, "mean": 0.8878, "median": 0.9766,
+                              "share_above_085": 0.748, "share_above_05": 0.978},
+    "unrelated": {"n": 400, "mean": 0.0, "median": 0.0,
+                  "share_above_085": 0.0, "share_above_05": 0.0},
+    "verdict": "ok"
+  }
+}

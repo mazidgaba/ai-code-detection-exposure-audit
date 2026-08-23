@@ -1,0 +1,44 @@
+{
+  "thresholds": {
+    "t_high": 0.9340000152587891,
+    "t_low": 0.784000015258789,
+    "target_human_fpr": 0.01
+  },
+  "slices": {
+    "s1_in_distribution": {
+      "n": 31083,
+      "abstain_rate": 0.059003313708458,
+      "human_fpr_on_called": 0.011232041793643883,
+      "machine_recall_on_called": 0.9413983337086241,
+      "coverage": 0.940996686291542
+    },
+    "s2_unseen_generator": {
+      "n": 41061,
+      "abstain_rate": 0.053724945812328,
+      "human_fpr_on_called": 0.008820728712474314,
+      "machine_recall_on_called": 0.9498994815363454,
+      "coverage": 0.946275054187672
+    },
+    "s3_unseen_language": {
+      "n": 56631,
+      "abstain_rate": 0.20132083134678885,
+      "human_fpr_on_called": 0.0907621534253388,
+      "machine_recall_on_called": 0.6385877024430414,
+      "coverage": 0.7986791686532111
+    },
+    "s4_unseen_domain": {
+      "n": 56731,
+      "abstain_rate": 0.11559817383793693,
+      "human_fpr_on_called": 0.6048671578477338,
+      "machine_recall_on_called": 0.9624883000935992,
+      "coverage": 0.8844018261620631
+    },
+    "s5_compound": {
+      "n": 4168,
+      "abstain_rate": 0.2531190019193858,
+      "human_fpr_on_called": 0.2815750371471025,
+      "machine_recall_on_called": 0.6819468024900962,
+      "coverage": 0.7468809980806143
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "selected": "mean",
+  "selection_slice": "val",
+  "n_rows": 401,
+  "max_len": 512,
+  "candidates": [
+    {
+      "pooling": "mean",
+      "l2norm": false,
+      "accuracy": 0.9750623441396509,
+      "macro_f1": 0.9381396630807416,
+      "predicted_share": [
+        0.3865,
+        0.4165,
+        0.1721,
+        0.0249
+      ]
+    },
+    {
+      "pooling": "mean",
+      "l2norm": true,
+      "accuracy": 0.9775561097256857,
+      "macro_f1": 0.9255019196928491,
+      "predicted_share": [
+        0.3791,
+        0.419,
+        0.1796,
+        0.0224
+      ]
+    },
+    {
+      "pooling": "cls",
+      "l2norm": false,
+      "accuracy": 0.9576059850374065,
+      "macro_f1": 0.9063942806747236,
+      "predicted_share": [
+        0.3865,
+        0.414,
+        0.1696,
+        0.0299
+      ]
+    },
+    {
+      "pooling": "cls",
+      "l2norm": true,
+      "accuracy": 0.9526184538653366,
+      "macro_f1": 0.8868358962933478,
+      "predicted_share": [
+        0.3716,
+        0.4165,
+        0.192,
+        0.02
+      ]
+    },
+    {
+      "pooling": "max",
+      "l2norm": false,
+      "accuracy": 0.9750623441396509,
+      "macro_f1": 0.935988952997467,
+      "predicted_share": [
+        0.3791,
+        0.4289,
+        0.1671,
+        0.0249
+      ]
+    },
+    {
+      "pooling": "max",
+      "l2norm": true,
+      "accuracy": 0.9625935162094763,
+      "macro_f1": 0.9122519137909673,
+      "predicted_share": [
+        0.3666,
+        0.4264,
+        0.1845,
+        0.0224
+      ]
+    }
+  ]
+}

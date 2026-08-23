@@ -1,0 +1,4 @@
+# E5: projection dimension doubled from 128 to 256.
+extends: kaggle.yaml
+modernbert:
+  projection_dim: 256

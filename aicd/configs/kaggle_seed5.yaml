@@ -1,0 +1,14 @@
+# Seed 5 of the seed sweep (E4).
+#
+# Reviewer finding U4, raised by all three reviewers: three seeds is not enough.
+# With three runs there are two degrees of freedom, and the 95% upper bound on
+# the true standard deviation is roughly six times the sample one. At six seeds
+# that factor falls to about 2.4, which leaves the S1-to-S5 degradation twenty
+# times larger than the spread even on a pessimistic reading.
+#
+# Only project.seed differs from kaggle.yaml. The corpus is built once, by
+# kaggle.yaml, and every seed trains on that same splits.parquet, so what is
+# measured here is training variance and not split variance.
+extends: kaggle.yaml
+project:
+  seed: 5

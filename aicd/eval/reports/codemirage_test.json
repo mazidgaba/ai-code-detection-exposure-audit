@@ -1,0 +1,34 @@
+{
+  "split": "test",
+  "rows": 62964,
+  "overlap_with_droid": 1,
+  "overlap_share": 1.5874275736169538e-05,
+  "internal_duplicates": 30,
+  "by_exposure": {
+    "human": 2999,
+    "seen_family_seen_model": 17993,
+    "seen_family_unseen_model": 29973,
+    "unseen_family": 11999
+  },
+  "by_label": {
+    "0": 2999,
+    "1": 29994,
+    "3": 29971
+  },
+  "by_language": {
+    "c": 6298,
+    "cpp": 6299,
+    "csharp": 6299,
+    "go": 6299,
+    "html": 6279,
+    "java": 6299,
+    "javascript": 6297,
+    "php": 6296,
+    "python": 6300,
+    "ruby": 6298
+  },
+  "languages_absent_from_droid": [
+    "html",
+    "ruby"
+  ]
+}

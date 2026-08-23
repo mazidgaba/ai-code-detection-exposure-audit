@@ -1,0 +1,19 @@
+# CPU-sized run. base.yaml holds the full-scale settings (600 trees, 20k
+# tf-idf features, ModernBERT at 1024 tokens) which want a GPU box; on 8 CPU
+# cores that combination takes hours. These settings finish in minutes and
+# produce real, comparable numbers on all five slices.
+extends: base.yaml
+
+features:
+  tfidf_max_features: 8000
+  tfidf_ngram_max: 4
+
+xgb:
+  n_estimators: 200
+  max_depth: 6
+  learning_rate: 0.15
+
+modernbert:
+  max_length: 384
+  batch_size: 8
+  epochs: 2

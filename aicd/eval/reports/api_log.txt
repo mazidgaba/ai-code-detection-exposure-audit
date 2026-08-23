@@ -1,0 +1,6 @@
+INFO:     Started server process [17568]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8077): only one usage of each socket address (protocoINFO:     127.0.0.1:64691 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62959 - "POST /analyze HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62963 - "POST /analyze HTTP/1.1" 200 OK

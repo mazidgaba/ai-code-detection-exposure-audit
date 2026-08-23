@@ -1,0 +1,7 @@
+# E3 detector panel: UniXcoder in place of ModernBERT.
+#
+# Same rationale as the CodeBERT config, and the paper already cites UniXcoder
+# in Related Work without ever evaluating it.
+extends: kaggle.yaml
+modernbert:
+  base_model: microsoft/unixcoder-base

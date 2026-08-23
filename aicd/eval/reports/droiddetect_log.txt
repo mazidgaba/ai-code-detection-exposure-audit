@@ -1,0 +1,61 @@
+[droiddetect] device=cpu
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|##########| 134/134 [00:00<00:00, 2995.29it/s]
+[transformers] [1mModernBertModel LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     |  | 
+------------------+------------+--+-
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+head.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[droiddetect] hidden=768 proj=256 classes=4 pooling=mean
+  encoder tensors: 134 loaded, 0 missing, 0 unexpected
+[transformers] You are using a model of type `custom_model` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+[droiddetect] val: 1,200 rows
+    [val] 200/1,200  1.0 rows/s
+    [val] 400/1,200  1.0 rows/s
+    [val] 600/1,200  0.9 rows/s
+    [val] 800/1,200  0.9 rows/s
+    [val] 1,000/1,200  1.0 rows/s
+[droiddetect] s1_in_distribution: 1,201 rows
+    [s1_in_distribution] 200/1,201  1.2 rows/s
+    [s1_in_distribution] 400/1,201  1.0 rows/s
+    [s1_in_distribution] 600/1,201  1.1 rows/s
+    [s1_in_distribution] 800/1,201  1.1 rows/s
+    [s1_in_distribution] 1,000/1,201  1.1 rows/s
+    [s1_in_distribution] 1,200/1,201  1.1 rows/s
+[droiddetect] s2_unseen_generator: 1,200 rows
+    [s2_unseen_generator] 200/1,200  1.0 rows/s
+    [s2_unseen_generator] 400/1,200  0.9 rows/s
+    [s2_unseen_generator] 600/1,200  0.9 rows/s
+    [s2_unseen_generator] 800/1,200  0.9 rows/s
+    [s2_unseen_generator] 1,000/1,200  0.9 rows/s
+[droiddetect] s3_unseen_language: 1,201 rows
+    [s3_unseen_language] 200/1,201  0.7 rows/s
+    [s3_unseen_language] 400/1,201  0.6 rows/s
+    [s3_unseen_language] 600/1,201  0.6 rows/s
+    [s3_unseen_language] 800/1,201  0.6 rows/s
+    [s3_unseen_language] 1,000/1,201  0.6 rows/s
+    [s3_unseen_language] 1,200/1,201  0.7 rows/s
+[droiddetect] s4_unseen_domain: 1,200 rows
+    [s4_unseen_domain] 200/1,200  0.9 rows/s
+    [s4_unseen_domain] 400/1,200  0.8 rows/s
+    [s4_unseen_domain] 600/1,200  0.9 rows/s
+    [s4_unseen_domain] 800/1,200  0.9 rows/s
+    [s4_unseen_domain] 1,000/1,200  0.9 rows/s
+[droiddetect] s5_compound: 1,200 rows
+    [s5_compound] 200/1,200  1.0 rows/s
+    [s5_compound] 400/1,200  1.0 rows/s
+    [s5_compound] 600/1,200  1.0 rows/s
+    [s5_compound] 800/1,200  1.0 rows/s
+    [s5_compound] 1,000/1,200  0.9 rows/s
+
+slice                        n  macroF1     wF1     acc     AUC  humFPR
+----------------------------------------------------------------------
+s1_in_distribution       1,201   0.8715  0.9183  0.9159  0.9935  0.0303
+s2_unseen_generator      1,200   0.8601  0.8996  0.8992  0.9933  0.0333
+s3_unseen_language       1,201   0.8396  0.8859  0.8843  0.9901  0.0471
+s4_unseen_domain         1,200   0.8021  0.8739  0.8750  0.9962   0.024
+s5_compound              1,200   0.7507  0.8373  0.8392  0.9941  0.0289

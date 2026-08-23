@@ -1,0 +1,262 @@
+{
+  "note": "held-out test-shard rows only; identical rows for both models",
+  "claims": {
+    "degradation": {
+      "s1_in_distribution": {
+        "droiddetect": 0.8554779771804413,
+        "branch_b": 0.74036281027579,
+        "n": 392
+      },
+      "s2_unseen_generator": {
+        "droiddetect": 0.8253121786663562,
+        "branch_b": 0.6588415854757121,
+        "n": 366
+      },
+      "s3_unseen_language": {
+        "droiddetect": 0.8343988045241785,
+        "branch_b": 0.3185410748885419,
+        "n": 367
+      },
+      "s4_unseen_domain": {
+        "droiddetect": 0.725442350216857,
+        "branch_b": 0.2966292423919543,
+        "n": 425
+      },
+      "s5_compound": {
+        "droiddetect": 0.6887672064761249,
+        "branch_b": 0.20905480137549348,
+        "n": 407
+      }
+    },
+    "auc_masks_f1": {
+      "s1_in_distribution": {
+        "auc_dd": 0.9880420918367349,
+        "f1_dd": 0.8554779771804413,
+        "auc_bb": 0.9849861819727892,
+        "f1_bb": 0.74036281027579
+      },
+      "s2_unseen_generator": {
+        "auc_dd": 0.9942624910351423,
+        "f1_dd": 0.8253121786663562,
+        "auc_bb": 0.994501553908678,
+        "f1_bb": 0.6588415854757121
+      },
+      "s3_unseen_language": {
+        "auc_dd": 0.9897596271768457,
+        "f1_dd": 0.8343988045241785,
+        "auc_bb": 0.8408756438557763,
+        "f1_bb": 0.3185410748885419
+      },
+      "s4_unseen_domain": {
+        "auc_dd": 0.9923745819397993,
+        "f1_dd": 0.725442350216857,
+        "auc_bb": 0.8091861761426977,
+        "f1_bb": 0.2966292423919543
+      },
+      "s5_compound": {
+        "auc_dd": 0.9903335768200634,
+        "f1_dd": 0.6887672064761249,
+        "auc_bb": 0.7074506939371805,
+        "f1_bb": 0.20905480137549348
+      }
+    },
+    "operating_point": {
+      "s1_in_distribution": {
+        "droiddetect": {
+          "coverage": 0.9974489795918368,
+          "abstain_rate": 0.0025510204081632404,
+          "human_fpr": 0.02976190476190476,
+          "machine_recall": 0.9551569506726457,
+          "n_called": 391,
+          "n": 392
+        },
+        "branch_b": {
+          "coverage": 0.9438775510204082,
+          "abstain_rate": 0.056122448979591844,
+          "human_fpr": 0.042682926829268296,
+          "machine_recall": 0.9514563106796117,
+          "n_called": 370,
+          "n": 392
+        }
+      },
+      "s2_unseen_generator": {
+        "droiddetect": {
+          "coverage": 0.9890710382513661,
+          "abstain_rate": 0.010928961748633892,
+          "human_fpr": 0.03977272727272727,
+          "machine_recall": 0.978494623655914,
+          "n_called": 362,
+          "n": 366
+        },
+        "branch_b": {
+          "coverage": 0.9617486338797814,
+          "abstain_rate": 0.03825136612021862,
+          "human_fpr": 0.011299435028248588,
+          "machine_recall": 0.9371428571428572,
+          "n_called": 352,
+          "n": 366
+        }
+      },
+      "s3_unseen_language": {
+        "droiddetect": {
+          "coverage": 0.989100817438692,
+          "abstain_rate": 0.010899182561307952,
+          "human_fpr": 0.026490066225165563,
+          "machine_recall": 0.9339622641509434,
+          "n_called": 363,
+          "n": 367
+        },
+        "branch_b": {
+          "coverage": 0.7629427792915532,
+          "abstain_rate": 0.23705722070844681,
+          "human_fpr": 0.05384615384615385,
+          "machine_recall": 0.5333333333333333,
+          "n_called": 280,
+          "n": 367
+        }
+      },
+      "s4_unseen_domain": {
+        "droiddetect": {
+          "coverage": 0.9952941176470588,
+          "abstain_rate": 0.004705882352941226,
+          "human_fpr": 0.008695652173913044,
+          "machine_recall": 0.9481865284974094,
+          "n_called": 423,
+          "n": 425
+        },
+        "branch_b": {
+          "coverage": 0.8635294117647059,
+          "abstain_rate": 0.13647058823529412,
+          "human_fpr": 0.5675675675675675,
+          "machine_recall": 0.9340659340659341,
+          "n_called": 367,
+          "n": 425
+        }
+      },
+      "s5_compound": {
+        "droiddetect": {
+          "coverage": 0.9975429975429976,
+          "abstain_rate": 0.002457002457002422,
+          "human_fpr": 0.01809954751131222,
+          "machine_recall": 0.9459459459459459,
+          "n_called": 406,
+          "n": 407
+        },
+        "branch_b": {
+          "coverage": 0.7444717444717445,
+          "abstain_rate": 0.25552825552825553,
+          "human_fpr": 0.25308641975308643,
+          "machine_recall": 0.6170212765957447,
+          "n_called": 303,
+          "n": 407
+        }
+      }
+    },
+    "calibration": {
+      "s1_in_distribution": {
+        "ece_dd": 0.0314007310065493,
+        "ece_bb": 0.046551057175562086
+      },
+      "s2_unseen_generator": {
+        "ece_dd": 0.036290295482670425,
+        "ece_bb": 0.04056660281341586
+      },
+      "s3_unseen_language": {
+        "ece_dd": 0.04343023433601257,
+        "ece_bb": 0.10299510013423759
+      },
+      "s4_unseen_domain": {
+        "ece_dd": 0.027312876040882925,
+        "ece_bb": 0.3842916653787389
+      },
+      "s5_compound": {
+        "ece_dd": 0.03633850217048601,
+        "ece_bb": 0.30391949703527904
+      }
+    },
+    "confidence_beats_band": {
+      "s1_in_distribution": {
+        "droiddetect": {
+          "fixed_fpr": 0.02976190476190476,
+          "conf_fpr": 0.02976190476190476,
+          "confidence_better": false
+        },
+        "branch_b": {
+          "fixed_fpr": 0.042682926829268296,
+          "conf_fpr": 0.024242424242424242,
+          "confidence_better": true
+        }
+      },
+      "s2_unseen_generator": {
+        "droiddetect": {
+          "fixed_fpr": 0.03977272727272727,
+          "conf_fpr": 0.028735632183908046,
+          "confidence_better": true
+        },
+        "branch_b": {
+          "fixed_fpr": 0.011299435028248588,
+          "conf_fpr": 0.0,
+          "confidence_better": true
+        }
+      },
+      "s3_unseen_language": {
+        "droiddetect": {
+          "fixed_fpr": 0.026490066225165563,
+          "conf_fpr": 0.02,
+          "confidence_better": true
+        },
+        "branch_b": {
+          "fixed_fpr": 0.05384615384615385,
+          "conf_fpr": 0.0,
+          "confidence_better": true
+        }
+      },
+      "s4_unseen_domain": {
+        "droiddetect": {
+          "fixed_fpr": 0.008695652173913044,
+          "conf_fpr": 0.008695652173913044,
+          "confidence_better": false
+        },
+        "branch_b": {
+          "fixed_fpr": 0.5675675675675675,
+          "conf_fpr": 0.42105263157894735,
+          "confidence_better": true
+        }
+      },
+      "s5_compound": {
+        "droiddetect": {
+          "fixed_fpr": 0.01809954751131222,
+          "conf_fpr": 0.01809954751131222,
+          "confidence_better": false
+        },
+        "branch_b": {
+          "fixed_fpr": 0.25308641975308643,
+          "conf_fpr": 0.06976744186046512,
+          "confidence_better": true
+        }
+      }
+    },
+    "aurc": {
+      "s1_in_distribution": {
+        "droiddetect": 0.0344314050006578,
+        "branch_b": 0.04578806592220201
+      },
+      "s2_unseen_generator": {
+        "droiddetect": 0.026760165877899797,
+        "branch_b": 0.08439482775062074
+      },
+      "s3_unseen_language": {
+        "droiddetect": 0.03273419757278848,
+        "branch_b": 0.3551398101424436
+      },
+      "s4_unseen_domain": {
+        "droiddetect": 0.045939710239096994,
+        "branch_b": 0.5069196929329254
+      },
+      "s5_compound": {
+        "droiddetect": 0.06307004038806294,
+        "branch_b": 0.5886220481930657
+      }
+    }
+  }
+}

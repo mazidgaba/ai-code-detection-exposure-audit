@@ -1,0 +1,12 @@
+# Tiny config for the end-to-end smoke test.
+extends: base.yaml
+data:
+  max_rows_per_split: 400
+splits:
+  min_slice_size: 10
+xgb:
+  n_estimators: 40
+modernbert:
+  epochs: 1
+  batch_size: 4
+  max_length: 256

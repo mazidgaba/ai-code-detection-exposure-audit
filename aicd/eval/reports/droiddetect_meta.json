@@ -1,0 +1,6 @@
+{
+  "repo": "project-droid/DroidDetect-Base",
+  "pooling": "mean",
+  "max_len": 384,
+  "max_eval": 1200
+}
