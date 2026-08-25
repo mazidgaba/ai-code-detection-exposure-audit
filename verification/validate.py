@@ -17,7 +17,18 @@ BS = chr(92)  # backslash, kept out of the regex literals for clarity
 
 def main() -> int:
     here = os.path.dirname(os.path.abspath(__file__))
-    src = open(os.path.join(here, "main.tex"), encoding="utf-8").read()
+    tex = os.path.join(here, "main.tex")
+    if not os.path.exists(tex):
+        # The public artifact ships the verification scripts but not the
+        # manuscript, which is unpublished. Explain that rather than dying on a
+        # traceback that reads like a broken checkout.
+        print("main.tex is not present, so there is nothing to validate.\n"
+              "This script checks the LaTeX source for unbalanced environments, "
+              "dangling\nreferences, uncited bibliography entries and malformed "
+              "table rows. It is\npublished alongside review.py to document what "
+              "was checked, and runs once the\nmanuscript is available.")
+        return 0
+    src = open(tex, encoding="utf-8").read()
     ok = True
 
     def fail(msg):

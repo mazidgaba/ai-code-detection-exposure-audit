@@ -13,7 +13,7 @@ time for. Four categories:
 Exit code is non-zero if anything in NUMBERS, CORPUS or STRUCTURE fails; STYLE
 findings are advisory and printed without failing the run.
 
-    python paper/review.py
+    python verification/review.py
 """
 from __future__ import annotations
 

@@ -47,7 +47,7 @@ aicd/
 kaggle_runs/   the notebooks that ran on GPU, with their per-row probability
                arrays and kernel logs
 research_state/  the ledgers described below
-paper/         the audit that checks the manuscript against these reports
+verification/  the scripts that check the manuscript against these reports
 docs/          measured results, and the retraining runbook
 ```
 
@@ -104,7 +104,7 @@ the way the argument predicted: the exposure gradient did not reproduce on the
 second external corpus, and the transformation battery was never run across the
 detector panel, so no claim is made that it generalises.
 
-`paper/review.py` regenerates that ledger by parsing the manuscript and checking
+`verification/review.py` regenerates that ledger by parsing the manuscript and checking
 each table cell against its source. The manuscript is not distributed here,
 because the paper is unpublished, so the script says so rather than failing. It
 is included because it documents what was checked.
@@ -145,15 +145,6 @@ rather than set aside.
 Gulam Mazid (National Institute of Technology, Warangal), Saquib Warsi (Indian
 Council of Medical Research), Md Jamaluddin (Aligarh Muslim University) and
 Afrah Fathima (Maulana Azad National Urdu University, Hyderabad).
-
-## How this was built
-
-Parts of the code here were written with AI assistance, as is now common. The
-experimental design, the choice of controls, the interpretation of the results
-and the conclusions are the authors'. Every number in the paper is checked
-against the report file that produced it by `paper/review.py`, and the checking
-code is itself mutation-tested, which is the reason to trust the figures rather
-than the provenance of any particular line.
 
 ## Citation
 

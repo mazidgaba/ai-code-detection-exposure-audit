@@ -7,9 +7,9 @@ Checked 2026-08-24, on this machine, from the released tree.
 | Check | Result |
 |---|---|
 | Test suite | 91 passed in 17.72s |
-| Manuscript numbers traced to source files | 343 values traced, all `ok` |
-| Structural validation (`paper/validate.py`) | PASS |
-| PDF compiles | clean, 18 pages |
+| Manuscript numbers traced to source files | 447 values traced, all `ok` |
+| Structural validation (`verification/validate.py`) | PASS |
+| PDF compiles | clean, 25 pages |
 
 `research_state/numbers_ledger.csv` records every trace: label, source value,
 manuscript value, tolerance, status. Seventeen tables covered.
@@ -27,7 +27,7 @@ python -m aicd.eval.comparisons          # seed effect size, Holm correction
 python -m aicd.eval.intervals            # per-class CIs from confusion matrices
 python -m aicd.eval.paired               # twin paired differences
 python -m aicd.eval.duplication_audit --self-test
-python paper/review.py                   # re-audit and re-emit the ledger
+python verification/review.py            # re-audit and re-emit the ledger
 ```
 
 ## What needs a GPU

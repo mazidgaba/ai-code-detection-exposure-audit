@@ -21,7 +21,7 @@ as pulled, with adversarial counts, from `shard_provenance.json`:
 | Evaluation rows | 220,670 | 77,739 |
 | Used for | every headline result | the earlier contamination measurement only |
 
-`paper/review.py` loads GPU-build figures from `eval/reports/kaggle/` and
+`verification/review.py` loads GPU-build figures from `eval/reports/kaggle/` and
 CPU-build figures from `eval/reports/`, and the manuscript states which build
 each table comes from. Interchanging them is the failure mode most likely to
 produce a plausible falsehood here, which is why the auditor separates them by

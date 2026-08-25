@@ -27,14 +27,18 @@ aicd/eval/reports/branch_a_verify.txt
 aicd/eval/reports/smoke.json
 
 # The manuscript. Not distributed until the paper is published.
-paper/main.tex
-paper/main.pdf
+# The manuscript is unpublished and must never be committed, whatever
+# directory it is dropped into. Kept to these two names plus LaTeX-only
+# build extensions: a blanket "figures/" would also swallow the figure
+# sources under aicd/scripts/, which belong here.
+main.tex
+main.pdf
 paper/figures/
-paper/*.aux
-paper/*.bbl
-paper/*.blg
 paper/*.out
-paper/*.synctex.gz
+*.aux
+*.bbl
+*.blg
+*.synctex.gz
 
 # Python
 __pycache__/
