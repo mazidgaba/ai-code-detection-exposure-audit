@@ -53,3 +53,10 @@ desktop.ini
 # NOT ignored, deliberately: aicd/eval/reports/*.json and
 # kaggle_runs/results/**/*.{json,npy,log}. Those are the measured results and
 # the evidence behind them, so they are what makes this artifact checkable.
+
+# Local dev-server and smoke-test output. These land in the reports directory
+# because that is where the run writes, but they are terminal noise rather than
+# evidence: a uvicorn startup log, and a 64-row CPU smoke test whose output is
+# mostly progress bars.
+aicd/eval/reports/api_log.txt
+aicd/eval/reports/branch_a_verify.txt
