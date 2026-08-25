@@ -1,0 +1,77 @@
+{
+  "model": "branch_a_e8_augment",
+  "source": "kaggle_runs/results/e8_augment_kernel.log",
+  "provenance": "kernel log",
+  "augmentation": {
+    "transforms": [
+      "rename_identifiers",
+      "whitespace"
+    ],
+    "target_fraction": 0.5,
+    "train_rows": 196720,
+    "selected": 98360,
+    "actually_altered": 91423,
+    "altered_fraction_of_selected": 0.929
+  },
+  "slices": {
+    "s1_in_distribution": {
+      "n": 31041,
+      "macro_f1": 0.8819,
+      "weighted_f1": 0.9252,
+      "accuracy": 0.9245,
+      "binary_auc": 0.9982,
+      "human_fpr": 0.026,
+      "delta_vs_reference": -0.015800000000000036
+    },
+    "s2_unseen_generator": {
+      "n": 41058,
+      "macro_f1": 0.8575,
+      "weighted_f1": 0.8974,
+      "accuracy": 0.8959,
+      "binary_auc": 0.9988,
+      "human_fpr": 0.0294,
+      "delta_vs_reference": -0.01100000000000001
+    },
+    "s3_unseen_language": {
+      "n": 56626,
+      "macro_f1": 0.5518,
+      "weighted_f1": 0.6469,
+      "accuracy": 0.6107,
+      "binary_auc": 0.9117,
+      "human_fpr": 0.3579,
+      "delta_vs_reference": -0.014900000000000024
+    },
+    "s4_unseen_domain": {
+      "n": 56728,
+      "macro_f1": 0.3588,
+      "weighted_f1": 0.3826,
+      "accuracy": 0.3803,
+      "binary_auc": 0.9153,
+      "human_fpr": 0.7783,
+      "delta_vs_reference": -0.04409999999999997
+    },
+    "s5_compound": {
+      "n": 4168,
+      "macro_f1": 0.2588,
+      "weighted_f1": 0.2676,
+      "accuracy": 0.2711,
+      "binary_auc": 0.7683,
+      "human_fpr": 0.8812,
+      "delta_vs_reference": 0.020999999999999963
+    }
+  },
+  "drop": 0.6232,
+  "reference": {
+    "by_condition": {
+      "s1_in_distribution": 0.8977,
+      "s2_unseen_generator": 0.8685,
+      "s3_unseen_language": 0.5667,
+      "s4_unseen_domain": 0.4029,
+      "s5_compound": 0.2378
+    },
+    "drop_min": 0.6159000000000001,
+    "drop_max": 0.6599,
+    "drop_mean": 0.6390666666666668
+  },
+  "vs_seed_range": "inside"
+}

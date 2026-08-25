@@ -1,0 +1,87 @@
+{
+  "codebert": {
+    "slices": {
+      "s1_in_distribution": {
+        "n": 31041,
+        "macro_f1": 0.8656,
+        "binary_auc": 0.9972,
+        "human_fpr": 0.0366
+      },
+      "s2_unseen_generator": {
+        "n": 41058,
+        "macro_f1": 0.8235,
+        "binary_auc": 0.9981,
+        "human_fpr": 0.0385
+      },
+      "s3_unseen_language": {
+        "n": 56626,
+        "macro_f1": 0.5312,
+        "binary_auc": 0.9137,
+        "human_fpr": 0.3077
+      },
+      "s4_unseen_domain": {
+        "n": 56728,
+        "macro_f1": 0.3227,
+        "binary_auc": 0.8531,
+        "human_fpr": 0.8344
+      },
+      "s5_compound": {
+        "n": 4168,
+        "macro_f1": 0.2093,
+        "binary_auc": 0.8042,
+        "human_fpr": 0.905
+      }
+    },
+    "drop": 0.6562,
+    "source": "kaggle_runs/results/e3_codebert_kernel.log",
+    "provenance": "kernel log"
+  },
+  "unixcoder": {
+    "slices": {
+      "s1_in_distribution": {
+        "n": 31041,
+        "macro_f1": 0.9023,
+        "binary_auc": 0.9983,
+        "human_fpr": 0.0222
+      },
+      "s2_unseen_generator": {
+        "n": 41058,
+        "macro_f1": 0.8714,
+        "binary_auc": 0.9986,
+        "human_fpr": 0.0238
+      },
+      "s3_unseen_language": {
+        "n": 56626,
+        "macro_f1": 0.5588,
+        "binary_auc": 0.9282,
+        "human_fpr": 0.2785
+      },
+      "s4_unseen_domain": {
+        "n": 56728,
+        "macro_f1": 0.388,
+        "binary_auc": 0.8026,
+        "human_fpr": 0.7373
+      },
+      "s5_compound": {
+        "n": 4168,
+        "macro_f1": 0.2558,
+        "binary_auc": 0.7986,
+        "human_fpr": 0.829
+      }
+    },
+    "drop": 0.6465,
+    "source": "kaggle_runs/results/e3_unixcoder_kernel.log",
+    "provenance": "kernel log"
+  },
+  "reference": {
+    "by_condition": {
+      "s1_in_distribution": 0.8977,
+      "s2_unseen_generator": 0.8685,
+      "s3_unseen_language": 0.5667,
+      "s4_unseen_domain": 0.4029,
+      "s5_compound": 0.2378
+    },
+    "drop": 0.6599,
+    "model": "ModernBERT-base"
+  }
+}

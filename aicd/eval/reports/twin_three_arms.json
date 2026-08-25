@@ -1,0 +1,21 @@
+{
+  "condition": "s5_compound",
+  "n": 4168,
+  "arms": {
+    "d1": {
+      "rows_trained": 196854,
+      "macro_f1": 0.23778553105715772
+    },
+    "d1small": {
+      "rows_trained": 126688,
+      "macro_f1": 0.2749475085088287
+    },
+    "d2": {
+      "rows_trained": 196720,
+      "macro_f1": 0.6193008020647208
+    }
+  },
+  "scale_effect": -0.03716197745167099,
+  "exposure_effect": 0.3443532935558921,
+  "scale_runs_against_exposure": true
+}

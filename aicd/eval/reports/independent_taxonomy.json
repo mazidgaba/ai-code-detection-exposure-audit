@@ -1,0 +1,43 @@
+{
+  "note": "Both readings on the same predictions. 'all_classes' includes the hybrid class, whose definition we mapped from the corpus's own field; 'human_machine' drops it and depends on no mapping.",
+  "rows_total": 7202,
+  "label_counts": {
+    "0": 4665,
+    "1": 928,
+    "2": 1609
+  },
+  "views": {
+    "all_classes": {
+      "rows": 7202,
+      "macro_f1": 0.3224,
+      "ci": [
+        0.3141,
+        0.3308
+      ],
+      "per_class_f1": {
+        "human": 0.6033,
+        "machine": 0.351,
+        "hybrid": 0.013
+      }
+    },
+    "human_machine": {
+      "rows": 5593,
+      "macro_f1": 0.5455,
+      "ci": [
+        0.5321,
+        0.5591
+      ],
+      "per_class_f1": {
+        "human": 0.6788,
+        "machine": 0.4121
+      }
+    }
+  },
+  "headline": {
+    "all_classes": 0.3224,
+    "human_machine": 0.5455,
+    "gap": 0.2231,
+    "hybrid_f1": 0.013,
+    "collapse_survives_dropping_hybrid": true
+  }
+}

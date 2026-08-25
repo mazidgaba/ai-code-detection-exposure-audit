@@ -1,7 +1,7 @@
 # Held Out From What?
 
-Research artifact for *Held Out From What? Distribution-Shift Benchmarks
-Overstate the Robustness of AI-Generated Code Detectors.*
+Research artifact for *Held Out From What? Evaluating Distribution Shift
+Relative to Training Exposure in AI-Generated Code Detection.*
 
 ## What this is about
 
@@ -78,9 +78,35 @@ Modules that read only the stored results run directly:
 ```bash
 python -m aicd.eval.e5_ablation        # architecture ablation against seed spread
 python -m aicd.eval.duplication_audit --self-test
-python paper/review.py                 # re-audit the manuscript's numbers
+python paper/review.py                 # re-audit the manuscript's numbers,
+                                       # if you have main.tex; see below
 python -m pytest aicd/tests -q         # 72 tests
 ```
+
+Later additions, each reading stored arrays rather than retraining:
+
+```bash
+python -m aicd.eval.aicdbench_audit      # a third party's withheld categories,
+                                         # counted in the split the detector names
+python -m aicd.eval.seed_twin            # the twin effect across three seeds
+python -m aicd.eval.matched_axis         # the axes compared on comparable rows
+python -m aicd.eval.language_clean       # the arm that saw no untrained language
+python -m aicd.eval.published_shift      # the published detector on rows it
+                                         # never trained on
+python -m aicd.eval.independent_taxonomy # how much of the external collapse is
+                                         # the class we mapped ourselves
+python -m aicd.eval.variance_components  # design against seed variation
+```
+
+The manuscript itself is not in this repository, because the paper is not yet
+published, so `paper/review.py` has nothing to audit against here and says so
+rather than failing. It is included because it documents what was checked and
+how.
+
+`research_state/numbers_ledger.csv` records every figure the manuscript quotes
+against the file it came from, so a reader can check any number without running
+anything. `research_state/claims_ledger.csv` lists what each claim rests on,
+including the two results that did not come out the way the argument predicted.
 
 `aicd/eval/reports/*.json` holds the measured result of each experiment.
 `kaggle_runs/results/` holds the per-row probability arrays and the kernel logs
@@ -142,8 +168,9 @@ is included because it is working code, not because any result depends on it.
 ## Authorship
 
 The paper is by Gulam Mazid (National Institute of Technology, Warangal), Saquib
-Warsi (Indian Council of Medical Research) and Md Jamaluddin (Aligarh Muslim
-University).
+Warsi (Indian Council of Medical Research), Md Jamaluddin (Aligarh Muslim
+University) and Afrah Fathima (Maulana Azad National Urdu University,
+Hyderabad).
 
 Much of the code in this repository was written with AI assistance. The
 experimental design, the results and the conclusions are the authors'.

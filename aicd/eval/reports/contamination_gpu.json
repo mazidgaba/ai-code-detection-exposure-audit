@@ -1,0 +1,75 @@
+{
+  "model": "droiddetect-base",
+  "build": "gpu",
+  "per_cell": 3000,
+  "n_boot": 2000,
+  "method": "BCa two-sample",
+  "comparison": "three classes present in both arms (adversarial excluded)",
+  "note": "The train shard contributes no adversarial rows to this corpus, so a four-class macro-F1 averages a class with zero support on one arm only and is not comparable across arms.",
+  "conditions": {
+    "s1_in_distribution": {
+      "train_macro_f1": 0.9778556232294203,
+      "held_macro_f1": 0.9231699817833118,
+      "inflation": 0.054685641446108546,
+      "ci95": [
+        0.04465323840801729,
+        0.06414862359559495
+      ],
+      "n_train": 3000,
+      "n_held": 5530,
+      "excludes_zero": true
+    },
+    "s2_unseen_generator": {
+      "train_macro_f1": 0.9718438164857286,
+      "held_macro_f1": 0.899021039478867,
+      "inflation": 0.07282277700686157,
+      "ci95": [
+        0.06023597322501128,
+        0.0853466847072589
+      ],
+      "n_train": 3000,
+      "n_held": 5174,
+      "excludes_zero": true
+    },
+    "s3_unseen_language": {
+      "train_macro_f1": 0.9678930641537763,
+      "held_macro_f1": 0.8632700378089001,
+      "inflation": 0.10462302634487619,
+      "ci95": [
+        0.09146630719018657,
+        0.1175853197411174
+      ],
+      "n_train": 3000,
+      "n_held": 5416,
+      "excludes_zero": true
+    },
+    "s4_unseen_domain": {
+      "train_macro_f1": 0.9507500264541388,
+      "held_macro_f1": 0.8079102388944879,
+      "inflation": 0.14283978755965088,
+      "ci95": [
+        0.126270532486004,
+        0.15869508771734958
+      ],
+      "n_train": 3000,
+      "n_held": 5199,
+      "excludes_zero": true
+    },
+    "s5_compound": {
+      "train_macro_f1": 0.9531983102313187,
+      "held_macro_f1": 0.775353779566692,
+      "inflation": 0.1778445306646267,
+      "ci95": [
+        0.15235013507222575,
+        0.205046202399142
+      ],
+      "n_train": 2359,
+      "n_held": 1654,
+      "excludes_zero": true
+    }
+  },
+  "mean_inflation": 0.11056315260442477,
+  "max_inflation": 0.1778445306646267,
+  "worst_condition": "s5_compound",
+  "n_excluding_zero": 5
+}

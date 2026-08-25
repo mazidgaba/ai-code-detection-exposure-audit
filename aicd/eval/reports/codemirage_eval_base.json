@@ -1,0 +1,46 @@
+{
+  "model": "droiddetect-base",
+  "rows": 62964,
+  "source": "kaggle_runs/results/e7_codemirage_kernel.log",
+  "provenance": "kernel log",
+  "overall": {
+    "macro_f1_present": 0.4047,
+    "binary_auc": 0.9007,
+    "human_fpr": 0.3161
+  },
+  "by_exposure": {
+    "seen_family_seen_model": {
+      "n": 17993,
+      "macro_f1_present": 0.5086,
+      "binary_auc": 0.9383
+    },
+    "seen_family_unseen_model": {
+      "n": 29973,
+      "macro_f1_present": 0.4073,
+      "binary_auc": 0.8681
+    },
+    "unseen_family": {
+      "n": 11999,
+      "macro_f1_present": 0.5365,
+      "binary_auc": 0.9255
+    }
+  },
+  "by_language": {
+    "c": 0.4913,
+    "cpp": 0.4685,
+    "csharp": 0.4238,
+    "go": 0.3517,
+    "html": 0.3848,
+    "java": 0.4641,
+    "javascript": 0.3799,
+    "php": 0.3227,
+    "python": 0.4144,
+    "ruby": 0.259
+  },
+  "tier_order": [
+    "seen_family_seen_model",
+    "seen_family_unseen_model",
+    "unseen_family"
+  ],
+  "monotone_decreasing": false
+}

@@ -1,0 +1,127 @@
+{
+ "note": "Paired difference D2 minus D1_small per seed. cfg.project.seed is identical across runs, so the corpus and arm partition are too; only weight initialisation differs.",
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "conditions": {
+  "s1_in_distribution": {
+   "rows": 31041,
+   "d2": [
+    0.8852,
+    0.8826932132428937,
+    0.8833536158597816
+   ],
+   "d1small": [
+    0.8852,
+    0.8872757049128246,
+    0.8847908263724417
+   ],
+   "differences": [
+    0.0,
+    -0.0046,
+    -0.0014
+   ],
+   "mean": -0.002,
+   "sd": 0.0024,
+   "range": 0.0046,
+   "sd_from_zero": 0.8
+  },
+  "s2_unseen_generator": {
+   "rows": 30344,
+   "d2": [
+    0.8672,
+    0.8618323572480471,
+    0.8654477348064462
+   ],
+   "d1small": [
+    0.8472,
+    0.8456691770960747,
+    0.8417092698910933
+   ],
+   "differences": [
+    0.02,
+    0.0162,
+    0.0237
+   ],
+   "mean": 0.02,
+   "sd": 0.0038,
+   "range": 0.0075,
+   "sd_from_zero": 5.3
+  },
+  "s3_unseen_language": {
+   "rows": 26936,
+   "d2": [
+    0.8154,
+    0.8152218691540535,
+    0.8145950973922504
+   ],
+   "d1small": [
+    0.5723,
+    0.5744303866203537,
+    0.5771813586920403
+   ],
+   "differences": [
+    0.2431,
+    0.2408,
+    0.2374
+   ],
+   "mean": 0.2404,
+   "sd": 0.0029,
+   "range": 0.0057,
+   "sd_from_zero": 83.8
+  },
+  "s4_unseen_domain": {
+   "rows": 27100,
+   "d2": [
+    0.7891,
+    0.7775415216458392,
+    0.777365324549852
+   ],
+   "d1small": [
+    0.3974,
+    0.407666601886511,
+    0.3914627244932425
+   ],
+   "differences": [
+    0.3917,
+    0.3699,
+    0.3859
+   ],
+   "mean": 0.3825,
+   "sd": 0.0113,
+   "range": 0.0218,
+   "sd_from_zero": 33.9
+  },
+  "s5_compound": {
+   "rows": 4168,
+   "d2": [
+    0.6193,
+    0.6255407884613408,
+    0.6304658940152785
+   ],
+   "d1small": [
+    0.2749,
+    0.2588762609125275,
+    0.28483360121332
+   ],
+   "differences": [
+    0.3444,
+    0.3667,
+    0.3456
+   ],
+   "mean": 0.3522,
+   "sd": 0.0125,
+   "range": 0.0223,
+   "sd_from_zero": 28.1
+  }
+ },
+ "headline": {
+  "compound_mean": 0.3522,
+  "compound_sd": 0.0125,
+  "in_distribution_mean": -0.002,
+  "in_distribution_sd": 0.0024,
+  "survives_replication": true
+ }
+}

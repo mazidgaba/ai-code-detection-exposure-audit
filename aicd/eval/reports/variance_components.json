@@ -1,0 +1,32 @@
+{
+  "note": "Standard deviation rather than range, because range grows with the number of draws and the two factors have different counts.",
+  "design": {
+    "n": 4,
+    "values": [
+      0.6332,
+      0.626,
+      0.6206,
+      0.6075
+    ],
+    "mean": 0.6218,
+    "sd": 0.0109,
+    "range": 0.0257
+  },
+  "seed": {
+    "n": 6,
+    "values": [
+      0.6599,
+      0.638,
+      0.6364,
+      0.6159,
+      0.648,
+      0.6362
+    ],
+    "mean": 0.6391,
+    "sd": 0.0146,
+    "range": 0.044
+  },
+  "sd_ratio_seed_over_design": 1.35,
+  "variance_share_seed": 0.644,
+  "seed_dominates": true
+}

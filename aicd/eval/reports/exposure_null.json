@@ -1,0 +1,21 @@
+{
+  "observed": 0.35638402169624783,
+  "draws": 3000,
+  "null_mean": 0.5227730036373028,
+  "null_sd": 0.163121308774959,
+  "null_median": 0.5247868527919981,
+  "null_p05": 0.25242996085509295,
+  "null_p95": 0.7845398878806704,
+  "percentile_of_observed": 0.18133333333333335,
+  "withheld_counts": {
+    "generator family": 2,
+    "language": 2,
+    "source": 3
+  },
+  "pool_sizes": {
+    "generator family": 13,
+    "language": 9,
+    "source": 11
+  },
+  "reading": "typical"
+}

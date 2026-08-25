@@ -1,0 +1,93 @@
+{
+  "note": "AICD Bench's Task 1 withheld categories, audited against the DroidCollection training split DroidDetect-Base's card names. Neither list was chosen by us. Presence in the named split is not survival of the publisher's undisclosed filter.",
+  "source": "AICD Bench (Orel et al., EACL 2026), Task 1",
+  "train_rows": 846598,
+  "languages": {
+    "Golang": {
+      "rows": 54194,
+      "share": 0.064014,
+      "matched_as": [
+        "go"
+      ]
+    },
+    "PHP": {
+      "rows": 9002,
+      "share": 0.010633,
+      "matched_as": [
+        "php"
+      ]
+    },
+    "Rust": {
+      "rows": 6079,
+      "share": 0.007181,
+      "matched_as": [
+        "rust"
+      ]
+    },
+    "JavaScript": {
+      "rows": 76232,
+      "share": 0.090045,
+      "matched_as": [
+        "javascript"
+      ]
+    },
+    "C#": {
+      "rows": 94707,
+      "share": 0.111868,
+      "matched_as": [
+        "c#"
+      ]
+    },
+    "C": {
+      "rows": 43549,
+      "share": 0.05144,
+      "matched_as": [
+        "c"
+      ]
+    }
+  },
+  "domains": {
+    "arxiv": {
+      "rows": 780,
+      "share": 0.000921
+    },
+    "thevault_function": {
+      "rows": 276142,
+      "share": 0.326178
+    },
+    "thevault_class": {
+      "rows": 68295,
+      "share": 0.08067
+    },
+    "thevault_inline": {
+      "rows": 71073,
+      "share": 0.083951
+    },
+    "starcoder_data": {
+      "rows": 199819,
+      "share": 0.236026
+    }
+  },
+  "languages_union": {
+    "rows": 283763,
+    "share": 0.33518,
+    "categories_present": [
+      "Golang",
+      "PHP",
+      "Rust",
+      "JavaScript",
+      "C#",
+      "C"
+    ],
+    "categories_absent": []
+  },
+  "domains_union": {
+    "rows": 616109,
+    "share": 0.727747
+  },
+  "any_withheld_category": {
+    "rows": 651999,
+    "share": 0.77014
+  },
+  "every_withheld_language_present": true
+}

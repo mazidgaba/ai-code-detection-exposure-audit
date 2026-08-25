@@ -1,0 +1,48 @@
+{
+  "n_boot": 2000,
+  "method": "BCa paired difference",
+  "comparisons": {
+    "twin": {
+      "a": "unexposed D1_small",
+      "b": "exposed D2",
+      "conditions": {
+        "s1_in_distribution": {
+          "a": 0.8851869390006917,
+          "b": 0.8852365096716367,
+          "difference": 4.9570670945020545e-05,
+          "ci95": [
+            -0.005506918784453215,
+            0.004898642203442357
+          ],
+          "excludes_zero": false,
+          "n": 31041
+        },
+        "s5_compound": {
+          "a": 0.2749475085088287,
+          "b": 0.6193008020647208,
+          "difference": 0.3443532935558921,
+          "ci95": [
+            0.3284710065384296,
+            0.3649313807731124
+          ],
+          "excludes_zero": true,
+          "n": 4168
+        }
+      },
+      "skipped": {
+        "s2_unseen_generator": [
+          30344,
+          41058
+        ],
+        "s3_unseen_language": [
+          26936,
+          56626
+        ],
+        "s4_unseen_domain": [
+          27100,
+          56728
+        ]
+      }
+    }
+  }
+}

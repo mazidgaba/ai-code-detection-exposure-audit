@@ -1,0 +1,62 @@
+{
+ "note": "S2's human rows carry no generator shift by construction, so the all-rows comparison across axes is partly a comparison of composition. Restricting both axes to machine-generated rows removes that difference.",
+ "conditions": {
+  "s2_unseen_generator": {
+   "axis": "generator",
+   "rows": 30344,
+   "human_rows": 20509,
+   "human_share": 0.6759,
+   "all": {
+    "rows": 30344,
+    "d1small": 0.8472,
+    "d2": 0.8672,
+    "effect": 0.02,
+    "ci": [
+     0.0142,
+     0.0259
+    ]
+   },
+   "machine_only": {
+    "rows": 9835,
+    "d1small": 0.8315,
+    "d2": 0.8608,
+    "effect": 0.0294,
+    "ci": [
+     0.022,
+     0.0365
+    ]
+   }
+  },
+  "s4_unseen_domain": {
+   "axis": "source",
+   "rows": 27100,
+   "human_rows": 12837,
+   "human_share": 0.4737,
+   "all": {
+    "rows": 27100,
+    "d1small": 0.3974,
+    "d2": 0.7891,
+    "effect": 0.3917,
+    "ci": [
+     0.385,
+     0.3982
+    ]
+   },
+   "machine_only": {
+    "rows": 14263,
+    "d1small": 0.5953,
+    "d2": 0.7388,
+    "effect": 0.1435,
+    "ci": [
+     0.1362,
+     0.1517
+    ]
+   }
+  }
+ },
+ "ratio": {
+  "all": 19.59,
+  "machine_only": 4.88
+ },
+ "ordering_survives_matching": true
+}

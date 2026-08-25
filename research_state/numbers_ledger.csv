@@ -1,0 +1,448 @@
+label,source_value,paper_value,tolerance,status
+tab:control s1_in_distribution n,31083,31083.0,0.6,ok
+tab:control s1_in_distribution A macro_f1,0.8976745329305021,0.8977,0.0006,ok
+tab:control s1_in_distribution A auc,0.9979803914573732,0.998,0.0006,ok
+tab:control s1_in_distribution B macro_f1,0.727572264438971,0.7276,0.0006,ok
+tab:control s1_in_distribution B auc,0.9921957341410401,0.9922,0.0006,ok
+tab:control s2_unseen_generator n,41061,41061.0,0.6,ok
+tab:control s2_unseen_generator A macro_f1,0.8685149127043924,0.8685,0.0006,ok
+tab:control s2_unseen_generator A auc,0.9987140490823694,0.9987,0.0006,ok
+tab:control s2_unseen_generator B macro_f1,0.6307399473843223,0.6307,0.0006,ok
+tab:control s2_unseen_generator B auc,0.9938901652324729,0.9939,0.0006,ok
+tab:control s3_unseen_language n,56631,56631.0,0.6,ok
+tab:control s3_unseen_language A macro_f1,0.5667177563908041,0.5667,0.0006,ok
+tab:control s3_unseen_language A auc,0.9194092103708106,0.9194,0.0006,ok
+tab:control s3_unseen_language B macro_f1,0.3732746762547784,0.3733,0.0006,ok
+tab:control s3_unseen_language B auc,0.8368352004362449,0.8368,0.0006,ok
+tab:control s4_unseen_domain n,56731,56731.0,0.6,ok
+tab:control s4_unseen_domain A macro_f1,0.40289540639502763,0.4029,0.0006,ok
+tab:control s4_unseen_domain A auc,0.8716868471503693,0.8717,0.0006,ok
+tab:control s4_unseen_domain B macro_f1,0.3170158660780568,0.317,0.0006,ok
+tab:control s4_unseen_domain B auc,0.8162114068853786,0.8162,0.0006,ok
+tab:control s5_compound n,4168,4168.0,0.6,ok
+tab:control s5_compound A macro_f1,0.23778553105715772,0.2378,0.0006,ok
+tab:control s5_compound A auc,0.7613886296987471,0.7614,0.0006,ok
+tab:control s5_compound B macro_f1,0.20939555969075513,0.2094,0.0006,ok
+tab:control s5_compound B auc,0.7197771566471163,0.7198,0.0006,ok
+tab:policy s1_in_distribution coverage,0.9939195058392047,0.994,0.0006,ok
+tab:policy s1_in_distribution human_fpr,0.010426459276984873,0.0104,0.0006,ok
+tab:policy s1_in_distribution CI lo,0.008716738713192554,0.0087,0.002,ok
+tab:policy s1_in_distribution CI hi,0.012160975618683737,0.0122,0.002,ok
+tab:policy s2_unseen_generator coverage,0.9952753220817807,0.995,0.0006,ok
+tab:policy s2_unseen_generator human_fpr,0.01078695758764403,0.0108,0.0006,ok
+tab:policy s2_unseen_generator CI lo,0.009427420457903415,0.0094,0.002,ok
+tab:policy s2_unseen_generator CI hi,0.012222028655783783,0.0122,0.002,ok
+tab:policy s3_unseen_language coverage,0.9617877134431672,0.962,0.0006,ok
+tab:policy s3_unseen_language human_fpr,0.22379727436921898,0.2238,0.0006,ok
+tab:policy s3_unseen_language CI lo,0.21822660843560712,0.2182,0.002,ok
+tab:policy s3_unseen_language CI hi,0.22961826128338989,0.2296,0.002,ok
+tab:policy s4_unseen_domain coverage,0.9772611094463345,0.977,0.0006,ok
+tab:policy s4_unseen_domain human_fpr,0.6443202979515829,0.6443,0.0006,ok
+tab:policy s4_unseen_domain CI lo,0.638596497638209,0.6386,0.002,ok
+tab:policy s4_unseen_domain CI hi,0.6504942796600718,0.6505,0.002,ok
+tab:policy s5_compound coverage,0.9810460652591171,0.981,0.0006,ok
+tab:policy s5_compound human_fpr,0.8514163548904329,0.8514,0.0006,ok
+tab:policy s5_compound CI lo,0.83509882439466,0.8351,0.002,ok
+tab:policy s5_compound CI hi,0.868657935615191,0.8687,0.002,ok
+tab:aurc s1_in_distribution A,0.009739986930761805,0.0097,0.0006,ok
+tab:aurc s1_in_distribution B,0.02974575605047195,0.0297,0.0006,ok
+tab:aurc s2_unseen_generator A,0.02215081609898898,0.0222,0.0006,ok
+tab:aurc s2_unseen_generator B,0.07909599278801258,0.0791,0.0006,ok
+tab:aurc s3_unseen_language A,0.2645737642332874,0.2646,0.0006,ok
+tab:aurc s3_unseen_language B,0.41813849044895124,0.4181,0.0006,ok
+tab:aurc s4_unseen_domain A,0.5921406401215829,0.5921,0.0006,ok
+tab:aurc s4_unseen_domain B,0.47441517100822395,0.4744,0.0006,ok
+tab:aurc s5_compound A,0.8233611583814103,0.8234,0.0006,ok
+tab:aurc s5_compound B,0.6710543130589697,0.6711,0.0006,ok
+tab:slices train rows,196854,196854.0,0.6,ok
+tab:slices train hum,74147,74147.0,0.6,ok
+tab:slices train mach,82806,82806.0,0.6,ok
+tab:slices train hyb,33778,33778.0,0.6,ok
+tab:slices train adv,6123,6123.0,0.6,ok
+tab:slices val rows,31069,31069.0,0.6,ok
+tab:slices val hum,11784,11784.0,0.6,ok
+tab:slices val mach,13012,13012.0,0.6,ok
+tab:slices val hyb,5341,5341.0,0.6,ok
+tab:slices val adv,932,932.0,0.6,ok
+tab:slices s1_in_distribution rows,31083,31083.0,0.6,ok
+tab:slices s1_in_distribution hum,11773,11773.0,0.6,ok
+tab:slices s1_in_distribution mach,12932,12932.0,0.6,ok
+tab:slices s1_in_distribution hyb,5427,5427.0,0.6,ok
+tab:slices s1_in_distribution adv,951,951.0,0.6,ok
+tab:slices s2_unseen_generator rows,41061,41061.0,0.6,ok
+tab:slices s2_unseen_generator hum,20508,20508.0,0.6,ok
+tab:slices s2_unseen_generator mach,10895,10895.0,0.6,ok
+tab:slices s2_unseen_generator hyb,7207,7207.0,0.6,ok
+tab:slices s2_unseen_generator adv,2451,2451.0,0.6,ok
+tab:slices s3_unseen_language rows,56631,56631.0,0.6,ok
+tab:slices s3_unseen_language hum,19363,19363.0,0.6,ok
+tab:slices s3_unseen_language mach,25471,25471.0,0.6,ok
+tab:slices s3_unseen_language hyb,9794,9794.0,0.6,ok
+tab:slices s3_unseen_language adv,2003,2003.0,0.6,ok
+tab:slices s4_unseen_domain rows,56731,56731.0,0.6,ok
+tab:slices s4_unseen_domain hum,26955,26955.0,0.6,ok
+tab:slices s4_unseen_domain mach,12167,12167.0,0.6,ok
+tab:slices s4_unseen_domain hyb,14265,14265.0,0.6,ok
+tab:slices s4_unseen_domain adv,3344,3344.0,0.6,ok
+tab:slices s5_compound rows,4168,4168.0,0.6,ok
+tab:slices s5_compound hum,1936,1936.0,0.6,ok
+tab:slices s5_compound mach,1199,1199.0,0.6,ok
+tab:slices s5_compound hyb,878,878.0,0.6,ok
+tab:slices s5_compound adv,155,155.0,0.6,ok
+tab:contam s1_in_distribution train,0.9042623742988165,0.9043,0.0006,ok
+tab:contam s1_in_distribution test,0.8554779771804413,0.8555,0.0006,ok
+tab:contam s1_in_distribution inflation,0.04878439711837523,0.0488,0.0006,ok
+tab:contam s2_unseen_generator train,0.8835986303074308,0.8836,0.0006,ok
+tab:contam s2_unseen_generator test,0.8253121786663562,0.8253,0.0006,ok
+tab:contam s2_unseen_generator inflation,0.0582864516410746,0.0583,0.0006,ok
+tab:contam s3_unseen_language train,0.8856695698709554,0.8857,0.0006,ok
+tab:contam s3_unseen_language test,0.8343988045241785,0.8344,0.0006,ok
+tab:contam s3_unseen_language inflation,0.05127076534677688,0.0513,0.0006,ok
+tab:contam s4_unseen_domain train,0.9121651948497461,0.9122,0.0006,ok
+tab:contam s4_unseen_domain test,0.725442350216857,0.7254,0.0006,ok
+tab:contam s4_unseen_domain inflation,0.18672284463288913,0.1867,0.0006,ok
+tab:contam s5_compound train,0.8658189302606778,0.8658,0.0006,ok
+tab:contam s5_compound test,0.6887672064761249,0.6888,0.0006,ok
+tab:contam s5_compound inflation,0.17705172378455292,0.1771,0.0006,ok
+tab:exposure microsoft rows,56756,56756.0,0.6,ok
+tab:exposure microsoft share,6.704000000000001,6.7,0.006,ok
+tab:exposure mistralai rows,2828,2828.0,0.6,ok
+tab:exposure mistralai share,0.334,0.33,0.006,ok
+tab:exposure go rows,54194,54194.0,0.6,ok
+tab:exposure go share,6.4014,6.4,0.006,ok
+tab:exposure javascript rows,76232,76232.0,0.6,ok
+tab:exposure javascript share,9.0045,9.0,0.006,ok
+tab:exposure thevaultclass rows,68295,68295.0,0.6,ok
+tab:exposure thevaultclass share,8.067,8.07,0.006,ok
+tab:exposure thevaultinline rows,71073,71073.0,0.6,ok
+tab:exposure thevaultinline share,8.3951,8.4,0.006,ok
+tab:exposure arxiv rows,780,780.0,0.6,ok
+tab:exposure arxiv share,0.0921,0.09,0.006,ok
+tab:baselines s1_in_distribution uniform,0.21841094870150013,0.2184,0.0006,ok
+tab:baselines s1_in_distribution stratified,0.24999999999999997,0.25,0.0006,ok
+tab:baselines s1_in_distribution majority,0.14690446438714075,0.1469,0.0006,ok
+tab:baselines s1_in_distribution branch_a,0.8976745329305021,0.8977,0.0006,ok
+tab:baselines s2_unseen_generator uniform,0.22331644970413803,0.2233,0.0006,ok
+tab:baselines s2_unseen_generator stratified,0.25,0.25,0.0006,ok
+tab:baselines s2_unseen_generator majority,0.16654485211713688,0.1665,0.0006,ok
+tab:baselines s2_unseen_generator branch_a,0.8685149127043924,0.8685,0.0006,ok
+tab:baselines s3_unseen_language uniform,0.21915378905683933,0.2192,0.0006,ok
+tab:baselines s3_unseen_language stratified,0.25,0.25,0.0006,ok
+tab:baselines s3_unseen_language majority,0.15511802392146354,0.1551,0.0006,ok
+tab:baselines s3_unseen_language branch_a,0.5667177563908041,0.5667,0.0006,ok
+tab:baselines s4_unseen_domain uniform,0.2261534252622868,0.2262,0.0006,ok
+tab:baselines s4_unseen_domain stratified,0.25,0.25,0.0006,ok
+tab:baselines s4_unseen_domain majority,0.1610484429892694,0.161,0.0006,ok
+tab:baselines s4_unseen_domain branch_a,0.40289540639502763,0.4029,0.0006,ok
+tab:baselines s5_compound uniform,0.22148897537178955,0.2215,0.0006,ok
+tab:baselines s5_compound stratified,0.25,0.25,0.0006,ok
+tab:baselines s5_compound majority,0.15858453473132372,0.1586,0.0006,ok
+tab:baselines s5_compound branch_a,0.23778553105715772,0.2378,0.0006,ok
+tab:matched s1_in_distribution original,0.8976745329305021,0.8977,0.0006,ok
+tab:matched s1_in_distribution matched,0.9463169308045339,0.9463,0.0006,ok
+tab:matched s1_in_distribution delta,0.048642397874031795,0.0486,0.0006,ok
+tab:matched s2_unseen_generator original,0.8685149127043924,0.8685,0.0006,ok
+tab:matched s2_unseen_generator matched,0.8710974857526586,0.8711,0.0006,ok
+tab:matched s2_unseen_generator delta,0.0025825730482661458,0.0026,0.0006,ok
+tab:matched s3_unseen_language original,0.5667177563908041,0.5667,0.0006,ok
+tab:matched s3_unseen_language matched,0.5736283526389427,0.5736,0.0006,ok
+tab:matched s3_unseen_language delta,0.006910596248138612,0.0069,0.0006,ok
+tab:matched s4_unseen_domain original,0.40289540639502763,0.4029,0.0006,ok
+tab:matched s4_unseen_domain matched,0.39195355463286585,0.392,0.0006,ok
+tab:matched s4_unseen_domain delta,-0.01094185176216178,-0.0109,0.0006,ok
+tab:matched s5_compound original,0.23778553105715772,0.2378,0.0006,ok
+tab:matched s5_compound matched,0.27658162255367896,0.2766,0.0006,ok
+tab:matched s5_compound delta,0.038796091496521246,0.0388,0.0006,ok
+tab:twin s1_in_distribution rows,31041,31041.0,0.5,ok
+tab:twin s1_in_distribution d1small,0.8852,0.8852,0.0006,ok
+tab:twin s1_in_distribution d2,0.8852,0.8852,0.0006,ok
+tab:twin s1_in_distribution difference,0.0,0.0,0.0006,ok
+tab:twin s2_unseen_generator rows,30344,30344.0,0.5,ok
+tab:twin s2_unseen_generator d1small,0.8472,0.8472,0.0006,ok
+tab:twin s2_unseen_generator d2,0.8672,0.8672,0.0006,ok
+tab:twin s2_unseen_generator difference,0.02,0.02,0.0006,ok
+tab:twin s3_unseen_language rows,26936,26936.0,0.5,ok
+tab:twin s3_unseen_language d1small,0.5723,0.5723,0.0006,ok
+tab:twin s3_unseen_language d2,0.8154,0.8154,0.0006,ok
+tab:twin s3_unseen_language difference,0.2431,0.2431,0.0006,ok
+tab:twin s4_unseen_domain rows,27100,27100.0,0.5,ok
+tab:twin s4_unseen_domain d1small,0.3974,0.3974,0.0006,ok
+tab:twin s4_unseen_domain d2,0.7891,0.7891,0.0006,ok
+tab:twin s4_unseen_domain difference,0.3917,0.3917,0.0006,ok
+tab:twin s5_compound rows,4168,4168.0,0.5,ok
+tab:twin s5_compound d1small,0.2749,0.2749,0.0006,ok
+tab:twin s5_compound d2,0.6193,0.6193,0.0006,ok
+tab:twin s5_compound difference,0.3444,0.3444,0.0006,ok
+tab:shift none (uncorrected) macro_f1,0.23778553105715772,0.2378,0.0012,ok
+tab:shift none (uncorrected) human_fpr,0.8228305785123967,0.8228,0.0012,ok
+tab:shift oracle priors macro_f1,0.23671595097124748,0.2367,0.0012,ok
+tab:shift oracle priors human_fpr,0.8212809917355371,0.8213,0.0012,ok
+tab:shift oracle temperature + priors macro_f1,0.23836912892510054,0.2384,0.0012,ok
+"tab:shift threshold refit, k=10 macro_f1",0.23781296872937902,0.2378,0.0012,ok
+"tab:shift threshold refit, k=10 human_fpr",0.2412399717976831,0.2412,0.0012,ok
+"tab:shift threshold refit, k=100 macro_f1",0.2378430638347458,0.2378,0.0012,ok
+"tab:shift threshold refit, k=100 human_fpr",0.026469954589507412,0.0265,0.0012,ok
+tab:augment s1_in_distribution augmented,0.8819,0.8819,0.0006,ok
+tab:augment s1_in_distribution reference,0.8977,0.8977,0.0006,ok
+tab:augment s1_in_distribution delta,-0.015800000000000036,-0.0158,0.0006,ok
+tab:augment s2_unseen_generator augmented,0.8575,0.8575,0.0006,ok
+tab:augment s2_unseen_generator reference,0.8685,0.8685,0.0006,ok
+tab:augment s2_unseen_generator delta,-0.01100000000000001,-0.011,0.0006,ok
+tab:augment s3_unseen_language augmented,0.5518,0.5518,0.0006,ok
+tab:augment s3_unseen_language reference,0.5667,0.5667,0.0006,ok
+tab:augment s3_unseen_language delta,-0.014900000000000024,-0.0149,0.0006,ok
+tab:augment s4_unseen_domain augmented,0.3588,0.3588,0.0006,ok
+tab:augment s4_unseen_domain reference,0.4029,0.4029,0.0006,ok
+tab:augment s4_unseen_domain delta,-0.04409999999999997,-0.0441,0.0006,ok
+tab:augment s5_compound augmented,0.2588,0.2588,0.0006,ok
+tab:augment s5_compound reference,0.2378,0.2378,0.0006,ok
+tab:augment s5_compound delta,0.020999999999999963,0.021,0.0006,ok
+tab:codemirage seen_family_seen_model n,17993,17993.0,0.6,ok
+tab:codemirage seen_family_seen_model f1,0.5086,0.5086,0.0006,ok
+tab:codemirage seen_family_seen_model auc,0.9383,0.9383,0.0006,ok
+tab:codemirage seen_family_unseen_model n,29973,29973.0,0.6,ok
+tab:codemirage seen_family_unseen_model f1,0.4073,0.4073,0.0006,ok
+tab:codemirage seen_family_unseen_model auc,0.8681,0.8681,0.0006,ok
+tab:codemirage unseen_family n,11999,11999.0,0.6,ok
+tab:codemirage unseen_family f1,0.5365,0.5365,0.0006,ok
+tab:codemirage unseen_family auc,0.9255,0.9255,0.0006,ok
+tab:codemirage overall n,62964,62964.0,0.6,ok
+tab:codemirage overall f1,0.4047,0.4047,0.0006,ok
+tab:codemirage overall auc,0.9007,0.9007,0.0006,ok
+tab:contamgpu s1_in_distribution train,0.9778556232294203,0.9779,0.0006,ok
+tab:contamgpu s1_in_distribution held,0.9231699817833118,0.9232,0.0006,ok
+tab:contamgpu s1_in_distribution inflation,0.054685641446108546,0.0547,0.0006,ok
+tab:contamgpu s1_in_distribution CI lo,0.04465323840801729,0.0447,0.002,ok
+tab:contamgpu s1_in_distribution CI hi,0.06414862359559495,0.0641,0.002,ok
+tab:contamgpu s2_unseen_generator train,0.9718438164857286,0.9718,0.0006,ok
+tab:contamgpu s2_unseen_generator held,0.899021039478867,0.899,0.0006,ok
+tab:contamgpu s2_unseen_generator inflation,0.07282277700686157,0.0728,0.0006,ok
+tab:contamgpu s2_unseen_generator CI lo,0.06023597322501128,0.0602,0.002,ok
+tab:contamgpu s2_unseen_generator CI hi,0.0853466847072589,0.0853,0.002,ok
+tab:contamgpu s3_unseen_language train,0.9678930641537763,0.9679,0.0006,ok
+tab:contamgpu s3_unseen_language held,0.8632700378089001,0.8633,0.0006,ok
+tab:contamgpu s3_unseen_language inflation,0.10462302634487619,0.1046,0.0006,ok
+tab:contamgpu s3_unseen_language CI lo,0.09146630719018657,0.0915,0.002,ok
+tab:contamgpu s3_unseen_language CI hi,0.1175853197411174,0.1176,0.002,ok
+tab:contamgpu s4_unseen_domain train,0.9507500264541388,0.9508,0.0006,ok
+tab:contamgpu s4_unseen_domain held,0.8079102388944879,0.8079,0.0006,ok
+tab:contamgpu s4_unseen_domain inflation,0.14283978755965088,0.1428,0.0006,ok
+tab:contamgpu s4_unseen_domain CI lo,0.126270532486004,0.1263,0.002,ok
+tab:contamgpu s4_unseen_domain CI hi,0.15869508771734958,0.1587,0.002,ok
+tab:contamgpu s5_compound train,0.9531983102313187,0.9532,0.0006,ok
+tab:contamgpu s5_compound held,0.775353779566692,0.7754,0.0006,ok
+tab:contamgpu s5_compound inflation,0.1778445306646267,0.1778,0.0006,ok
+tab:contamgpu s5_compound CI lo,0.15235013507222575,0.1524,0.002,ok
+tab:contamgpu s5_compound CI hi,0.205046202399142,0.205,0.002,ok
+tab:axes s1_in_distribution language,0.0,0.0,0.06,ok
+tab:axes s1_in_distribution source,0.0,0.0,0.06,ok
+tab:axes s1_in_distribution family,0.0,0.0,0.06,ok
+tab:axes s1_in_distribution exposure,4.9570670945020545e-05,0.0,0.0006,ok
+tab:axes s2_unseen_generator language,0.0,0.0,0.06,ok
+tab:axes s2_unseen_generator source,0.0,0.0,0.06,ok
+tab:axes s2_unseen_generator family,50.010901955083945,50.0,0.06,ok
+tab:axes s2_unseen_generator exposure,0.020015544156284037,0.02,0.0006,ok
+tab:axes s3_unseen_language language,100.0,100.0,0.06,ok
+tab:axes s3_unseen_language source,0.0,0.0,0.06,ok
+tab:axes s3_unseen_language family,6.466283324621013,6.5,0.06,ok
+tab:axes s3_unseen_language exposure,0.24306980280544943,0.2431,0.0006,ok
+tab:axes s4_unseen_domain language,0.0,0.0,0.06,ok
+tab:axes s4_unseen_domain source,100.0,100.0,0.06,ok
+tab:axes s4_unseen_domain family,8.093061150590684,8.1,0.06,ok
+tab:axes s4_unseen_domain exposure,0.3917129524303303,0.3917,0.0006,ok
+tab:axes s5_compound language,100.0,100.0,0.06,ok
+tab:axes s5_compound source,100.0,100.0,0.06,ok
+tab:axes s5_compound family,8.715596330275229,8.7,0.06,ok
+tab:axes s5_compound exposure,0.3443532935558921,0.3444,0.0006,ok
+tab:aicdaudit C# rows,94707,94707.0,0.5,ok
+tab:aicdaudit JavaScript rows,76232,76232.0,0.5,ok
+tab:aicdaudit Golang rows,54194,54194.0,0.5,ok
+tab:aicdaudit C rows,43549,43549.0,0.5,ok
+tab:aicdaudit PHP rows,9002,9002.0,0.5,ok
+tab:aicdaudit Rust rows,6079,6079.0,0.5,ok
+aicdbench union rows,283763,283763,0.5,ok
+variance design sd,0.0109,0.0109,0.0006,ok
+variance seed sd,0.0146,0.0146,0.0006,ok
+independent all_classes macro_f1,0.3224,0.3224,0.0006,ok
+independent human_machine macro_f1,0.5455,0.5455,0.0006,ok
+independent human_machine ci,0.5321,0.5321,0.0006,ok
+independent human_machine ci,0.5591,0.5591,0.0006,ok
+tab:seedtwin s1_in_distribution seed1,0.0,0.0,0.0006,ok
+tab:seedtwin s1_in_distribution seed2,-0.0046,-0.0046,0.0006,ok
+tab:seedtwin s1_in_distribution seed3,-0.0014,-0.0014,0.0006,ok
+tab:seedtwin s1_in_distribution mean,-0.002,-0.002,0.0006,ok
+tab:seedtwin s1_in_distribution sd,0.0024,0.0024,6e-05,ok
+tab:seedtwin s2_unseen_generator seed1,0.02,0.02,0.0006,ok
+tab:seedtwin s2_unseen_generator seed2,0.0162,0.0162,0.0006,ok
+tab:seedtwin s2_unseen_generator seed3,0.0237,0.0237,0.0006,ok
+tab:seedtwin s2_unseen_generator mean,0.02,0.02,0.0006,ok
+tab:seedtwin s2_unseen_generator sd,0.0038,0.0038,6e-05,ok
+tab:seedtwin s3_unseen_language seed1,0.2431,0.2431,0.0006,ok
+tab:seedtwin s3_unseen_language seed2,0.2408,0.2408,0.0006,ok
+tab:seedtwin s3_unseen_language seed3,0.2374,0.2374,0.0006,ok
+tab:seedtwin s3_unseen_language mean,0.2404,0.2404,0.0006,ok
+tab:seedtwin s3_unseen_language sd,0.0029,0.0029,6e-05,ok
+tab:seedtwin s4_unseen_domain seed1,0.3917,0.3917,0.0006,ok
+tab:seedtwin s4_unseen_domain seed2,0.3699,0.3699,0.0006,ok
+tab:seedtwin s4_unseen_domain seed3,0.3859,0.3859,0.0006,ok
+tab:seedtwin s4_unseen_domain mean,0.3825,0.3825,0.0006,ok
+tab:seedtwin s4_unseen_domain sd,0.0113,0.0113,6e-05,ok
+tab:seedtwin s5_compound seed1,0.3444,0.3444,0.0006,ok
+tab:seedtwin s5_compound seed2,0.3667,0.3667,0.0006,ok
+tab:seedtwin s5_compound seed3,0.3456,0.3456,0.0006,ok
+tab:seedtwin s5_compound mean,0.3522,0.3522,0.0006,ok
+tab:seedtwin s5_compound sd,0.0125,0.0125,6e-05,ok
+tab:published s1_in_distribution n,783,783.0,0.5,ok
+tab:published s1_in_distribution clean,0.8526,0.8526,0.0006,ok
+tab:published s1_in_distribution seen,0.9043,0.9043,0.0006,ok
+tab:published s1_in_distribution effect,0.0516,0.0516,0.0006,ok
+tab:published s2_unseen_generator n,774,774.0,0.5,ok
+tab:published s2_unseen_generator clean,0.8459,0.8459,0.0006,ok
+tab:published s2_unseen_generator seen,0.8836,0.8836,0.0006,ok
+tab:published s2_unseen_generator effect,0.0377,0.0377,0.0006,ok
+tab:published s3_unseen_language n,785,785.0,0.5,ok
+tab:published s3_unseen_language clean,0.8156,0.8156,0.0006,ok
+tab:published s3_unseen_language seen,0.8857,0.8857,0.0006,ok
+tab:published s3_unseen_language effect,0.07,0.07,0.0006,ok
+tab:published s4_unseen_domain n,808,808.0,0.5,ok
+tab:published s4_unseen_domain clean,0.7482,0.7482,0.0006,ok
+tab:published s4_unseen_domain seen,0.9122,0.9122,0.0006,ok
+tab:published s4_unseen_domain effect,0.164,0.164,0.0006,ok
+tab:published s5_compound n,814,814.0,0.5,ok
+tab:published s5_compound clean,0.6928,0.6928,0.0006,ok
+tab:published s5_compound seen,0.8658,0.8658,0.0006,ok
+tab:published s5_compound effect,0.173,0.173,0.0006,ok
+matched generator effect,0.0294,0.0294,0.0006,ok
+matched generator ci,0.022,0.022,0.0006,ok
+matched generator ci,0.0365,0.0365,0.0006,ok
+matched source effect,0.1435,0.1435,0.0006,ok
+matched source ci,0.1362,0.1362,0.0006,ok
+matched source ci,0.1517,0.1517,0.0006,ok
+tab:nolang s1_in_distribution rows,31041,31041.0,0.5,ok
+tab:nolang s1_in_distribution exposure,0.0,0.0,0.0006,ok
+tab:nolang s1_in_distribution clean,-0.0124,-0.0124,0.0006,ok
+tab:nolang s2_unseen_generator rows,21412,21412.0,0.5,ok
+tab:nolang s2_unseen_generator exposure,0.0178,0.0178,0.0006,ok
+tab:nolang s2_unseen_generator clean,0.0037,0.0037,0.0006,ok
+tab:nolang s3_unseen_language rows,26936,26936.0,0.5,ok
+tab:nolang s3_unseen_language exposure,0.2431,0.2431,0.0006,ok
+tab:nolang s3_unseen_language clean,0.0067,0.0067,0.0006,ok
+tab:nolang s4_unseen_domain rows,2541,2541.0,0.5,ok
+tab:nolang s4_unseen_domain exposure,0.3836,0.3836,0.0006,ok
+tab:nolang s4_unseen_domain clean,0.4105,0.4105,0.0006,ok
+tab:nolang s5_compound rows,4168,4168.0,0.5,ok
+tab:nolang s5_compound exposure,0.3444,0.3444,0.0006,ok
+tab:nolang s5_compound clean,0.3373,0.3373,0.0006,ok
+tab:panel s1_in_distribution reference,0.8977,0.8977,0.0006,ok
+tab:panel s1_in_distribution codebert,0.8656,0.8656,0.0006,ok
+tab:panel s1_in_distribution unixcoder,0.9023,0.9023,0.0006,ok
+tab:panel s2_unseen_generator reference,0.8685,0.8685,0.0006,ok
+tab:panel s2_unseen_generator codebert,0.8235,0.8235,0.0006,ok
+tab:panel s2_unseen_generator unixcoder,0.8714,0.8714,0.0006,ok
+tab:panel s3_unseen_language reference,0.5667,0.5667,0.0006,ok
+tab:panel s3_unseen_language codebert,0.5312,0.5312,0.0006,ok
+tab:panel s3_unseen_language unixcoder,0.5588,0.5588,0.0006,ok
+tab:panel s4_unseen_domain reference,0.4029,0.4029,0.0006,ok
+tab:panel s4_unseen_domain codebert,0.3227,0.3227,0.0006,ok
+tab:panel s4_unseen_domain unixcoder,0.388,0.388,0.0006,ok
+tab:panel s5_compound reference,0.2378,0.2378,0.0006,ok
+tab:panel s5_compound codebert,0.2093,0.2093,0.0006,ok
+tab:panel s5_compound unixcoder,0.2558,0.2558,0.0006,ok
+tab:zeroshot s1_in_distribution zeroshot,0.6586130240272949,0.6586,0.0006,ok
+tab:zeroshot s1_in_distribution unexposed,0.997663804598844,0.9977,0.0006,ok
+tab:zeroshot s1_in_distribution exposed,0.9979373399748541,0.9979,0.0006,ok
+tab:zeroshot s2_unseen_generator zeroshot,0.552489666207387,0.5525,0.0006,ok
+tab:zeroshot s2_unseen_generator unexposed,0.9984622768934284,0.9985,0.0006,ok
+tab:zeroshot s2_unseen_generator exposed,0.9988017065331443,0.9988,0.0006,ok
+tab:zeroshot s3_unseen_language zeroshot,0.7009506390179824,0.701,0.0006,ok
+tab:zeroshot s3_unseen_language unexposed,0.9114144121350167,0.9114,0.0006,ok
+tab:zeroshot s3_unseen_language exposed,0.9937999670681307,0.9938,0.0006,ok
+tab:zeroshot s4_unseen_domain zeroshot,0.6273338255997216,0.6273,0.0006,ok
+tab:zeroshot s4_unseen_domain unexposed,0.8306972493837064,0.8307,0.0006,ok
+tab:zeroshot s4_unseen_domain exposed,0.9973045995668752,0.9973,0.0006,ok
+tab:zeroshot s5_compound zeroshot,0.6615552982167718,0.6616,0.0006,ok
+tab:zeroshot s5_compound unexposed,0.7659890232974909,0.766,0.0006,ok
+tab:zeroshot s5_compound exposed,0.9900509169776948,0.9901,0.0006,ok
+tab:ablation triplet0 s1_in_distribution,0.895261819360067,0.8953,0.0006,ok
+tab:ablation triplet0 s2_unseen_generator,0.8685682000660834,0.8686,0.0006,ok
+tab:ablation triplet0 s3_unseen_language,0.5904127035560787,0.5904,0.0006,ok
+tab:ablation triplet0 s4_unseen_domain,0.3903249733229065,0.3903,0.0006,ok
+tab:ablation triplet0 s5_compound,0.2620638173597795,0.2621,0.0006,ok
+tab:ablation triplet0 drop,0.6331980020002874,0.6332,0.0006,ok
+tab:ablation triplet02 s1_in_distribution,0.8933,0.8933,0.0006,ok
+tab:ablation triplet02 s2_unseen_generator,0.8678,0.8678,0.0006,ok
+tab:ablation triplet02 s3_unseen_language,0.5544,0.5544,0.0006,ok
+tab:ablation triplet02 s4_unseen_domain,0.4091,0.4091,0.0006,ok
+tab:ablation triplet02 s5_compound,0.2672,0.2672,0.0006,ok
+tab:ablation triplet02 drop,0.626,0.626,0.0006,ok
+tab:ablation proj256 s1_in_distribution,0.8962,0.8962,0.0006,ok
+tab:ablation proj256 s2_unseen_generator,0.8678,0.8678,0.0006,ok
+tab:ablation proj256 s3_unseen_language,0.581,0.581,0.0006,ok
+tab:ablation proj256 s4_unseen_domain,0.4092,0.4092,0.0006,ok
+tab:ablation proj256 s5_compound,0.2756,0.2756,0.0006,ok
+tab:ablation proj256 drop,0.6206,0.6206,0.0006,ok
+tab:ablation large s1_in_distribution,0.9031950068837095,0.9032,0.0006,ok
+tab:ablation large s2_unseen_generator,0.8749371672371998,0.8749,0.0006,ok
+tab:ablation large s3_unseen_language,0.6679360134627865,0.6679,0.0006,ok
+tab:ablation large s4_unseen_domain,0.3970461194340964,0.397,0.0006,ok
+tab:ablation large s5_compound,0.2957029671063495,0.2957,0.0006,ok
+tab:ablation large drop,0.60749203977736,0.6075,0.0006,ok
+tab:seeds paper (seed 20260818) s1_in_distribution,0.8977,0.8977,0.0006,ok
+tab:seeds paper (seed 20260818) s2_unseen_generator,0.8685,0.8685,0.0006,ok
+tab:seeds paper (seed 20260818) s3_unseen_language,0.5667,0.5667,0.0006,ok
+tab:seeds paper (seed 20260818) s4_unseen_domain,0.4029,0.4029,0.0006,ok
+tab:seeds paper (seed 20260818) s5_compound,0.2378,0.2378,0.0006,ok
+tab:seeds seed1 s1_in_distribution,0.8976,0.8976,0.0006,ok
+tab:seeds seed1 s2_unseen_generator,0.8708,0.8708,0.0006,ok
+tab:seeds seed1 s3_unseen_language,0.5752,0.5752,0.0006,ok
+tab:seeds seed1 s4_unseen_domain,0.4092,0.4092,0.0006,ok
+tab:seeds seed1 s5_compound,0.2596,0.2596,0.0006,ok
+tab:seeds seed2 s1_in_distribution,0.8917,0.8917,0.0006,ok
+tab:seeds seed2 s2_unseen_generator,0.8633,0.8633,0.0006,ok
+tab:seeds seed2 s3_unseen_language,0.5489,0.5489,0.0006,ok
+tab:seeds seed2 s4_unseen_domain,0.3997,0.3997,0.0006,ok
+tab:seeds seed2 s5_compound,0.2553,0.2553,0.0006,ok
+tab:seeds mean s1_in_distribution,0.8946,0.8946,0.0006,ok
+tab:seeds mean s2_unseen_generator,0.8677,0.8677,0.0006,ok
+tab:seeds mean s3_unseen_language,0.5695,0.5695,0.0006,ok
+tab:seeds mean s4_unseen_domain,0.3977,0.3977,0.0006,ok
+tab:seeds mean s5_compound,0.2555,0.2555,0.0006,ok
+tab:seeds sd s1_in_distribution,0.003,0.003,0.0006,ok
+tab:seeds sd s2_unseen_generator,0.0025,0.0025,0.0006,ok
+tab:seeds sd s3_unseen_language,0.0118,0.0118,0.0006,ok
+tab:seeds sd s4_unseen_domain,0.0083,0.0083,0.0006,ok
+tab:seeds sd s5_compound,0.0129,0.0129,0.0006,ok
+tab:independent macro-f1,0.32243239699785436,0.3224,0.0006,ok
+tab:independent binary auc,0.655644288749445,0.6556,0.0006,ok
+tab:independent human false-accusation,0.48403001071811363,0.484,0.0006,ok
+tab:independent human f1,0.6032581453634085,0.6033,0.0006,ok
+tab:independent machine f1,0.3510167992926614,0.351,0.0006,ok
+tab:independent hybrid f1,0.013022246337493217,0.013,0.0006,ok
+tab:independent detected: llama,0.6909581646423751,0.691,0.0006,ok
+tab:independent detected: codestral,0.6768558951965066,0.6769,0.0006,ok
+tab:independent detected: gemini,0.5647727272727273,0.5648,0.0006,ok
+tab:transforms rename_identifiers applied,99.98,100.0,0.06,ok
+tab:transforms rename_identifiers aggregate,-0.39344305548864644,-0.3934,0.0006,ok
+tab:transforms rename_identifiers conditional,-0.3935630904584785,-0.3936,0.0006,ok
+tab:transforms rename_identifiers break,12.392478495699145,12.39,0.06,ok
+tab:transforms rename_identifiers conditional_parsing,-0.39710749305686,-0.3971,0.0006,ok
+tab:transforms strip_comments applied,81.19,81.2,0.06,ok
+tab:transforms strip_comments aggregate,-0.3461263873336922,-0.3461,0.0006,ok
+tab:transforms strip_comments conditional,-0.36493128406615183,-0.3649,0.0006,ok
+tab:transforms strip_comments break,1.4164305949008527,1.42,0.06,ok
+tab:transforms strip_comments conditional_parsing,-0.362295950148599,-0.3623,0.0006,ok
+tab:transforms whitespace applied,85.54,85.5,0.06,ok
+tab:transforms whitespace aggregate,-0.3175296456433965,-0.3175,0.0006,ok
+tab:transforms whitespace conditional,-0.3359746656064505,-0.336,0.0006,ok
+tab:transforms whitespace break,1.2625672200140325,1.26,0.06,ok
+tab:transforms whitespace conditional_parsing,-0.33343516353734587,-0.3334,0.0006,ok
+tab:transforms dead_code applied,100.0,100.0,0.06,ok
+tab:transforms dead_code aggregate,-0.16888479020590796,-0.1689,0.0006,ok
+tab:transforms dead_code conditional,-0.16888479020590796,-0.1689,0.0006,ok
+tab:transforms dead_code break,1.1199999999999988,1.12,0.06,ok
+tab:transforms dead_code conditional_parsing,-0.1802809946171915,-0.1803,0.0006,ok
+tab:transforms compress_blanks applied,5.66,5.7,0.06,ok
+tab:transforms compress_blanks aggregate,-0.001995613957142761,-0.002,0.0006,ok
+tab:transforms compress_blanks conditional,-0.03992892966359429,-0.0399,0.0006,ok
+tab:transforms compress_blanks break,4.770318021201414,4.77,0.06,ok
+tab:transforms compress_blanks conditional_parsing,-0.04361429957665286,-0.0436,0.0006,ok

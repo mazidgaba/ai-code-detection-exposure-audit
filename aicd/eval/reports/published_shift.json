@@ -1,0 +1,136 @@
+{
+ "note": "DroidDetect-Base on every condition. 'clean' is the union of the DroidCollection dev and test shards, which its training never saw; 'seen' is the train shard it did.",
+ "conditions": {
+  "s1_in_distribution": {
+   "rows_clean": 783,
+   "rows_seen": 418,
+   "clean": {
+    "n": 783,
+    "macro_f1": 0.8526,
+    "ci": [
+     0.8193,
+     0.8826
+    ]
+   },
+   "seen": {
+    "n": 418,
+    "macro_f1": 0.9043,
+    "ci": [
+     0.8621,
+     0.9369
+    ]
+   },
+   "shard_effect": 0.0516,
+   "shard_effect_ci": [
+    0.0026,
+    0.0966
+   ],
+   "excludes_zero": true
+  },
+  "s2_unseen_generator": {
+   "rows_clean": 774,
+   "rows_seen": 426,
+   "clean": {
+    "n": 774,
+    "macro_f1": 0.8459,
+    "ci": [
+     0.8146,
+     0.8737
+    ]
+   },
+   "seen": {
+    "n": 426,
+    "macro_f1": 0.8836,
+    "ci": [
+     0.8468,
+     0.9166
+    ]
+   },
+   "shard_effect": 0.0377,
+   "shard_effect_ci": [
+    -0.0093,
+    0.0838
+   ],
+   "excludes_zero": false
+  },
+  "s3_unseen_language": {
+   "rows_clean": 785,
+   "rows_seen": 416,
+   "clean": {
+    "n": 785,
+    "macro_f1": 0.8156,
+    "ci": [
+     0.7813,
+     0.8466
+    ]
+   },
+   "seen": {
+    "n": 416,
+    "macro_f1": 0.8857,
+    "ci": [
+     0.8467,
+     0.9198
+    ]
+   },
+   "shard_effect": 0.07,
+   "shard_effect_ci": [
+    0.0179,
+    0.1186
+   ],
+   "excludes_zero": true
+  },
+  "s4_unseen_domain": {
+   "rows_clean": 808,
+   "rows_seen": 392,
+   "clean": {
+    "n": 808,
+    "macro_f1": 0.7482,
+    "ci": [
+     0.7107,
+     0.7844
+    ]
+   },
+   "seen": {
+    "n": 392,
+    "macro_f1": 0.9122,
+    "ci": [
+     0.8698,
+     0.9435
+    ]
+   },
+   "shard_effect": 0.164,
+   "shard_effect_ci": [
+    0.1099,
+    0.2126
+   ],
+   "excludes_zero": true
+  },
+  "s5_compound": {
+   "rows_clean": 814,
+   "rows_seen": 386,
+   "clean": {
+    "n": 814,
+    "macro_f1": 0.6928,
+    "ci": [
+     0.6546,
+     0.731
+    ]
+   },
+   "seen": {
+    "n": 386,
+    "macro_f1": 0.8658,
+    "ci": [
+     0.8231,
+     0.9051
+    ]
+   },
+   "shard_effect": 0.173,
+   "shard_effect_ci": [
+    0.1171,
+    0.2278
+   ],
+   "excludes_zero": true
+  }
+ },
+ "clean_drop_s1_to_s5": 0.1598
+}

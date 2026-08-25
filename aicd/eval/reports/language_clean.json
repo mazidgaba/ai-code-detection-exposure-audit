@@ -1,0 +1,112 @@
+{
+ "note": "All three arms restricted to rows every arm still evaluates, so the contrasts are measured on identical rows.",
+ "languages_seen_by_d2nolang": [
+  "c",
+  "cpp",
+  "csharp",
+  "java",
+  "php",
+  "python",
+  "rust"
+ ],
+ "untrained_languages_seen": [],
+ "conditions": {
+  "s1_in_distribution": {
+   "rows": 31041,
+   "rows_before_restriction": 31041,
+   "d1small": 0.8852,
+   "d2": 0.8852,
+   "d2nolang": 0.8727,
+   "exposure_effect": 0.0,
+   "exposure_ci": [
+    -0.0049,
+    0.0051
+   ],
+   "language_clean_effect": -0.0124,
+   "language_clean_ci": [
+    -0.0175,
+    -0.0072
+   ],
+   "clean_excludes_zero": true
+  },
+  "s2_unseen_generator": {
+   "rows": 21412,
+   "rows_before_restriction": 30344,
+   "d1small": 0.6957,
+   "d2": 0.7135,
+   "d2nolang": 0.6994,
+   "exposure_effect": 0.0178,
+   "exposure_ci": [
+    0.0005,
+    0.0357
+   ],
+   "language_clean_effect": 0.0037,
+   "language_clean_ci": [
+    -0.0141,
+    0.0213
+   ],
+   "clean_excludes_zero": false
+  },
+  "s3_unseen_language": {
+   "rows": 26936,
+   "rows_before_restriction": 26936,
+   "d1small": 0.5723,
+   "d2": 0.8154,
+   "d2nolang": 0.579,
+   "exposure_effect": 0.2431,
+   "exposure_ci": [
+    0.2355,
+    0.2505
+   ],
+   "language_clean_effect": 0.0067,
+   "language_clean_ci": [
+    0.0016,
+    0.0116
+   ],
+   "clean_excludes_zero": true
+  },
+  "s4_unseen_domain": {
+   "rows": 2541,
+   "rows_before_restriction": 27100,
+   "d1small": 0.393,
+   "d2": 0.7766,
+   "d2nolang": 0.8035,
+   "exposure_effect": 0.3836,
+   "exposure_ci": [
+    0.3609,
+    0.405
+   ],
+   "language_clean_effect": 0.4105,
+   "language_clean_ci": [
+    0.3884,
+    0.4329
+   ],
+   "clean_excludes_zero": true
+  },
+  "s5_compound": {
+   "rows": 4168,
+   "rows_before_restriction": 4168,
+   "d1small": 0.2749,
+   "d2": 0.6193,
+   "d2nolang": 0.6123,
+   "exposure_effect": 0.3444,
+   "exposure_ci": [
+    0.3273,
+    0.3626
+   ],
+   "language_clean_effect": 0.3373,
+   "language_clean_ci": [
+    0.3207,
+    0.3542
+   ],
+   "clean_excludes_zero": true
+  }
+ },
+ "headline": {
+  "condition": "s4_unseen_domain",
+  "claim": "the source-axis exposure effect survives with no untrained language anywhere in training",
+  "exposure_effect": 0.3836,
+  "language_clean_effect": 0.4105,
+  "survives": true
+ }
+}

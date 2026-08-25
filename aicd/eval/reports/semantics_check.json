@@ -1,0 +1,65 @@
+{
+  "n_rows": 6000,
+  "condition": "s1_in_distribution",
+  "languages_checked": [
+    "c",
+    "cpp",
+    "csharp",
+    "java",
+    "php",
+    "python",
+    "rust"
+  ],
+  "transforms": {
+    "whitespace": {
+      "parsed_before": 5877,
+      "altered": 4628,
+      "broke_parse": 0,
+      "break_rate": 0.0,
+      "by_language": {}
+    },
+    "strip_comments": {
+      "parsed_before": 5877,
+      "altered": 4224,
+      "broke_parse": 9,
+      "break_rate": 0.002130681818181818,
+      "by_language": {
+        "python": 9
+      }
+    },
+    "rename_identifiers": {
+      "parsed_before": 5877,
+      "altered": 5876,
+      "broke_parse": 714,
+      "break_rate": 0.12151123213070116,
+      "by_language": {
+        "java": 88,
+        "csharp": 330,
+        "c": 62,
+        "cpp": 105,
+        "php": 75,
+        "python": 22,
+        "rust": 32
+      },
+      "injective_checked": 5876,
+      "non_injective": 0,
+      "collision_rate": 0.0
+    },
+    "compress_blanks": {
+      "parsed_before": 5877,
+      "altered": 317,
+      "broke_parse": 0,
+      "break_rate": 0.0,
+      "by_language": {}
+    },
+    "dead_code": {
+      "parsed_before": 5877,
+      "altered": 5877,
+      "broke_parse": 0,
+      "break_rate": 0.0,
+      "by_language": {}
+    }
+  },
+  "max_break_rate": 0.12151123213070116,
+  "worst_transform": "rename_identifiers"
+}

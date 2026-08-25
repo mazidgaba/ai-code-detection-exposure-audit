@@ -1,0 +1,90 @@
+{
+  "note": "Composition is measured on the CPU build, whose category structure is identical to the GPU build by construction; the twin effects are measured on the arm build.",
+  "conditions": {
+    "s1_in_distribution": {
+      "language": {
+        "fraction_novel": 0.0,
+        "n_novel_values": 0
+      },
+      "source": {
+        "fraction_novel": 0.0,
+        "n_novel_values": 0
+      },
+      "model_family": {
+        "fraction_novel": 0.0,
+        "n_novel_values": 0
+      },
+      "twin_effect": 4.9570670945020545e-05
+    },
+    "s2_unseen_generator": {
+      "language": {
+        "fraction_novel": 0.0,
+        "n_novel_values": 0
+      },
+      "source": {
+        "fraction_novel": 0.0,
+        "n_novel_values": 0
+      },
+      "model_family": {
+        "fraction_novel": 0.5001090195508394,
+        "n_novel_values": 2
+      },
+      "twin_effect": 0.020015544156284037
+    },
+    "s3_unseen_language": {
+      "language": {
+        "fraction_novel": 1.0,
+        "n_novel_values": 2
+      },
+      "source": {
+        "fraction_novel": 0.0,
+        "n_novel_values": 0
+      },
+      "model_family": {
+        "fraction_novel": 0.06466283324621014,
+        "n_novel_values": 2
+      },
+      "twin_effect": 0.24306980280544943
+    },
+    "s4_unseen_domain": {
+      "language": {
+        "fraction_novel": 0.0,
+        "n_novel_values": 0
+      },
+      "source": {
+        "fraction_novel": 1.0,
+        "n_novel_values": 3
+      },
+      "model_family": {
+        "fraction_novel": 0.08093061150590684,
+        "n_novel_values": 2
+      },
+      "twin_effect": 0.3917129524303303
+    },
+    "s5_compound": {
+      "language": {
+        "fraction_novel": 1.0,
+        "n_novel_values": 2
+      },
+      "source": {
+        "fraction_novel": 1.0,
+        "n_novel_values": 3
+      },
+      "model_family": {
+        "fraction_novel": 0.0871559633027523,
+        "n_novel_values": 2
+      },
+      "twin_effect": 0.3443532935558921
+    }
+  },
+  "clean_source_axis": {
+    "condition": "s4_unseen_domain",
+    "language_novel": 0.0,
+    "source_novel": 1.0,
+    "twin_effect": 0.3917129524303303
+  },
+  "generator_axis": {
+    "condition": "s2_unseen_generator",
+    "twin_effect": 0.020015544156284037
+  }
+}

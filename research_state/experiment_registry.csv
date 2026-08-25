@@ -1,0 +1,19 @@
+experiment,question,status,evidence,provenance,notes
+E1,Does exposure cause the collapse? (matched twin),complete,kaggle_runs/results/e1/branch_a_e1_d1small.json; kaggle_runs/results/e1-d2/results/reports/branch_a_e1_d2.json,report+arrays,Controlled: identical architecture/recipe/seed/eval rows; only training contents differ
+E2,Is the collapse prior shift or calibration failure?,complete,aicd/eval/reports/shift_diagnosis_a.json,report,Oracle priors recover nothing; BBSE reaches 1.0000 human FPR on S5
+E3,Does the collapse hold across encoder architectures?,complete,aicd/eval/reports/e3_panel.json,kernel log,"CodeBERT 0.6562, UniXcoder 0.6465; written up as Section VIII-D tab:panel"
+E4,Is it an artefact of one initialisation?,complete,aicd/eval/reports/seed_sweep_six.json,report,"6 seeds, drop 0.6391 CI [0.6237,0.6544]"
+E5,Is it an artefact of architecture/objective choices?,complete,aicd/eval/reports/e5_ablation.json,report+log,4 arms; proj256 and triplet02 survive only as kernel logs
+E6,What do the detectors key on?,complete,aicd/eval/reports/transform_suite_corrected.json,kernel log,"Conditional effects at n=10,000; supersedes the confounded published table"
+E7,Does the exposure gradient reproduce on an independent corpus?,complete,aicd/eval/reports/codemirage_eval_base.json,kernel log,NON-MONOTONE -- does not support the thesis; reported as such
+E8,Does augmenting away the surface cue restore transfer?,complete,aicd/eval/reports/e8_augment.json,kernel log,"No. Drop 0.6232, inside the six-seed range; 4/5 conditions worse"
+E9,"Are the conditions intrinsically harder, or unexposed?",complete,aicd/eval/reports/branch_c_fastdetect.json,report+arrays,Zero-shot S1->S5 drop -0.0029 vs unexposed twin +0.2317
+E10,"Row-level contamination on the GPU build, with evidence retained",complete,aicd/eval/reports/paired_differences.json; contamination_gpu.json,report+arrays,"Also writes eval_row_keys.parquet, which unblocks 4.2 and 4.6"
+R4,"Do the rewrites preserve syntax, and does the mechanism effect survive restricting to files that do?",complete,aicd/eval/reports/transform_suite_corrected.json; semantics_check.json,report,"Renaming breaks 12.39%; effect -0.3936 -> -0.3971 restricted to parsing rows, 0.9% shift. Survives."
+R9,Is the audit's 35.6% remarkable?,complete,aicd/eval/reports/exposure_null.json,report,18th percentile of a random 7-category null (median 52.5%). Ordinary; the paper now rests on presence not magnitude.
+R1,Does the exposure effect survive with no untrained language in training?,complete,aicd/eval/reports/language_clean.json,report+arrays,"Source-axis effect SURVIVES language-clean: S4 +0.4105 [+0.3884, +0.4329] vs D2's +0.3836. S3 collapses to +0.0067 as designed, since the arm never saw Go or JavaScript."
+E11,Does the published detector degrade on rows it never trained on?,complete,aicd/eval/reports/published_shift.json,report+arrays,"Clean-shard drop 0.1598 S1->S5; shard advantage grows with severity, +0.0377 on S2 to +0.1730 on S5"
+E12,Does the axis ordering survive matching on comparable rows?,complete,aicd/eval/reports/matched_axis.json,report+arrays,"Ordering holds, intervals disjoint; ratio 4.9x matched against 19.6x over all rows"
+E13,Does the twin effect survive a different initialisation?,complete,aicd/eval/reports/seed_twin.json,report+arrays,3 seeds both arms. S5 +0.3522 sd 0.0125 (28 SD from 0); S1 null holds at 0.8 SD; S2 +0.0200 sd 0.0038 (5.3 SD)
+E14,How much of the external collapse is the hybrid mapping?,complete,aicd/eval/reports/independent_taxonomy.json,report,"3-class 0.3224; human/machine only 0.5455 [0.5321, 0.5591]. Collapse survives but is milder"
+E15,Design variation against seed variation on equal footing,complete,aicd/eval/reports/variance_components.json,report,"design sd 0.0109 (n=4), seed sd 0.0146 (n=6), ratio 1.35; seed is 64% of variance"
