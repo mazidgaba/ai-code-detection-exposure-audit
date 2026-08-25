@@ -1,21 +1,32 @@
+# Training and inference
 torch>=2.4
 transformers>=4.48
 datasets>=3.0
 accelerate>=1.0
-sentence-transformers>=3.0
+huggingface_hub>=0.26
+
+# The classical baseline, and the statistics the analyses use
 scikit-learn>=1.5
+scipy>=1.13
 xgboost>=2.1
-catboost>=1.2
-tree-sitter>=0.23
-tree-sitter-language-pack>=0.7
+numpy>=1.26
 pandas>=2.2
 pyarrow>=17.0
-numpy>=1.26
+
+# Parsing, for the AST features and the semantics check
+tree-sitter>=0.23
+tree-sitter-language-pack>=0.7
+
+# Near-duplicate detection
 datasketch>=1.6
-fastapi>=0.115
-uvicorn>=0.32
-evaluate>=0.4
+
+# Figures and the feature-attribution report
 matplotlib>=3.9
 shap>=0.46
+
+# Configuration and progress
 pyyaml>=6.0
 tqdm>=4.66
+
+# Tests
+pytest>=8.0

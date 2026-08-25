@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 336" width="100%" height="100%">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#000000" />
+    </marker>
+  </defs>
+
+  <style>
+    .h  { font-family: "Times New Roman", Times, serif; font-size: 12px;   fill: #000000; }
+    .hb { font-family: "Times New Roman", Times, serif; font-size: 12px;   fill: #000000; font-weight: 700; }
+    .s  { font-family: "Times New Roman", Times, serif; font-size: 10.5px; fill: #000000; font-style: italic; }
+  </style>
+
+  <rect width="330" height="336" fill="#ffffff" />
+
+  <!-- 1. the benchmark's claim -->
+  <rect x="25" y="12" width="280" height="32" rx="2" fill="none" stroke="#000000" stroke-width="0.8" />
+  <text x="165" y="32" text-anchor="middle" class="h">A benchmark withholds a category</text>
+  <line x1="165" y1="44" x2="165" y2="62" stroke="#000000" stroke-width="0.8" marker-end="url(#a)" />
+
+  <!-- 2. the question the paper insists on asking -->
+  <rect x="25" y="66" width="280" height="42" rx="2" fill="#f2f2f2" stroke="#000000" stroke-width="0.8" />
+  <text x="165" y="84" text-anchor="middle" class="h">Was that category in the</text>
+  <text x="165" y="100" text-anchor="middle" class="h">detector's training data?</text>
+
+  <!-- split -->
+  <line x1="128" y1="108" x2="92" y2="134" stroke="#000000" stroke-width="0.8" marker-end="url(#a)" />
+  <line x1="202" y1="108" x2="238" y2="134" stroke="#000000" stroke-width="0.8" marker-end="url(#a)" />
+
+  <!-- 3a. the benchmark was right -->
+  <rect x="18" y="138" width="140" height="50" rx="2" fill="none" stroke="#000000" stroke-width="0.8" />
+  <text x="88" y="157" text-anchor="middle" class="hb">No</text>
+  <text x="88" y="172" text-anchor="middle" class="s">genuine shift for</text>
+  <text x="88" y="184" text-anchor="middle" class="s">this detector</text>
+
+  <!-- 3b. the case this paper is about: marked by weight, not by colour -->
+  <rect x="172" y="138" width="140" height="50" rx="2" fill="none" stroke="#000000" stroke-width="2" />
+  <text x="242" y="157" text-anchor="middle" class="hb">Yes</text>
+  <text x="242" y="172" text-anchor="middle" class="s">familiar to this</text>
+  <text x="242" y="184" text-anchor="middle" class="s">detector already</text>
+
+  <line x1="242" y1="188" x2="242" y2="208" stroke="#000000" stroke-width="1.4" marker-end="url(#a)" />
+
+  <!-- 4. the manipulation -->
+  <rect x="25" y="212" width="280" height="42" rx="2" fill="none" stroke="#000000" stroke-width="1.4" />
+  <text x="165" y="230" text-anchor="middle" class="h">Matched twin: two detectors</text>
+  <text x="165" y="246" text-anchor="middle" class="h">differing only in exposure</text>
+  <line x1="165" y1="254" x2="165" y2="274" stroke="#000000" stroke-width="1.4" marker-end="url(#a)" />
+
+  <!-- 5. what comes out -->
+  <rect x="25" y="278" width="280" height="36" rx="2" fill="#e8e8e8" stroke="#000000" stroke-width="1.4" />
+  <text x="165" y="301" text-anchor="middle" class="hb">What exposure is worth, per axis</text>
+</svg>

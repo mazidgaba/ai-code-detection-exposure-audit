@@ -42,6 +42,9 @@ def main() -> None:
     ap.add_argument("--config", default="cpu.yaml")
     ap.add_argument("--model", default="droiddetect", choices=["droiddetect", "b"])
     ap.add_argument("--slice", default="s1_in_distribution")
+    ap.add_argument("--parse-check", action="store_true",
+                    help="also report the conditional effect on rows the "
+                         "rewrite left syntactically valid")
     ap.add_argument("--n", type=int, default=300)
     ap.add_argument("--max-len", type=int, default=384)
     ap.add_argument("--batch-size", type=int, default=8)
@@ -72,6 +75,13 @@ def main() -> None:
     langs = sub["language"].astype(str).tolist()
     print(f"[suite] {len(sub)} rows from {args.slice}, "
           f"labels={np.bincount(y, minlength=4).tolist()}")
+
+    parsers = None
+    if args.parse_check:
+        from aicd.eval.semantics_check import parser_for, parses
+        parsers = {l: parser_for(l) for l in set(langs)}
+        have = sorted(k for k, v in parsers.items() if v is not None)
+        print(f"[suite] parse check on {len(have)} languages: {have}")
 
     if args.model == "droiddetect":
         import torch
@@ -126,13 +136,41 @@ def main() -> None:
         else:
             f1_before = f1_after = cond = float("nan")
 
-        rows.append({"transform": name, "applied_fraction": applied,
-                     "macro_f1": f1, "delta_macro_f1": f1 - base_f1,
-                     "n_altered": int(changed.sum()),
-                     "macro_f1_altered_before": f1_before,
-                     "macro_f1_altered_after": f1_after,
-                     "delta_macro_f1_conditional": cond,
-                     "binary_auc": auc, "delta_auc": auc - base_auc})
+        rec = {"transform": name, "applied_fraction": applied,
+               "macro_f1": f1, "delta_macro_f1": f1 - base_f1,
+               "n_altered": int(changed.sum()),
+               "macro_f1_altered_before": f1_before,
+               "macro_f1_altered_after": f1_after,
+               "delta_macro_f1_conditional": cond,
+               "binary_auc": auc, "delta_auc": auc - base_auc}
+
+        # The conditional effect restricted to rows the rewrite left
+        # syntactically valid.
+        #
+        # Renaming breaks parsing on roughly one file in eight, because it
+        # substitutes identifiers blindly and so rewrites the contents of
+        # include directives and import paths. A detector reacting to broken
+        # code is not evidence that it reads naming habit, so the effect has to
+        # be measured where the rewrite did what it claims. This is the
+        # difference between a mechanism result and a corruption rate.
+        if parsers is not None and changed.any():
+            ok = np.array([
+                (parsers.get(l) is not None
+                 and parses(parsers[l], b) and parses(parsers[l], c))
+                for b, c, l in zip(base_codes, codes, langs)])
+            valid = changed & ok
+            rec["n_altered_parsing"] = int(valid.sum())
+            rec["break_rate"] = float(1 - ok[changed].mean())
+            if valid.sum() > 1 and len(np.unique(y[valid])) > 1:
+                b4 = float(f1_score(y[valid], base_p[valid].argmax(1),
+                                    average="macro", zero_division=0))
+                af = float(f1_score(y[valid], p[valid].argmax(1),
+                                    average="macro", zero_division=0))
+                rec["delta_macro_f1_conditional_parsing"] = af - b4
+            else:
+                rec["delta_macro_f1_conditional_parsing"] = float("nan")
+
+        rows.append(rec)
         print(f"  {name:20s} {applied:8.1%} {f1:9.4f} {f1-base_f1:+8.4f} "
               f"{cond:+11.4f} {auc:8.4f} {auc-base_auc:+8.4f}")
 

@@ -1,52 +1,87 @@
 {
   "model": "droiddetect",
   "slice": "s1_in_distribution",
-  "n": 2000,
-  "max_len": 512,
+  "n": 60,
+  "max_len": 256,
   "baseline": {
-    "macro_f1": 0.9119795620238249,
-    "binary_auc": 0.9960278765630377
+    "macro_f1": 0.8021457386782463,
+    "binary_auc": 0.9988839285714286
   },
   "transforms": [
     {
       "transform": "whitespace",
-      "applied_fraction": 0.853,
-      "macro_f1": 0.5405603405216297,
-      "delta_macro_f1": -0.3714192215021952,
-      "binary_auc": 0.9722652416096261,
-      "delta_auc": -0.023762634953411577
+      "applied_fraction": 0.8166666666666667,
+      "macro_f1": 0.5812170285854497,
+      "delta_macro_f1": -0.2209287100927967,
+      "n_altered": 49,
+      "macro_f1_altered_before": 0.7993888464476699,
+      "macro_f1_altered_after": 0.5674325674325674,
+      "delta_macro_f1_conditional": -0.23195627901510252,
+      "binary_auc": 0.9765624999999999,
+      "delta_auc": -0.022321428571428714,
+      "n_altered_parsing": 48,
+      "break_rate": 0.020408163265306145,
+      "delta_macro_f1_conditional_parsing": -0.23368788074670432
     },
     {
       "transform": "strip_comments",
-      "applied_fraction": 0.8095,
-      "macro_f1": 0.5008273958765025,
-      "delta_macro_f1": -0.4111521661473224,
-      "binary_auc": 0.9754274321355887,
-      "delta_auc": -0.020600444427449016
+      "applied_fraction": 0.7833333333333333,
+      "macro_f1": 0.6223653395784543,
+      "delta_macro_f1": -0.17978039909979204,
+      "n_altered": 47,
+      "macro_f1_altered_before": 0.7984671874614949,
+      "macro_f1_altered_after": 0.6071428571428572,
+      "delta_macro_f1_conditional": -0.19132433031863771,
+      "binary_auc": 0.9732142857142858,
+      "delta_auc": -0.025669642857142794,
+      "n_altered_parsing": 46,
+      "break_rate": 0.021276595744680882,
+      "delta_macro_f1_conditional_parsing": -0.19293265895699974
     },
     {
       "transform": "rename_identifiers",
       "applied_fraction": 1.0,
-      "macro_f1": 0.44483080114677265,
-      "delta_macro_f1": -0.46714876087705226,
-      "binary_auc": 0.9281873648341471,
-      "delta_auc": -0.0678405117288906
+      "macro_f1": 0.3998538011695907,
+      "delta_macro_f1": -0.40229193750865566,
+      "n_altered": 60,
+      "macro_f1_altered_before": 0.8021457386782463,
+      "macro_f1_altered_after": 0.3998538011695907,
+      "delta_macro_f1_conditional": -0.40229193750865566,
+      "binary_auc": 0.8962053571428572,
+      "delta_auc": -0.1026785714285714,
+      "n_altered_parsing": 53,
+      "break_rate": 0.1166666666666667,
+      "delta_macro_f1_conditional_parsing": -0.38688899014696887
     },
     {
       "transform": "compress_blanks",
-      "applied_fraction": 0.0595,
-      "macro_f1": 0.9106288328586649,
-      "delta_macro_f1": -0.0013507291651599918,
-      "binary_auc": 0.9954633134913048,
-      "delta_auc": -0.0005645630717329153
+      "applied_fraction": 0.03333333333333333,
+      "macro_f1": 0.8021457386782463,
+      "delta_macro_f1": 0.0,
+      "n_altered": 2,
+      "macro_f1_altered_before": 1.0,
+      "macro_f1_altered_after": 1.0,
+      "delta_macro_f1_conditional": 0.0,
+      "binary_auc": 0.9988839285714286,
+      "delta_auc": 0.0,
+      "n_altered_parsing": 1,
+      "break_rate": 0.5,
+      "delta_macro_f1_conditional_parsing": NaN
     },
     {
       "transform": "dead_code",
       "applied_fraction": 1.0,
-      "macro_f1": 0.688803969937168,
-      "delta_macro_f1": -0.22317559208665694,
-      "binary_auc": 0.9832734248530968,
-      "delta_auc": -0.01275445170994094
+      "macro_f1": 0.6736373165618448,
+      "delta_macro_f1": -0.12850842211640157,
+      "n_altered": 60,
+      "macro_f1_altered_before": 0.8021457386782463,
+      "macro_f1_altered_after": 0.6736373165618448,
+      "delta_macro_f1_conditional": -0.12850842211640157,
+      "binary_auc": 0.9910714285714285,
+      "delta_auc": -0.007812500000000111,
+      "n_altered_parsing": 59,
+      "break_rate": 0.01666666666666672,
+      "delta_macro_f1_conditional_parsing": -0.129273830744419
     }
   ]
 }

@@ -1,5 +1,5 @@
 # Corpora, model weights and anything else downloaded or trained. None of it is
-# ours to redistribute, and it is several gigabytes.
+# ours to redistribute, and it runs to several gigabytes.
 aicd/artifacts/
 *.parquet
 *.pt
@@ -18,45 +18,33 @@ kaggle.json
 id_rsa*
 id_ed25519*
 .netrc
-credentials.json
-secrets.*
+
+# Local run output that lands in the reports directory but is terminal noise
+# rather than a measurement: a dev-server startup log, and smoke tests whose
+# output is mostly progress bars.
+aicd/eval/reports/api_log.txt
+aicd/eval/reports/branch_a_verify.txt
+aicd/eval/reports/smoke.json
+
+# The manuscript. Not distributed until the paper is published.
+paper/main.tex
+paper/main.pdf
+paper/figures/
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.synctex.gz
 
 # Python
 __pycache__/
 *.py[cod]
-*.egg-info/
-build/
-dist/
+.pytest_cache/
 .venv/
 venv/
-env/
-.pytest_cache/
-.mypy_cache/
-.ipynb_checkpoints/
 
-# Editors and operating systems
+# Editors and OS
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-desktop.ini
-
-# LaTeX build products
-*.aux
-*.bbl
-*.blg
-*.out
-*.synctex.gz
-*.fls
-*.fdb_latexmk
-
-# NOT ignored, deliberately: aicd/eval/reports/*.json and
-# kaggle_runs/results/**/*.{json,npy,log}. Those are the measured results and
-# the evidence behind them, so they are what makes this artifact checkable.
-
-# Local dev-server and smoke-test output. These land in the reports directory
-# because that is where the run writes, but they are terminal noise rather than
-# evidence: a uvicorn startup log, and a 64-row CPU smoke test whose output is
-# mostly progress bars.
-aicd/eval/reports/api_log.txt
-aicd/eval/reports/branch_a_verify.txt

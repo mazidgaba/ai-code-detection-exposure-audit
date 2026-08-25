@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 462" width="100%" height="100%">
+  <defs>
+    <marker id="grey-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#666666" />
+    </marker>
+    <marker id="teal-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F6E6B" />
+    </marker>
+  </defs>
+
+  <style>
+    .phase-title { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 13px; font-weight: 700; fill: #1a1a1a; }
+    .box-text { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 12px; font-weight: 700; fill: #1a1a1a; }
+    .box-sm { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #1a1a1a; }
+    .box-sub { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 10px; font-weight: 500; fill: #444444; }
+    .tiny { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 10px; font-weight: 600; fill: #1a1a1a; }
+    .sub-caption { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 10px; font-style: italic; fill: #555555; }
+    .teal-text { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 12px; font-weight: 700; fill: #0F6E6B; }
+    .teal-sub { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 10px; font-weight: 600; fill: #0F6E6B; }
+    .final-text { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 12px; font-weight: 700; fill: #0b5250; }
+    .contrast { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size: 10.5px; font-weight: 700; fill: #1a1a1a; }
+  </style>
+
+  <rect width="330" height="462" fill="#ffffff" />
+
+  <!-- ===== 1. EXPOSURE AUDIT ===== -->
+  <rect x="10" y="8" width="310" height="76" rx="9" fill="#fafafa" stroke="#a0a0a0" stroke-width="1.4" stroke-dasharray="6,4" />
+  <text x="24" y="25" class="phase-title">Exposure Audit</text>
+
+  <path d="M 16,41 L 16,63 A 36,8 0 0,0 88,63 L 88,41 Z" fill="#e8e4f0" stroke="#7a748e" stroke-width="1.4" />
+  <ellipse cx="52" cy="41" rx="36" ry="8" fill="#e8e4f0" stroke="#7a748e" stroke-width="1.4" />
+  <text x="52" y="52" text-anchor="middle" class="box-sub">Detector</text>
+  <text x="52" y="63" text-anchor="middle" class="box-sub">training data</text>
+
+  <rect x="104" y="33" width="88" height="38" rx="3" fill="#cfe2f3" stroke="#6fa8dc" stroke-width="1.4" />
+  <text x="148" y="49" text-anchor="middle" class="box-sm">Measure</text>
+  <text x="148" y="62" text-anchor="middle" class="box-sm">exposure</text>
+  <line x1="88" y1="52" x2="100" y2="52" stroke="#666666" stroke-width="1.4" marker-end="url(#grey-arrow)" />
+
+  <polygon points="208,33 292,33 302,43 302,71 208,71" fill="#f5f5f5" stroke="#888888" stroke-width="1.4" />
+  <polyline points="292,33 292,43 302,43" fill="none" stroke="#888888" stroke-width="1.4" />
+  <text x="255" y="49" text-anchor="middle" class="box-sub">Exposure per</text>
+  <text x="255" y="62" text-anchor="middle" class="box-sub">category</text>
+  <line x1="192" y1="52" x2="204" y2="52" stroke="#666666" stroke-width="1.4" marker-end="url(#grey-arrow)" />
+
+  <polygon points="157,86 173,86 173,94 181,94 165,102 149,94 157,94" fill="#e0e0e0" stroke="#999999" stroke-width="1.4" />
+
+  <!-- ===== 2. CORPUS CONSTRUCTION ===== -->
+  <rect x="10" y="104" width="310" height="90" rx="9" fill="#fafafa" stroke="#a0a0a0" stroke-width="1.4" stroke-dasharray="6,4" />
+  <text x="24" y="121" class="phase-title">Corpus Construction</text>
+
+  <rect x="20" y="129" width="94" height="38" rx="5" fill="#eeeeee" stroke="#b0b0b0" stroke-width="1.4" />
+  <text x="67" y="146" text-anchor="middle" class="box-text">D1</text>
+  <text x="67" y="160" text-anchor="middle" class="box-sub">clean, full</text>
+
+  <rect x="118" y="129" width="94" height="38" rx="5" fill="#eeeeee" stroke="#b0b0b0" stroke-width="1.4" />
+  <text x="165" y="146" text-anchor="middle" class="box-text">D1_small</text>
+  <text x="165" y="160" text-anchor="middle" class="box-sub">clean, subset</text>
+
+  <rect x="216" y="129" width="94" height="38" rx="5" fill="#e6f2f2" stroke="#0F6E6B" stroke-width="2.2" />
+  <text x="263" y="146" text-anchor="middle" class="teal-text">D2</text>
+  <text x="263" y="160" text-anchor="middle" class="teal-sub">exposed</text>
+
+  <text x="165" y="184" text-anchor="middle" class="sub-caption">D2 = D1_small + withheld rows</text>
+
+  <polygon points="157,196 173,196 173,204 181,204 165,212 149,204 157,204" fill="#e0e0e0" stroke="#999999" stroke-width="1.4" />
+
+  <!-- ===== 3. THREE ARMS ===== -->
+  <rect x="10" y="214" width="310" height="102" rx="9" fill="#fafafa" stroke="#a0a0a0" stroke-width="1.4" stroke-dasharray="6,4" />
+  <text x="24" y="231" class="phase-title">Three Arms</text>
+
+  <rect x="20" y="239" width="94" height="38" rx="5" fill="#eeeeee" stroke="#b0b0b0" stroke-width="1.4" />
+  <line x1="26" y1="239" x2="26" y2="277" stroke="#b0b0b0" stroke-width="1.4" />
+  <text x="70" y="256" text-anchor="middle" class="box-text">D1</text>
+  <text x="70" y="270" text-anchor="middle" class="box-sub">scale control</text>
+
+  <rect x="118" y="239" width="94" height="38" rx="5" fill="#d9d2e9" stroke="#8e85aa" stroke-width="1.4" />
+  <line x1="124" y1="239" x2="124" y2="277" stroke="#8e85aa" stroke-width="1.4" />
+  <text x="168" y="256" text-anchor="middle" class="box-text">D1_small</text>
+  <text x="168" y="270" text-anchor="middle" class="box-sub">unexposed</text>
+
+  <rect x="216" y="239" width="94" height="38" rx="5" fill="#e6f2f2" stroke="#0F6E6B" stroke-width="2.2" />
+  <line x1="222" y1="239" x2="222" y2="277" stroke="#0F6E6B" stroke-width="1.8" />
+  <text x="266" y="256" text-anchor="middle" class="teal-text">D2</text>
+  <text x="266" y="270" text-anchor="middle" class="teal-sub">exposed</text>
+
+  <rect x="20" y="283" width="290" height="28" rx="5" fill="#ffffff" stroke="#999999" stroke-width="1.1" stroke-dasharray="4,3" />
+  <text x="165" y="295" text-anchor="middle" class="contrast">exposure = D2 &#8722; D1_small</text>
+  <text x="165" y="306" text-anchor="middle" class="contrast">scale = D1 &#8722; D1_small</text>
+
+  <polygon points="157,318 173,318 173,326 181,326 165,334 149,326 157,326" fill="#e0e0e0" stroke="#999999" stroke-width="1.4" />
+
+  <!-- ===== 4. EVALUATION ===== -->
+  <rect x="10" y="336" width="310" height="118" rx="9" fill="#fafafa" stroke="#a0a0a0" stroke-width="1.4" stroke-dasharray="6,4" />
+  <text x="24" y="353" class="phase-title">Evaluation</text>
+
+  <rect x="20" y="361" width="134" height="36" rx="3" fill="#cfe2f3" stroke="#6fa8dc" stroke-width="1.4" />
+  <text x="87" y="376" text-anchor="middle" class="tiny">Five shift</text>
+  <text x="87" y="389" text-anchor="middle" class="tiny">conditions</text>
+
+  <rect x="176" y="361" width="134" height="36" rx="3" fill="#cfe2f3" stroke="#6fa8dc" stroke-width="1.4" />
+  <text x="243" y="376" text-anchor="middle" class="tiny">Axis</text>
+  <text x="243" y="389" text-anchor="middle" class="tiny">decomposition</text>
+  <line x1="154" y1="379" x2="170" y2="379" stroke="#666666" stroke-width="1.4" marker-end="url(#grey-arrow)" />
+
+  <rect x="20" y="417" width="290" height="34" rx="5" fill="#d7ebe9" stroke="#0F6E6B" stroke-width="2.4" />
+  <text x="165" y="439" text-anchor="middle" class="final-text">Exposure effect per axis</text>
+  <line x1="243" y1="397" x2="243" y2="413" stroke="#0F6E6B" stroke-width="1.8" marker-end="url(#teal-arrow)" />
+</svg>

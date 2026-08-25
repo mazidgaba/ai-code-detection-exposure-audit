@@ -45,6 +45,19 @@ def kag(name):
     return json.loads(io.open(p, encoding="utf-8").read())
 
 
+def baselines():
+    """The trivial baselines, or None if they have not been computed.
+
+    Lives outside the kaggle/ report directory, so it needs its own loader.
+    Returning None rather than raising lets the figure still draw when only the
+    prior-matched level is available.
+    """
+    p = C.ROOT / "eval" / "reports" / "baselines.json"
+    if not p.exists():
+        return None
+    return json.loads(io.open(p, encoding="utf-8").read())
+
+
 def outdir() -> Path:
     d = C.ROOT / "docs" / "figures"
     d.mkdir(parents=True, exist_ok=True)
@@ -65,17 +78,40 @@ def fig_collapse(out: Path) -> None:
     fb = [b[s]["macro_f1"] for s in ORDER]
     ax.plot(x, fa, "o-", color=ACC, ms=3.6, label="Branch A (ModernBERT)")
     ax.plot(x, fb, "s--", color=WARN, ms=3.2, label="Branch B (TF-IDF + XGBoost)")
-    ax.axhline(0.25, color="#999", ls=":", lw=0.7)
-    ax.text(-0.45, 0.27, "chance", fontsize=5.9, color="#777", ha="left")
+    # Two chance levels, both drawn and both named. A single line labelled
+    # "chance" is ambiguous, and the ambiguity matters here: a prior-matched
+    # classifier scores exactly 1/K on every condition whatever the class
+    # balance, while a uniform one scores *below* 1/K once the classes are
+    # uneven. The familiar 0.25 is the prior-matched level, not the uniform one.
+    base = baselines()
+    ax.axhline(0.25, color="#999", ls=":", lw=0.8)
+    # Both labels sit at the left, where the curves are high and the space is
+    # empty. At the right they collide with the S5 value annotation, which sits
+    # at almost exactly the prior-matched level.
+    ax.text(-0.30, 0.275, "prior-matched (1/K)", fontsize=5.4, color="#777",
+            ha="left", va="bottom")
+    if base:
+        uni = [base[s]["uniform"] for s in ORDER]
+        ax.plot(x, uni, ls=(0, (1, 2)), color="#bbb", lw=0.8)
+        ax.text(-0.30, min(uni) - 0.045, "uniform", fontsize=5.4, color="#999",
+                ha="left", va="top")
     for i, v in enumerate(fa):
         ax.text(i, v + 0.03, f"{v:.3f}", ha="center", fontsize=6.0, color=ACC)
     ax.set_xticks(x); ax.set_xticklabels([LABEL[s] for s in ORDER], fontsize=6.2)
     ax.set_ylabel("four-class macro-F1"); ax.set_ylim(0, 1.02)
     ax.set_title("(a) accuracy under held-out shift", fontsize=7.6)
-    ax.legend(frameon=False, fontsize=6.0, loc="lower left")
+    # Upper right: the curves descend, so that corner is empty, and the lower
+    # left is now occupied by the two chance-level labels.
+    ax.legend(frameon=False, fontsize=6.0, loc="upper right")
 
     ax = axes[1]
-    fp = [a[s]["human_fpr"] for s in ORDER]
+    # The caption promises the rate at the validation-fitted operating point,
+    # which is human_fpr_policy in the analysis report. The per-slice report's
+    # bare human_fpr is the argmax rate, a different and larger quantity, and
+    # plotting it here disagreed with Table VIII by up to 0.03.
+    pol = json.loads(io.open(C.ROOT / "eval" / "reports" / "kaggle_analysis.json",
+                             encoding="utf-8").read())["branches"]["a"]["slices"]
+    fp = [pol[s]["human_fpr_policy"] for s in ORDER]
     auc = [a[s]["binary_auc"] for s in ORDER]
     ax.bar(x, fp, 0.55, color=BAD, ec=INK, lw=0.4, label="human false-positive rate", zorder=3)
     ax.plot(x, auc, "o--", color=MUT, ms=3.2, lw=1.0, label="binary AUC", zorder=4)
@@ -113,12 +149,16 @@ def fig_confusion_shift(out: Path) -> None:
                         ["(a) S1 in-distribution", "(b) S5 compound shift"]):
         cm = np.array(a[s]["confusion"], dtype=float)
         cmn = cm / np.maximum(cm.sum(axis=1, keepdims=True), 1)
-        im = ax.imshow(cmn, cmap="OrRd", vmin=0, vmax=1)
+        # vmax above 1 keeps the darkest cell light enough for dark ink, so no
+        # cell label needs to be white. Similarity checkers flag white glyphs as
+        # an evasion attempt without seeing what is drawn behind them, and a
+        # white number on a dark cell is indistinguishable to them from text
+        # hidden on a white page.
+        im = ax.imshow(cmn, cmap="OrRd", vmin=0, vmax=1.35)
         for i in range(4):
             for j in range(4):
                 ax.text(j, i, f"{cmn[i, j]:.2f}", ha="center", va="center",
-                        fontsize=6.4,
-                        color="white" if cmn[i, j] > 0.55 else INK,
+                        fontsize=6.4, color=INK,
                         fontweight="bold" if (i == 0 and cmn[i, j] > 0.5) else "normal")
         ax.set_xticks(range(4)); ax.set_yticks(range(4))
         ax.set_xticklabels(CLASSES, fontsize=6.2, rotation=30, ha="right")

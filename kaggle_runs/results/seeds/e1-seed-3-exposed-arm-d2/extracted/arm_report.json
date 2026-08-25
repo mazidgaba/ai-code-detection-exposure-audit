@@ -1,0 +1,52 @@
+{
+  "exposure_target": 0.356,
+  "d2_rows": 196720,
+  "d2_withheld_rows": 70032,
+  "d2_exposure_realised": 0.3559983733224888,
+  "d1small_rows": 126688,
+  "d2nolang_rows": 196720,
+  "d2nolang_withheld_rows": 70032,
+  "d1_rows": 196720,
+  "dropped_for_group_hygiene": 0,
+  "conditions": {
+    "s1_in_distribution": {
+      "before": 31041,
+      "after": 31041,
+      "kept": 1.0
+    },
+    "s2_unseen_generator": {
+      "before": 41058,
+      "after": 30344,
+      "kept": 0.7390520726776755
+    },
+    "s3_unseen_language": {
+      "before": 56626,
+      "after": 26936,
+      "kept": 0.47568254865256243
+    },
+    "s4_unseen_domain": {
+      "before": 56728,
+      "after": 27100,
+      "kept": 0.4777182343816105
+    },
+    "s5_compound": {
+      "before": 4168,
+      "after": 4168,
+      "kept": 1.0
+    },
+    "val": {
+      "before": 31049,
+      "after": 31049,
+      "kept": 1.0
+    }
+  },
+  "d2_category_rows": {
+    "microsoft": 14343,
+    "mistralai": 1159,
+    "go": 12602,
+    "javascript": 17088,
+    "THEVAULT_CLASS": 11490,
+    "THEVAULT_INLINE": 17922,
+    "ARXIV": 216
+  }
+}

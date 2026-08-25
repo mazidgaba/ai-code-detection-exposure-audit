@@ -160,6 +160,9 @@ def test_invariant_to_logit_shift():
 # single-sample path, which the tests above tie to the closed form.
 # ---------------------------------------------------------------------------
 
+import pathlib  # noqa: E402
+
+from aicd.models import fastdetect as E  # noqa: E402
 from aicd.models.fastdetect import _row_stats, curvature_batch  # noqa: E402
 
 
@@ -270,3 +273,47 @@ def test_short_sequences_are_declined_inside_a_batch():
     got = curvature_batch(["1,2,3", SEQS[0]], tok, model, dev)
     assert got[0] == 0.0
     assert got[1] != 0.0
+
+
+def test_report_path_resolves_inside_the_package_not_beside_it():
+    """The bug that lost an E9 run's report, pinned.
+
+    Two different roots share the name ROOT in this codebase: modules under
+    aicd/eval/ set theirs to the project directory with parents[2], while
+    config.ROOT is the aicd/ package directory. Joining "aicd/eval/reports"
+    onto config.ROOT yields aicd/aicd/eval/reports, which is a real directory
+    the writer happily creates and the reader never looks in. The scoring had
+    already finished, so nothing was lost but the session.
+
+    C.reports(cfg) is the only form correct from either root.
+    """
+    from aicd import config as C
+    cfg = C.load("base.yaml")
+    reports = C.reports(cfg)
+
+    assert reports.name == "reports"
+    assert reports.parent.name == "eval"
+    assert reports.parent.parent.name == "aicd"
+    # A doubled aicd/aicd/ segment is the signature of the bug: the package
+    # name must appear once on the way down, never twice in a row.
+    parts = reports.parts
+    doubled = [i for i in range(len(parts) - 1)
+               if parts[i] == "aicd" and parts[i + 1] == "aicd"]
+    assert not doubled, f"{reports} contains a doubled aicd/ segment"
+
+    # Match the expression, not the text. Two earlier attempts at this check
+    # failed in opposite directions: scanning raw source matched the comment
+    # that explains the bug, and stripping string tokens deleted the "aicd"
+    # literal the pattern depends on. The parse tree has neither problem.
+    import ast
+    tree = ast.parse(pathlib.Path(E.__file__).read_text(encoding="utf-8"))
+    offenders = [
+        n for n in ast.walk(tree)
+        if isinstance(n, ast.BinOp) and isinstance(n.op, ast.Div)
+        and isinstance(n.left, ast.Attribute) and n.left.attr == "ROOT"
+        and isinstance(n.left.value, ast.Name) and n.left.value.id == "C"
+        and isinstance(n.right, ast.Constant) and n.right.value == "aicd"
+    ]
+    assert not offenders, (
+        f"line {offenders[0].lineno}: joining a package-relative path onto "
+        "config.ROOT again; use C.reports(cfg)")

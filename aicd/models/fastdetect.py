@@ -288,8 +288,13 @@ def main() -> None:
         print("conditions. A flat zero-shot profile against a steep trained one")
         print("is the result; a matching decline would narrow the paper's claim.")
 
-    dest = C.ROOT / "aicd" / "eval" / "reports" / f"branch_{args.tag}_fastdetect.json"
-    dest.parent.mkdir(parents=True, exist_ok=True)
+    # C.reports(cfg), not C.ROOT / "aicd" / "eval" / "reports". Two different
+    # roots share the name in this codebase: modules under aicd/eval/ set their
+    # own ROOT to the project directory via parents[2], while config.ROOT is the
+    # aicd/ package directory. Joining "aicd/eval/reports" onto the latter wrote
+    # to aicd/aicd/eval/reports, where the run's own report cell could not find
+    # it. The helper is the only form that is correct from anywhere.
+    dest = C.reports(cfg) / f"branch_{args.tag}_fastdetect.json"
     dest.write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(f"\nwritten -> {dest}")
 

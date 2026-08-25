@@ -1,0 +1,8 @@
+# Normalise line endings, so a clone on Windows and a clone on Linux do not
+# differ by every line of every file.
+* text=auto eol=lf
+
+*.npy binary
+*.parquet binary
+*.pdf binary
+*.png binary

@@ -55,6 +55,9 @@ from aicd import config as C
 
 PROTECTED = ("s1_in_distribution", "s5_compound")
 DONORS = ("s2_unseen_generator", "s3_unseen_language", "s4_unseen_domain")
+# The language-clean arm draws from the generator-novel and source-novel
+# conditions only, so no row in an untrained language enters its training set.
+NOLANG_DONORS = ("s2_unseen_generator", "s4_unseen_domain")
 
 
 def withheld_mask(df: pd.DataFrame, cfg) -> pd.Series:
@@ -125,6 +128,35 @@ def build(df: pd.DataFrame, cfg, exposure: float) -> tuple[pd.DataFrame, dict]:
     df["d1small_train"] = False
     df.loc[retained_idx, "d1small_train"] = True
 
+    # A fourth arm, exposed to everything except an unseen language.
+    #
+    # D2 draws donors from S2, S3 and S4, so it sees Go and JavaScript rows in
+    # training. Its gain on S4 could therefore in principle come from general
+    # token coverage rather than from source exposure, even though every row of
+    # S4 is in a language the model already knew. This arm removes that
+    # possibility by construction: its donors come only from the
+    # generator-novel and source-novel conditions, so no Go or JavaScript row
+    # ever enters training, and S3 and S5 remain untouched held-out language
+    # conditions in both arms.
+    #
+    # It shares D1_small's retained rows exactly, so d2nolang minus d1small is
+    # the same contrast as d2 minus d1small with the language axis removed.
+    nolang_pool = df.index[df["slice"].isin(NOLANG_DONORS) & carries]
+    nolang_idx = draw_by_problem(df, nolang_pool, n_withheld, rng, forbidden)
+    if len(nolang_idx) < n_withheld * 0.9:
+        raise SystemExit(
+            f"only {len(nolang_idx):,} language-clean withheld rows for a target "
+            f"of {n_withheld:,}; lower --exposure or widen NOLANG_DONORS.")
+    seen_langs = set(df.loc[nolang_idx, "language"])
+    trained_langs = set(df.loc[df["slice"] == "train", "language"])
+    leaked = seen_langs - trained_langs
+    if leaked:
+        raise SystemExit(f"language-clean arm would see {sorted(leaked)}, which "
+                         "defeats the purpose of the arm")
+    df["d2nolang_train"] = False
+    df.loc[retained_idx, "d2nolang_train"] = True
+    df.loc[nolang_idx, "d2nolang_train"] = True
+
     # Donors have left evaluation. Anything sharing their group goes too.
     donor_pids = set(df.loc[donor_idx, "problem_id"])
     arm_slice = df["slice"].copy()
@@ -140,6 +172,8 @@ def build(df: pd.DataFrame, cfg, exposure: float) -> tuple[pd.DataFrame, dict]:
         "d2_withheld_rows": int(len(donor_idx)),
         "d2_exposure_realised": float(len(donor_idx) / max(df["d2_train"].sum(), 1)),
         "d1small_rows": int(df["d1small_train"].sum()),
+        "d2nolang_rows": int(df["d2nolang_train"].sum()),
+        "d2nolang_withheld_rows": int(len(nolang_idx)),
         "d1_rows": int(n_total),
         "dropped_for_group_hygiene": int(len(also)),
         "conditions": {},
@@ -199,7 +233,8 @@ def checks(df: pd.DataFrame, cfg, report: dict) -> None:
                          + "; the draw missed a withheld category entirely")
 
 
-ARM_COLUMN = {"d2": "d2_train", "d1small": "d1small_train"}
+ARM_COLUMN = {"d2": "d2_train", "d1small": "d1small_train",
+              "d2nolang": "d2nolang_train"}
 
 
 def as_training_frame(df: pd.DataFrame, arm: str) -> pd.DataFrame:

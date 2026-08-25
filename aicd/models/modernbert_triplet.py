@@ -454,8 +454,13 @@ def main() -> None:
     ap.add_argument("--no-triplet", action="store_true", help="ablation: CE only")
     ap.add_argument("--max-eval", type=int, default=None,
                     help="cap rows scored per slice (CPU verification only)")
-    ap.add_argument("--arm", choices=["d2", "d1small"], default=None,
-                    help="train one of the E1 exposure arms from "
+    # Derived from the arm registry rather than restated, so adding an arm in
+    # exposure_arms.py cannot leave the trainer refusing to train it. The
+    # language-clean arm was added and this list was not, which would have
+    # failed the run on its first command.
+    from aicd.data.exposure_arms import ARM_COLUMN
+    ap.add_argument("--arm", choices=sorted(ARM_COLUMN), default=None,
+                    help="train one of the exposure arms from "
                          "splits_arms.parquet instead of the ordinary split")
     ap.add_argument("--resume", action="store_true",
                     help="continue from the last per-epoch checkpoint")
@@ -472,10 +477,19 @@ def main() -> None:
                          "seed or per training-set variant, or the runs "
                          "overwrite each other and --resume continues the "
                          "wrong model. Default: 'base'.")
+    ap.add_argument("--train-seed", type=int, default=None,
+                    help="seed weight initialisation, dropout and batch order "
+                         "only, leaving cfg.project.seed to drive the corpus "
+                         "and arm construction. Replicating a twin arm across "
+                         "seeds requires exactly this: changing "
+                         "cfg.project.seed instead would rebuild the arms, so "
+                         "the seeds would differ in training data as well as "
+                         "initialisation and could not be compared.")
     args = ap.parse_args()
 
     cfg = C.load(args.config)
-    seed_everything(cfg.project.seed)
+    seed_everything(args.train_seed if args.train_seed is not None
+                    else cfg.project.seed)
     if args.no_triplet:
         cfg["modernbert"]["triplet_weight"] = 0.0
     d = C.ROOT / cfg.data.cache_dir
