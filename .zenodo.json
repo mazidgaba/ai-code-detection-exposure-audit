@@ -1,0 +1,36 @@
+{
+  "title": "Held Out From What? Evaluating Distribution Shift Relative to Training Exposure in AI-Generated Code Detection: research artifact",
+  "description": "<p>Research artifact accompanying the article &quot;Held Out From What? Evaluating Distribution Shift Relative to Training Exposure in AI-Generated Code Detection&quot;, submitted to the Journal of Systems and Software.</p><p>Contains the full detection pipeline, the corpus construction, the exposure audit of a published detector's stated training split, the five evaluation conditions, the matched-twin control and every analysis reported in the article. Per-condition probability arrays are included for all arms, seeds and conditions, so every table and figure in the article can be regenerated without repeating model inference. A numbers ledger traces each of the 447 numeric values in the manuscript to the file that produced it.</p><p>No corpus is redistributed. DroidCollection, CodeMirage, AIGCodeSet and the DroidDetect weights are obtained from their own sources under their own terms, and the repository documents where each is placed.</p>",
+  "upload_type": "software",
+  "license": "mit",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Mazid, Gulam",
+      "affiliation": "Indian Institute of Technology Kanpur, Kanpur, India",
+      "orcid": "0009-0008-7602-0741"
+    },
+    {
+      "name": "Warsi, Saquib",
+      "affiliation": "School of Computer and Systems Sciences, Jawaharlal Nehru University, New Delhi, India"
+    },
+    {
+      "name": "Jamaluddin",
+      "affiliation": "Department of Computer Science, Aligarh Muslim University, Aligarh, India"
+    },
+    {
+      "name": "Fathima, Afrah",
+      "affiliation": "Department of Computer Science, Maulana Azad National Urdu University, Hyderabad, India"
+    }
+  ],
+  "keywords": [
+    "machine-generated code detection",
+    "evaluation methodology",
+    "distribution shift",
+    "benchmark contamination",
+    "training-data exposure",
+    "empirical software engineering",
+    "research artifact"
+  ]
+}
